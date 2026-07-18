@@ -293,11 +293,12 @@ def validate():
 
     # G-mean measures whether the model performs well
     # across both majority and minority classes.
-    g_mean = geometric_mean_score(
+    g_mean = float(geometric_mean_score(
         all_labels,
         all_predictions,
         average="multiclass",
-    )
+    ))
+    
     return average_loss, accuracy, macro_f1, g_mean
 
 
