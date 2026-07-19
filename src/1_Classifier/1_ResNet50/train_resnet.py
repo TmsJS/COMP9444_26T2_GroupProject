@@ -6,6 +6,8 @@ from torchvision import transforms
 from torchvision.models import ResNet50_Weights, resnet50
 from tqdm import tqdm
 import sys
+import logging
+from datetime import datetime
 from pathlib import Path
 from imblearn.metrics import geometric_mean_score
 
@@ -67,6 +69,32 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 BEST_MODEL_PATH = OUTPUT_DIR / "resnet50_best_model.pth"
 
+# Create a timestamped logger that writes to both the terminal and a text file.
+def create_logger() -> tuple[logging.Logger, Path]:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_path = OUTPUT_DIR / f"resnet50_trainlog_{timestamp}.txt"
+
+    logger = logging.getLogger("resnet50_training")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+    logger.handlers.clear()
+
+    formatter = logging.Formatter("%(message)s")
+
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(formatter)
+
+    file_handler = logging.FileHandler(
+        log_path,
+        mode="w",
+        encoding="utf-8",
+    )
+    file_handler.setFormatter(formatter)
+
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+
+    return logger, log_path
 
 # 3. Image preprocessing
 
@@ -314,11 +342,14 @@ def main():
     3. Apply early stopping.
     """
 
-    print("Device:", device)
-    print("Training images:", len(train_dataset))
-    print("Validation images:", len(val_dataset))
-    print("Maximum epochs:", MAX_EPOCHS)
-    print("Best model path:", BEST_MODEL_PATH)
+    logger, train_log_path = create_logger()
+
+    logger.info(f"Device: {device}")
+    logger.info(f"Training images: {len(train_dataset)}")
+    logger.info(f"Validation images: {len(val_dataset)}")
+    logger.info(f"Maximum epochs: {MAX_EPOCHS}")
+    logger.info(f"Best model path: {BEST_MODEL_PATH}")
+    logger.info(f"Training log path: {train_log_path}")
 
     # Start a completely new training run.
     best_macro_f1 = 0.0
@@ -333,7 +364,7 @@ def main():
 
         current_learning_rate = optimizer.param_groups[0]["lr"]
 
-        print(
+        logger.info(
             f"Epoch [{epoch + 1}/{MAX_EPOCHS}] | "
             f"LR: {current_learning_rate:.6f} | "
             f"Train loss: {train_loss:.4f} | "
@@ -365,7 +396,7 @@ def main():
                 BEST_MODEL_PATH,
             )
 
-            print(
+            logger.info(
                 "Saved new best model "
                 f"(Macro-F1: {best_macro_f1:.4f})"
             )
@@ -373,9 +404,9 @@ def main():
         else:
             epochs_without_improvement += 1
 
-            print(
-                "Epochs without Macro-F1 improvement:",
-                epochs_without_improvement,
+            logger.info(
+                "Epochs without Macro-F1 improvement: "
+                f"{epochs_without_improvement}"
             )
 
         # Remember the current learning rate so that we can
@@ -388,7 +419,7 @@ def main():
         new_learning_rate = optimizer.param_groups[0]["lr"]
 
         if new_learning_rate < previous_learning_rate:
-            print(
+            logger.info(
                 f"Learning rate reduced: "
                 f"{previous_learning_rate:.6f} "
                 f"-> {new_learning_rate:.6f}"
@@ -399,16 +430,17 @@ def main():
             epochs_without_improvement
             >= EARLY_STOPPING_PATIENCE
         ):
-            print(
+            logger.info(
                 "Early stopping: validation Macro-F1 "
                 f"did not improve for "
                 f"{EARLY_STOPPING_PATIENCE} epochs."
             )
             break
 
-    print("Training complete")
-    print("Best validation Macro-F1:", best_macro_f1)
-    print("Best model path:", BEST_MODEL_PATH)
+    logger.info("Training complete")
+    logger.info(f"Best validation Macro-F1: {best_macro_f1}")
+    logger.info(f"Best model path: {BEST_MODEL_PATH}")
+    logger.info(f"Training log path: {train_log_path}")
 
 if __name__ == "__main__":
     main()
