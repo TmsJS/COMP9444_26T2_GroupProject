@@ -36,12 +36,12 @@ python3 src/1_Classifier/1_ResNet50/plot_class_metrics.py \
   outputs/classifier/resnet50
 python3 src/1_Classifier/1_ResNet50/plot_confusion_matrix.py \
   outputs/classifier/resnet50
-python3 src/1_Classifier/1_ResNet50/plot_training_curve.py \
+python3 src/1_Classifier/1_ResNet50/plot_training_curves.py \
   outputs/classifier/resnet50
 
 python3 src/1_Classifier/1_ResNet50/plot_class_metrics.py \
   outputs/classifier/resnet50_imbalance
 python3 src/1_Classifier/1_ResNet50/plot_confusion_matrix.py \
   outputs/classifier/resnet50_imbalance
-python3 src/1_Classifier/1_ResNet50/plot_training_curve.py \
+python3 src/1_Classifier/1_ResNet50/plot_training_curves.py \
   outputs/classifier/resnet50_imbalance

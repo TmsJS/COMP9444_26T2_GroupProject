@@ -1,18 +1,27 @@
 '''
 The imbalance-aware model is trained on the IP102 training set with explicit imbalance-specific processing.
 The original class distribution is modified only during training through two-sided resampling.
-1.(Oversampling)Minority Classes with fewer than 300 training images are oversampled to approximately 300 samples per epoch.
-2.(Undersampling)Majority Classes with more than 1500 training images are undersampled to approximately 1500 samples per epoch.
+1.(Oversampling)
+Minority Classes with fewer than 150 training images are oversampled to approximately 150 samples per epoch.
+2.(Undersampling)
+Majority Classes with more than 2500 training images are undersampled to approximately 2500 samples per epoch.
 Majority-class undersampling is performed dynamically during training.
-3.(Normalsampling)Classes containing between 300 and 1500 training images preserve their original sampling frequency.
-4.(Class Weights)Inverse-square-root class weights are computed from the original training class frequencies.
-Class-weighted CrossEntropyLoss is used, compared to the standard CrossEntropyLoss in (base)train_resnet.py.
-5.(Custom Sampler)A custom class-aware sampler replaces ordinary random mini-batch sampling.
-6.(Data Augmentation)Minority classes(before oversampling) receive stronger online data augmentation, 
-including random resized crop, random horizontal flip, small-angle rotation, and mild colour jitter.
-Non-Minority Classes with at least 300 training images retain the baseline augmentation: random horizontal flip.
+3.(Normalsampling)
+Classes containing between 150 and 2500 training images preserve their original sampling frequency.
+4.(Class Weights)
+Still keep applyingthe standard CrossEntropyLoss same as in (base)train_resnet.py, 
+but Class-weighted CrossEntropyLoss maybe considered in future experiments, 
+with Inverse-square-root class weights are computed from the original training class frequencies.
+5.(Custom Sampler)
+A custom class-aware sampler replaces ordinary random mini-batch sampling.
+6.(Data Augmentation)
+Minority classes(before oversampling) receive stronger online data augmentation, 
+including random horizontal flip, small-angle rotation, and mild colour jitter,
+random resized crop are not adopted, cause it may cut antenna, wings).
+Non-Minority Classes with at least 150 training images retain the baseline augmentation: random horizontal flip.
 All augmented images are generated online during training and are not saved to local storage.
-7.(Validation Sets)Validation sets remain unchanged and are evaluated on the original data distribution.
+7.(Validation Sets)
+Validation sets remain unchanged and are evaluated on the original data distribution.
 No oversampling, undersampling, or random augmentation is applied to validation test data.
 '''
 
@@ -57,8 +66,8 @@ LR_PATIENCE = 3
 EARLY_STOPPING_PATIENCE = 6
 
 # Two-sided resampling thresholds.
-MIN_SAMPLES_PER_CLASS = 300
-MAX_SAMPLES_PER_CLASS = 1500
+MIN_SAMPLES_PER_CLASS = 150
+MAX_SAMPLES_PER_CLASS = 2500
 
 # Class-weight limits after normalization.
 MIN_CLASS_WEIGHT = 0.5
@@ -135,7 +144,7 @@ def create_logger() -> tuple[logging.Logger, Path]:
 
 # 3. Image preprocessing and online augmentation
 
-# Baseline-style augmentation for classes with at least 300 training images.
+# Baseline-style augmentation for classes with at least 150 training images.
 standard_train_transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.RandomHorizontalFlip(),
@@ -146,13 +155,9 @@ standard_train_transform = transforms.Compose([
     ),
 ])
 
-# Stronger online augmentation for minority classes with fewer than 300 images.
+# Stronger online augmentation for minority classes with fewer than 150 images.
 minority_train_transform = transforms.Compose([
-    transforms.RandomResizedCrop(
-        size=224,
-        scale=(0.75, 1.0),
-        ratio=(0.85, 1.15),
-    ),
+    transforms.Resize((224, 224)),
     transforms.RandomHorizontalFlip(),
     transforms.RandomRotation(degrees=15),
     transforms.ColorJitter(
@@ -257,14 +262,14 @@ class TwoSidedClassSampler(Sampler[int]):
     Construct one resampled epoch with exact per-class target counts.
 
     Rules:
-      original count < 300:
-          sample with replacement until the class contributes 300 samples
+    original count < 150:
+        sample with replacement until the class contributes 150 samples
 
-      300 <= original count <= 1500:
-          keep every original sample once
+    150 <= original count <= 2500:
+        keep every original sample once
 
-      original count > 1500:
-          sample 1500 distinct examples without replacement
+    original count > 2500:
+        sample 2500 distinct examples without replacement
 
     The sampled index order is shuffled at the end of every epoch.
     """
@@ -551,9 +556,7 @@ model.fc = nn.Sequential(
 
 model = model.to(device)
 
-criterion = nn.CrossEntropyLoss(
-    weight=class_weights_cpu.to(device),
-)
+criterion = nn.CrossEntropyLoss()
 
 optimizer = torch.optim.SGD(
     model.parameters(),
@@ -681,11 +684,11 @@ def main():
     Train the imbalance-aware ResNet50 model.
 
     Imbalance handling:
-      1. Classes below 300 samples are oversampled to 300 per epoch.
-      2. Classes above 1500 samples are undersampled to 1500 per epoch.
-      3. Classes below 300 samples receive stronger online augmentation.
-      4. Training uses inverse-square-root class-weighted cross-entropy.
-      5. Validation remains unchanged.
+    1. Classes below 150 samples are oversampled to 150 per epoch.
+    2. Classes above 2500 samples are undersampled to 2500 per epoch.
+    3. Classes below 150 samples receive mild online augmentation.
+    4. Training uses standard unweighted cross-entropy.
+    5. Validation remains unchanged.
     """
     save_imbalance_configuration()
 

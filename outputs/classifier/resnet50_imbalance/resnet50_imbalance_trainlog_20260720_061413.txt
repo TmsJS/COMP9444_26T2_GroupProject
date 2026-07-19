@@ -76,3 +76,13 @@ Epochs without Macro-F1 improvement: 3
 Epoch [32/40] | LR: 0.001000 | Train loss: 0.0304 | Train accuracy: 0.9928 | Val loss: 1.5264 | Val accuracy: 0.7014 | Val macro-F1: 0.6011 | Val GM: 0.0000
 Epochs without Macro-F1 improvement: 4
 Learning rate reduced: 0.001000 -> 0.000100
+Epoch [33/40] | LR: 0.000100 | Train loss: 0.0279 | Train accuracy: 0.9938 | Val loss: 1.5395 | Val accuracy: 0.7011 | Val macro-F1: 0.5979 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 5
+Epoch [34/40] | LR: 0.000100 | Train loss: 0.0273 | Train accuracy: 0.9942 | Val loss: 1.5430 | Val accuracy: 0.6999 | Val macro-F1: 0.5971 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 6
+Early stopping: validation Macro-F1 did not improve for 6 epochs.
+Training complete
+Best validation Macro-F1: 0.6066681077640346
+Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_trainlog_20260720_061413.txt
+Training history path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/training_history.csv
