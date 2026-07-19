@@ -1,3 +1,6 @@
+"""Plot raw and normalized confusion matrices from a model output folder."""
+
+import argparse
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -5,64 +8,81 @@ import numpy as np
 import pandas as pd
 
 
-# 1. Project paths
+def parse_arguments() -> argparse.Namespace:
+    """Read the model output directory and optional display name."""
+    parser = argparse.ArgumentParser(
+        description=(
+            "Plot raw and normalized confusion matrices for a ResNet50 model."
+        ),
+    )
 
-# Current file:
-# COMP9444_Group/src/1_Classifier/1_ResNet50/
-# plot_confusion_matrix.py
-#
-# parents[3] points to:
-# COMP9444_Group/
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    parser.add_argument(
+        "output_dir",
+        type=Path,
+        help=(
+            "Existing model output directory containing "
+            "test_confusion_matrix.csv."
+        ),
+    )
+    parser.add_argument(
+        "--model-name",
+        type=str,
+        default=None,
+        help=(
+            "Display name used in chart titles. By default, the output "
+            "directory name is used."
+        ),
+    )
 
-OUTPUT_DIR = (
-    PROJECT_ROOT
-    / "outputs"
-    / "classifier"
-    / "resnet50"
-)
-
-CONFUSION_MATRIX_PATH = (
-    OUTPUT_DIR
-    / "test_confusion_matrix.csv"
-)
-
-RAW_FIGURE_PATH = (
-    OUTPUT_DIR
-    / "test_confusion_matrix.png"
-)
-
-NORMALIZED_FIGURE_PATH = (
-    OUTPUT_DIR
-    / "test_confusion_matrix_normalized.png"
-)
+    return parser.parse_args()
 
 
-# 2. Load confusion matrix
+def create_paths(output_dir: Path) -> dict[str, Path]:
+    """Create all file paths directly inside one model output directory."""
+    output_dir = output_dir.expanduser().resolve()
+
+    if not output_dir.is_dir():
+        raise NotADirectoryError(
+            f"Model output directory not found: {output_dir}"
+        )
+
+    return {
+        "output_dir": output_dir,
+        "confusion_matrix": output_dir / "test_confusion_matrix.csv",
+        "raw_figure": output_dir / "test_confusion_matrix.png",
+        "normalized_figure": (
+            output_dir / "test_confusion_matrix_normalized.png"
+        ),
+    }
+
+
+def create_default_model_name(output_dir: Path) -> str:
+    """Convert a known output-directory name into a chart display name."""
+    known_names = {
+        "resnet50": "ResNet50",
+        "resnet50_imbalance": "Imbalance-Aware ResNet50",
+    }
+
+    return known_names.get(
+        output_dir.name,
+        output_dir.name.replace("_", " ").title(),
+    )
+
 
 def load_confusion_matrix(
     csv_path: Path,
 ) -> tuple[np.ndarray, list[str], list[str]]:
     """
-    Load a confusion matrix CSV.
+    Load and validate a square confusion-matrix CSV.
 
-    Expected format:
-
-        ,class_a,class_b,class_c
-        class_a,10,2,1
-        class_b,3,20,4
-        class_c,0,1,15
-
-    The first row contains predicted class names.
-    The first column contains true class names.
+    The first row contains predicted-class names, and the first column
+    contains true-class names.
     """
-
-    if not csv_path.exists():
+    if not csv_path.is_file():
         raise FileNotFoundError(
-            f"Confusion matrix CSV not found:\n{csv_path}"
+            f"Confusion matrix CSV not found: {csv_path}"
         )
 
-    # The first column contains the true-class names.
     dataframe = pd.read_csv(
         csv_path,
         index_col=0,
@@ -70,25 +90,21 @@ def load_confusion_matrix(
 
     if dataframe.empty:
         raise ValueError(
-            f"Confusion matrix CSV is empty:\n{csv_path}"
+            f"Confusion matrix CSV is empty: {csv_path}"
         )
 
-    # Remove accidental whitespace around class names.
     dataframe.index = (
         dataframe.index
         .astype(str)
         .str.strip()
     )
-
     dataframe.columns = [
         str(column).strip()
         for column in dataframe.columns
     ]
 
     try:
-        matrix = dataframe.to_numpy(
-            dtype=np.float64,
-        )
+        matrix = dataframe.to_numpy(dtype=np.float64)
     except ValueError as error:
         raise ValueError(
             "The confusion matrix contains non-numeric values."
@@ -126,31 +142,19 @@ def load_confusion_matrix(
             "are not exactly identical or are in a different order."
         )
 
-    print(
-        "Loaded confusion matrix:",
-        matrix.shape,
-    )
+    print("Loaded confusion matrix:", matrix.shape)
 
     return matrix, row_names, column_names
 
 
-# 3. Normalize confusion matrix
-
-def normalize_by_true_class(
-    matrix: np.ndarray,
-) -> np.ndarray:
-    """
-    Normalize each row by its total number of true samples.
-
-    Each row therefore sums to approximately 1.0.
-    """
-
+def normalize_by_true_class(matrix: np.ndarray) -> np.ndarray:
+    """Normalize every row by its number of true-class samples."""
     row_totals = matrix.sum(
         axis=1,
         keepdims=True,
     )
 
-    normalized_matrix = np.divide(
+    return np.divide(
         matrix,
         row_totals,
         out=np.zeros_like(
@@ -160,10 +164,6 @@ def normalize_by_true_class(
         where=row_totals != 0,
     )
 
-    return normalized_matrix
-
-
-# 4. Plot confusion matrix
 
 def plot_matrix(
     matrix: np.ndarray,
@@ -174,12 +174,9 @@ def plot_matrix(
     colorbar_label: str,
 ) -> None:
     """Plot and save one confusion-matrix heatmap."""
-
     number_classes = matrix.shape[0]
 
-    figure, axis = plt.subplots(
-        figsize=(32, 28),
-    )
+    figure, axis = plt.subplots(figsize=(32, 28))
 
     image = axis.imshow(
         matrix,
@@ -193,7 +190,6 @@ def plot_matrix(
         fraction=0.046,
         pad=0.04,
     )
-
     colorbar.set_label(
         colorbar_label,
         fontsize=14,
@@ -204,13 +200,11 @@ def plot_matrix(
         fontsize=20,
         pad=20,
     )
-
     axis.set_xlabel(
         "Predicted class",
         fontsize=16,
         labelpad=15,
     )
-
     axis.set_ylabel(
         "True class",
         fontsize=16,
@@ -221,34 +215,28 @@ def plot_matrix(
 
     axis.set_xticks(class_positions)
     axis.set_yticks(class_positions)
-
     axis.set_xticklabels(
         column_names,
         rotation=90,
         fontsize=4.5,
     )
-
     axis.set_yticklabels(
         row_names,
         fontsize=4.5,
     )
 
-    # Draw cell boundaries.
     axis.set_xticks(
         np.arange(-0.5, number_classes, 1),
         minor=True,
     )
-
     axis.set_yticks(
         np.arange(-0.5, number_classes, 1),
         minor=True,
     )
-
     axis.grid(
         which="minor",
         linewidth=0.1,
     )
-
     axis.tick_params(
         which="minor",
         bottom=False,
@@ -256,61 +244,57 @@ def plot_matrix(
     )
 
     figure.tight_layout()
-
-    output_path.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
 
-# 5. Main
-
 def main() -> None:
-    matrix, row_names, column_names = load_confusion_matrix(
-        CONFUSION_MATRIX_PATH
-    )
+    args = parse_arguments()
+    paths = create_paths(args.output_dir)
 
-    normalized_matrix = normalize_by_true_class(
-        matrix
+    if args.model_name is None:
+        model_name = create_default_model_name(paths["output_dir"])
+    else:
+        model_name = args.model_name.strip()
+
+        if not model_name:
+            raise ValueError("--model-name cannot be empty.")
+
+    matrix, row_names, column_names = load_confusion_matrix(
+        paths["confusion_matrix"]
     )
+    normalized_matrix = normalize_by_true_class(matrix)
 
     plot_matrix(
         matrix=matrix,
         row_names=row_names,
         column_names=column_names,
-        output_path=RAW_FIGURE_PATH,
-        title="ResNet50 Test Confusion Matrix",
+        output_path=paths["raw_figure"],
+        title=f"{model_name} Test Confusion Matrix",
         colorbar_label="Number of test images",
     )
-
     plot_matrix(
         matrix=normalized_matrix,
         row_names=row_names,
         column_names=column_names,
-        output_path=NORMALIZED_FIGURE_PATH,
+        output_path=paths["normalized_figure"],
         title=(
-            "ResNet50 Test Confusion Matrix "
+            f"{model_name} Test Confusion Matrix "
             "(Normalized by True Class)"
         ),
         colorbar_label="Proportion of true-class images",
     )
 
+    print("Model:", model_name)
+    print("Confusion-matrix CSV:", paths["confusion_matrix"])
+    print("Raw confusion-matrix figure:", paths["raw_figure"])
     print(
-        "Raw confusion matrix (used for checking actual wrong predictions per class) saved to:",
-        RAW_FIGURE_PATH,
-    )
-
-    print(
-        "Normalized confusion matrix (used for checking recall rate per class) saved to:",
-        NORMALIZED_FIGURE_PATH,
+        "Normalized confusion-matrix figure:",
+        paths["normalized_figure"],
     )
 
 

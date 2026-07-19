@@ -1,3 +1,6 @@
+"""Plot per-class IP102 metrics produced by evaluate_resnet.py."""
+
+import argparse
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -5,48 +8,86 @@ import numpy as np
 import pandas as pd
 
 
-# 1. Project paths
+def parse_arguments() -> argparse.Namespace:
+    """Read the model output directory and plotting options."""
+    parser = argparse.ArgumentParser(
+        description=(
+            "Plot the test classification metrics for a ResNet50 model."
+        ),
+    )
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    parser.add_argument(
+        "output_dir",
+        type=Path,
+        help=(
+            "Model output directory containing "
+            "test_classification_report.csv."
+        ),
+    )
+    parser.add_argument(
+        "--model-name",
+        type=str,
+        default=None,
+        help=(
+            "Display name used in chart titles. By default, the output "
+            "directory name is used."
+        ),
+    )
+    parser.add_argument(
+        "--lowest-count",
+        type=int,
+        default=20,
+        help="Number of lowest-F1 classes to plot (default: 20).",
+    )
 
-OUTPUT_DIR = (
-    PROJECT_ROOT
-    / "outputs"
-    / "classifier"
-    / "resnet50"
-)
+    args = parser.parse_args()
 
-CLASSIFICATION_REPORT_PATH = (
-    OUTPUT_DIR
-    / "test_classification_report.csv"
-)
+    if args.lowest_count <= 0:
+        parser.error("--lowest-count must be positive.")
 
-ALL_CLASS_METRICS_PATH = (
-    OUTPUT_DIR
-    / "class_precision_recall_f1.png"
-)
-
-LOWEST_F1_PATH = (
-    OUTPUT_DIR
-    / "lowest_f1_classes.png"
-)
-
-CLASS_SUPPORT_PATH = (
-    OUTPUT_DIR
-    / "class_support.png"
-)
+    return args
 
 
-# 2. Load classification report
+def create_paths(output_dir: Path) -> dict[str, Path]:
+    """Create the input and output paths inside one model directory."""
+    output_dir = output_dir.expanduser().resolve()
 
-def load_classification_report(
-    csv_path: Path,
-) -> pd.DataFrame:
+    if not output_dir.is_dir():
+        raise NotADirectoryError(
+            f"Model output directory not found: {output_dir}"
+        )
+
+    return {
+        "output_dir": output_dir,
+        "classification_report": (
+            output_dir / "test_classification_report.csv"
+        ),
+        "all_class_metrics": (
+            output_dir / "class_precision_recall_f1.png"
+        ),
+        "lowest_f1": output_dir / "lowest_f1_classes.png",
+        "class_support": output_dir / "class_support.png",
+    }
+
+
+def create_default_model_name(output_dir: Path) -> str:
+    """Convert a directory name into a readable chart title."""
+    known_names = {
+        "resnet50": "ResNet50",
+        "resnet50_imbalance": "Imbalance-Aware ResNet50",
+    }
+
+    return known_names.get(
+        output_dir.name,
+        output_dir.name.replace("_", " ").title(),
+    )
+
+
+def load_classification_report(csv_path: Path) -> pd.DataFrame:
     """Load and validate per-class classification metrics."""
-
-    if not csv_path.exists():
+    if not csv_path.is_file():
         raise FileNotFoundError(
-            f"Classification report not found:\n{csv_path}"
+            f"Classification report not found: {csv_path}"
         )
 
     dataframe = pd.read_csv(csv_path)
@@ -60,10 +101,7 @@ def load_classification_report(
         "support",
     }
 
-    missing_columns = (
-        required_columns
-        - set(dataframe.columns)
-    )
+    missing_columns = required_columns - set(dataframe.columns)
 
     if missing_columns:
         raise ValueError(
@@ -72,9 +110,7 @@ def load_classification_report(
         )
 
     if dataframe.empty:
-        raise ValueError(
-            "Classification-report CSV is empty."
-        )
+        raise ValueError("Classification-report CSV is empty.")
 
     numeric_columns = [
         "label",
@@ -97,33 +133,24 @@ def load_classification_report(
     )
 
     dataframe = dataframe.sort_values(
-        by="label"
+        by="label",
     ).reset_index(drop=True)
 
     return dataframe
 
 
-# 3. Plot all class metrics
-
 def plot_all_class_metrics(
     report: pd.DataFrame,
     output_path: Path,
+    model_name: str,
 ) -> None:
-    """
-    Plot precision, recall and F1 for all classes.
-
-    Numeric class labels are used because 102 insect names
-    would make the horizontal axis unreadable.
-    """
-
+    """Plot precision, recall, and F1 for all classes."""
     labels = report["label"].to_numpy()
     precision = report["precision"].to_numpy()
     recall = report["recall"].to_numpy()
     f1_scores = report["f1-score"].to_numpy()
 
-    figure, axis = plt.subplots(
-        figsize=(24, 8)
-    )
+    figure, axis = plt.subplots(figsize=(24, 8))
 
     axis.plot(
         labels,
@@ -131,14 +158,12 @@ def plot_all_class_metrics(
         label="Precision",
         linewidth=1.2,
     )
-
     axis.plot(
         labels,
         recall,
         label="Recall",
         linewidth=1.2,
     )
-
     axis.plot(
         labels,
         f1_scores,
@@ -146,20 +171,11 @@ def plot_all_class_metrics(
         linewidth=1.5,
     )
 
-    axis.set_title(
-        "ResNet50 Test Metrics by IP102 Class"
-    )
-
+    axis.set_title(f"{model_name} Test Metrics by IP102 Class")
     axis.set_xlabel("Class label")
     axis.set_ylabel("Metric value")
-
-    axis.set_xlim(
-        labels.min(),
-        labels.max(),
-    )
-
+    axis.set_xlim(labels.min(), labels.max())
     axis.set_ylim(0.0, 1.0)
-
     axis.set_xticks(
         np.arange(
             labels.min(),
@@ -167,44 +183,31 @@ def plot_all_class_metrics(
             5,
         )
     )
-
-    axis.grid(
-        visible=True,
-        alpha=0.3,
-    )
-
+    axis.grid(visible=True, alpha=0.3)
     axis.legend()
 
     figure.tight_layout()
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
-
-# 4. Plot lowest-F1 classes
 
 def plot_lowest_f1_classes(
     report: pd.DataFrame,
     output_path: Path,
-    number_classes: int = 20,
+    model_name: str,
+    number_classes: int,
 ) -> None:
-    """Plot the classes with the lowest F1-scores."""
+    """Plot the classes with the lowest F1 scores."""
+    number_classes = min(number_classes, len(report))
 
     lowest_classes = (
         report
-        .nsmallest(
-            number_classes,
-            "f1-score",
-        )
-        .sort_values(
-            by="f1-score",
-            ascending=True,
-        )
+        .nsmallest(number_classes, "f1-score")
+        .sort_values(by="f1-score", ascending=True)
     )
 
     display_names = [
@@ -212,9 +215,7 @@ def plot_lowest_f1_classes(
         for row in lowest_classes.itertuples()
     ]
 
-    figure, axis = plt.subplots(
-        figsize=(12, 10)
-    )
+    figure, axis = plt.subplots(figsize=(12, 10))
 
     axis.barh(
         display_names,
@@ -222,15 +223,12 @@ def plot_lowest_f1_classes(
     )
 
     axis.set_title(
-        f"ResNet50 Lowest {len(lowest_classes)} "
+        f"{model_name} Lowest {len(lowest_classes)} "
         "Per-Class F1-Scores"
     )
-
     axis.set_xlabel("F1-score")
     axis.set_ylabel("Class")
-
     axis.set_xlim(0.0, 1.0)
-
     axis.grid(
         visible=True,
         axis="x",
@@ -238,43 +236,28 @@ def plot_lowest_f1_classes(
     )
 
     figure.tight_layout()
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
-
-# 5. Plot class support
 
 def plot_class_support(
     report: pd.DataFrame,
     output_path: Path,
 ) -> None:
     """Plot the number of test images in every class."""
-
     labels = report["label"].to_numpy()
     support = report["support"].to_numpy()
 
-    figure, axis = plt.subplots(
-        figsize=(24, 8)
-    )
+    figure, axis = plt.subplots(figsize=(24, 8))
 
-    axis.bar(
-        labels,
-        support,
-    )
-
-    axis.set_title(
-        "IP102 Test Support by Class"
-    )
-
+    axis.bar(labels, support)
+    axis.set_title("IP102 Test Support by Class")
     axis.set_xlabel("Class label")
     axis.set_ylabel("Number of test images")
-
     axis.set_xticks(
         np.arange(
             labels.min(),
@@ -282,7 +265,6 @@ def plot_class_support(
             5,
         )
     )
-
     axis.grid(
         visible=True,
         axis="y",
@@ -290,32 +272,18 @@ def plot_class_support(
     )
 
     figure.tight_layout()
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
 
-# 6. Print best and worst classes
-
-def print_metric_summary(
-    report: pd.DataFrame,
-) -> None:
-    """Print the five best and five worst classes by F1-score."""
-
-    best_classes = report.nlargest(
-        5,
-        "f1-score",
-    )
-
-    worst_classes = report.nsmallest(
-        5,
-        "f1-score",
-    )
+def print_metric_summary(report: pd.DataFrame) -> None:
+    """Print the five best and five worst classes by F1 score."""
+    best_classes = report.nlargest(5, "f1-score")
+    worst_classes = report.nsmallest(5, "f1-score")
 
     print("\nFive highest-F1 classes:")
 
@@ -335,45 +303,46 @@ def print_metric_summary(
             f"{row['f1-score']:.4f}"
         )
 
-# 7. Main
 
 def main() -> None:
+    args = parse_arguments()
+    paths = create_paths(args.output_dir)
+
+    if args.model_name is None:
+        model_name = create_default_model_name(paths["output_dir"])
+    else:
+        model_name = args.model_name.strip()
+
+        if not model_name:
+            raise ValueError("--model-name cannot be empty.")
+
     report = load_classification_report(
-        CLASSIFICATION_REPORT_PATH
+        paths["classification_report"]
     )
 
     plot_all_class_metrics(
         report=report,
-        output_path=ALL_CLASS_METRICS_PATH,
+        output_path=paths["all_class_metrics"],
+        model_name=model_name,
     )
-
     plot_lowest_f1_classes(
         report=report,
-        output_path=LOWEST_F1_PATH,
-        number_classes=20,
+        output_path=paths["lowest_f1"],
+        model_name=model_name,
+        number_classes=args.lowest_count,
     )
-
     plot_class_support(
         report=report,
-        output_path=CLASS_SUPPORT_PATH,
+        output_path=paths["class_support"],
     )
 
     print_metric_summary(report)
 
-    print(
-        "\nAll-class metrics saved to:",
-        ALL_CLASS_METRICS_PATH,
-    )
-
-    print(
-        "Lowest-F1 chart saved to:",
-        LOWEST_F1_PATH,
-    )
-
-    print(
-        "Class-support chart saved to:",
-        CLASS_SUPPORT_PATH,
-    )
+    print("\nModel:", model_name)
+    print("Classification report:", paths["classification_report"])
+    print("All-class metrics saved to:", paths["all_class_metrics"])
+    print("Lowest-F1 chart saved to:", paths["lowest_f1"])
+    print("Class-support chart saved to:", paths["class_support"])
 
 
 if __name__ == "__main__":

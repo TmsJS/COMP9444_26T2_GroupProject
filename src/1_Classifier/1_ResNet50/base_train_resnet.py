@@ -80,14 +80,14 @@ IMAGES_DIR = DATA_DIR / "images"
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "classifier" / "resnet50"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-BEST_MODEL_PATH = OUTPUT_DIR / "resnet50_best_model.pth"
+BEST_MODEL_PATH = OUTPUT_DIR / "(base)resnet50_best_model.pth"
 
 TRAINING_HISTORY_PATH = OUTPUT_DIR / "training_history.csv"
 
 # Create a timestamped logger that writes to both the terminal and a text file.
 def create_logger() -> tuple[logging.Logger, Path]:
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_path = OUTPUT_DIR / f"resnet50_trainlog_{timestamp}.txt"
+    log_path = OUTPUT_DIR / f"(base)resnet50_trainlog_{timestamp}.txt"
 
     logger = logging.getLogger("resnet50_training")
     logger.setLevel(logging.INFO)

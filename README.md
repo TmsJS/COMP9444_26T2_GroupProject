@@ -19,8 +19,29 @@ python3 src/0_Data_Prep/1_download_data.py
 
 ### Classifier 
 #### 1: Resnet50
-##### (1) Train Resnet50
+##### (1) Train Resnet50 & Imbalance Resnet50
 python3 src/1_Classifier/1_ResNet50/train_resnet.py
+python3 src/1_Classifier/1_ResNet50/imbalance_train_resnet.py
 
-##### (2) Evaluate Resnet50
-python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py
+##### (2) Evaluate Baseline Resnet50 & Imbalance Resnet50
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50/resnet50_best_model.pth
+
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+
+
+##### (3) Plot Resnet50 & Imbalance Resnet50 evaluation result
+python3 src/1_Classifier/1_ResNet50/plot_class_metrics.py \
+  outputs/classifier/resnet50
+python3 src/1_Classifier/1_ResNet50/plot_confusion_matrix.py \
+  outputs/classifier/resnet50
+python3 src/1_Classifier/1_ResNet50/plot_training_curve.py \
+  outputs/classifier/resnet50
+
+python3 src/1_Classifier/1_ResNet50/plot_class_metrics.py \
+  outputs/classifier/resnet50_imbalance
+python3 src/1_Classifier/1_ResNet50/plot_confusion_matrix.py \
+  outputs/classifier/resnet50_imbalance
+python3 src/1_Classifier/1_ResNet50/plot_training_curve.py \
+  outputs/classifier/resnet50_imbalance

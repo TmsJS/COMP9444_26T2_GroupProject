@@ -1,46 +1,76 @@
+"""Plot ResNet50 training history from a model output folder."""
+
+import argparse
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# 1. Project paths
+def parse_arguments() -> argparse.Namespace:
+    """Read the model output directory and optional display name."""
+    parser = argparse.ArgumentParser(
+        description=(
+            "Plot training and validation curves for a ResNet50 model."
+        ),
+    )
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    parser.add_argument(
+        "output_dir",
+        type=Path,
+        help=(
+            "Existing model output directory containing "
+            "training_history.csv."
+        ),
+    )
+    parser.add_argument(
+        "--model-name",
+        type=str,
+        default=None,
+        help=(
+            "Display name used in chart titles. By default, the output "
+            "directory name is used."
+        ),
+    )
 
-OUTPUT_DIR = (
-    PROJECT_ROOT
-    / "outputs"
-    / "classifier"
-    / "resnet50"
-)
-
-TRAINING_HISTORY_PATH = (
-    OUTPUT_DIR
-    / "training_history.csv"
-)
-
-LOSS_CURVE_PATH = (
-    OUTPUT_DIR
-    / "training_loss_curve.png"
-)
-
-ACCURACY_CURVE_PATH = (
-    OUTPUT_DIR
-    / "training_accuracy_curve.png"
-)
+    return parser.parse_args()
 
 
-# 2. Load training history
+def create_paths(output_dir: Path) -> dict[str, Path]:
+    """Create all file paths directly inside one model output directory."""
+    output_dir = output_dir.expanduser().resolve()
 
-def load_training_history(
-    csv_path: Path,
-) -> pd.DataFrame:
+    if not output_dir.is_dir():
+        raise NotADirectoryError(
+            f"Model output directory not found: {output_dir}"
+        )
+
+    return {
+        "output_dir": output_dir,
+        "training_history": output_dir / "training_history.csv",
+        "loss_curve": output_dir / "training_loss_curve.png",
+        "accuracy_curve": output_dir / "training_accuracy_curve.png",
+    }
+
+
+def create_default_model_name(output_dir: Path) -> str:
+    """Convert a known output-directory name into a chart display name."""
+    known_names = {
+        "resnet50": "ResNet50",
+        "resnet50_imbalance": "Imbalance-Aware ResNet50",
+    }
+
+    return known_names.get(
+        output_dir.name,
+        output_dir.name.replace("_", " ").title(),
+    )
+
+
+def load_training_history(csv_path: Path) -> pd.DataFrame:
     """Load and validate the training-history CSV."""
-
-    if not csv_path.exists():
+    if not csv_path.is_file():
         raise FileNotFoundError(
-            f"Training history CSV not found:\n{csv_path}"
+            f"Training history CSV not found: {csv_path}"
         )
 
     dataframe = pd.read_csv(csv_path)
@@ -53,10 +83,7 @@ def load_training_history(
         "val_accuracy",
     }
 
-    missing_columns = (
-        required_columns
-        - set(dataframe.columns)
-    )
+    missing_columns = required_columns - set(dataframe.columns)
 
     if missing_columns:
         raise ValueError(
@@ -69,24 +96,34 @@ def load_training_history(
             "Training-history CSV contains no epochs."
         )
 
+    numeric_columns = [
+        "epoch",
+        "train_loss",
+        "val_loss",
+        "train_accuracy",
+        "val_accuracy",
+    ]
+
+    for column in numeric_columns:
+        dataframe[column] = pd.to_numeric(
+            dataframe[column],
+            errors="raise",
+        )
+
     dataframe = dataframe.sort_values(
-        by="epoch"
+        by="epoch",
     ).reset_index(drop=True)
 
     return dataframe
 
 
-# 3. Plot loss
-
 def plot_loss_curves(
     history: pd.DataFrame,
     output_path: Path,
+    model_name: str,
 ) -> None:
     """Plot training and validation loss."""
-
-    figure, axis = plt.subplots(
-        figsize=(10, 6)
-    )
+    figure, axis = plt.subplots(figsize=(10, 6))
 
     axis.plot(
         history["epoch"],
@@ -94,7 +131,6 @@ def plot_loss_curves(
         marker="o",
         label="Training loss",
     )
-
     axis.plot(
         history["epoch"],
         history["val_loss"],
@@ -103,43 +139,30 @@ def plot_loss_curves(
     )
 
     axis.set_title(
-        "ResNet50 Training and Validation Loss"
+        f"{model_name} Training and Validation Loss"
     )
-
     axis.set_xlabel("Epoch")
     axis.set_ylabel("Cross-entropy loss")
-
     axis.set_xticks(history["epoch"])
-
-    axis.grid(
-        visible=True,
-        alpha=0.3,
-    )
-
+    axis.grid(visible=True, alpha=0.3)
     axis.legend()
 
     figure.tight_layout()
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
-
-# 4. Plot accuracy
 
 def plot_accuracy_curves(
     history: pd.DataFrame,
     output_path: Path,
+    model_name: str,
 ) -> None:
     """Plot training and validation accuracy."""
-
-    figure, axis = plt.subplots(
-        figsize=(10, 6)
-    )
+    figure, axis = plt.subplots(figsize=(10, 6))
 
     axis.plot(
         history["epoch"],
@@ -147,7 +170,6 @@ def plot_accuracy_curves(
         marker="o",
         label="Training accuracy",
     )
-
     axis.plot(
         history["epoch"],
         history["val_accuracy"],
@@ -156,59 +178,53 @@ def plot_accuracy_curves(
     )
 
     axis.set_title(
-        "ResNet50 Training and Validation Accuracy"
+        f"{model_name} Training and Validation Accuracy"
     )
-
     axis.set_xlabel("Epoch")
     axis.set_ylabel("Accuracy")
-
     axis.set_xticks(history["epoch"])
     axis.set_ylim(0.0, 1.0)
-
-    axis.grid(
-        visible=True,
-        alpha=0.3,
-    )
-
+    axis.grid(visible=True, alpha=0.3)
     axis.legend()
 
     figure.tight_layout()
-
     figure.savefig(
         output_path,
         dpi=300,
         bbox_inches="tight",
     )
-
     plt.close(figure)
 
 
-# 5. Main
-
 def main() -> None:
-    history = load_training_history(
-        TRAINING_HISTORY_PATH
-    )
+    args = parse_arguments()
+    paths = create_paths(args.output_dir)
+
+    if args.model_name is None:
+        model_name = create_default_model_name(paths["output_dir"])
+    else:
+        model_name = args.model_name.strip()
+
+        if not model_name:
+            raise ValueError("--model-name cannot be empty.")
+
+    history = load_training_history(paths["training_history"])
 
     plot_loss_curves(
         history=history,
-        output_path=LOSS_CURVE_PATH,
+        output_path=paths["loss_curve"],
+        model_name=model_name,
     )
-
     plot_accuracy_curves(
         history=history,
-        output_path=ACCURACY_CURVE_PATH,
+        output_path=paths["accuracy_curve"],
+        model_name=model_name,
     )
 
-    print(
-        "Loss curve saved to:",
-        LOSS_CURVE_PATH,
-    )
-
-    print(
-        "Accuracy curve saved to:",
-        ACCURACY_CURVE_PATH,
-    )
+    print("Model:", model_name)
+    print("Training history:", paths["training_history"])
+    print("Loss curve saved to:", paths["loss_curve"])
+    print("Accuracy curve saved to:", paths["accuracy_curve"])
 
 
 if __name__ == "__main__":
