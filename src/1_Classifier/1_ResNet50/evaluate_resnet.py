@@ -1,6 +1,6 @@
 import sys
+from datetime import datetime
 from pathlib import Path
-
 import pandas as pd
 import torch
 from imblearn.metrics import geometric_mean_score
@@ -10,6 +10,7 @@ from sklearn.metrics import (
     f1_score,
     precision_score,
     recall_score,
+    confusion_matrix,
 )
 from torch import nn
 from torch.utils.data import DataLoader
@@ -43,11 +44,21 @@ OUTPUT_DIR = (
     PROJECT_ROOT / "outputs" / "classifier" / "resnet50"
 )
 
-MODEL_PATH = OUTPUT_DIR / "best_model.pth"
+MODEL_PATH = OUTPUT_DIR / "resnet50_best_model.pth"
 REPORT_PATH = OUTPUT_DIR / "test_classification_report.csv"
 PREDICTIONS_PATH = OUTPUT_DIR / "test_predictions.csv"
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
+SUMMARY_PATH = (
+    OUTPUT_DIR
+    / f"resnet50_test_summary_{timestamp}.txt"
+)
 
+CLASSES_PATH = DATA_DIR.parent / "classes.txt"
+
+CONFUSION_MATRIX_PATH = (
+    OUTPUT_DIR / "test_confusion_matrix.csv"
+)
 # 3. Select device
 if torch.cuda.is_available():
     device = torch.device("cuda")
@@ -81,6 +92,27 @@ test_loader = DataLoader(
     pin_memory=device.type == "cuda",
     persistent_workers=NUM_WORKERS > 0,
 )
+
+# Load insect names from classes.txt
+def load_insect_names(classes_path: Path) -> dict[int, str]:
+    insect_names = {}
+
+    with classes_path.open("r", encoding="utf-8") as file:
+        for line in file:
+            line = line.strip()
+
+            if not line:
+                continue
+
+            class_id, insect_name = line.split(maxsplit=1)
+
+            # classes.txt uses labels 1–102,
+            # while PyTorch uses labels 0–101.
+            zero_based_label = int(class_id) - 1
+
+            insect_names[zero_based_label] = insect_name
+
+    return insect_names
 
 
 # 5. Recreate ResNet50
@@ -199,21 +231,33 @@ test_g_mean = geometric_mean_score(
     average="multiclass",
 )
 
+summary = "\n".join([
+    f"Best checkpoint epoch: {checkpoint['epoch']}",
+    f"Best validation accuracy: {checkpoint['val_accuracy']:.4f}",
+    f"Best validation Macro-F1: {checkpoint['val_macro_f1']:.4f}",
+    "",
+    f"Test loss: {test_loss:.4f}",
+    f"Test accuracy: {test_accuracy:.4f}",
+    f"Test macro precision: {test_precision:.4f}",
+    f"Test macro recall: {test_recall:.4f}",
+    f"Test macro-F1: {test_macro_f1:.4f}",
+    f"Test GM: {test_g_mean:.4f}",
+])
 
 print()
-print("Best checkpoint epoch:", checkpoint["epoch"])
-print("Best validation accuracy:", checkpoint["val_accuracy"])
-print("Best validation Macro-F1:", checkpoint["val_macro_f1"])
-print()
-print("Test loss:", f"{test_loss:.4f}")
-print("Test accuracy:", f"{test_accuracy:.4f}")
-print("Test macro precision:", f"{test_precision:.4f}")
-print("Test macro recall:", f"{test_recall:.4f}")
-print("Test macro-F1:", f"{test_macro_f1:.4f}")
-print("Test GM:", f"{test_g_mean:.4f}")
+print(summary)
+
+SUMMARY_PATH.write_text(
+    summary + "\n",
+    encoding="utf-8",
+)
 
 
 # 9. Save per-class report
+
+# 9. Save per-class report
+
+insect_names = load_insect_names(CLASSES_PATH)
 
 report = classification_report(
     all_labels,
@@ -223,16 +267,40 @@ report = classification_report(
     zero_division=0,
 )
 
+report_rows = []
+
+for label in range(NUM_CLASSES):
+    class_metrics = report[str(label)]
+
+    report_rows.append({
+        "label": label,
+        "insect_name": insect_names.get(
+            label,
+            f"Unknown class {label}",
+        ),
+        "precision": class_metrics["precision"],
+        "recall": class_metrics["recall"],
+        "f1-score": class_metrics["f1-score"],
+        "support": int(class_metrics["support"]),
+    })
+
 report_dataframe = pd.DataFrame(
-    report
-).transpose()
+    report_rows,
+    columns=[
+        "label",
+        "insect_name",
+        "precision",
+        "recall",
+        "f1-score",
+        "support",
+    ],
+)
 
 report_dataframe.to_csv(
     REPORT_PATH,
-    index=True,
+    index=False,
+    float_format="%.4f",
 )
-
-
 # 10. Save every test prediction
 
 image_names = [
@@ -251,7 +319,30 @@ predictions_dataframe.to_csv(
     index=False,
 )
 
+# 10. Save confusion matrix
 
+confusion = confusion_matrix(
+    all_labels,
+    all_predictions,
+    labels=list(range(NUM_CLASSES)),
+)
+confusion_dataframe = pd.DataFrame(
+    confusion,
+    index=[
+        insect_names[label]
+        for label in range(NUM_CLASSES)
+    ],
+    columns=[
+        insect_names[label]
+        for label in range(NUM_CLASSES)
+    ],
+)
+confusion_dataframe.to_csv(
+    CONFUSION_MATRIX_PATH,
+    index=True,
+)
 print()
+print("Test summary saved to:", SUMMARY_PATH)
 print("Classification report saved to:", REPORT_PATH)
 print("Predictions saved to:", PREDICTIONS_PATH)
+print("Confusion matrix saved to:",CONFUSION_MATRIX_PATH)

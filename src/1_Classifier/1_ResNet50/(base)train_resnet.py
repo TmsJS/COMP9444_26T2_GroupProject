@@ -1,4 +1,17 @@
+'''
+The baseline model is trained on the original IP102 training set without any imbalance-specific processing.
+Original imbalanced class distribution is preserved.
+No minority-class oversampling.
+No majority-class undersampling.
+No class-weighted loss.
+Standard CrossEntropyLoss is used.
+Ordinary random mini-batch sampling (shuffle=True).
+Only basic data augmentation is applied: Random horizontal flip.
+No minority-specific data augmentation.
+Validation and test sets remain unchanged and are evaluated on the original data distribution.
+'''
 import torch
+import pandas as pd
 from sklearn.metrics import f1_score
 from torch import nn
 from torch.utils.data import DataLoader
@@ -68,6 +81,8 @@ OUTPUT_DIR = PROJECT_ROOT / "outputs" / "classifier" / "resnet50"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 BEST_MODEL_PATH = OUTPUT_DIR / "resnet50_best_model.pth"
+
+TRAINING_HISTORY_PATH = OUTPUT_DIR / "training_history.csv"
 
 # Create a timestamped logger that writes to both the terminal and a text file.
 def create_logger() -> tuple[logging.Logger, Path]:
@@ -316,7 +331,6 @@ def validate():
         all_predictions,
         average="macro",
         zero_division=0,
-        
     )
 
     # G-mean measures whether the model performs well
@@ -354,6 +368,7 @@ def main():
     # Start a completely new training run.
     best_macro_f1 = 0.0
     epochs_without_improvement = 0
+    training_history = []
 
     for epoch in range(MAX_EPOCHS):
         # Train the model for one complete epoch.
@@ -373,6 +388,24 @@ def main():
             f"Val accuracy: {val_accuracy:.4f} | "
             f"Val macro-F1: {val_macro_f1:.4f} | "
             f"Val GM: {val_g_mean:.4f}"
+        )
+
+        training_history.append(
+            {
+                "epoch": epoch + 1,
+                "learning_rate": current_learning_rate,
+                "train_loss": train_loss,
+                "train_accuracy": train_accuracy,
+                "val_loss": val_loss,
+                "val_accuracy": val_accuracy,
+                "val_macro_f1": val_macro_f1,
+                "val_g_mean": val_g_mean,
+            }
+        )
+
+        pd.DataFrame(training_history).to_csv(
+            TRAINING_HISTORY_PATH,
+            index=False,
         )
 
         # Save the model when validation Macro-F1 improves.
@@ -441,6 +474,7 @@ def main():
     logger.info(f"Best validation Macro-F1: {best_macro_f1}")
     logger.info(f"Best model path: {BEST_MODEL_PATH}")
     logger.info(f"Training log path: {train_log_path}")
+    logger.info(f"Training history path: {TRAINING_HISTORY_PATH}")
 
 if __name__ == "__main__":
     main()

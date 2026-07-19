@@ -1,0 +1,10 @@
+Best checkpoint epoch: 28
+Best validation accuracy: 0.7155
+Best validation Macro-F1: 0.6464
+
+Test loss: 1.4469
+Test accuracy: 0.7139
+Test macro precision: 0.6633
+Test macro recall: 0.6346
+Test macro-F1: 0.6452
+Test GM: 0.6068
