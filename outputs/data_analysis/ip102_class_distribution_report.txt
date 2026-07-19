@@ -1,0 +1,58 @@
+Classes: 102
+Split totals: {'train': 45095, 'val': 7508, 'test': 22619}
+All images: 75222
+Largest class: Cicadellidae (5740 images)
+Smallest class: Erythroneura apicalis (71 images)
+Max/min imbalance ratio: 80.85:1
+
+Train set summary:
+All images in train set: 45095
+Largest class: Cicadellidae (3444 images)
+Smallest class: Erythroneura apicalis (42 images)
+Max/min imbalance ratio: 82.00:1
+
+Top 3 MOST frequent labels in train set:
+  Label 101 (Cicadellidae): 3444 images
+  Label 67 (Lycorma delicatula): 3186 images
+  Label 70 (Miridae): 3048 images
+
+Top 3 LEAST frequent labels in train set:
+  Label 72 (Erythroneura apicalis): 42 images
+  Label 80 (Parlatoria zizyphus Lucus): 44 images
+  Label 61 (Brevipoalpus lewisi McGregor): 47 images
+
+Val set summary:
+All images in val set: 7508
+Largest class: Cicadellidae (573 images)
+Smallest class: Parlatoria zizyphus Lucus (7 images)
+Max/min imbalance ratio: 81.86:1
+
+Top 3 MOST frequent labels in val set:
+  Label 101 (Cicadellidae): 573 images
+  Label 67 (Lycorma delicatula): 530 images
+  Label 70 (Miridae): 508 images
+
+Top 3 LEAST frequent labels in val set:
+  Label 72 (Erythroneura apicalis): 7 images
+  Label 80 (Parlatoria zizyphus Lucus): 7 images
+  Label 63 (Polyphagotars onemus latus): 8 images
+
+Test set summary:
+All images in test set: 22619
+Largest class: Cicadellidae (1723 images)
+Smallest class: Erythroneura apicalis (22 images)
+Max/min imbalance ratio: 78.32:1
+
+Top 3 MOST frequent labels in test set:
+  Label 101 (Cicadellidae): 1723 images
+  Label 67 (Lycorma delicatula): 1594 images
+  Label 70 (Miridae): 1525 images
+
+Top 3 LEAST frequent labels in test set:
+  Label 72 (Erythroneura apicalis): 22 images
+  Label 80 (Parlatoria zizyphus Lucus): 23 images
+  Label 61 (Brevipoalpus lewisi McGregor): 24 images
+
+CSV: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution.csv
+Chart: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution.png
+Text report: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution_report.txt

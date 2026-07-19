@@ -1,0 +1,103 @@
+label_id,class_number,class_name,train_count,val_count,test_count,total_count,dataset_percent
+0,1,rice leaf roller,669,111,335,1115,1.4823
+1,2,rice leaf caterpillar,292,48,147,487,0.6474
+2,3,paddy stem maggot,156,26,79,261,0.347
+3,4,asiatic rice borer,631,106,316,1053,1.3999
+4,5,yellow rice borer,302,50,152,504,0.67
+5,6,rice gall midge,303,51,152,506,0.6727
+6,7,Rice Stemfly,221,37,111,369,0.4905
+7,8,brown plant hopper,500,83,251,834,1.1087
+8,9,white backed plant hopper,535,90,268,893,1.1872
+9,10,small brown plant hopper,331,56,166,553,0.7352
+10,11,rice water weevil,513,86,257,856,1.138
+11,12,rice leafhopper,242,40,122,404,0.5371
+12,13,grain spreader thrips,103,18,52,173,0.23
+13,14,rice shell pest,245,41,123,409,0.5437
+14,15,grub,516,86,258,860,1.1433
+15,16,mole cricket,989,165,495,1649,2.1922
+16,17,wireworm,532,88,267,887,1.1792
+17,18,white margined moth,88,14,45,147,0.1954
+18,19,black cutworm,512,85,257,854,1.1353
+19,20,large cutworm,294,49,148,491,0.6527
+20,21,yellow cutworm,287,48,144,479,0.6368
+21,22,red spider,317,53,159,529,0.7033
+22,23,corn borer,1018,170,510,1698,2.2573
+23,24,army worm,642,107,322,1071,1.4238
+24,25,aphids,2456,409,1229,4094,5.4426
+25,26,Potosiabre vitarsis,339,56,170,565,0.7511
+26,27,peach borer,414,69,208,691,0.9186
+27,28,english grain aphid,392,65,197,654,0.8694
+28,29,green bug,195,32,98,325,0.4321
+29,30,bird cherry-oataphid,424,71,213,708,0.9412
+30,31,wheat blossom midge,291,48,146,485,0.6448
+31,32,penthaleus major,139,24,70,233,0.3097
+32,33,longlegged spider mite,147,24,74,245,0.3257
+33,34,wheat phloeothrips,175,29,88,292,0.3882
+34,35,wheat sawfly,203,34,102,339,0.4507
+35,36,cerodonta denticornis,82,13,42,137,0.1821
+36,37,beet fly,62,10,32,104,0.1383
+37,38,flea beetle,473,79,237,789,1.0489
+38,39,cabbage army worm,513,85,257,855,1.1366
+39,40,beet army worm,962,160,482,1604,2.1324
+40,41,Beet spot flies,179,30,90,299,0.3975
+41,42,meadow moth,162,27,81,270,0.3589
+42,43,beet weevil,184,31,93,308,0.4095
+43,44,sericaorient alismots chulsky,114,19,58,191,0.2539
+44,45,alfalfa weevil,314,52,158,524,0.6966
+45,46,flax budworm,639,107,320,1066,1.4171
+46,47,alfalfa plant bug,393,66,197,656,0.8721
+47,48,tarnished plant bug,492,82,246,820,1.0901
+48,49,Locustoidea,836,139,419,1394,1.8532
+49,50,lytta polita,392,65,197,654,0.8694
+50,51,legume blister beetle,845,141,423,1409,1.8731
+51,52,blister beetle,1138,189,570,1897,2.5219
+52,53,therioaphis maculata Buckton,156,26,78,260,0.3456
+53,54,odontothrips loti,106,17,54,177,0.2353
+54,55,Thrips,527,88,264,879,1.1685
+55,56,alfalfa seed chalcid,111,18,56,185,0.2459
+56,57,Pieris canidia,281,47,141,469,0.6235
+57,58,Apolygus lucorum,228,38,115,381,0.5065
+58,59,Limacodidae,840,139,421,1400,1.8612
+59,60,Viteus vitifoliae,212,35,107,354,0.4706
+60,61,Colomerus vitis,105,18,53,176,0.234
+61,62,Brevipoalpus lewisi McGregor,47,8,24,79,0.105
+62,63,oides decempunctata,169,29,85,283,0.3762
+63,64,Polyphagotars onemus latus,50,8,26,84,0.1117
+64,65,Pseudococcus comstocki Kuwana,184,30,93,307,0.4081
+65,66,parathrene regalis,84,14,42,140,0.1861
+66,67,Ampelophaga,458,76,230,764,1.0157
+67,68,Lycorma delicatula,3186,530,1594,5310,7.0591
+68,69,Xylotrechus,690,115,345,1150,1.5288
+69,70,Cicadella viridis,767,128,384,1279,1.7003
+70,71,Miridae,3048,508,1525,5081,6.7547
+71,72,Trialeurodes vaporariorum,415,69,208,692,0.9199
+72,73,Erythroneura apicalis,42,7,22,71,0.0944
+73,74,Papilio xuthus,269,45,135,449,0.5969
+74,75,Panonchus citri McGregor,231,38,116,385,0.5118
+75,76,Phyllocoptes oleiverus ashmead,103,17,52,172,0.2287
+76,77,Icerya purchasi Maskell,433,72,217,722,0.9598
+77,78,Unaspis yanonensis,251,42,126,419,0.557
+78,79,Ceroplastes rubens,154,26,78,258,0.343
+79,80,Chrysomphalus aonidum,135,22,68,225,0.2991
+80,81,Parlatoria zizyphus Lucus,44,7,23,74,0.0984
+81,82,Nipaecoccus vastalor,59,10,30,99,0.1316
+82,83,Aleurocanthus spiniferus,414,68,208,690,0.9173
+83,84,Tetradacus c Bactrocera minax,232,39,117,388,0.5158
+84,85,Dacus dorsalis(Hendel),263,44,132,439,0.5836
+85,86,Bactrocera tsuneonis,100,17,51,168,0.2233
+86,87,Prodenia litura,782,130,392,1304,1.7335
+87,88,Adristyrannus,186,31,94,311,0.4134
+88,89,Phyllocnistis citrella Stainton,242,40,122,404,0.5371
+89,90,Toxoptera citricidus,113,19,57,189,0.2513
+90,91,Toxoptera aurantii,135,23,68,226,0.3004
+91,92,Aphis citricola Vander Goot,210,35,106,351,0.4666
+92,93,Scirtothrips dorsalis Hood,484,80,243,807,1.0728
+93,94,Dasineura sp,303,50,152,505,0.6713
+94,95,Lawana imitata Melichar,346,58,174,578,0.7684
+95,96,Salurnis marginella Guerr,292,48,147,487,0.6474
+96,97,Deporaus marginatus Pascoe,126,21,63,210,0.2792
+97,98,Chlumetia transversa,183,30,92,305,0.4055
+98,99,Mango flat beak leafhopper,55,10,28,93,0.1236
+99,100,Rhytidodera bowrinii white,333,55,167,555,0.7378
+100,101,Sternochetus frigidus,274,46,138,458,0.6089
+101,102,Cicadellidae,3444,573,1723,5740,7.6307

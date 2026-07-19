@@ -65,7 +65,7 @@ IMAGES_DIR = DATA_DIR / "images"
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "classifier" / "resnet50"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-BEST_MODEL_PATH = OUTPUT_DIR / "best_model.pth"
+BEST_MODEL_PATH = OUTPUT_DIR / "resnet50_best_model.pth"
 
 
 # 3. Image preprocessing
