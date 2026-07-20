@@ -45,3 +45,11 @@ python3 src/1_Classifier/1_ResNet50/plot_confusion_matrix.py \
   outputs/classifier/resnet50_imbalance
 python3 src/1_Classifier/1_ResNet50/plot_training_curves.py \
   outputs/classifier/resnet50_imbalance
+
+#### 2: Vision Transformer(ViT)
+##### (1) Train ViT
+python3 src/1_Classifier/2_ViT/base_train_vit.py
+
+#### 2: EfficientNet
+##### (1) Train EfficientNet
+python3 src/1_Classifier/3_EfficientNet/base_train_effnet.py
