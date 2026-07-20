@@ -1,4 +1,4 @@
-"""Plot ResNet50 training history from a model output folder."""
+"""Plot model training history from a model output folder."""
 
 import argparse
 from pathlib import Path
@@ -10,9 +10,7 @@ import pandas as pd
 def parse_arguments() -> argparse.Namespace:
     """Read the model output directory and optional display name."""
     parser = argparse.ArgumentParser(
-        description=(
-            "Plot training and validation curves for a ResNet50 model."
-        ),
+        description="Plot training and validation curves for a model.",
     )
 
     parser.add_argument(
@@ -23,6 +21,7 @@ def parse_arguments() -> argparse.Namespace:
             "training_history.csv."
         ),
     )
+
     parser.add_argument(
         "--model-name",
         type=str,
@@ -37,7 +36,7 @@ def parse_arguments() -> argparse.Namespace:
 
 
 def create_paths(output_dir: Path) -> dict[str, Path]:
-    """Create all file paths directly inside one model output directory."""
+    """Create all output paths inside the model output directory."""
     output_dir = output_dir.expanduser().resolve()
 
     if not output_dir.is_dir():
@@ -50,6 +49,9 @@ def create_paths(output_dir: Path) -> dict[str, Path]:
         "training_history": output_dir / "training_history.csv",
         "loss_curve": output_dir / "training_loss_curve.png",
         "accuracy_curve": output_dir / "training_accuracy_curve.png",
+        "validation_metrics_curve": (
+            output_dir / "validation_metrics_curve.png"
+        ),
     }
 
 
@@ -58,6 +60,8 @@ def create_default_model_name(output_dir: Path) -> str:
     known_names = {
         "resnet50": "ResNet50",
         "resnet50_imbalance": "Imbalance-Aware ResNet50",
+        "efficientnet_b3": "EfficientNet-B3",
+        "deit3_base_patch16_224": "DeiT-III Base/16",
     }
 
     return known_names.get(
@@ -81,6 +85,8 @@ def load_training_history(csv_path: Path) -> pd.DataFrame:
         "val_loss",
         "train_accuracy",
         "val_accuracy",
+        "val_macro_f1",
+        "val_g_mean",
     }
 
     missing_columns = required_columns - set(dataframe.columns)
@@ -102,6 +108,8 @@ def load_training_history(csv_path: Path) -> pd.DataFrame:
         "val_loss",
         "train_accuracy",
         "val_accuracy",
+        "val_macro_f1",
+        "val_g_mean",
     ]
 
     for column in numeric_columns:
@@ -196,6 +204,52 @@ def plot_accuracy_curves(
     plt.close(figure)
 
 
+def plot_validation_metrics(
+    history: pd.DataFrame,
+    output_path: Path,
+    model_name: str,
+) -> None:
+    """Plot validation accuracy, macro-F1, and G-Mean."""
+    figure, axis = plt.subplots(figsize=(10, 6))
+
+    axis.plot(
+        history["epoch"],
+        history["val_accuracy"],
+        marker="o",
+        label="Validation accuracy",
+    )
+    axis.plot(
+        history["epoch"],
+        history["val_macro_f1"],
+        marker="o",
+        label="Validation macro-F1",
+    )
+    axis.plot(
+        history["epoch"],
+        history["val_g_mean"],
+        marker="o",
+        label="Validation G-Mean",
+    )
+
+    axis.set_title(
+        f"{model_name} Validation Metrics"
+    )
+    axis.set_xlabel("Epoch")
+    axis.set_ylabel("Metric value")
+    axis.set_xticks(history["epoch"])
+    axis.set_ylim(0.0, 1.0)
+    axis.grid(visible=True, alpha=0.3)
+    axis.legend()
+
+    figure.tight_layout()
+    figure.savefig(
+        output_path,
+        dpi=300,
+        bbox_inches="tight",
+    )
+    plt.close(figure)
+
+
 def main() -> None:
     args = parse_arguments()
     paths = create_paths(args.output_dir)
@@ -215,9 +269,16 @@ def main() -> None:
         output_path=paths["loss_curve"],
         model_name=model_name,
     )
+
     plot_accuracy_curves(
         history=history,
         output_path=paths["accuracy_curve"],
+        model_name=model_name,
+    )
+
+    plot_validation_metrics(
+        history=history,
+        output_path=paths["validation_metrics_curve"],
         model_name=model_name,
     )
 
@@ -225,6 +286,10 @@ def main() -> None:
     print("Training history:", paths["training_history"])
     print("Loss curve saved to:", paths["loss_curve"])
     print("Accuracy curve saved to:", paths["accuracy_curve"])
+    print(
+        "Validation metrics curve saved to:",
+        paths["validation_metrics_curve"],
+    )
 
 
 if __name__ == "__main__":
