@@ -20,7 +20,7 @@ python3 src/0_Data_Prep/1_download_data.py
 ### Classifier 
 #### 1: Resnet50
 ##### (1) Train Resnet50 & Imbalance Resnet50
-python3 src/1_Classifier/1_ResNet50/train_resnet.py
+python3 src/1_Classifier/1_ResNet50/base_train_resnet.py
 
 python3 src/1_Classifier/1_ResNet50/imbalance_train_resnet.py
 
