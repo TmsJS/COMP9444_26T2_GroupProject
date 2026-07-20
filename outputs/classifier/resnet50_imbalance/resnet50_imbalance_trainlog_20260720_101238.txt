@@ -1,0 +1,12 @@
+Device: cuda
+Original training images: 45095
+Effective images per epoch: 44217
+Validation images: 7508
+Minority threshold: < 150
+Majority cap: > 2500
+Class-weight range: 0.4952 to 2.3294
+Maximum epochs: 40
+Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_trainlog_20260720_101238.txt
+Resampling summary: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resampling_summary.csv
+Class weights: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/class_weights.csv
