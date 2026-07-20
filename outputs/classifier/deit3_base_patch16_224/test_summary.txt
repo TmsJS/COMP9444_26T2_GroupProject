@@ -1,0 +1,16 @@
+Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/deit3_base_patch16_224/deit3_base_patch16_224_best_model.pth
+Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/deit3_base_patch16_224
+Device: cuda
+Model: DeiT-III Base/16
+Architecture: deit3_base_patch16_224.fb_in1k
+
+Best checkpoint epoch: 13
+Best validation accuracy: 0.7179
+Best validation Macro-F1: 0.6497
+
+Test loss: 1.9696
+Test accuracy: 0.7110
+Test macro precision: 0.6601
+Test macro recall: 0.6322
+Test macro-F1: 0.6418
+Test GM: 0.6015
