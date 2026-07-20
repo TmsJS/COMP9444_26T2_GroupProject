@@ -21,6 +21,7 @@ python3 src/0_Data_Prep/1_download_data.py
 #### 1: Resnet50
 ##### (1) Train Resnet50 & Imbalance Resnet50
 python3 src/1_Classifier/1_ResNet50/train_resnet.py
+
 python3 src/1_Classifier/1_ResNet50/imbalance_train_resnet.py
 
 ##### (2) Evaluate Baseline Resnet50 & Imbalance Resnet50
@@ -34,15 +35,20 @@ python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
 ##### (3) Plot Resnet50 & Imbalance Resnet50 evaluation result
 python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   outputs/classifier/resnet50
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
   outputs/classifier/resnet50
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/resnet50
 
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   outputs/classifier/resnet50_imbalance
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
   outputs/classifier/resnet50_imbalance
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/resnet50_imbalance
 
@@ -53,13 +59,16 @@ python3 src/1_Classifier/2_ViT/base_train_vit.py
 ##### (2) Evaluate ViT
 python3 src/1_Classifier/2_ViT/evaluate_vit.py \
 outputs/classifier/deit3_base_patch16_224/deit3_base_patch16_224_best_model.pth
+
 ##### (3) Plot ViT evaluation result
 python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   outputs/classifier/deit3_base_patch16_224 \
   --model-name "DeiT-III Base/16"
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
   outputs/classifier/deit3_base_patch16_224 \
   --model-name "DeiT-III Base/16"
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/deit3_base_patch16_224 \
   --model-name "DeiT-III Base/16"
@@ -76,9 +85,11 @@ outputs/classifier/efficientnet_b3/efficientnet_b3_best_model.pth
 python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   outputs/classifier/efficientnet_b3 \
   --model-name "EfficientNet-B3"
+
 python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
   outputs/classifier/efficientnet_b3 \
   --model-name "EfficientNet-B3"
+  
 python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/efficientnet_b3 \
   --model-name "EfficientNet-B3"
