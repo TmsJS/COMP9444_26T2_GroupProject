@@ -9,15 +9,13 @@ Majority-class undersampling is performed dynamically during training.
 3.(Normalsampling)
 Classes containing between 150 and 2500 training images preserve their original sampling frequency.
 4.(Class Weights)
-Still keep applyingthe standard CrossEntropyLoss same as in (base)train_resnet.py, 
-but Class-weighted CrossEntropyLoss maybe considered in future experiments, 
-with Inverse-square-root class weights are computed from the original training class frequencies.
+Inverse-square-root class weights are computed from the original training class frequencies.
+Then Class-weighted CrossEntropyLoss is adopted, not applying the standard CrossEntropyLoss as in (base)train_resnet.py.
 5.(Custom Sampler)
 A custom class-aware sampler replaces ordinary random mini-batch sampling.
 6.(Data Augmentation)
 Minority classes(before oversampling) receive stronger online data augmentation, 
-including random horizontal flip, small-angle rotation, and mild colour jitter,
-random resized crop are not adopted, cause it may cut antenna, wings).
+including random horizontal flip, random resized crop, small-angle rotation, and mild colour jitter.
 Non-Minority Classes with at least 150 training images retain the baseline augmentation: random horizontal flip.
 All augmented images are generated online during training and are not saved to local storage.
 7.(Validation Sets)
@@ -157,7 +155,11 @@ standard_train_transform = transforms.Compose([
 
 # Stronger online augmentation for minority classes with fewer than 150 images.
 minority_train_transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.RandomResizedCrop(
+        size=224,
+        scale=(0.75, 1.0),
+        ratio=(0.85, 1.15),
+    ),
     transforms.RandomHorizontalFlip(),
     transforms.RandomRotation(degrees=15),
     transforms.ColorJitter(
@@ -262,14 +264,14 @@ class TwoSidedClassSampler(Sampler[int]):
     Construct one resampled epoch with exact per-class target counts.
 
     Rules:
-    original count < 150:
-        sample with replacement until the class contributes 150 samples
+      original count < 150:
+          sample with replacement until the class contributes 150 samples
 
-    150 <= original count <= 2500:
-        keep every original sample once
+      150 <= original count <= 2500:
+          keep every original sample once
 
-    original count > 2500:
-        sample 2500 distinct examples without replacement
+      original count > 2500:
+          sample 2500 distinct examples without replacement
 
     The sampled index order is shuffled at the end of every epoch.
     """
@@ -556,7 +558,9 @@ model.fc = nn.Sequential(
 
 model = model.to(device)
 
-criterion = nn.CrossEntropyLoss()
+criterion = nn.CrossEntropyLoss(
+    weight=class_weights_cpu.to(device),
+)
 
 optimizer = torch.optim.SGD(
     model.parameters(),
@@ -684,11 +688,11 @@ def main():
     Train the imbalance-aware ResNet50 model.
 
     Imbalance handling:
-    1. Classes below 150 samples are oversampled to 150 per epoch.
-    2. Classes above 2500 samples are undersampled to 2500 per epoch.
-    3. Classes below 150 samples receive mild online augmentation.
-    4. Training uses standard unweighted cross-entropy.
-    5. Validation remains unchanged.
+      1. Classes below 150 samples are oversampled to 150 per epoch.
+      2. Classes above 2500 samples are undersampled to 2500 per epoch.
+      3. Classes below 150 samples receive stronger online augmentation.
+      4. Training uses inverse-square-root class-weighted cross-entropy.
+      5. Validation remains unchanged.
     """
     save_imbalance_configuration()
 

@@ -1,8 +1,0 @@
-Model: DeiT-III Base/16
-Device: cuda
-Training images: 45095
-Validation images: 7508
-Batch size: 16
-Maximum epochs: 40
-Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/deit3_base_patch16_224/deit3_base_patch16_224_best_model.pth
-Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/deit3_base_patch16_224/deit3_base_patch16_224_trainlog_20260720_100906.txt
