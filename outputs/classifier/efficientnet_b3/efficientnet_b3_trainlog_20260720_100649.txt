@@ -1,8 +1,0 @@
-Model: EfficientNet-B3
-Device: cuda
-Training images: 45095
-Validation images: 7508
-Batch size: 16
-Maximum epochs: 40
-Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/efficientnet_b3/efficientnet_b3_best_model.pth
-Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/efficientnet_b3/efficientnet_b3_trainlog_20260720_100649.txt

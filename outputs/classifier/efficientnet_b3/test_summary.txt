@@ -1,0 +1,16 @@
+Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/efficientnet_b3/efficientnet_b3_best_model.pth
+Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/efficientnet_b3
+Device: cuda
+Model: EfficientNet-B3
+Architecture: efficientnet_b3
+
+Best checkpoint epoch: 13
+Best validation accuracy: 0.7254
+Best validation Macro-F1: 0.6501
+
+Test loss: 1.1969
+Test accuracy: 0.7217
+Test macro precision: 0.6555
+Test macro recall: 0.6456
+Test macro-F1: 0.6455
+Test GM: 0.6093
