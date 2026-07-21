@@ -2,13 +2,13 @@ Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_
 Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance
 Device: cuda
 
-Best checkpoint epoch: 28
-Best validation accuracy: 0.7023
-Best validation Macro-F1: 0.6067
+Best checkpoint epoch: 36
+Best validation accuracy: 0.7192
+Best validation Macro-F1: 0.6298
 
-Test loss: 1.5031
-Test accuracy: 0.7004
-Test macro precision: 0.6912
-Test macro recall: 0.5786
-Test macro-F1: 0.6091
-Test GM: 0.5023
+Test loss: 1.4660
+Test accuracy: 0.7198
+Test macro precision: 0.6862
+Test macro recall: 0.6160
+Test macro-F1: 0.6347
+Test GM: 0.5681

@@ -1,0 +1,99 @@
+Device: cuda
+Original training images: 45095
+Effective images per epoch: 44217
+Validation images: 7508
+Minority threshold: < 150
+Majority cap: > 2500
+Class-weight range: 0.4952 to 2.3294
+Maximum epochs: 40
+Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_trainlog_20260721_014233.txt
+Resampling summary: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resampling_summary.csv
+Class weights: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/class_weights.csv
+Epoch [1/40] | LR: 0.010000 | Train loss: 2.1009 | Train accuracy: 0.4930 | Val loss: 1.5576 | Val accuracy: 0.5743 | Val macro-F1: 0.4394 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.4394)
+Epoch [2/40] | LR: 0.010000 | Train loss: 1.1800 | Train accuracy: 0.6621 | Val loss: 1.3984 | Val accuracy: 0.6255 | Val macro-F1: 0.4928 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.4928)
+Epoch [3/40] | LR: 0.010000 | Train loss: 0.9216 | Train accuracy: 0.7208 | Val loss: 1.3765 | Val accuracy: 0.6247 | Val macro-F1: 0.5036 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5036)
+Epoch [4/40] | LR: 0.010000 | Train loss: 0.7497 | Train accuracy: 0.7655 | Val loss: 1.3143 | Val accuracy: 0.6556 | Val macro-F1: 0.5153 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5153)
+Epoch [5/40] | LR: 0.010000 | Train loss: 0.6280 | Train accuracy: 0.7973 | Val loss: 1.3501 | Val accuracy: 0.6524 | Val macro-F1: 0.5167 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5167)
+Epoch [6/40] | LR: 0.010000 | Train loss: 0.5514 | Train accuracy: 0.8209 | Val loss: 1.4137 | Val accuracy: 0.6412 | Val macro-F1: 0.5130 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [7/40] | LR: 0.010000 | Train loss: 0.4901 | Train accuracy: 0.8398 | Val loss: 1.3981 | Val accuracy: 0.6469 | Val macro-F1: 0.5298 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5298)
+Epoch [8/40] | LR: 0.010000 | Train loss: 0.4405 | Train accuracy: 0.8545 | Val loss: 1.3954 | Val accuracy: 0.6576 | Val macro-F1: 0.5295 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [9/40] | LR: 0.010000 | Train loss: 0.3945 | Train accuracy: 0.8703 | Val loss: 1.3766 | Val accuracy: 0.6650 | Val macro-F1: 0.5470 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5470)
+Epoch [10/40] | LR: 0.010000 | Train loss: 0.3797 | Train accuracy: 0.8761 | Val loss: 1.5048 | Val accuracy: 0.6496 | Val macro-F1: 0.5169 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [11/40] | LR: 0.010000 | Train loss: 0.3685 | Train accuracy: 0.8773 | Val loss: 1.5104 | Val accuracy: 0.6440 | Val macro-F1: 0.5199 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [12/40] | LR: 0.010000 | Train loss: 0.3414 | Train accuracy: 0.8882 | Val loss: 1.4618 | Val accuracy: 0.6634 | Val macro-F1: 0.5398 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 3
+Epoch [13/40] | LR: 0.010000 | Train loss: 0.3159 | Train accuracy: 0.8973 | Val loss: 1.5042 | Val accuracy: 0.6480 | Val macro-F1: 0.5262 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 4
+Learning rate reduced: 0.010000 -> 0.001000
+Epoch [14/40] | LR: 0.001000 | Train loss: 0.1653 | Train accuracy: 0.9485 | Val loss: 1.3100 | Val accuracy: 0.7046 | Val macro-F1: 0.5893 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.5893)
+Epoch [15/40] | LR: 0.001000 | Train loss: 0.0990 | Train accuracy: 0.9699 | Val loss: 1.3146 | Val accuracy: 0.7111 | Val macro-F1: 0.6028 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6028)
+Epoch [16/40] | LR: 0.001000 | Train loss: 0.0762 | Train accuracy: 0.9787 | Val loss: 1.3418 | Val accuracy: 0.7099 | Val macro-F1: 0.6031 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6031)
+Epoch [17/40] | LR: 0.001000 | Train loss: 0.0628 | Train accuracy: 0.9833 | Val loss: 1.3551 | Val accuracy: 0.7116 | Val macro-F1: 0.6043 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6043)
+Epoch [18/40] | LR: 0.001000 | Train loss: 0.0532 | Train accuracy: 0.9862 | Val loss: 1.3625 | Val accuracy: 0.7106 | Val macro-F1: 0.6068 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6068)
+Epoch [19/40] | LR: 0.001000 | Train loss: 0.0472 | Train accuracy: 0.9884 | Val loss: 1.3775 | Val accuracy: 0.7163 | Val macro-F1: 0.6139 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6139)
+Epoch [20/40] | LR: 0.001000 | Train loss: 0.0421 | Train accuracy: 0.9910 | Val loss: 1.3876 | Val accuracy: 0.7152 | Val macro-F1: 0.6100 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [21/40] | LR: 0.001000 | Train loss: 0.0384 | Train accuracy: 0.9916 | Val loss: 1.3984 | Val accuracy: 0.7154 | Val macro-F1: 0.6111 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [22/40] | LR: 0.001000 | Train loss: 0.0351 | Train accuracy: 0.9931 | Val loss: 1.3937 | Val accuracy: 0.7148 | Val macro-F1: 0.6145 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6145)
+Epoch [23/40] | LR: 0.001000 | Train loss: 0.0318 | Train accuracy: 0.9938 | Val loss: 1.4116 | Val accuracy: 0.7160 | Val macro-F1: 0.6167 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6167)
+Epoch [24/40] | LR: 0.001000 | Train loss: 0.0272 | Train accuracy: 0.9955 | Val loss: 1.4106 | Val accuracy: 0.7176 | Val macro-F1: 0.6202 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6202)
+Epoch [25/40] | LR: 0.001000 | Train loss: 0.0247 | Train accuracy: 0.9957 | Val loss: 1.4209 | Val accuracy: 0.7159 | Val macro-F1: 0.6171 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [26/40] | LR: 0.001000 | Train loss: 0.0251 | Train accuracy: 0.9959 | Val loss: 1.4382 | Val accuracy: 0.7159 | Val macro-F1: 0.6185 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [27/40] | LR: 0.001000 | Train loss: 0.0219 | Train accuracy: 0.9966 | Val loss: 1.4368 | Val accuracy: 0.7158 | Val macro-F1: 0.6194 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 3
+Epoch [28/40] | LR: 0.001000 | Train loss: 0.0205 | Train accuracy: 0.9968 | Val loss: 1.4369 | Val accuracy: 0.7176 | Val macro-F1: 0.6229 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6229)
+Epoch [29/40] | LR: 0.001000 | Train loss: 0.0193 | Train accuracy: 0.9973 | Val loss: 1.4462 | Val accuracy: 0.7182 | Val macro-F1: 0.6243 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6243)
+Epoch [30/40] | LR: 0.001000 | Train loss: 0.0180 | Train accuracy: 0.9977 | Val loss: 1.4529 | Val accuracy: 0.7147 | Val macro-F1: 0.6129 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [31/40] | LR: 0.001000 | Train loss: 0.0190 | Train accuracy: 0.9976 | Val loss: 1.4459 | Val accuracy: 0.7174 | Val macro-F1: 0.6201 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [32/40] | LR: 0.001000 | Train loss: 0.0171 | Train accuracy: 0.9978 | Val loss: 1.4458 | Val accuracy: 0.7166 | Val macro-F1: 0.6216 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 3
+Epoch [33/40] | LR: 0.001000 | Train loss: 0.0174 | Train accuracy: 0.9978 | Val loss: 1.4573 | Val accuracy: 0.7183 | Val macro-F1: 0.6282 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6282)
+Epoch [34/40] | LR: 0.001000 | Train loss: 0.0162 | Train accuracy: 0.9976 | Val loss: 1.4599 | Val accuracy: 0.7180 | Val macro-F1: 0.6264 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [35/40] | LR: 0.001000 | Train loss: 0.0147 | Train accuracy: 0.9984 | Val loss: 1.4572 | Val accuracy: 0.7168 | Val macro-F1: 0.6272 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [36/40] | LR: 0.001000 | Train loss: 0.0137 | Train accuracy: 0.9985 | Val loss: 1.4560 | Val accuracy: 0.7192 | Val macro-F1: 0.6298 | Val GM: 0.0000
+Saved new best model (Macro-F1: 0.6298)
+Epoch [37/40] | LR: 0.001000 | Train loss: 0.0132 | Train accuracy: 0.9986 | Val loss: 1.4646 | Val accuracy: 0.7180 | Val macro-F1: 0.6260 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 1
+Epoch [38/40] | LR: 0.001000 | Train loss: 0.0134 | Train accuracy: 0.9984 | Val loss: 1.4752 | Val accuracy: 0.7170 | Val macro-F1: 0.6267 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 2
+Epoch [39/40] | LR: 0.001000 | Train loss: 0.0126 | Train accuracy: 0.9986 | Val loss: 1.4808 | Val accuracy: 0.7168 | Val macro-F1: 0.6285 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 3
+Epoch [40/40] | LR: 0.001000 | Train loss: 0.0125 | Train accuracy: 0.9988 | Val loss: 1.4671 | Val accuracy: 0.7179 | Val macro-F1: 0.6272 | Val GM: 0.0000
+Epochs without Macro-F1 improvement: 4
+Learning rate reduced: 0.001000 -> 0.000100
+Training complete
+Best validation Macro-F1: 0.6298037749481287
+Best model path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+Training log path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_trainlog_20260721_014233.txt
+Training history path: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/training_history.csv
