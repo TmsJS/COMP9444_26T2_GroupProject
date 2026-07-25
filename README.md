@@ -19,20 +19,80 @@ python3 src/0_Data_Prep/1_download_data.py
 
 ### Classifier 
 #### 1: Resnet50
-##### (1) Train Resnet50 & Imbalance Resnet50
+##### (1) Train Baseline Resnet50
 python3 src/1_Classifier/1_ResNet50/base_train_resnet.py
 
+##### (2) Evaluate Baseline Resnet50 on (train set | val set | test set)
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50/base_resnet50_best_model.pth \
+  --split train
+
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50/base_resnet50_best_model.pth \
+  --split val
+
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50/base_resnet50_best_model.pth \
+  --split test
+
+##### (3) Plot Resnet50 evaluation result on (train set | val set | test set)
+python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
+  outputs/classifier/resnet50
+
+python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split train
+
+  python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split val
+
+  python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split test
+
+python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split train
+
+python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split val
+
+python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
+  outputs/classifier/resnet50 \
+  --model-name "ResNet50" \
+  --split test
+
+##### (4) Analyze Resnet50 evaluation result on (train set | val set | test set)
+python3 src/0_Data_Prep/3_analyze_confusion_matrix.py \
+  outputs/classifier/resnet50 \
+  --split all
+
+
+#### 2: Imbalance Resnet50
+##### (1) Train Imbalance Resnet50
 python3 src/1_Classifier/1_ResNet50/imbalance_train_resnet.py
 
-##### (2) Evaluate Baseline Resnet50 & Imbalance Resnet50
+##### (2) Evaluate Imbalance Resnet50 on (train set | val set | test set)
 python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
-  outputs/classifier/resnet50/resnet50_best_model.pth
+  outputs/classifier/resnet50/resnet50_imbalance_best_model.pth \
+  --split train
 
 python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
-  outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
+  outputs/classifier/resnet50/resnet50_imbalance_best_model.pth \
+  --split val
 
+python3 src/1_Classifier/1_ResNet50/evaluate_resnet.py \
+  outputs/classifier/resnet50/resnet50_imbalance_best_model.pth \
+  --split test
 
-##### (3) Plot Resnet50 & Imbalance Resnet50 evaluation result
+##### (3) Plot Imbalance Resnet50 evaluation result
 python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   outputs/classifier/resnet50
 
@@ -52,7 +112,7 @@ python3 src/1_Classifier/4_PlotEvaluation/plot_confusion_matrix.py \
 python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/resnet50_imbalance
 
-#### 2: Vision Transformer(ViT)
+#### 3: Vision Transformer(ViT)
 ##### (1) Train ViT
 python3 src/1_Classifier/2_ViT/base_train_vit.py
 
@@ -73,7 +133,7 @@ python3 src/1_Classifier/4_PlotEvaluation/plot_training_curves.py \
   outputs/classifier/deit3_base_patch16_224 \
   --model-name "DeiT-III Base/16"
 
-#### 2: EfficientNet
+#### 4: EfficientNet
 ##### (1) Train EfficientNet
 python3 src/1_Classifier/3_EfficientNet/base_train_effnet.py
 
