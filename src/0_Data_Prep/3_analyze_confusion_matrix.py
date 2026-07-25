@@ -502,7 +502,8 @@ def create_support_bucket_table(
 
     Rows follow increasing support so the rarest-class bucket appears first.
     The error_share column measures each bucket's contribution to all
-    false-negative errors in the split.
+    false-negative errors in the split. The bucket_error_rate measures the
+    probability that an image inside that bucket is classified incorrectly.
     """
     total_samples = per_class["support"].sum()
     total_errors = per_class["false_negative"].sum()
@@ -532,6 +533,17 @@ def create_support_bucket_table(
 
         number_samples = int(selected["support"].sum())
         number_errors = int(selected["false_negative"].sum())
+        number_correct = number_samples - number_errors
+        bucket_accuracy = (
+            number_correct / number_samples
+            if number_samples
+            else 0.0
+        )
+        bucket_error_rate = (
+            number_errors / number_samples
+            if number_samples
+            else 0.0
+        )
 
         rows.append(
             {
@@ -546,7 +558,10 @@ def create_support_bucket_table(
                     if total_samples
                     else 0.0
                 ),
+                "number_correct": number_correct,
                 "number_errors": number_errors,
+                "bucket_accuracy": bucket_accuracy,
+                "bucket_error_rate": bucket_error_rate,
                 "error_share": (
                     number_errors / total_errors
                     if total_errors
