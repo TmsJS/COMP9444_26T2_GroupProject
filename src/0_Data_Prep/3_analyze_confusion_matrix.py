@@ -77,6 +77,31 @@ IP102_CONFUSION_CLUSTERS = {
     ],
 }
 
+# Labels that may describe a family, broad group, or common-name umbrella
+# rather than a visually distinct species-level category. A high confusion
+# score involving one of these labels is not sufficient evidence of pure
+# visual similarity; the label semantics should be audited first.
+HIERARCHY_RISK_LABELS = {
+    "aphids": "generic group label alongside named aphid subclasses",
+    "Miridae": "family-level label alongside named mirid subclasses",
+    "Cicadellidae": "family-level label alongside named leafhopper subclasses",
+    "blister beetle": (
+        "generic group label alongside named blister-beetle subclasses"
+    ),
+    "Thrips": "generic common-name label alongside named thrips subclasses",
+    "red spider": "broad common name that may overlap named mite subclasses",
+}
+
+# The visual-cluster score is a transparent diagnostic heuristic, not a
+# calibrated probability. The four weights sum to 1.0.
+VISUAL_SCORE_WEIGHTS = {
+    "cohesion": 0.40,
+    "severity": 0.30,
+    "reciprocity": 0.20,
+    "evidence_strength": 0.10,
+}
+FULL_EVIDENCE_WITHIN_ERRORS = 20
+
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -695,6 +720,249 @@ def create_confusion_cluster_table(
     return result
 
 
+def create_high_confidence_visual_cluster_table(
+    matrix: np.ndarray,
+    class_names: list[str],
+    per_class: pd.DataFrame,
+    split: str,
+) -> pd.DataFrame:
+    """
+    Rank predefined clusters by evidence of fine-grained visual confusion.
+
+    The 0-100 visual_confusion_score combines:
+
+    * cohesion: share of the cluster's errors that remain inside the cluster;
+    * severity: within-cluster errors divided by cluster support;
+    * reciprocity: how strongly confusion occurs in both directions;
+    * evidence strength: within-error count, saturated at 20 errors.
+
+    High reciprocity matters because a one-way flow into a broad parent label
+    can otherwise look like visual similarity. Known broad/generic labels are
+    therefore marked as hierarchy risks and never receive an automatic merge
+    recommendation.
+
+    "Merge" here means using the classes as one coarse routing group while
+    retaining the original labels for a specialist second-stage classifier.
+    It does not mean permanently replacing the original IP102 labels.
+    """
+    name_to_index = {
+        class_name: index
+        for index, class_name in enumerate(class_names)
+    }
+    rows: list[dict[str, int | float | str | bool]] = []
+
+    for cluster_name, requested_members in (
+        IP102_CONFUSION_CLUSTERS.items()
+    ):
+        members = [
+            member
+            for member in requested_members
+            if member in name_to_index
+        ]
+        missing_members = [
+            member
+            for member in requested_members
+            if member not in name_to_index
+        ]
+
+        if len(members) < 2:
+            continue
+
+        indices = [name_to_index[member] for member in members]
+        cluster_matrix = matrix[np.ix_(indices, indices)]
+        diagonal_correct = float(np.diag(cluster_matrix).sum())
+        cluster_support = float(matrix[indices, :].sum())
+        all_cluster_errors = cluster_support - diagonal_correct
+        within_cluster_errors = float(
+            cluster_matrix.sum() - diagonal_correct
+        )
+
+        cohesion = (
+            within_cluster_errors / all_cluster_errors
+            if all_cluster_errors
+            else 0.0
+        )
+        severity = (
+            within_cluster_errors / cluster_support
+            if cluster_support
+            else 0.0
+        )
+
+        reciprocal_error_mass = 0.0
+        bidirectional_pairs = 0
+        possible_pairs = len(indices) * (len(indices) - 1) // 2
+        strongest_pair: tuple[float, int, int, float, float] | None = None
+
+        for local_a in range(len(indices)):
+            for local_b in range(local_a + 1, len(indices)):
+                a_to_b = float(cluster_matrix[local_a, local_b])
+                b_to_a = float(cluster_matrix[local_b, local_a])
+                combined = a_to_b + b_to_a
+
+                reciprocal_error_mass += 2.0 * min(a_to_b, b_to_a)
+                if a_to_b > 0 and b_to_a > 0:
+                    bidirectional_pairs += 1
+
+                if strongest_pair is None or combined > strongest_pair[0]:
+                    strongest_pair = (
+                        combined,
+                        local_a,
+                        local_b,
+                        a_to_b,
+                        b_to_a,
+                    )
+
+        reciprocity = (
+            reciprocal_error_mass / within_cluster_errors
+            if within_cluster_errors
+            else 0.0
+        )
+        bidirectional_pair_density = (
+            bidirectional_pairs / possible_pairs
+            if possible_pairs
+            else 0.0
+        )
+        evidence_strength = min(
+            1.0,
+            within_cluster_errors / FULL_EVIDENCE_WITHIN_ERRORS,
+        )
+
+        visual_confusion_score = 100.0 * (
+            VISUAL_SCORE_WEIGHTS["cohesion"] * cohesion
+            + VISUAL_SCORE_WEIGHTS["severity"] * severity
+            + VISUAL_SCORE_WEIGHTS["reciprocity"] * reciprocity
+            + VISUAL_SCORE_WEIGHTS["evidence_strength"]
+            * evidence_strength
+        )
+
+        risky_members = [
+            member
+            for member in members
+            if member in HIERARCHY_RISK_LABELS
+        ]
+        hierarchy_risk = bool(risky_members)
+        hierarchy_risk_reasons = [
+            f"{member}: {HIERARCHY_RISK_LABELS[member]}"
+            for member in risky_members
+        ]
+
+        if hierarchy_risk:
+            confidence_tier = "semantic_hierarchy_risk"
+            merge_recommendation = (
+                "audit_label_semantics_before_hierarchical_merge"
+            )
+        elif (
+            visual_confusion_score >= 60.0
+            and within_cluster_errors >= 20
+            and reciprocity >= 0.60
+        ):
+            confidence_tier = "high"
+            merge_recommendation = (
+                "strong_candidate_for_coarse_to_fine_classifier"
+            )
+        elif (
+            visual_confusion_score >= 50.0
+            and within_cluster_errors >= 10
+            and reciprocity >= 0.50
+        ):
+            confidence_tier = "medium"
+            merge_recommendation = (
+                "inspect_images_then_consider_coarse_to_fine_classifier"
+            )
+        else:
+            confidence_tier = "low"
+            merge_recommendation = "insufficient_evidence_for_merge"
+
+        if strongest_pair is None:
+            strongest_pair_names = ""
+            strongest_pair_count = 0
+            strongest_pair_a_to_b = 0
+            strongest_pair_b_to_a = 0
+        else:
+            (
+                strongest_pair_count_value,
+                local_a,
+                local_b,
+                strongest_pair_a_to_b_value,
+                strongest_pair_b_to_a_value,
+            ) = strongest_pair
+            strongest_pair_names = (
+                f"{members[local_a]} <-> {members[local_b]}"
+            )
+            strongest_pair_count = int(strongest_pair_count_value)
+            strongest_pair_a_to_b = int(
+                strongest_pair_a_to_b_value
+            )
+            strongest_pair_b_to_a = int(
+                strongest_pair_b_to_a_value
+            )
+
+        rows.append(
+            {
+                "split": split,
+                "cluster_name": cluster_name,
+                "number_classes": len(members),
+                "class_members": " | ".join(members),
+                "missing_members": " | ".join(missing_members),
+                "cluster_support": int(cluster_support),
+                "all_cluster_errors": int(all_cluster_errors),
+                "within_cluster_errors": int(within_cluster_errors),
+                "cohesion": cohesion,
+                "severity": severity,
+                "reciprocity": reciprocity,
+                "bidirectional_pair_density": (
+                    bidirectional_pair_density
+                ),
+                "evidence_strength": evidence_strength,
+                "visual_confusion_score": visual_confusion_score,
+                "hierarchy_risk": hierarchy_risk,
+                "hierarchy_risk_labels": " | ".join(risky_members),
+                "hierarchy_risk_reasons": " | ".join(
+                    hierarchy_risk_reasons
+                ),
+                "confidence_tier": confidence_tier,
+                "merge_recommendation": merge_recommendation,
+                "strongest_internal_pair": strongest_pair_names,
+                "strongest_pair_wrong_count": strongest_pair_count,
+                "strongest_pair_a_to_b": strongest_pair_a_to_b,
+                "strongest_pair_b_to_a": strongest_pair_b_to_a,
+            }
+        )
+
+    # Pure visual candidates appear before semantic-hierarchy risks, even when
+    # a hierarchy-risk cluster has a numerically high raw score.
+    result = pd.DataFrame(rows)
+    tier_priority = {
+        "high": 1,
+        "medium": 2,
+        "semantic_hierarchy_risk": 3,
+        "low": 4,
+    }
+    result["_tier_priority"] = result["confidence_tier"].map(
+        tier_priority
+    )
+    result = (
+        result
+        .sort_values(
+            by=[
+                "_tier_priority",
+                "visual_confusion_score",
+                "within_cluster_errors",
+                "reciprocity",
+            ],
+            ascending=[True, False, False, False],
+        )
+        .drop(columns="_tier_priority")
+        .reset_index(drop=True)
+    )
+    result.insert(
+        0,
+        "visual_cluster_rank",
+        np.arange(1, len(result) + 1),
+    )
+    return result
+
+
 def create_error_concentration_table(
     per_class: pd.DataFrame,
     split: str,
@@ -820,6 +1088,12 @@ def analyse_split(
         per_class,
         split,
     )
+    visual_clusters = create_high_confidence_visual_cluster_table(
+        matrix,
+        class_names,
+        per_class,
+        split,
+    )
     error_concentration = create_error_concentration_table(
         per_class,
         split,
@@ -840,6 +1114,10 @@ def analyse_split(
     )
     confusion_clusters_path = (
         analysis_dir / f"{split}_confusion_cluster_analysis.csv"
+    )
+    visual_clusters_path = (
+        analysis_dir
+        / f"{split}_high_confidence_visual_clusters.csv"
     )
     error_concentration_path = (
         analysis_dir / f"{split}_error_concentration.csv"
@@ -869,6 +1147,11 @@ def analyse_split(
         index=False,
         float_format="%.6f",
     )
+    visual_clusters.to_csv(
+        visual_clusters_path,
+        index=False,
+        float_format="%.6f",
+    )
     error_concentration.to_csv(
         error_concentration_path,
         index=False,
@@ -886,6 +1169,7 @@ def analyse_split(
     print("Mutual confusion pairs:", mutual_pairs_path)
     print("Support-bucket analysis:", support_buckets_path)
     print("Confusion-cluster analysis:", confusion_clusters_path)
+    print("High-confidence visual clusters:", visual_clusters_path)
     print("Error concentration:", error_concentration_path)
     return per_class, summary
 
