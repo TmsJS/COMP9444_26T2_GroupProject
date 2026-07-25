@@ -20,8 +20,19 @@ def parse_arguments() -> argparse.Namespace:
         "output_dir",
         type=Path,
         help=(
-            "Existing model output directory containing "
-            "test_confusion_matrix.csv."
+            "Existing model output directory containing a "
+            "split-specific confusion-matrix CSV."
+        ),
+    )
+
+    parser.add_argument(
+        "--split",
+        type=str,
+        choices=("train", "val", "test"),
+        default="test",
+        help=(
+            "Dataset split whose confusion matrix should be plotted: "
+            "train, val, or test (default: test)."
         ),
     )
     parser.add_argument(
@@ -37,9 +48,17 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def create_paths(output_dir: Path) -> dict[str, Path]:
-    """Create all file paths directly inside one model output directory."""
-    output_dir = output_dir.expanduser().resolve()
+def create_paths(
+    output_dir: Path,
+    split: str,
+) -> dict[str, Path]:
+    """Create split-specific input and output paths."""
+
+    output_dir = (
+        output_dir
+        .expanduser()
+        .resolve()
+    )
 
     if not output_dir.is_dir():
         raise NotADirectoryError(
@@ -48,13 +67,19 @@ def create_paths(output_dir: Path) -> dict[str, Path]:
 
     return {
         "output_dir": output_dir,
-        "confusion_matrix": output_dir / "test_confusion_matrix.csv",
-        "raw_figure": output_dir / "test_confusion_matrix.png",
+        "confusion_matrix": (
+            output_dir
+            / f"{split}_confusion_matrix.csv"
+        ),
+        "raw_figure": (
+            output_dir
+            / f"{split}_confusion_matrix.png"
+        ),
         "normalized_figure": (
-            output_dir / "test_confusion_matrix_normalized.png"
+            output_dir
+            / f"{split}_confusion_matrix_normalized.png"
         ),
     }
-
 
 def create_default_model_name(output_dir: Path) -> str:
     """Convert a known output-directory name into a chart display name."""
@@ -254,49 +279,85 @@ def plot_matrix(
 
 def main() -> None:
     args = parse_arguments()
-    paths = create_paths(args.output_dir)
+
+    paths = create_paths(
+        output_dir=args.output_dir,
+        split=args.split,
+    )
 
     if args.model_name is None:
-        model_name = create_default_model_name(paths["output_dir"])
+        model_name = create_default_model_name(
+            paths["output_dir"]
+        )
     else:
         model_name = args.model_name.strip()
 
         if not model_name:
-            raise ValueError("--model-name cannot be empty.")
+            raise ValueError(
+                "--model-name cannot be empty."
+            )
 
-    matrix, row_names, column_names = load_confusion_matrix(
-        paths["confusion_matrix"]
+    split_display_name = {
+        "train": "Training",
+        "val": "Validation",
+        "test": "Test",
+    }[args.split]
+
+    matrix, row_names, column_names = (
+        load_confusion_matrix(
+            paths["confusion_matrix"]
+        )
     )
-    normalized_matrix = normalize_by_true_class(matrix)
+
+    normalized_matrix = (
+        normalize_by_true_class(
+            matrix
+        )
+    )
 
     plot_matrix(
         matrix=matrix,
         row_names=row_names,
         column_names=column_names,
         output_path=paths["raw_figure"],
-        title=f"{model_name} Test Confusion Matrix",
-        colorbar_label="Number of test images",
+        title=(
+            f"{model_name} "
+            f"{split_display_name} Confusion Matrix"
+        ),
+        colorbar_label=(
+            f"Number of {args.split} images"
+        ),
     )
+
     plot_matrix(
         matrix=normalized_matrix,
         row_names=row_names,
         column_names=column_names,
         output_path=paths["normalized_figure"],
         title=(
-            f"{model_name} Test Confusion Matrix "
+            f"{model_name} "
+            f"{split_display_name} Confusion Matrix "
             "(Normalized by True Class)"
         ),
-        colorbar_label="Proportion of true-class images",
+        colorbar_label=(
+            "Proportion of true-class images"
+        ),
     )
 
     print("Model:", model_name)
-    print("Confusion-matrix CSV:", paths["confusion_matrix"])
-    print("Raw confusion-matrix figure:", paths["raw_figure"])
+    print("Dataset split:", args.split)
+    print(
+        "Confusion-matrix CSV:",
+        paths["confusion_matrix"],
+    )
+    print(
+        "Raw confusion-matrix figure:",
+        paths["raw_figure"],
+    )
     print(
         "Normalized confusion-matrix figure:",
         paths["normalized_figure"],
     )
-
-
+    
 if __name__ == "__main__":
     main()

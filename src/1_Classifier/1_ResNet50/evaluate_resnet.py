@@ -1,4 +1,5 @@
-"""Evaluate a trained ResNet50 checkpoint on the unchanged IP102 test set."""
+"""Evaluate a trained ResNet50 checkpoint on a selected IP102 dataset split,
+i.e. train set, validation set, or test set."""
 
 import argparse
 import sys
@@ -63,8 +64,18 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Directory for evaluation results. By default, a timestamped "
-            "directory is created next to the checkpoint."
+            "Directory for evaluation results. By default, results are "
+            "saved directly beside the checkpoint."
+        ),
+    )
+    parser.add_argument(
+        "--split",
+        type=str,
+        choices=("train", "val", "test"),
+        default="test",
+        help=(
+            "Dataset split to evaluate: train, val, or test "
+            "(default: test)."
         ),
     )
     parser.add_argument(
@@ -108,8 +119,9 @@ def select_device() -> torch.device:
 def create_output_paths(
     model_path: Path,
     requested_output_dir: Path | None,
+    split: str,
 ) -> dict[str, Path]:
-    """Save evaluation results in the checkpoint directory by default."""
+    """Create split-specific paths in the model output directory."""
     if requested_output_dir is None:
         output_dir = model_path.parent
     else:
@@ -122,10 +134,10 @@ def create_output_paths(
 
     return {
         "output_dir": output_dir,
-        "summary": output_dir / "test_summary.txt",
-        "report": output_dir / "test_classification_report.csv",
-        "predictions": output_dir / "test_predictions.csv",
-        "confusion_matrix": output_dir / "test_confusion_matrix.csv",
+        "summary": output_dir / f"{split}_summary.txt",
+        "report": output_dir / f"{split}_classification_report.csv",
+        "predictions": output_dir / f"{split}_predictions.csv",
+        "confusion_matrix": output_dir / f"{split}_confusion_matrix.csv",
     }
 
 def load_insect_names(classes_path: Path) -> dict[int, str]:
@@ -162,13 +174,19 @@ def load_insect_names(classes_path: Path) -> dict[int, str]:
     return insect_names
 
 
-def create_test_loader(
+def create_evaluation_loader(
+    split: str,
     batch_size: int,
     num_workers: int,
     device: torch.device,
 ) -> tuple[IP102Dataset, DataLoader]:
-    """Create the unchanged IP102 test dataset and sequential DataLoader."""
-    test_transform = transforms.Compose([
+    """Create a deterministic DataLoader for one IP102 split."""
+    if split not in {"train", "val", "test"}:
+        raise ValueError(
+            f"Unsupported evaluation split: {split}"
+        )
+
+    evaluation_transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(
@@ -177,14 +195,14 @@ def create_test_loader(
         ),
     ])
 
-    test_dataset = IP102Dataset(
+    evaluation_dataset = IP102Dataset(
         images_dir=IMAGES_DIR,
-        annotation_file=DATA_DIR / "test.txt",
-        transform=test_transform,
+        annotation_file=DATA_DIR / f"{split}.txt",
+        transform=evaluation_transform,
     )
 
-    test_loader = DataLoader(
-        test_dataset,
+    evaluation_loader = DataLoader(
+        evaluation_dataset,
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
@@ -192,7 +210,7 @@ def create_test_loader(
         persistent_workers=num_workers > 0,
     )
 
-    return test_dataset, test_loader
+    return evaluation_dataset, evaluation_loader
 
 
 def create_resnet50_model(device: torch.device) -> nn.Module:
@@ -241,8 +259,9 @@ def load_checkpoint(
 
 def evaluate(
     model: nn.Module,
-    test_loader: DataLoader,
+    evaluation_loader: DataLoader,
     device: torch.device,
+    split: str,
 ) -> tuple[float, list[int], list[int]]:
     """Run inference once and return loss, labels, and predictions."""
     criterion = nn.CrossEntropyLoss()
@@ -252,7 +271,10 @@ def evaluate(
     number_samples = 0
 
     with torch.no_grad():
-        progress_bar = tqdm(test_loader, desc="Testing")
+        progress_bar = tqdm(
+            evaluation_loader,
+            desc=f"Evaluating {split}",
+        )
 
         for images, labels in progress_bar:
             images = images.to(device, non_blocking=True)
@@ -269,10 +291,12 @@ def evaluate(
             all_labels.extend(labels.cpu().tolist())
 
     if number_samples == 0:
-        raise ValueError("The test dataset is empty.")
+        raise ValueError(
+            f"The {split} dataset is empty."
+        )
 
-    test_loss = total_loss / number_samples
-    return test_loss, all_labels, all_predictions
+    evaluation_loss = total_loss / number_samples
+    return evaluation_loss, all_labels, all_predictions
 
 
 def format_checkpoint_value(checkpoint: dict, key: str) -> str:
@@ -293,31 +317,32 @@ def build_summary(
     model_path: Path,
     output_dir: Path,
     device: torch.device,
-    test_loss: float,
+    split: str,
+    evaluation_loss: float,
     all_labels: list[int],
     all_predictions: list[int],
 ) -> str:
     """Calculate aggregate metrics and format the text summary."""
-    test_accuracy = accuracy_score(all_labels, all_predictions)
-    test_precision = precision_score(
+    evaluation_accuracy = accuracy_score(all_labels, all_predictions)
+    evaluation_precision = precision_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_recall = recall_score(
+    evaluation_recall = recall_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_macro_f1 = f1_score(
+    evaluation_macro_f1 = f1_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_g_mean = float(
+    evaluation_g_mean = float(
         geometric_mean_score(
             all_labels,
             all_predictions,
@@ -325,9 +350,16 @@ def build_summary(
         )
     )
 
+    split_name = {
+        "train": "Training",
+        "val": "Validation",
+        "test": "Test",
+    }[split]
+
     return "\n".join([
         f"Checkpoint: {model_path}",
         f"Evaluation output: {output_dir}",
+        f"Dataset split: {split}",
         f"Device: {device}",
         "",
         (
@@ -343,12 +375,12 @@ def build_summary(
             f"{format_checkpoint_value(checkpoint, 'val_macro_f1')}"
         ),
         "",
-        f"Test loss: {test_loss:.4f}",
-        f"Test accuracy: {test_accuracy:.4f}",
-        f"Test macro precision: {test_precision:.4f}",
-        f"Test macro recall: {test_recall:.4f}",
-        f"Test macro-F1: {test_macro_f1:.4f}",
-        f"Test GM: {test_g_mean:.4f}",
+        f"{split_name} loss: {evaluation_loss:.4f}",
+        f"{split_name} accuracy: {evaluation_accuracy:.4f}",
+        f"{split_name} macro precision: {evaluation_precision:.4f}",
+        f"{split_name} macro recall: {evaluation_recall:.4f}",
+        f"{split_name} macro-F1: {evaluation_macro_f1:.4f}",
+        f"{split_name} GM: {evaluation_g_mean:.4f}",
     ])
 
 
@@ -390,19 +422,19 @@ def save_per_class_report(
 
 def save_predictions(
     output_path: Path,
-    test_dataset: IP102Dataset,
+    evaluation_dataset: IP102Dataset,
     all_labels: list[int],
     all_predictions: list[int],
 ) -> None:
-    """Save one row for every test image."""
-    if not hasattr(test_dataset, "samples"):
+    """Save one row for every evaluated image."""
+    if not hasattr(evaluation_dataset, "samples"):
         raise AttributeError(
             "IP102Dataset must expose a 'samples' attribute to save filenames."
         )
 
     image_names = [
         image_name
-        for image_name, _ in test_dataset.samples
+        for image_name, _ in evaluation_dataset.samples
     ]
 
     if len(image_names) != len(all_labels):
@@ -456,11 +488,16 @@ def main() -> None:
             f"Model checkpoint not found: {model_path}"
         )
 
-    paths = create_output_paths(model_path, args.output_dir)
+    paths = create_output_paths(
+        model_path=model_path,
+        requested_output_dir=args.output_dir,
+        split=args.split,
+    )
     device = select_device()
     insect_names = load_insect_names(CLASSES_PATH)
 
-    test_dataset, test_loader = create_test_loader(
+    evaluation_dataset, evaluation_loader = create_evaluation_loader(
+        split=args.split,
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         device=device,
@@ -469,10 +506,11 @@ def main() -> None:
     model = create_resnet50_model(device)
     checkpoint = load_checkpoint(model_path, model, device)
 
-    test_loss, all_labels, all_predictions = evaluate(
-        model,
-        test_loader,
-        device,
+    evaluation_loss, all_labels, all_predictions = evaluate(
+        model=model,
+        evaluation_loader=evaluation_loader,
+        device=device,
+        split=args.split,
     )
 
     summary = build_summary(
@@ -480,7 +518,8 @@ def main() -> None:
         model_path=model_path,
         output_dir=paths["output_dir"],
         device=device,
-        test_loss=test_loss,
+        split=args.split,
+        evaluation_loss=evaluation_loss,
         all_labels=all_labels,
         all_predictions=all_predictions,
     )
@@ -501,7 +540,7 @@ def main() -> None:
     )
     save_predictions(
         paths["predictions"],
-        test_dataset,
+        evaluation_dataset,
         all_labels,
         all_predictions,
     )
@@ -513,7 +552,7 @@ def main() -> None:
     )
 
     print()
-    print("Test summary saved to:", paths["summary"])
+    print(f"{args.split.capitalize()} summary saved to:", paths["summary"])
     print("Classification report saved to:", paths["report"])
     print("Predictions saved to:", paths["predictions"])
     print("Confusion matrix saved to:", paths["confusion_matrix"])
