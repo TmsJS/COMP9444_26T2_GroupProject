@@ -11,6 +11,72 @@ import pandas as pd
 
 SPLITS = ("train", "val", "test")
 
+# Support intervals used to test whether the rarest classes are actually
+# responsible for most mistakes. Bounds are inclusive.
+SUPPORT_BUCKETS = (
+    ("under_20", 0, 19),
+    ("20_to_49", 20, 49),
+    ("50_to_99", 50, 99),
+    ("100_to_199", 100, 199),
+    ("200_or_more", 200, None),
+)
+
+# Predefined IP102 groups whose members have similar appearances or related
+# label meanings. These are diagnostic groups, not automatic label merges.
+IP102_CONFUSION_CLUSTERS = {
+    "cutworms": [
+        "black cutworm",
+        "large cutworm",
+        "yellow cutworm",
+    ],
+    "plant_hoppers": [
+        "brown plant hopper",
+        "white backed plant hopper",
+        "small brown plant hopper",
+    ],
+    "aphids": [
+        "aphids",
+        "english grain aphid",
+        "green bug",
+        "bird cherry-oataphid",
+        "therioaphis maculata Buckton",
+        "Toxoptera citricidus",
+        "Toxoptera aurantii",
+        "Aphis citricola Vander Goot",
+    ],
+    "army_worms": [
+        "army worm",
+        "cabbage army worm",
+        "beet army worm",
+        "Prodenia litura",
+        "flax budworm",
+    ],
+    "plant_bugs_and_miridae": [
+        "Apolygus lucorum",
+        "alfalfa plant bug",
+        "tarnished plant bug",
+        "Miridae",
+    ],
+    "blister_beetles": [
+        "lytta polita",
+        "legume blister beetle",
+        "blister beetle",
+    ],
+    "mites": [
+        "red spider",
+        "longlegged spider mite",
+        "penthaleus major",
+        "Panonchus citri McGregor",
+        "Colomerus vitis",
+        "Polyphagotars onemus latus",
+    ],
+    "fruit_flies": [
+        "Tetradacus c Bactrocera minax",
+        "Dacus dorsalis(Hendel)",
+        "Bactrocera tsuneonis",
+    ],
+}
+
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -427,6 +493,255 @@ def create_mutual_pairs_table(
     return result
 
 
+def create_support_bucket_table(
+    per_class: pd.DataFrame,
+    split: str,
+) -> pd.DataFrame:
+    """
+    Summarise performance by class-support interval.
+
+    Rows follow increasing support so the rarest-class bucket appears first.
+    The error_share column measures each bucket's contribution to all
+    false-negative errors in the split.
+    """
+    total_samples = per_class["support"].sum()
+    total_errors = per_class["false_negative"].sum()
+    rows: list[dict[str, int | float | str]] = []
+
+    for bucket_order, (
+        bucket_name,
+        minimum_support,
+        maximum_support,
+    ) in enumerate(SUPPORT_BUCKETS, start=1):
+        if maximum_support is None:
+            selected = per_class[
+                per_class["support"] >= minimum_support
+            ]
+            support_range = f">={minimum_support}"
+        else:
+            selected = per_class[
+                per_class["support"].between(
+                    minimum_support,
+                    maximum_support,
+                    inclusive="both",
+                )
+            ]
+            support_range = (
+                f"{minimum_support}-{maximum_support}"
+            )
+
+        number_samples = int(selected["support"].sum())
+        number_errors = int(selected["false_negative"].sum())
+
+        rows.append(
+            {
+                "bucket_order": bucket_order,
+                "split": split,
+                "support_bucket": bucket_name,
+                "support_range": support_range,
+                "number_classes": len(selected),
+                "number_samples": number_samples,
+                "sample_share": (
+                    number_samples / total_samples
+                    if total_samples
+                    else 0.0
+                ),
+                "number_errors": number_errors,
+                "error_share": (
+                    number_errors / total_errors
+                    if total_errors
+                    else 0.0
+                ),
+                "macro_precision": (
+                    selected["precision"].mean()
+                    if not selected.empty
+                    else 0.0
+                ),
+                "macro_recall": (
+                    selected["recall"].mean()
+                    if not selected.empty
+                    else 0.0
+                ),
+                "macro_f1": (
+                    selected["f1_score"].mean()
+                    if not selected.empty
+                    else 0.0
+                ),
+            }
+        )
+
+    return pd.DataFrame(rows)
+
+
+def create_confusion_cluster_table(
+    matrix: np.ndarray,
+    class_names: list[str],
+    per_class: pd.DataFrame,
+    split: str,
+) -> pd.DataFrame:
+    """
+    Quantify errors occurring within predefined similar-class groups.
+
+    This table does not assert that labels should be merged. It identifies
+    candidate groups for image inspection, higher-resolution training, or
+    a specialist/hierarchical classifier.
+    """
+    name_to_index = {
+        class_name: index
+        for index, class_name in enumerate(class_names)
+    }
+    total_split_errors = per_class["false_negative"].sum()
+    rows: list[dict[str, int | float | str]] = []
+
+    for cluster_name, requested_members in (
+        IP102_CONFUSION_CLUSTERS.items()
+    ):
+        members = [
+            member
+            for member in requested_members
+            if member in name_to_index
+        ]
+        missing_members = [
+            member
+            for member in requested_members
+            if member not in name_to_index
+        ]
+
+        if len(members) < 2:
+            continue
+
+        indices = [name_to_index[member] for member in members]
+        cluster_matrix = matrix[np.ix_(indices, indices)]
+
+        cluster_support = float(matrix[indices, :].sum())
+        cluster_correct = float(
+            np.diag(matrix)[indices].sum()
+        )
+        all_cluster_errors = cluster_support - cluster_correct
+        within_cluster_errors = float(
+            cluster_matrix.sum()
+            - np.diag(cluster_matrix).sum()
+        )
+        outside_cluster_errors = (
+            all_cluster_errors - within_cluster_errors
+        )
+
+        rows.append(
+            {
+                "split": split,
+                "cluster_name": cluster_name,
+                "number_classes": len(members),
+                "class_members": " | ".join(members),
+                "missing_members": " | ".join(missing_members),
+                "cluster_support": int(cluster_support),
+                "cluster_correct": int(cluster_correct),
+                "all_cluster_errors": int(all_cluster_errors),
+                "within_cluster_errors": int(
+                    within_cluster_errors
+                ),
+                "outside_cluster_errors": int(
+                    outside_cluster_errors
+                ),
+                "within_share_of_cluster_errors": (
+                    within_cluster_errors / all_cluster_errors
+                    if all_cluster_errors
+                    else 0.0
+                ),
+                "within_error_rate_of_cluster_support": (
+                    within_cluster_errors / cluster_support
+                    if cluster_support
+                    else 0.0
+                ),
+                "within_share_of_all_split_errors": (
+                    within_cluster_errors / total_split_errors
+                    if total_split_errors
+                    else 0.0
+                ),
+            }
+        )
+
+    result = (
+        pd.DataFrame(rows)
+        .sort_values(
+            by=[
+                "within_cluster_errors",
+                "within_share_of_cluster_errors",
+                "cluster_support",
+            ],
+            ascending=[False, False, False],
+        )
+        .reset_index(drop=True)
+    )
+    result.insert(
+        0,
+        "cluster_priority_rank",
+        np.arange(1, len(result) + 1),
+    )
+    return result
+
+
+def create_error_concentration_table(
+    per_class: pd.DataFrame,
+    split: str,
+) -> pd.DataFrame:
+    """
+    Rank classes by error count and calculate their cumulative contribution.
+
+    This answers questions such as how many difficult classes account for
+    half of all validation errors.
+    """
+    total_errors = per_class["false_negative"].sum()
+
+    result = (
+        per_class[
+            [
+                "label",
+                "insect_name",
+                "support",
+                "false_negative",
+                "error_rate",
+                "precision",
+                "recall",
+                "f1_score",
+                "top1_wrong_class",
+                "top1_wrong_count",
+                "top1_wrong_rate",
+            ]
+        ]
+        .sort_values(
+            by=[
+                "false_negative",
+                "error_rate",
+                "support",
+            ],
+            ascending=[False, False, False],
+        )
+        .reset_index(drop=True)
+    )
+
+    result.insert(0, "split", split)
+    result.insert(
+        0,
+        "error_contribution_rank",
+        np.arange(1, len(result) + 1),
+    )
+    result["error_share"] = (
+        result["false_negative"] / total_errors
+        if total_errors
+        else 0.0
+    )
+    result["cumulative_errors"] = (
+        result["false_negative"].cumsum()
+    )
+    result["cumulative_error_share"] = (
+        result["cumulative_errors"] / total_errors
+        if total_errors
+        else 0.0
+    )
+
+    return result
+
+
 def create_summary(
     matrix: np.ndarray,
     per_class: pd.DataFrame,
@@ -480,6 +795,20 @@ def analyse_split(
         split,
         min_pair_count,
     )
+    support_buckets = create_support_bucket_table(
+        per_class,
+        split,
+    )
+    confusion_clusters = create_confusion_cluster_table(
+        matrix,
+        class_names,
+        per_class,
+        split,
+    )
+    error_concentration = create_error_concentration_table(
+        per_class,
+        split,
+    )
     summary = create_summary(matrix, per_class, split)
 
     per_class_path = (
@@ -490,6 +819,15 @@ def analyse_split(
     )
     mutual_pairs_path = (
         analysis_dir / f"{split}_mutual_confusions.csv"
+    )
+    support_buckets_path = (
+        analysis_dir / f"{split}_support_bucket_analysis.csv"
+    )
+    confusion_clusters_path = (
+        analysis_dir / f"{split}_confusion_cluster_analysis.csv"
+    )
+    error_concentration_path = (
+        analysis_dir / f"{split}_error_concentration.csv"
     )
     per_class.to_csv(
         per_class_path,
@@ -506,6 +844,21 @@ def analyse_split(
         index=False,
         float_format="%.6f",
     )
+    support_buckets.to_csv(
+        support_buckets_path,
+        index=False,
+        float_format="%.6f",
+    )
+    confusion_clusters.to_csv(
+        confusion_clusters_path,
+        index=False,
+        float_format="%.6f",
+    )
+    error_concentration.to_csv(
+        error_concentration_path,
+        index=False,
+        float_format="%.6f",
+    )
     print(f"\n[{split.upper()}]")
     print("Input:", matrix_path)
     print(
@@ -516,6 +869,9 @@ def analyse_split(
     print("Per-class analysis:", per_class_path)
     print("Directed confusion pairs:", directed_pairs_path)
     print("Mutual confusion pairs:", mutual_pairs_path)
+    print("Support-bucket analysis:", support_buckets_path)
+    print("Confusion-cluster analysis:", confusion_clusters_path)
+    print("Error concentration:", error_concentration_path)
     return per_class, summary
 
 
