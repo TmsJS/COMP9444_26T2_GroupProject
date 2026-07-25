@@ -1,15 +1,15 @@
 Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50/base_resnet50_best_model.pth
 Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50
-Dataset split: test
+Dataset split: val
 Device: cuda
 
 Best checkpoint epoch: 14
 Best validation accuracy: 0.7256
 Best validation Macro-F1: 0.6543
 
-Test loss: 1.2814
-Test accuracy: 0.7188
-Test macro precision: 0.6645
-Test macro recall: 0.6351
-Test macro-F1: 0.6456
-Test GM: 0.6034
+Validation loss: 1.2513
+Validation accuracy: 0.7258
+Validation macro precision: 0.6697
+Validation macro recall: 0.6470
+Validation macro-F1: 0.6545
+Validation GM: 0.6097
