@@ -1,0 +1,83 @@
+confusion_rank,split,true_label,true_class,predicted_label,predicted_class,wrong_count,true_class_support,wrong_rate_of_true_class,share_of_true_class_errors,predicted_class_total,share_of_predicted_class
+1,train,85,Bactrocera tsuneonis,83,Tetradacus c Bactrocera minax,42,100,0.420000,0.777778,274,0.153285
+2,train,89,Toxoptera citricidus,24,aphids,41,113,0.362832,0.672131,2539,0.016148
+3,train,32,longlegged spider mite,21,red spider,37,147,0.251701,0.420455,359,0.103064
+4,train,17,white margined moth,18,black cutworm,33,88,0.375000,0.428571,545,0.060550
+5,train,90,Toxoptera aurantii,24,aphids,29,135,0.214815,0.371795,2539,0.011422
+6,train,60,Colomerus vitis,59,Viteus vitifoliae,26,105,0.247619,0.565217,239,0.108787
+7,train,32,longlegged spider mite,74,Panonchus citri McGregor,25,147,0.170068,0.284091,266,0.093985
+8,train,12,grain spreader thrips,33,wheat phloeothrips,22,103,0.213592,0.372881,210,0.104762
+9,train,12,grain spreader thrips,54,Thrips,22,103,0.213592,0.372881,573,0.038394
+10,train,17,white margined moth,20,yellow cutworm,19,88,0.215909,0.246753,305,0.062295
+11,train,90,Toxoptera aurantii,91,Aphis citricola Vander Goot,18,135,0.133333,0.230769,232,0.077586
+12,train,35,cerodonta denticornis,6,Rice Stemfly,17,82,0.207317,0.459459,239,0.071130
+13,train,98,Mango flat beak leafhopper,101,Cicadellidae,16,55,0.290909,0.888889,3471,0.004610
+14,train,35,cerodonta denticornis,2,paddy stem maggot,15,82,0.182927,0.405405,181,0.082873
+15,train,53,odontothrips loti,54,Thrips,15,106,0.141509,0.394737,573,0.026178
+16,train,96,Deporaus marginatus Pascoe,42,beet weevil,15,126,0.119048,0.348837,199,0.075377
+17,train,90,Toxoptera aurantii,29,bird cherry-oataphid,15,135,0.111111,0.192308,452,0.033186
+18,train,36,beet fly,40,Beet spot flies,14,62,0.225806,0.482759,199,0.070352
+19,train,72,Erythroneura apicalis,101,Cicadellidae,13,42,0.309524,1.000000,3471,0.003745
+20,train,85,Bactrocera tsuneonis,84,Dacus dorsalis(Hendel),12,100,0.120000,0.222222,278,0.043165
+21,train,53,odontothrips loti,33,wheat phloeothrips,12,106,0.113208,0.315789,210,0.057143
+22,train,79,Chrysomphalus aonidum,77,Unaspis yanonensis,12,135,0.088889,0.545455,266,0.045113
+23,train,17,white margined moth,19,large cutworm,11,88,0.125000,0.142857,305,0.036066
+24,train,53,odontothrips loti,92,Scirtothrips dorsalis Hood,11,106,0.103774,0.289474,509,0.021611
+25,train,96,Deporaus marginatus Pascoe,100,Sternochetus frigidus,11,126,0.087302,0.255814,285,0.038596
+26,train,81,Nipaecoccus vastalor,64,Pseudococcus comstocki Kuwana,10,59,0.169492,0.588235,194,0.051546
+27,train,36,beet fly,2,paddy stem maggot,10,62,0.161290,0.344828,181,0.055249
+28,train,12,grain spreader thrips,92,Scirtothrips dorsalis Hood,10,103,0.097087,0.169492,509,0.019646
+29,train,89,Toxoptera citricidus,29,bird cherry-oataphid,9,113,0.079646,0.147541,452,0.019912
+30,train,90,Toxoptera aurantii,28,green bug,9,135,0.066667,0.115385,207,0.043478
+31,train,60,Colomerus vitis,54,Thrips,8,105,0.076190,0.173913,573,0.013962
+32,train,43,sericaorient alismots chulsky,25,Potosiabre vitarsis,8,114,0.070175,0.296296,347,0.023055
+33,train,31,penthaleus major,74,Panonchus citri McGregor,7,139,0.050360,0.250000,266,0.026316
+34,train,17,white margined moth,86,Prodenia litura,6,88,0.068182,0.077922,790,0.007595
+35,train,55,alfalfa seed chalcid,70,Miridae,6,111,0.054054,0.200000,3058,0.001962
+36,train,43,sericaorient alismots chulsky,37,flea beetle,6,114,0.052632,0.222222,481,0.012474
+37,train,96,Deporaus marginatus Pascoe,51,blister beetle,6,126,0.047619,0.139535,1148,0.005226
+38,train,31,penthaleus major,24,aphids,6,139,0.043165,0.214286,2539,0.002363
+39,train,81,Nipaecoccus vastalor,76,Icerya purchasi Maskell,5,59,0.084746,0.294118,439,0.011390
+40,train,90,Toxoptera aurantii,27,english grain aphid,5,135,0.037037,0.064103,404,0.012376
+41,train,80,Parlatoria zizyphus Lucus,82,Aleurocanthus spiniferus,4,44,0.090909,0.666667,419,0.009547
+42,train,35,cerodonta denticornis,40,Beet spot flies,4,82,0.048780,0.108108,199,0.020101
+43,train,43,sericaorient alismots chulsky,50,legume blister beetle,4,114,0.035088,0.148148,852,0.004695
+44,train,31,penthaleus major,21,red spider,4,139,0.028777,0.142857,359,0.011142
+45,train,32,longlegged spider mite,8,white backed plant hopper,4,147,0.027211,0.045455,540,0.007407
+46,train,32,longlegged spider mite,27,english grain aphid,4,147,0.027211,0.045455,404,0.009901
+47,train,61,Brevipoalpus lewisi McGregor,74,Panonchus citri McGregor,3,47,0.063830,0.750000,266,0.011278
+48,train,63,Polyphagotars onemus latus,92,Scirtothrips dorsalis Hood,3,50,0.060000,0.500000,509,0.005894
+49,train,36,beet fly,84,Dacus dorsalis(Hendel),3,62,0.048387,0.103448,278,0.010791
+50,train,65,parathrene regalis,26,peach borer,3,84,0.035714,0.300000,417,0.007194
+51,train,17,white margined moth,14,grub,3,88,0.034091,0.038961,525,0.005714
+52,train,12,grain spreader thrips,0,rice leaf roller,3,103,0.029126,0.050847,673,0.004458
+53,train,55,alfalfa seed chalcid,38,cabbage army worm,3,111,0.027027,0.100000,518,0.005792
+54,train,55,alfalfa seed chalcid,67,Lycorma delicatula,3,111,0.027027,0.100000,3194,0.000939
+55,train,89,Toxoptera citricidus,91,Aphis citricola Vander Goot,3,113,0.026549,0.049180,232,0.012931
+56,train,43,sericaorient alismots chulsky,14,grub,3,114,0.026316,0.111111,525,0.005714
+57,train,43,sericaorient alismots chulsky,16,wireworm,3,114,0.026316,0.111111,536,0.005597
+58,train,43,sericaorient alismots chulsky,51,blister beetle,3,114,0.026316,0.111111,1148,0.002613
+59,train,31,penthaleus major,10,rice water weevil,3,139,0.021583,0.107143,519,0.005780
+60,train,32,longlegged spider mite,24,aphids,3,147,0.020408,0.034091,2539,0.001182
+61,train,80,Parlatoria zizyphus Lucus,77,Unaspis yanonensis,2,44,0.045455,0.333333,266,0.007519
+62,train,98,Mango flat beak leafhopper,69,Cicadella viridis,2,55,0.036364,0.111111,769,0.002601
+63,train,81,Nipaecoccus vastalor,94,Lawana imitata Melichar,2,59,0.033898,0.117647,348,0.005747
+64,train,65,parathrene regalis,68,Xylotrechus,2,84,0.023810,0.200000,693,0.002886
+65,train,75,Phyllocoptes oleiverus ashmead,71,Trialeurodes vaporariorum,2,103,0.019417,0.333333,419,0.004773
+66,train,60,Colomerus vitis,67,Lycorma delicatula,2,105,0.019048,0.043478,3194,0.000626
+67,train,60,Colomerus vitis,70,Miridae,2,105,0.019048,0.043478,3058,0.000654
+68,train,55,alfalfa seed chalcid,14,grub,2,111,0.018018,0.066667,525,0.003810
+69,train,55,alfalfa seed chalcid,40,Beet spot flies,2,111,0.018018,0.066667,199,0.010050
+70,train,55,alfalfa seed chalcid,48,Locustoidea,2,111,0.018018,0.066667,838,0.002387
+71,train,96,Deporaus marginatus Pascoe,10,rice water weevil,2,126,0.015873,0.046512,519,0.003854
+72,train,96,Deporaus marginatus Pascoe,24,aphids,2,126,0.015873,0.046512,2539,0.000788
+73,train,96,Deporaus marginatus Pascoe,50,legume blister beetle,2,126,0.015873,0.046512,852,0.002347
+74,train,96,Deporaus marginatus Pascoe,70,Miridae,2,126,0.015873,0.046512,3058,0.000654
+75,train,79,Chrysomphalus aonidum,78,Ceroplastes rubens,2,135,0.014815,0.090909,157,0.012739
+76,train,31,penthaleus major,27,english grain aphid,2,139,0.014388,0.071429,404,0.004950
+77,train,31,penthaleus major,32,longlegged spider mite,2,139,0.014388,0.071429,61,0.032787
+78,train,32,longlegged spider mite,1,rice leaf caterpillar,2,147,0.013605,0.022727,295,0.006780
+79,train,32,longlegged spider mite,5,rice gall midge,2,147,0.013605,0.022727,308,0.006494
+80,train,32,longlegged spider mite,29,bird cherry-oataphid,2,147,0.013605,0.022727,452,0.004425
+81,train,32,longlegged spider mite,54,Thrips,2,147,0.013605,0.022727,573,0.003490
+82,train,7,brown plant hopper,9,small brown plant hopper,2,500,0.004000,0.666667,333,0.006006

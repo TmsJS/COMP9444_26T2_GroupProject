@@ -1,0 +1,9 @@
+cluster_priority_rank,split,cluster_name,number_classes,class_members,missing_members,cluster_support,cluster_correct,all_cluster_errors,within_cluster_errors,outside_cluster_errors,within_share_of_cluster_errors,within_error_rate_of_cluster_support,within_share_of_all_split_errors
+1,val,aphids,8,aphids | english grain aphid | green bug | bird cherry-oataphid | therioaphis maculata Buckton | Toxoptera citricidus | Toxoptera aurantii | Aphis citricola Vander Goot,,680,441,239,162,77,0.677824,0.238235,0.076850
+2,val,army_worms,5,army worm | cabbage army worm | beet army worm | Prodenia litura | flax budworm,,589,340,249,137,112,0.550201,0.232598,0.064991
+3,val,plant_bugs_and_miridae,4,Apolygus lucorum | alfalfa plant bug | tarnished plant bug | Miridae,,694,521,173,103,70,0.595376,0.148415,0.048861
+4,val,blister_beetles,3,lytta polita | legume blister beetle | blister beetle,,395,253,142,87,55,0.612676,0.220253,0.041271
+5,val,plant_hoppers,3,brown plant hopper | white backed plant hopper | small brown plant hopper,,229,109,120,84,36,0.700000,0.366812,0.039848
+6,val,cutworms,3,black cutworm | large cutworm | yellow cutworm,,182,91,91,59,32,0.648352,0.324176,0.027989
+7,val,mites,6,red spider | longlegged spider mite | penthaleus major | Panonchus citri McGregor | Colomerus vitis | Polyphagotars onemus latus,,165,91,74,38,36,0.513514,0.230303,0.018027
+8,val,fruit_flies,3,Tetradacus c Bactrocera minax | Dacus dorsalis(Hendel) | Bactrocera tsuneonis,,100,63,37,23,14,0.621622,0.230000,0.010911

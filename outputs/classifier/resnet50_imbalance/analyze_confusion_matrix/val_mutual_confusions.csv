@@ -1,0 +1,71 @@
+mutual_confusion_rank,split,class_a_label,class_a,class_a_support,class_b_label,class_b,class_b_support,a_to_b_count,a_to_b_rate,b_to_a_count,b_to_a_rate,combined_wrong_count,combined_confusion_rate,combined_support
+1,val,50,legume blister beetle,141,51,blister beetle,189,19,0.134752,25,0.132275,44,0.133333,330
+2,val,7,brown plant hopper,83,8,white backed plant hopper,90,21,0.253012,22,0.244444,43,0.248555,173
+3,val,69,Cicadella viridis,128,101,Cicadellidae,573,21,0.164062,21,0.036649,42,0.059914,701
+4,val,47,tarnished plant bug,82,70,Miridae,508,24,0.292683,15,0.029528,39,0.066102,590
+5,val,27,english grain aphid,65,29,bird cherry-oataphid,71,21,0.323077,13,0.183099,34,0.250000,136
+6,val,46,alfalfa plant bug,66,70,Miridae,508,19,0.287879,13,0.025591,32,0.055749,574
+7,val,49,lytta polita,65,51,blister beetle,189,18,0.276923,13,0.068783,31,0.122047,254
+8,val,24,aphids,409,70,Miridae,508,18,0.044010,13,0.025591,31,0.033806,917
+9,val,38,cabbage army worm,85,39,beet army worm,160,12,0.141176,18,0.112500,30,0.122449,245
+10,val,18,black cutworm,85,19,large cutworm,49,9,0.105882,19,0.387755,28,0.208955,134
+11,val,8,white backed plant hopper,90,9,small brown plant hopper,56,9,0.100000,13,0.232143,22,0.150685,146
+12,val,39,beet army worm,160,45,flax budworm,107,8,0.050000,14,0.130841,22,0.082397,267
+13,val,24,aphids,409,27,english grain aphid,65,11,0.026895,10,0.153846,21,0.044304,474
+14,val,18,black cutworm,85,20,yellow cutworm,48,9,0.105882,10,0.208333,19,0.142857,133
+15,val,7,brown plant hopper,83,9,small brown plant hopper,56,7,0.084337,12,0.214286,19,0.136691,139
+16,val,0,rice leaf roller,111,13,rice shell pest,41,11,0.099099,8,0.195122,19,0.125000,152
+17,val,3,asiatic rice borer,106,22,corn borer,170,10,0.094340,9,0.052941,19,0.068841,276
+18,val,21,red spider,53,74,Panonchus citri McGregor,38,10,0.188679,8,0.210526,18,0.197802,91
+19,val,70,Miridae,508,101,Cicadellidae,573,6,0.011811,12,0.020942,18,0.016651,1081
+20,val,54,Thrips,88,92,Scirtothrips dorsalis Hood,80,10,0.113636,7,0.087500,17,0.101190,168
+21,val,45,flax budworm,107,86,Prodenia litura,130,11,0.102804,6,0.046154,17,0.071730,237
+22,val,38,cabbage army worm,85,86,Prodenia litura,130,10,0.117647,6,0.046154,16,0.074419,215
+23,val,24,aphids,409,29,bird cherry-oataphid,71,6,0.014670,10,0.140845,16,0.033333,480
+24,val,57,Apolygus lucorum,38,70,Miridae,508,9,0.236842,6,0.011811,15,0.027473,546
+25,val,3,asiatic rice borer,106,4,yellow rice borer,50,8,0.075472,6,0.120000,14,0.089744,156
+26,val,83,Tetradacus c Bactrocera minax,39,84,Dacus dorsalis(Hendel),44,6,0.153846,7,0.159091,13,0.156627,83
+27,val,24,aphids,409,91,Aphis citricola Vander Goot,35,4,0.009780,9,0.257143,13,0.029279,444
+28,val,19,large cutworm,49,20,yellow cutworm,48,2,0.040816,10,0.208333,12,0.123711,97
+29,val,28,green bug,32,29,bird cherry-oataphid,71,6,0.187500,6,0.084507,12,0.116505,103
+30,val,49,lytta polita,65,50,legume blister beetle,141,7,0.107692,5,0.035461,12,0.058252,206
+31,val,23,army worm,107,86,Prodenia litura,130,7,0.065421,5,0.038462,12,0.050633,237
+32,val,22,corn borer,170,26,peach borer,69,7,0.041176,5,0.072464,12,0.050209,239
+33,val,23,army worm,107,39,beet army worm,160,6,0.056075,6,0.037500,12,0.044944,267
+34,val,51,blister beetle,189,67,Lycorma delicatula,530,9,0.047619,3,0.005660,12,0.016690,719
+35,val,68,Xylotrechus,115,99,Rhytidodera bowrinii white,55,4,0.034783,7,0.127273,11,0.064706,170
+36,val,22,corn borer,170,23,army worm,107,6,0.035294,5,0.046729,11,0.039711,277
+37,val,51,blister beetle,189,70,Miridae,508,7,0.037037,4,0.007874,11,0.015782,697
+38,val,94,Lawana imitata Melichar,58,95,Salurnis marginella Guerr,48,3,0.051724,7,0.145833,10,0.094340,106
+39,val,46,alfalfa plant bug,66,47,tarnished plant bug,82,4,0.060606,6,0.073171,10,0.067568,148
+40,val,39,beet army worm,160,54,Thrips,88,4,0.025000,6,0.068182,10,0.040323,248
+41,val,39,beet army worm,160,86,Prodenia litura,130,4,0.025000,6,0.046154,10,0.034483,290
+42,val,24,aphids,409,101,Cicadellidae,573,8,0.019560,2,0.003490,10,0.010183,982
+43,val,27,english grain aphid,65,28,green bug,32,4,0.061538,4,0.125000,8,0.082474,97
+44,val,33,wheat phloeothrips,29,54,Thrips,88,4,0.137931,4,0.045455,8,0.068376,117
+45,val,1,rice leaf caterpillar,48,3,asiatic rice borer,106,6,0.125000,2,0.018868,8,0.051948,154
+46,val,45,flax budworm,107,66,Ampelophaga,76,5,0.046729,3,0.039474,8,0.043716,183
+47,val,23,army worm,107,38,cabbage army worm,85,2,0.018692,6,0.070588,8,0.041667,192
+48,val,11,rice leafhopper,40,101,Cicadellidae,573,2,0.050000,6,0.010471,8,0.013051,613
+49,val,54,Thrips,88,67,Lycorma delicatula,530,5,0.056818,3,0.005660,8,0.012945,618
+50,val,39,beet army worm,160,67,Lycorma delicatula,530,3,0.018750,5,0.009434,8,0.011594,690
+51,val,67,Lycorma delicatula,530,70,Miridae,508,3,0.005660,4,0.007874,7,0.006744,1038
+52,val,36,beet fly,10,40,Beet spot flies,30,4,0.400000,2,0.066667,6,0.150000,40
+53,val,2,paddy stem maggot,26,6,Rice Stemfly,37,4,0.153846,2,0.054054,6,0.095238,63
+54,val,42,beet weevil,31,44,alfalfa weevil,52,2,0.064516,4,0.076923,6,0.072289,83
+55,val,46,alfalfa plant bug,66,57,Apolygus lucorum,38,2,0.030303,4,0.105263,6,0.057692,104
+56,val,33,wheat phloeothrips,29,92,Scirtothrips dorsalis Hood,80,4,0.137931,2,0.025000,6,0.055046,109
+57,val,10,rice water weevil,86,100,Sternochetus frigidus,46,4,0.046512,2,0.043478,6,0.045455,132
+58,val,10,rice water weevil,86,44,alfalfa weevil,52,2,0.023256,4,0.076923,6,0.043478,138
+59,val,51,blister beetle,189,99,Rhytidodera bowrinii white,55,2,0.010582,4,0.072727,6,0.024590,244
+60,val,24,aphids,409,46,alfalfa plant bug,66,2,0.004890,4,0.060606,6,0.012632,475
+61,val,45,flax budworm,107,67,Lycorma delicatula,530,2,0.018692,4,0.007547,6,0.009419,637
+62,val,50,legume blister beetle,141,67,Lycorma delicatula,530,4,0.028369,2,0.003774,6,0.008942,671
+63,val,48,Locustoidea,139,101,Cicadellidae,573,3,0.021583,3,0.005236,6,0.008427,712
+64,val,66,Ampelophaga,76,67,Lycorma delicatula,530,3,0.039474,2,0.003774,5,0.008251,606
+65,val,67,Lycorma delicatula,530,86,Prodenia litura,130,3,0.005660,2,0.015385,5,0.007576,660
+66,val,41,meadow moth,27,45,flax budworm,107,2,0.074074,2,0.018692,4,0.029851,134
+67,val,20,yellow cutworm,48,23,army worm,107,2,0.041667,2,0.018692,4,0.025806,155
+68,val,18,black cutworm,85,86,Prodenia litura,130,2,0.023529,2,0.015385,4,0.018605,215
+69,val,24,aphids,409,59,Viteus vitifoliae,35,2,0.004890,2,0.057143,4,0.009009,444
+70,val,68,Xylotrechus,115,70,Miridae,508,2,0.017391,2,0.003937,4,0.006421,623

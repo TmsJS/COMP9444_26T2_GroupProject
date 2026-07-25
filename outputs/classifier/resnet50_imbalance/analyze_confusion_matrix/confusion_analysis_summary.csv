@@ -1,0 +1,4 @@
+summary_order,split,number_classes,number_samples,number_correct,number_wrong,accuracy,macro_precision,macro_recall,macro_f1
+1,train,102,45095,44285,810,0.982038,0.977201,0.920608,0.935666
+2,val,102,7508,5400,2108,0.719233,0.692953,0.612456,0.629810
+3,test,102,22619,16281,6338,0.719793,0.686218,0.616012,0.634665

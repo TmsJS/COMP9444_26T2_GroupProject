@@ -1,15 +1,15 @@
 Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance/resnet50_imbalance_best_model.pth
 Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50_imbalance
-Dataset split: test
+Dataset split: train
 Device: cuda
 
 Best checkpoint epoch: 36
 Best validation accuracy: 0.7192
 Best validation Macro-F1: 0.6298
 
-Test loss: 1.4660
-Test accuracy: 0.7198
-Test macro precision: 0.6862
-Test macro recall: 0.6160
-Test macro-F1: 0.6347
-Test GM: 0.5681
+Training loss: 0.0655
+Training accuracy: 0.9820
+Training macro precision: 0.9772
+Training macro recall: 0.9206
+Training macro-F1: 0.9357
+Training GM: 0.8926
