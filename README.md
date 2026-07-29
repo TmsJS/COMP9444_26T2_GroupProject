@@ -76,14 +76,17 @@ python3 src/1_Classifier/5_ClassSeparability/1_analyze_confusion_matrix.py \
   --min-pair-count 2
 
 
+##### (5) Define new separability_data and Re-evaluate on test set
+python3 src/1_Classifier/5_ClassSeparability/2_evaluate_difficulty_groups.py \
+  outputs/classifier/resnet50 \
+  --split val
 
+python3 src/1_Classifier/5_ClassSeparability/3_prepare_separability_data.py
 
-
-
-
-
-
-
+python3 src/1_Classifier/5_ClassSeparability/3_evaluate_coarse_and_groups.py \
+  outputs/classifier/resnet50 \
+  --split test \
+  --output-dir outputs/classifier/resnet50/separability_analysis
 
 
 
