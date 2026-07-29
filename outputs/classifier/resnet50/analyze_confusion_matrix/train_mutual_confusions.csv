@@ -1,30 +1,29 @@
 mutual_confusion_rank,split,class_a_label,class_a,class_a_support,class_b_label,class_b,class_b_support,a_to_b_count,a_to_b_rate,b_to_a_count,b_to_a_rate,combined_wrong_count,combined_confusion_rate,combined_support
-1,train,18,black cutworm,512,19,large cutworm,294,6,0.011719,20,0.068027,26,0.032258,806
-2,train,7,brown plant hopper,500,8,white backed plant hopper,535,10,0.020000,15,0.028037,25,0.024155,1035
-3,train,8,white backed plant hopper,535,9,small brown plant hopper,331,12,0.022430,10,0.030211,22,0.025404,866
-4,train,50,legume blister beetle,845,51,blister beetle,1138,11,0.013018,11,0.009666,22,0.011094,1983
-5,train,27,english grain aphid,392,29,bird cherry-oataphid,424,6,0.015306,14,0.033019,20,0.024510,816
+1,train,7,brown plant hopper,500,8,white backed plant hopper,535,10,0.020000,18,0.033645,28,0.027053,1035
+2,train,18,black cutworm,512,19,large cutworm,294,7,0.013672,20,0.068027,27,0.033499,806
+3,train,50,legume blister beetle,845,51,blister beetle,1138,13,0.015385,11,0.009666,24,0.012103,1983
+4,train,8,white backed plant hopper,535,9,small brown plant hopper,331,13,0.024299,10,0.030211,23,0.026559,866
+5,train,19,large cutworm,294,20,yellow cutworm,287,6,0.020408,15,0.052265,21,0.036145,581
 6,train,17,white margined moth,88,18,black cutworm,512,17,0.193182,2,0.003906,19,0.031667,600
-7,train,19,large cutworm,294,20,yellow cutworm,287,6,0.020408,12,0.041812,18,0.030981,581
-8,train,18,black cutworm,512,20,yellow cutworm,287,2,0.003906,16,0.055749,18,0.022528,799
-9,train,27,english grain aphid,392,28,green bug,195,5,0.012755,12,0.061538,17,0.028961,587
-10,train,7,brown plant hopper,500,9,small brown plant hopper,331,6,0.012000,10,0.030211,16,0.019254,831
+7,train,18,black cutworm,512,20,yellow cutworm,287,2,0.003906,17,0.059233,19,0.023780,799
+8,train,27,english grain aphid,392,29,bird cherry-oataphid,424,6,0.015306,13,0.030660,19,0.023284,816
+9,train,27,english grain aphid,392,28,green bug,195,4,0.010204,12,0.061538,16,0.027257,587
+10,train,7,brown plant hopper,500,9,small brown plant hopper,331,4,0.008000,12,0.036254,16,0.019254,831
 11,train,31,penthaleus major,139,32,longlegged spider mite,147,8,0.057554,6,0.040816,14,0.048951,286
 12,train,0,rice leaf roller,669,13,rice shell pest,245,5,0.007474,7,0.028571,12,0.013129,914
-13,train,38,cabbage army worm,513,39,beet army worm,962,9,0.017544,3,0.003119,12,0.008136,1475
-14,train,33,wheat phloeothrips,175,54,Thrips,527,3,0.017143,8,0.015180,11,0.015670,702
-15,train,3,asiatic rice borer,631,4,yellow rice borer,302,2,0.003170,8,0.026490,10,0.010718,933
+13,train,33,wheat phloeothrips,175,54,Thrips,527,3,0.017143,8,0.015180,11,0.015670,702
+14,train,38,cabbage army worm,513,39,beet army worm,962,8,0.015595,3,0.003119,11,0.007458,1475
+15,train,69,Cicadella viridis,767,101,Cicadellidae,3444,4,0.005215,6,0.001742,10,0.002375,4211
 16,train,21,red spider,317,74,Panonchus citri McGregor,231,6,0.018927,3,0.012987,9,0.016423,548
-17,train,69,Cicadella viridis,767,101,Cicadellidae,3444,3,0.003911,6,0.001742,9,0.002137,4211
-18,train,28,green bug,195,29,bird cherry-oataphid,424,5,0.025641,3,0.007075,8,0.012924,619
+17,train,28,green bug,195,29,bird cherry-oataphid,424,6,0.030769,3,0.007075,9,0.014540,619
+18,train,3,asiatic rice borer,631,4,yellow rice borer,302,2,0.003170,7,0.023179,9,0.009646,933
 19,train,2,paddy stem maggot,156,6,Rice Stemfly,221,5,0.032051,2,0.009050,7,0.018568,377
 20,train,94,Lawana imitata Melichar,346,95,Salurnis marginella Guerr,292,3,0.008671,4,0.013699,7,0.010972,638
 21,train,0,rice leaf roller,669,1,rice leaf caterpillar,292,2,0.002990,4,0.013699,6,0.006243,961
 22,train,54,Thrips,527,92,Scirtothrips dorsalis Hood,484,4,0.007590,2,0.004132,6,0.005935,1011
 23,train,28,green bug,195,90,Toxoptera aurantii,135,3,0.015385,2,0.014815,5,0.015152,330
-24,train,17,white margined moth,88,20,yellow cutworm,287,3,0.034091,2,0.006969,5,0.013333,375
-25,train,83,Tetradacus c Bactrocera minax,232,84,Dacus dorsalis(Hendel),263,2,0.008621,3,0.011407,5,0.010101,495
+24,train,83,Tetradacus c Bactrocera minax,232,84,Dacus dorsalis(Hendel),263,2,0.008621,3,0.011407,5,0.010101,495
+25,train,46,alfalfa plant bug,393,47,tarnished plant bug,492,2,0.005089,3,0.006098,5,0.005650,885
 26,train,24,aphids,2456,28,green bug,195,2,0.000814,3,0.015385,5,0.001886,2651
-27,train,46,alfalfa plant bug,393,47,tarnished plant bug,492,2,0.005089,2,0.004065,4,0.004520,885
+27,train,24,aphids,2456,27,english grain aphid,392,2,0.000814,3,0.007653,5,0.001756,2848
 28,train,22,corn borer,1018,23,army worm,642,2,0.001965,2,0.003115,4,0.002410,1660
-29,train,24,aphids,2456,27,english grain aphid,392,2,0.000814,2,0.005102,4,0.001404,2848

@@ -1,0 +1,3 @@
+evaluation_order,split,evaluation_level,number_classes,number_samples,number_correct,number_errors,accuracy,macro_precision,macro_recall,macro_f1,g_mean,errors_recovered_by_merging,error_recovery_rate
+1,test,original_fine,102,22619,16259,6360,0.718820,0.664529,0.635068,0.645607,0.603374,0,0.000000
+2,test,merged_coarse,75,22619,18332,4287,0.810469,0.735212,0.708346,0.718006,0.684514,2073,0.325943

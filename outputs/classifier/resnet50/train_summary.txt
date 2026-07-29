@@ -1,15 +1,15 @@
-Checkpoint: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50/base_resnet50_best_model.pth
-Evaluation output: /home/thomas/My_Programs/COMP9444_Group/outputs/classifier/resnet50
+Checkpoint: /Users/thomasshaw/Documents/UNSW_Courses/2026T2/COMP9444_NN/Assign/COMP9444_26T2_GroupProject/outputs/classifier/resnet50/base_resnet50_best_model.pth
+Evaluation output: /Users/thomasshaw/Documents/UNSW_Courses/2026T2/COMP9444_NN/Assign/COMP9444_26T2_GroupProject/outputs/classifier/resnet50
 Dataset split: train
-Device: cuda
+Device: mps
 
 Best checkpoint epoch: 14
 Best validation accuracy: 0.7256
 Best validation Macro-F1: 0.6543
 
-Training loss: 0.0492
-Training accuracy: 0.9878
-Training macro precision: 0.9827
-Training macro recall: 0.9782
-Training macro-F1: 0.9802
-Training GM: 0.9775
+Training loss: 0.0500
+Training accuracy: 0.9874
+Training macro precision: 0.9825
+Training macro recall: 0.9778
+Training macro-F1: 0.9799
+Training GM: 0.9771

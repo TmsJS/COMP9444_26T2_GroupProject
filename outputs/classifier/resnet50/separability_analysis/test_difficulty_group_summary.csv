@@ -1,0 +1,5 @@
+group_order,split,difficulty_group,number_classes,number_samples,sample_share,number_correct,number_errors,conditional_accuracy,conditional_error_rate,error_share,macro_precision,macro_recall,macro_f1
+1,test,easy,34,10367,0.458331,8760,1607,0.844989,0.155011,0.252673,0.809560,0.813500,0.810713
+2,test,cluster_hard,35,9124,0.403378,5711,3413,0.625932,0.374068,0.536635,0.556603,0.525365,0.536804
+3,test,diffuse_hard,17,1624,0.071798,836,788,0.514778,0.485222,0.123899,0.549783,0.513147,0.524925
+4,test,uncertain,16,1504,0.066493,952,552,0.632979,0.367021,0.086792,0.714343,0.625413,0.660988

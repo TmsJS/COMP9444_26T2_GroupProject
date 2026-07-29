@@ -1,0 +1,2074 @@
+recovered_error_rank,image_name,true_label,predicted_label,true_class,predicted_class,true_coarse_label,predicted_coarse_label,true_coarse_class,predicted_coarse_class
+1,04300.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+2,04301.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+3,04309.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+4,04322.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+5,04323.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+6,04325.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+7,04345.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+8,04354.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+9,04364.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+10,04367.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+11,04369.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+12,04370.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+13,04405.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+14,04418.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+15,04450.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+16,04472.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+17,04473.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+18,04478.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+19,04481.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+20,04498.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+21,04499.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+22,04501.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+23,04503.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+24,04508.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+25,04511.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+26,04530.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+27,04545.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+28,04549.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+29,04569.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+30,04572.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+31,04633.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+32,04640.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+33,04643.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+34,04656.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+35,04665.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+36,04702.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+37,04707.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+38,04710.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+39,04750.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+40,04783.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+41,04798.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+42,04829.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+43,04840.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+44,04844.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+45,04856.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+46,04867.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+47,04879.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+48,04882.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+49,04883.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+50,04894.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+51,04895.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+52,04905.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+53,04912.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+54,04931.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+55,04938.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+56,04941.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+57,04942.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+58,04949.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+59,04950.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+60,04959.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+61,04964.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+62,04970.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+63,04971.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+64,04974.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+65,04996.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+66,05006.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+67,05011.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+68,05017.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+69,05056.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+70,05062.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+71,05080.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+72,05087.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+73,05089.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+74,05099.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+75,05100.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+76,05101.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+77,05107.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+78,05109.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+79,05115.jpg,7,9,brown plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+80,05120.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+81,05123.jpg,7,8,brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+82,05137.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+83,05166.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+84,05188.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+85,05192.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+86,05196.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+87,05225.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+88,05229.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+89,05233.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+90,05256.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+91,05281.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+92,05282.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+93,05313.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+94,05321.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+95,05330.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+96,05341.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+97,05344.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+98,05349.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+99,05355.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+100,05379.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+101,05434.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+102,05435.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+103,05437.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+104,05441.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+105,05453.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+106,05461.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+107,05466.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+108,05469.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+109,05475.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+110,05508.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+111,05512.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+112,05517.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+113,05524.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+114,05529.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+115,05536.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+116,05537.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+117,05556.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+118,05596.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+119,05621.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+120,05648.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+121,05671.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+122,05672.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+123,05677.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+124,05679.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+125,05681.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+126,05682.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+127,05687.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+128,05705.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+129,05718.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+130,05738.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+131,05757.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+132,05787.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+133,05791.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+134,05796.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+135,05799.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+136,05808.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+137,05810.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+138,05812.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+139,05852.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+140,05857.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+141,05867.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+142,05893.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+143,05896.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+144,05912.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+145,05915.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+146,05917.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+147,05924.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+148,05937.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+149,05952.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+150,05970.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+151,05974.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+152,05981.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+153,05991.jpg,8,7,white backed plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+154,06010.jpg,8,9,white backed plant hopper,small brown plant hopper,1,1,plant_hoppers,plant_hoppers
+155,06028.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+156,06029.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+157,06036.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+158,06042.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+159,06043.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+160,06046.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+161,06050.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+162,06060.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+163,06062.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+164,06071.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+165,06098.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+166,06102.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+167,06106.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+168,06115.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+169,06135.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+170,06146.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+171,06150.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+172,06152.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+173,06162.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+174,06177.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+175,06186.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+176,06189.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+177,06193.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+178,06200.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+179,06203.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+180,06219.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+181,06220.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+182,06229.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+183,06231.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+184,06232.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+185,06240.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+186,06245.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+187,06252.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+188,06254.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+189,06257.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+190,06260.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+191,06269.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+192,06286.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+193,06292.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+194,06299.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+195,06320.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+196,06326.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+197,06359.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+198,06375.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+199,06377.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+200,06402.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+201,06414.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+202,06432.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+203,06444.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+204,06446.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+205,06448.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+206,06450.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+207,06478.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+208,06481.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+209,06486.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+210,06488.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+211,06491.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+212,06502.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+213,06526.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+214,06535.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+215,06536.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+216,06543.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+217,06548.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+218,06552.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+219,06556.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+220,06558.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+221,06560.jpg,9,7,small brown plant hopper,brown plant hopper,1,1,plant_hoppers,plant_hoppers
+222,06569.jpg,9,8,small brown plant hopper,white backed plant hopper,1,1,plant_hoppers,plant_hoppers
+223,11986.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+224,12002.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+225,12007.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+226,12028.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+227,12080.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+228,12089.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+229,12097.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+230,12114.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+231,12127.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+232,12130.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+233,12132.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+234,12137.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+235,12140.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+236,12149.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+237,12180.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+238,12192.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+239,12213.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+240,12219.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+241,12223.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+242,12227.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+243,12265.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+244,12302.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+245,12312.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+246,12320.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+247,12327.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+248,12328.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+249,12341.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+250,12343.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+251,12344.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+252,12351.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+253,12367.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+254,12379.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+255,12386.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+256,12400.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+257,12419.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+258,12428.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+259,12431.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+260,12435.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+261,12445.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+262,12447.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+263,12452.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+264,12464.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+265,12489.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+266,12506.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+267,12507.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+268,12515.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+269,12543.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+270,12546.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+271,12563.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+272,12564.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+273,12580.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+274,12586.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+275,12596.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+276,12606.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+277,12615.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+278,12626.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+279,12642.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+280,12646.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+281,12658.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+282,12674.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+283,12681.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+284,12685.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+285,12694.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+286,12722.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+287,12723.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+288,12746.jpg,18,19,black cutworm,large cutworm,0,0,cutworms,cutworms
+289,12768.jpg,18,20,black cutworm,yellow cutworm,0,0,cutworms,cutworms
+290,12816.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+291,12828.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+292,12834.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+293,12836.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+294,12838.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+295,12846.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+296,12849.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+297,12857.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+298,12862.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+299,12866.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+300,12886.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+301,12892.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+302,12896.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+303,12899.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+304,12906.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+305,12923.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+306,12935.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+307,12944.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+308,12955.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+309,12965.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+310,12972.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+311,12975.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+312,12979.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+313,12980.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+314,12985.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+315,12986.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+316,12987.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+317,12991.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+318,13014.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+319,13020.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+320,13025.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+321,13039.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+322,13042.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+323,13061.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+324,13076.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+325,13083.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+326,13085.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+327,13103.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+328,13107.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+329,13122.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+330,13126.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+331,13128.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+332,13138.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+333,13140.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+334,13156.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+335,13165.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+336,13166.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+337,13176.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+338,13182.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+339,13192.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+340,13204.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+341,13210.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+342,13214.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+343,13221.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+344,13225.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+345,13234.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+346,13235.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+347,13244.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+348,13249.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+349,13263.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+350,13280.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+351,13289.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+352,13290.jpg,19,20,large cutworm,yellow cutworm,0,0,cutworms,cutworms
+353,13294.jpg,19,18,large cutworm,black cutworm,0,0,cutworms,cutworms
+354,13321.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+355,13325.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+356,13345.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+357,13347.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+358,13360.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+359,13361.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+360,13362.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+361,13370.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+362,13381.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+363,13422.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+364,13428.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+365,13430.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+366,13436.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+367,13507.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+368,13508.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+369,13512.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+370,13517.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+371,13523.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+372,13527.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+373,13534.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+374,13547.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+375,13562.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+376,13571.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+377,13578.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+378,13579.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+379,13581.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+380,13592.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+381,13593.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+382,13610.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+383,13614.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+384,13620.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+385,13624.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+386,13631.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+387,13640.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+388,13641.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+389,13646.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+390,13655.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+391,13662.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+392,13697.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+393,13705.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+394,13708.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+395,13713.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+396,13715.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+397,13722.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+398,13730.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+399,13758.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+400,13759.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+401,13772.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+402,13778.jpg,20,19,yellow cutworm,large cutworm,0,0,cutworms,cutworms
+403,13782.jpg,20,18,yellow cutworm,black cutworm,0,0,cutworms,cutworms
+404,13809.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+405,13813.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+406,13815.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+407,13831.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+408,13838.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+409,13862.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+410,13863.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+411,13891.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+412,13896.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+413,13902.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+414,13912.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+415,13922.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+416,13925.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+417,13929.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+418,13938.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+419,13952.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+420,13973.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+421,13995.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+422,14005.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+423,14010.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+424,14019.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+425,14066.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+426,14075.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+427,14126.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+428,14132.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+429,14134.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+430,14151.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+431,14168.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+432,14173.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+433,14176.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+434,14210.jpg,21,32,red spider,longlegged spider mite,6,6,mites,mites
+435,14220.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+436,14233.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+437,14249.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+438,14252.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+439,14261.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+440,14263.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+441,14282.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+442,14303.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+443,14309.jpg,21,74,red spider,Panonchus citri McGregor,6,6,mites,mites
+444,16014.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+445,16015.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+446,16142.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+447,16155.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+448,16160.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+449,16202.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+450,16212.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+451,16228.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+452,16277.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+453,16280.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+454,16288.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+455,16289.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+456,16304.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+457,16318.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+458,16335.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+459,16336.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+460,16338.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+461,16355.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+462,16358.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+463,16370.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+464,16396.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+465,16407.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+466,16444.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+467,16453.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+468,16494.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+469,16517.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+470,16546.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+471,16590.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+472,16647.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+473,16655.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+474,16657.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+475,16682.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+476,16691.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+477,16730.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+478,16758.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+479,16786.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+480,16788.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+481,16790.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+482,16828.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+483,16845.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+484,16856.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+485,16861.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+486,16873.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+487,16911.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+488,16937.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+489,16948.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+490,16951.jpg,23,38,army worm,cabbage army worm,3,3,army_worms,army_worms
+491,16968.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+492,16974.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+493,16975.jpg,23,86,army worm,Prodenia litura,3,3,army_worms,army_worms
+494,17007.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+495,17023.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+496,17025.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+497,17043.jpg,23,39,army worm,beet army worm,3,3,army_worms,army_worms
+498,17047.jpg,23,45,army worm,flax budworm,3,3,army_worms,army_worms
+499,17094.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+500,17095.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+501,17119.jpg,24,90,aphids,Toxoptera aurantii,5,5,aphids,aphids
+502,17233.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+503,17253.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+504,17275.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+505,17291.jpg,24,90,aphids,Toxoptera aurantii,5,5,aphids,aphids
+506,17325.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+507,17347.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+508,17351.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+509,17365.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+510,17367.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+511,17374.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+512,17377.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+513,17415.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+514,17439.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+515,17444.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+516,17525.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+517,17598.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+518,17603.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+519,17611.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+520,17627.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+521,17650.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+522,17662.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+523,17678.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+524,17787.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+525,17847.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+526,17857.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+527,17893.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+528,17908.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+529,18018.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+530,18023.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+531,18100.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+532,18133.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+533,18192.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+534,18201.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+535,18203.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+536,18210.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+537,18230.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+538,18314.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+539,18386.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+540,18389.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+541,18410.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+542,18421.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+543,18438.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+544,18505.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+545,18511.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+546,18548.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+547,18580.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+548,18614.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+549,18653.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+550,18699.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+551,18726.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+552,18740.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+553,18769.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+554,18787.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+555,18821.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+556,18831.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+557,18864.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+558,18899.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+559,18902.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+560,18942.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+561,18989.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+562,19016.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+563,19027.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+564,19121.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+565,19124.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+566,19169.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+567,19195.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+568,19217.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+569,19244.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+570,19265.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+571,19289.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+572,19317.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+573,19318.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+574,19391.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+575,19436.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+576,19448.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+577,19529.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+578,19564.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+579,19679.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+580,19700.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+581,19772.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+582,19831.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+583,19845.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+584,19871.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+585,19890.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+586,19944.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+587,19962.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+588,19997.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+589,20004.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+590,20061.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+591,20097.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+592,20168.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+593,20225.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+594,20260.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+595,20288.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+596,20367.jpg,24,52,aphids,therioaphis maculata Buckton,5,5,aphids,aphids
+597,20370.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+598,20382.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+599,20399.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+600,20486.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+601,20500.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+602,20502.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+603,20513.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+604,20539.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+605,20545.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+606,20561.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+607,20586.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+608,20602.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+609,20629.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+610,20700.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+611,20711.jpg,24,91,aphids,Aphis citricola Vander Goot,5,5,aphids,aphids
+612,20870.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+613,20880.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+614,20883.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+615,20954.jpg,24,27,aphids,english grain aphid,5,5,aphids,aphids
+616,21016.jpg,24,28,aphids,green bug,5,5,aphids,aphids
+617,21078.jpg,24,89,aphids,Toxoptera citricidus,5,5,aphids,aphids
+618,21089.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+619,21114.jpg,24,90,aphids,Toxoptera aurantii,5,5,aphids,aphids
+620,21126.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+621,21154.jpg,24,29,aphids,bird cherry-oataphid,5,5,aphids,aphids
+622,22432.jpg,27,90,english grain aphid,Toxoptera aurantii,5,5,aphids,aphids
+623,22440.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+624,22444.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+625,22445.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+626,22460.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+627,22461.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+628,22464.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+629,22473.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+630,22480.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+631,22490.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+632,22493.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+633,22495.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+634,22516.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+635,22546.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+636,22561.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+637,22563.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+638,22566.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+639,22567.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+640,22572.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+641,22573.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+642,22579.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+643,22580.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+644,22587.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+645,22588.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+646,22591.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+647,22594.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+648,22597.jpg,27,52,english grain aphid,therioaphis maculata Buckton,5,5,aphids,aphids
+649,22604.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+650,22612.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+651,22613.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+652,22615.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+653,22618.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+654,22619.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+655,22625.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+656,22636.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+657,22637.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+658,22640.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+659,22641.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+660,22644.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+661,22650.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+662,22659.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+663,22663.jpg,27,52,english grain aphid,therioaphis maculata Buckton,5,5,aphids,aphids
+664,22682.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+665,22687.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+666,22689.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+667,22693.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+668,22698.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+669,22699.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+670,22709.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+671,22710.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+672,22713.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+673,22720.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+674,22721.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+675,22725.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+676,22727.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+677,22740.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+678,22741.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+679,22748.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+680,22755.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+681,22756.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+682,22770.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+683,22779.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+684,22784.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+685,22786.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+686,22797.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+687,22799.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+688,22801.jpg,27,52,english grain aphid,therioaphis maculata Buckton,5,5,aphids,aphids
+689,22816.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+690,22835.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+691,22844.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+692,22851.jpg,27,52,english grain aphid,therioaphis maculata Buckton,5,5,aphids,aphids
+693,22858.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+694,22872.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+695,22875.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+696,22888.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+697,22896.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+698,22908.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+699,22912.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+700,22915.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+701,22919.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+702,22937.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+703,22938.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+704,22943.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+705,22945.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+706,22950.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+707,22953.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+708,22957.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+709,22965.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+710,22969.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+711,22972.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+712,22974.jpg,27,52,english grain aphid,therioaphis maculata Buckton,5,5,aphids,aphids
+713,22988.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+714,23000.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+715,23004.jpg,27,90,english grain aphid,Toxoptera aurantii,5,5,aphids,aphids
+716,23017.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+717,23021.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+718,23041.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+719,23043.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+720,23045.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+721,23050.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+722,23062.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+723,23066.jpg,27,24,english grain aphid,aphids,5,5,aphids,aphids
+724,23068.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+725,23069.jpg,27,28,english grain aphid,green bug,5,5,aphids,aphids
+726,23072.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+727,23078.jpg,27,91,english grain aphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+728,23085.jpg,27,29,english grain aphid,bird cherry-oataphid,5,5,aphids,aphids
+729,23104.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+730,23120.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+731,23122.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+732,23128.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+733,23154.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+734,23156.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+735,23158.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+736,23162.jpg,28,91,green bug,Aphis citricola Vander Goot,5,5,aphids,aphids
+737,23164.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+738,23165.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+739,23167.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+740,23176.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+741,23177.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+742,23183.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+743,23187.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+744,23191.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+745,23193.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+746,23194.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+747,23196.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+748,23200.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+749,23201.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+750,23202.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+751,23207.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+752,23208.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+753,23209.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+754,23210.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+755,23217.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+756,23220.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+757,23227.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+758,23232.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+759,23235.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+760,23244.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+761,23249.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+762,23253.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+763,23254.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+764,23256.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+765,23261.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+766,23262.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+767,23268.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+768,23279.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+769,23281.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+770,23293.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+771,23300.jpg,28,91,green bug,Aphis citricola Vander Goot,5,5,aphids,aphids
+772,23312.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+773,23324.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+774,23327.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+775,23332.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+776,23335.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+777,23344.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+778,23347.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+779,23348.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+780,23351.jpg,28,91,green bug,Aphis citricola Vander Goot,5,5,aphids,aphids
+781,23353.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+782,23358.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+783,23361.jpg,28,91,green bug,Aphis citricola Vander Goot,5,5,aphids,aphids
+784,23363.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+785,23366.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+786,23369.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+787,23372.jpg,28,24,green bug,aphids,5,5,aphids,aphids
+788,23374.jpg,28,52,green bug,therioaphis maculata Buckton,5,5,aphids,aphids
+789,23377.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+790,23379.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+791,23380.jpg,28,29,green bug,bird cherry-oataphid,5,5,aphids,aphids
+792,23382.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+793,23387.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+794,23389.jpg,28,27,green bug,english grain aphid,5,5,aphids,aphids
+795,23396.jpg,28,91,green bug,Aphis citricola Vander Goot,5,5,aphids,aphids
+796,23415.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+797,23417.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+798,23418.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+799,23425.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+800,23440.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+801,23450.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+802,23458.jpg,29,52,bird cherry-oataphid,therioaphis maculata Buckton,5,5,aphids,aphids
+803,23482.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+804,23487.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+805,23493.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+806,23496.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+807,23502.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+808,23513.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+809,23532.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+810,23540.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+811,23541.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+812,23553.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+813,23562.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+814,23565.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+815,23573.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+816,23574.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+817,23576.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+818,23583.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+819,23584.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+820,23595.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+821,23600.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+822,23606.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+823,23621.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+824,23630.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+825,23635.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+826,23647.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+827,23648.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+828,23659.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+829,23661.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+830,23663.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+831,23670.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+832,23682.jpg,29,89,bird cherry-oataphid,Toxoptera citricidus,5,5,aphids,aphids
+833,23688.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+834,23691.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+835,23697.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+836,23701.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+837,23709.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+838,23710.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+839,23719.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+840,23720.jpg,29,52,bird cherry-oataphid,therioaphis maculata Buckton,5,5,aphids,aphids
+841,23726.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+842,23735.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+843,23753.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+844,23759.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+845,23764.jpg,29,52,bird cherry-oataphid,therioaphis maculata Buckton,5,5,aphids,aphids
+846,23777.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+847,23782.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+848,23803.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+849,23808.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+850,23836.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+851,23837.jpg,29,89,bird cherry-oataphid,Toxoptera citricidus,5,5,aphids,aphids
+852,23840.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+853,23847.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+854,23860.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+855,23863.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+856,23869.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+857,23873.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+858,23884.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+859,23885.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+860,23891.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+861,23894.jpg,29,52,bird cherry-oataphid,therioaphis maculata Buckton,5,5,aphids,aphids
+862,23897.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+863,23899.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+864,23903.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+865,23912.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+866,23914.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+867,23915.jpg,29,91,bird cherry-oataphid,Aphis citricola Vander Goot,5,5,aphids,aphids
+868,23922.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+869,23924.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+870,23931.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+871,23939.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+872,23940.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+873,23941.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+874,23943.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+875,23955.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+876,23978.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+877,23982.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+878,23995.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+879,24012.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+880,24013.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+881,24014.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+882,24015.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+883,24016.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+884,24020.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+885,24038.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+886,24044.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+887,24047.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+888,24048.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+889,24055.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+890,24059.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+891,24062.jpg,29,24,bird cherry-oataphid,aphids,5,5,aphids,aphids
+892,24081.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+893,24086.jpg,29,90,bird cherry-oataphid,Toxoptera aurantii,5,5,aphids,aphids
+894,24097.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+895,24106.jpg,29,27,bird cherry-oataphid,english grain aphid,5,5,aphids,aphids
+896,24110.jpg,29,28,bird cherry-oataphid,green bug,5,5,aphids,aphids
+897,24610.jpg,31,74,penthaleus major,Panonchus citri McGregor,6,6,mites,mites
+898,24620.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+899,24622.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+900,24634.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+901,24678.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+902,24697.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+903,24735.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+904,24744.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+905,24745.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+906,24750.jpg,31,21,penthaleus major,red spider,6,6,mites,mites
+907,24774.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+908,24783.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+909,24802.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+910,24815.jpg,31,74,penthaleus major,Panonchus citri McGregor,6,6,mites,mites
+911,24818.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+912,24821.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+913,24833.jpg,31,32,penthaleus major,longlegged spider mite,6,6,mites,mites
+914,24841.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+915,24843.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+916,24846.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+917,24853.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+918,24860.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+919,24882.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+920,24885.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+921,24890.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+922,24893.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+923,24897.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+924,24911.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+925,24923.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+926,24925.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+927,24932.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+928,24937.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+929,24944.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+930,24955.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+931,24977.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+932,24983.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+933,24994.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+934,25004.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+935,25006.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+936,25022.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+937,25037.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+938,25040.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+939,25057.jpg,32,31,longlegged spider mite,penthaleus major,6,6,mites,mites
+940,25059.jpg,32,21,longlegged spider mite,red spider,6,6,mites,mites
+941,25065.jpg,32,74,longlegged spider mite,Panonchus citri McGregor,6,6,mites,mites
+942,26743.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+943,26745.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+944,26754.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+945,26765.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+946,26772.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+947,26781.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+948,26795.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+949,26796.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+950,26798.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+951,26802.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+952,26808.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+953,26831.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+954,26834.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+955,26838.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+956,26861.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+957,26875.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+958,26882.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+959,26888.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+960,26894.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+961,26922.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+962,26946.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+963,26947.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+964,26965.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+965,26974.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+966,26975.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+967,26977.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+968,26981.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+969,26986.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+970,27001.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+971,27004.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+972,27009.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+973,27027.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+974,27039.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+975,27040.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+976,27057.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+977,27072.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+978,27086.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+979,27088.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+980,27099.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+981,27123.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+982,27139.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+983,27142.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+984,27148.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+985,27154.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+986,27155.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+987,27163.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+988,27171.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+989,27189.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+990,27200.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+991,27205.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+992,27220.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+993,27224.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+994,27233.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+995,27234.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+996,27240.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+997,27245.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+998,27250.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+999,27251.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1000,27256.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+1001,27264.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1002,27271.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1003,27274.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+1004,27276.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1005,27277.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1006,27282.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1007,27289.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1008,27303.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1009,27305.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1010,27306.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1011,27307.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1012,27318.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+1013,27328.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1014,27330.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1015,27336.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1016,27363.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1017,27377.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1018,27378.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1019,27380.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1020,27405.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1021,27411.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1022,27414.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1023,27419.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1024,27441.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1025,27442.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1026,27449.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1027,27451.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+1028,27458.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1029,27471.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1030,27477.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1031,27484.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1032,27487.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1033,27498.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1034,27499.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1035,27510.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1036,27519.jpg,38,23,cabbage army worm,army worm,3,3,army_worms,army_worms
+1037,27520.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1038,27526.jpg,38,86,cabbage army worm,Prodenia litura,3,3,army_worms,army_worms
+1039,27547.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1040,27552.jpg,38,45,cabbage army worm,flax budworm,3,3,army_worms,army_worms
+1041,27554.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1042,27565.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1043,27584.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1044,27586.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1045,27589.jpg,38,39,cabbage army worm,beet army worm,3,3,army_worms,army_worms
+1046,27647.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1047,27664.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1048,27667.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1049,27683.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1050,27685.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1051,27696.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1052,27698.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1053,27706.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1054,27707.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1055,27712.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1056,27719.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1057,27726.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1058,27761.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1059,27783.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1060,27784.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1061,27788.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1062,27795.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1063,27802.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1064,27814.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1065,27841.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1066,27865.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1067,27885.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1068,27890.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1069,27910.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1070,27924.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1071,27929.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1072,27946.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1073,27949.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1074,27956.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1075,27969.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1076,27982.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1077,27992.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1078,27999.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1079,28006.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1080,28007.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1081,28009.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1082,28035.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1083,28042.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1084,28054.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1085,28060.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1086,28077.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1087,28084.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1088,28090.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1089,28095.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1090,28096.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1091,28149.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1092,28180.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1093,28186.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1094,28220.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1095,28224.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1096,28236.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1097,28248.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1098,28249.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1099,28279.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1100,28292.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1101,28293.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1102,28305.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1103,28331.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1104,28362.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1105,28387.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1106,28392.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1107,28415.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1108,28433.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1109,28434.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1110,28447.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1111,28479.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1112,28481.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1113,28486.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1114,28493.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1115,28507.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1116,28557.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1117,28567.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1118,28588.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1119,28598.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1120,28622.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1121,28645.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1122,28665.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1123,28672.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1124,28688.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1125,28691.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1126,28706.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1127,28801.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1128,28807.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1129,28828.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1130,28830.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1131,28841.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1132,28855.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1133,28858.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1134,28860.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1135,28874.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1136,28885.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1137,28910.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1138,28919.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1139,28934.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1140,28943.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1141,28969.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1142,28975.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1143,28999.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1144,29003.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1145,29007.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1146,29020.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1147,29021.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1148,29044.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1149,29063.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1150,29077.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1151,29097.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1152,29106.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1153,29117.jpg,39,38,beet army worm,cabbage army worm,3,3,army_worms,army_worms
+1154,29123.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1155,29135.jpg,39,23,beet army worm,army worm,3,3,army_worms,army_worms
+1156,29145.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1157,29173.jpg,39,86,beet army worm,Prodenia litura,3,3,army_worms,army_worms
+1158,29177.jpg,39,45,beet army worm,flax budworm,3,3,army_worms,army_worms
+1159,30795.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1160,30800.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1161,30821.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1162,30823.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1163,30835.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1164,30837.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1165,30842.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1166,30856.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1167,30859.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1168,30863.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1169,30864.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1170,30921.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1171,30926.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1172,30931.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1173,30959.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1174,30970.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1175,30979.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1176,30981.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1177,30984.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1178,30999.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1179,31023.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1180,31027.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1181,31034.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1182,31048.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1183,31051.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1184,31055.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1185,31059.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1186,31062.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1187,31067.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1188,31077.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1189,31102.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1190,31106.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1191,31115.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1192,31119.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1193,31134.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1194,31144.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1195,31156.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1196,31161.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1197,31171.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1198,31182.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1199,31195.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1200,31215.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1201,31223.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1202,31264.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1203,31274.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1204,31298.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1205,31313.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1206,31336.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1207,31378.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1208,31382.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1209,31391.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1210,31436.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1211,31463.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1212,31500.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1213,31503.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1214,31513.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1215,31527.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1216,31541.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1217,31557.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1218,31561.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1219,31564.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1220,31575.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1221,31679.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1222,31692.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1223,31707.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1224,31712.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1225,31737.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1226,31751.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1227,31756.jpg,45,23,flax budworm,army worm,3,3,army_worms,army_worms
+1228,31770.jpg,45,86,flax budworm,Prodenia litura,3,3,army_worms,army_worms
+1229,31781.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1230,31810.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1231,31831.jpg,45,38,flax budworm,cabbage army worm,3,3,army_worms,army_worms
+1232,31837.jpg,45,39,flax budworm,beet army worm,3,3,army_worms,army_worms
+1233,31864.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1234,31871.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1235,31877.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1236,31882.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1237,31886.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1238,31889.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1239,31897.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1240,31906.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1241,31917.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1242,31926.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1243,31933.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1244,31937.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1245,31945.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1246,31949.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1247,31954.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1248,31960.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1249,31964.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1250,31979.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1251,31991.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1252,32006.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1253,32014.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1254,32028.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1255,32030.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1256,32051.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1257,32053.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1258,32059.jpg,46,57,alfalfa plant bug,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1259,32071.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1260,32082.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1261,32095.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1262,32109.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1263,32131.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1264,32143.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1265,32152.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1266,32156.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1267,32158.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1268,32170.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1269,32173.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1270,32177.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1271,32178.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1272,32189.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1273,32200.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1274,32205.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1275,32207.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1276,32216.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1277,32225.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1278,32235.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1279,32236.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1280,32237.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1281,32245.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1282,32248.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1283,32261.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1284,32264.jpg,46,57,alfalfa plant bug,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1285,32273.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1286,32279.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1287,32280.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1288,32284.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1289,32288.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1290,32289.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1291,32292.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1292,32302.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1293,32344.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1294,32348.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1295,32361.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1296,32362.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1297,32376.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1298,32382.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1299,32390.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1300,32396.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1301,32406.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1302,32408.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1303,32412.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1304,32417.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1305,32421.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1306,32424.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1307,32427.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1308,32432.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1309,32449.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1310,32454.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1311,32457.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1312,32462.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1313,32466.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1314,32471.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1315,32477.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1316,32481.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1317,32482.jpg,46,47,alfalfa plant bug,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1318,32485.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1319,32500.jpg,46,70,alfalfa plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1320,32516.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1321,32521.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1322,32531.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1323,32547.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1324,32553.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1325,32554.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1326,32556.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1327,32575.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1328,32576.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1329,32586.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1330,32587.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1331,32597.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1332,32630.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1333,32639.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1334,32668.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1335,32669.jpg,47,57,tarnished plant bug,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1336,32679.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1337,32680.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1338,32684.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1339,32686.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1340,32701.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1341,32710.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1342,32716.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1343,32722.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1344,32725.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1345,32736.jpg,47,57,tarnished plant bug,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1346,32738.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1347,32740.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1348,32741.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1349,32751.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1350,32755.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1351,32758.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1352,32763.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1353,32766.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1354,32778.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1355,32780.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1356,32783.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1357,32784.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1358,32789.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1359,32803.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1360,32823.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1361,32844.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1362,32848.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1363,32866.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1364,32872.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1365,32884.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1366,32890.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1367,32895.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1368,32901.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1369,32925.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1370,32928.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1371,32942.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1372,32950.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1373,32951.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1374,32956.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1375,32961.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1376,32962.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1377,32963.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1378,32970.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1379,32980.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1380,32986.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1381,32998.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1382,32999.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1383,33019.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1384,33030.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1385,33042.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1386,33058.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1387,33064.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1388,33075.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1389,33080.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1390,33125.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1391,33127.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1392,33131.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1393,33133.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1394,33134.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1395,33135.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1396,33137.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1397,33148.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1398,33157.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1399,33159.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1400,33160.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1401,33178.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1402,33181.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1403,33195.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1404,33196.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1405,33198.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1406,33203.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1407,33206.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1408,33211.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1409,33216.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1410,33232.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1411,33245.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1412,33258.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1413,33273.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1414,33281.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1415,33288.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1416,33291.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1417,33299.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1418,33312.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1419,33313.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1420,33314.jpg,47,70,tarnished plant bug,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1421,33317.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1422,33328.jpg,47,46,tarnished plant bug,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1423,34733.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1424,34738.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1425,34739.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1426,34740.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1427,34742.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1428,34747.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1429,34756.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1430,34764.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1431,34774.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1432,34776.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1433,34785.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1434,34791.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1435,34797.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1436,34799.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1437,34803.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1438,34806.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1439,34813.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1440,34815.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1441,34827.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1442,34830.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1443,34834.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1444,34846.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1445,34862.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1446,34865.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1447,34875.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1448,34886.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1449,34905.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1450,34912.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1451,34926.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1452,34931.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1453,34932.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1454,34939.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1455,34953.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1456,34956.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1457,34962.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1458,34968.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1459,34972.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1460,34974.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1461,34980.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1462,34996.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1463,35010.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1464,35011.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1465,35013.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1466,35022.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1467,35024.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1468,35026.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1469,35038.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1470,35045.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1471,35050.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1472,35051.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1473,35062.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1474,35078.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1475,35081.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1476,35083.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1477,35099.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1478,35103.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1479,35134.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1480,35148.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1481,35149.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1482,35150.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1483,35154.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1484,35158.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1485,35160.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1486,35170.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1487,35181.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1488,35194.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1489,35197.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1490,35210.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1491,35218.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1492,35219.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1493,35243.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1494,35248.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1495,35256.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1496,35262.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1497,35266.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1498,35271.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1499,35289.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1500,35290.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1501,35295.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1502,35312.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1503,35321.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1504,35327.jpg,49,50,lytta polita,legume blister beetle,4,4,blister_beetles,blister_beetles
+1505,35360.jpg,49,51,lytta polita,blister beetle,4,4,blister_beetles,blister_beetles
+1506,35385.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1507,35409.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1508,35459.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1509,35464.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1510,35508.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1511,35530.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1512,35538.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1513,35539.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1514,35553.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1515,35568.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1516,35601.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1517,35611.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1518,35613.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1519,35632.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1520,35663.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1521,35667.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1522,35684.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1523,35697.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1524,35721.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1525,35729.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1526,35750.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1527,35762.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1528,35773.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1529,35786.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1530,35805.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1531,35823.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1532,35896.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1533,35900.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1534,35926.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1535,35933.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1536,35946.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1537,36006.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1538,36023.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1539,36031.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1540,36037.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1541,36040.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1542,36047.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1543,36056.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1544,36061.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1545,36098.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1546,36101.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1547,36102.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1548,36143.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1549,36164.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1550,36170.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1551,36223.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1552,36233.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1553,36261.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1554,36300.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1555,36303.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1556,36315.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1557,36347.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1558,36366.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1559,36396.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1560,36446.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1561,36462.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1562,36475.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1563,36501.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1564,36518.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1565,36551.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1566,36604.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1567,36610.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1568,36665.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1569,36672.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1570,36677.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1571,36688.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1572,36716.jpg,50,49,legume blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1573,36722.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1574,36732.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1575,36737.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1576,36755.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1577,36768.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1578,36777.jpg,50,51,legume blister beetle,blister beetle,4,4,blister_beetles,blister_beetles
+1579,36794.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1580,36812.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1581,36860.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1582,36910.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1583,36933.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1584,36936.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1585,36973.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1586,36989.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1587,37039.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1588,37042.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1589,37047.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1590,37075.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1591,37122.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1592,37153.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1593,37174.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1594,37177.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1595,37190.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1596,37221.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1597,37249.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1598,37251.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1599,37254.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1600,37262.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1601,37272.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1602,37304.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1603,37310.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1604,37318.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1605,37349.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1606,37381.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1607,37396.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1608,37398.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1609,37411.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1610,37426.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1611,37465.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1612,37483.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1613,37487.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1614,37524.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1615,37531.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1616,37545.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1617,37550.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1618,37551.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1619,37567.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1620,37637.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1621,37672.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1622,37676.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1623,37684.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1624,37812.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1625,37816.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1626,37827.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1627,37865.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1628,37881.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1629,37886.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1630,37902.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1631,37906.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1632,37919.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1633,37927.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1634,37945.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1635,37961.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1636,37979.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1637,37985.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1638,37992.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1639,38001.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1640,38029.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1641,38044.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1642,38078.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1643,38092.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1644,38093.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1645,38098.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1646,38107.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1647,38113.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1648,38115.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1649,38119.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1650,38120.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1651,38144.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1652,38159.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1653,38194.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1654,38221.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1655,38227.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1656,38247.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1657,38257.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1658,38283.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1659,38299.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1660,38310.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1661,38315.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1662,38319.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1663,38373.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1664,38428.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1665,38435.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1666,38492.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1667,38502.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1668,38576.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1669,38587.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1670,38592.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1671,38597.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1672,38598.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1673,38619.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1674,38628.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1675,38631.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1676,38641.jpg,51,50,blister beetle,legume blister beetle,4,4,blister_beetles,blister_beetles
+1677,38654.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1678,38689.jpg,51,49,blister beetle,lytta polita,4,4,blister_beetles,blister_beetles
+1679,38691.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1680,38700.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1681,38709.jpg,52,89,therioaphis maculata Buckton,Toxoptera citricidus,5,5,aphids,aphids
+1682,38712.jpg,52,89,therioaphis maculata Buckton,Toxoptera citricidus,5,5,aphids,aphids
+1683,38713.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1684,38715.jpg,52,28,therioaphis maculata Buckton,green bug,5,5,aphids,aphids
+1685,38723.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1686,38733.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1687,38738.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1688,38742.jpg,52,90,therioaphis maculata Buckton,Toxoptera aurantii,5,5,aphids,aphids
+1689,38763.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1690,38768.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1691,38770.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1692,38795.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1693,38807.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1694,38821.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1695,38823.jpg,52,91,therioaphis maculata Buckton,Aphis citricola Vander Goot,5,5,aphids,aphids
+1696,38825.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1697,38826.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1698,38834.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1699,38839.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1700,38844.jpg,52,28,therioaphis maculata Buckton,green bug,5,5,aphids,aphids
+1701,38862.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1702,38863.jpg,52,27,therioaphis maculata Buckton,english grain aphid,5,5,aphids,aphids
+1703,38866.jpg,52,28,therioaphis maculata Buckton,green bug,5,5,aphids,aphids
+1704,38872.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1705,38878.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1706,38884.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1707,38900.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1708,38905.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1709,38918.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1710,38923.jpg,52,29,therioaphis maculata Buckton,bird cherry-oataphid,5,5,aphids,aphids
+1711,38927.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1712,38935.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1713,38949.jpg,52,24,therioaphis maculata Buckton,aphids,5,5,aphids,aphids
+1714,40662.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1715,40669.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1716,40676.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1717,40686.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1718,40752.jpg,57,47,Apolygus lucorum,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1719,40758.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1720,40782.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1721,40790.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1722,40791.jpg,57,47,Apolygus lucorum,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1723,40799.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1724,40802.jpg,57,47,Apolygus lucorum,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1725,40818.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1726,40827.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1727,40832.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1728,40838.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1729,40844.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1730,40845.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1731,40861.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1732,40868.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1733,40870.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1734,40883.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1735,40905.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1736,40910.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1737,40927.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1738,40932.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1739,40938.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1740,40940.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1741,40943.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1742,40972.jpg,57,46,Apolygus lucorum,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1743,40976.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1744,40984.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1745,40991.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1746,40995.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1747,41001.jpg,57,47,Apolygus lucorum,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1748,41009.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1749,41013.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1750,41036.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1751,41038.jpg,57,70,Apolygus lucorum,Miridae,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1752,43367.jpg,63,74,Polyphagotars onemus latus,Panonchus citri McGregor,6,6,mites,mites
+1753,43368.jpg,63,74,Polyphagotars onemus latus,Panonchus citri McGregor,6,6,mites,mites
+1754,43388.jpg,63,74,Polyphagotars onemus latus,Panonchus citri McGregor,6,6,mites,mites
+1755,52369.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1756,52384.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1757,52387.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1758,52404.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1759,52432.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1760,52448.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1761,52500.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1762,52509.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1763,52518.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1764,52591.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1765,52599.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1766,52635.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1767,52759.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1768,52825.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1769,52830.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1770,52855.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1771,52861.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1772,52932.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1773,53060.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1774,53099.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1775,53140.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1776,53178.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1777,53245.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1778,53361.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1779,53437.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1780,53457.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1781,53560.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1782,53568.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1783,53638.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1784,53653.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1785,53671.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1786,53740.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1787,53817.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1788,53827.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1789,53839.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1790,53944.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1791,54013.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1792,54087.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1793,54167.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1794,54199.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1795,54271.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1796,54302.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1797,54314.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1798,54379.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1799,54490.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1800,54520.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1801,54572.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1802,54574.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1803,54654.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1804,54680.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1805,54689.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1806,54728.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1807,54801.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1808,54803.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1809,54888.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1810,54934.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1811,54970.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1812,55026.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1813,55037.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1814,55105.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1815,55123.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1816,55129.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1817,55246.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1818,55263.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1819,55288.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1820,55347.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1821,55359.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1822,55418.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1823,55423.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1824,55493.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1825,55509.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1826,55646.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1827,55838.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1828,55874.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1829,55896.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1830,55959.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1831,55973.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1832,56023.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1833,56113.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1834,56154.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1835,56186.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1836,56227.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1837,56334.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1838,56375.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1839,56393.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1840,56439.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1841,56469.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1842,56480.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1843,56505.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1844,56516.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1845,56561.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1846,56572.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1847,56579.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1848,56640.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1849,56678.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1850,56765.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1851,56835.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1852,56858.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1853,56917.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1854,56956.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1855,56979.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1856,57019.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1857,57046.jpg,70,57,Miridae,Apolygus lucorum,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1858,57100.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1859,57114.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1860,57122.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1861,57169.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1862,57245.jpg,70,46,Miridae,alfalfa plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1863,57294.jpg,70,47,Miridae,tarnished plant bug,7,7,plant_bugs_and_miridae,plant_bugs_and_miridae
+1864,58688.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1865,58689.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1866,58743.jpg,74,63,Panonchus citri McGregor,Polyphagotars onemus latus,6,6,mites,mites
+1867,58750.jpg,74,32,Panonchus citri McGregor,longlegged spider mite,6,6,mites,mites
+1868,58755.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1869,58772.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1870,58800.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1871,58815.jpg,74,32,Panonchus citri McGregor,longlegged spider mite,6,6,mites,mites
+1872,58836.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1873,58847.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1874,58856.jpg,74,32,Panonchus citri McGregor,longlegged spider mite,6,6,mites,mites
+1875,58876.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1876,58919.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1877,58929.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1878,58930.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1879,58932.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1880,58944.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1881,58946.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1882,58951.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1883,58994.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1884,59007.jpg,74,21,Panonchus citri McGregor,red spider,6,6,mites,mites
+1885,61742.jpg,83,85,Tetradacus c Bactrocera minax,Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1886,61747.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1887,61760.jpg,83,85,Tetradacus c Bactrocera minax,Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1888,61788.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1889,61802.jpg,83,85,Tetradacus c Bactrocera minax,Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1890,61815.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1891,61817.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1892,61830.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1893,61837.jpg,83,85,Tetradacus c Bactrocera minax,Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1894,61840.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1895,61842.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1896,61878.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1897,61887.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1898,61895.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1899,61928.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1900,61950.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1901,61977.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1902,61990.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1903,61999.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1904,62009.jpg,83,85,Tetradacus c Bactrocera minax,Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1905,62072.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1906,62080.jpg,83,84,Tetradacus c Bactrocera minax,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1907,62115.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1908,62159.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1909,62363.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1910,62404.jpg,84,85,Dacus dorsalis(Hendel),Bactrocera tsuneonis,2,2,fruit_flies,fruit_flies
+1911,62434.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1912,62447.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1913,62506.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1914,62515.jpg,84,83,Dacus dorsalis(Hendel),Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1915,62535.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1916,62548.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1917,62556.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1918,62567.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1919,62568.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1920,62571.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1921,62572.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1922,62578.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1923,62586.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1924,62596.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1925,62600.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1926,62608.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1927,62615.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1928,62643.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1929,62645.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1930,62648.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1931,62669.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1932,62685.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1933,62687.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1934,62688.jpg,85,84,Bactrocera tsuneonis,Dacus dorsalis(Hendel),2,2,fruit_flies,fruit_flies
+1935,62691.jpg,85,83,Bactrocera tsuneonis,Tetradacus c Bactrocera minax,2,2,fruit_flies,fruit_flies
+1936,62754.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1937,62766.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1938,62776.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1939,62784.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1940,62806.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1941,62849.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1942,62862.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1943,62866.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1944,62981.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1945,62983.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1946,62992.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1947,63054.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1948,63061.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1949,63064.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1950,63161.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1951,63162.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1952,63189.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1953,63266.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1954,63286.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1955,63302.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1956,63315.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1957,63331.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1958,63368.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1959,63369.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1960,63402.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1961,63409.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1962,63483.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1963,63502.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1964,63508.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1965,63549.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1966,63569.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1967,63583.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1968,63601.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1969,63637.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1970,63641.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1971,63664.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1972,63673.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1973,63674.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1974,63696.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1975,63697.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1976,63702.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1977,63714.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1978,63721.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1979,63759.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1980,63768.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1981,63796.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1982,63797.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1983,63825.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1984,63827.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1985,63854.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1986,63881.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1987,63891.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1988,63910.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1989,63913.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1990,63937.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1991,63942.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1992,63960.jpg,86,23,Prodenia litura,army worm,3,3,army_worms,army_worms
+1993,63963.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1994,63969.jpg,86,45,Prodenia litura,flax budworm,3,3,army_worms,army_worms
+1995,63980.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1996,63981.jpg,86,39,Prodenia litura,beet army worm,3,3,army_worms,army_worms
+1997,63992.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1998,63995.jpg,86,38,Prodenia litura,cabbage army worm,3,3,army_worms,army_worms
+1999,64718.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2000,64722.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2001,64763.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2002,64768.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2003,64769.jpg,89,91,Toxoptera citricidus,Aphis citricola Vander Goot,5,5,aphids,aphids
+2004,64772.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2005,64782.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2006,64793.jpg,89,90,Toxoptera citricidus,Toxoptera aurantii,5,5,aphids,aphids
+2007,64803.jpg,89,90,Toxoptera citricidus,Toxoptera aurantii,5,5,aphids,aphids
+2008,64807.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2009,64822.jpg,89,91,Toxoptera citricidus,Aphis citricola Vander Goot,5,5,aphids,aphids
+2010,64823.jpg,89,28,Toxoptera citricidus,green bug,5,5,aphids,aphids
+2011,64837.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2012,64840.jpg,89,29,Toxoptera citricidus,bird cherry-oataphid,5,5,aphids,aphids
+2013,64841.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2014,64844.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2015,64849.jpg,89,90,Toxoptera citricidus,Toxoptera aurantii,5,5,aphids,aphids
+2016,64867.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2017,64871.jpg,89,90,Toxoptera citricidus,Toxoptera aurantii,5,5,aphids,aphids
+2018,64880.jpg,89,52,Toxoptera citricidus,therioaphis maculata Buckton,5,5,aphids,aphids
+2019,64900.jpg,89,52,Toxoptera citricidus,therioaphis maculata Buckton,5,5,aphids,aphids
+2020,64905.jpg,89,24,Toxoptera citricidus,aphids,5,5,aphids,aphids
+2021,64909.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2022,64919.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2023,64924.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2024,64927.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2025,64929.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2026,64938.jpg,90,28,Toxoptera aurantii,green bug,5,5,aphids,aphids
+2027,64941.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2028,64942.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2029,64949.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2030,64955.jpg,90,28,Toxoptera aurantii,green bug,5,5,aphids,aphids
+2031,64967.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2032,64991.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2033,64997.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2034,65002.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2035,65003.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2036,65004.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2037,65017.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2038,65039.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2039,65040.jpg,90,29,Toxoptera aurantii,bird cherry-oataphid,5,5,aphids,aphids
+2040,65069.jpg,90,89,Toxoptera aurantii,Toxoptera citricidus,5,5,aphids,aphids
+2041,65098.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2042,65100.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2043,65103.jpg,90,24,Toxoptera aurantii,aphids,5,5,aphids,aphids
+2044,65149.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2045,65150.jpg,91,52,Aphis citricola Vander Goot,therioaphis maculata Buckton,5,5,aphids,aphids
+2046,65185.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2047,65194.jpg,91,89,Aphis citricola Vander Goot,Toxoptera citricidus,5,5,aphids,aphids
+2048,65203.jpg,91,29,Aphis citricola Vander Goot,bird cherry-oataphid,5,5,aphids,aphids
+2049,65214.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2050,65215.jpg,91,28,Aphis citricola Vander Goot,green bug,5,5,aphids,aphids
+2051,65249.jpg,91,52,Aphis citricola Vander Goot,therioaphis maculata Buckton,5,5,aphids,aphids
+2052,65260.jpg,91,27,Aphis citricola Vander Goot,english grain aphid,5,5,aphids,aphids
+2053,65277.jpg,91,90,Aphis citricola Vander Goot,Toxoptera aurantii,5,5,aphids,aphids
+2054,65285.jpg,91,89,Aphis citricola Vander Goot,Toxoptera citricidus,5,5,aphids,aphids
+2055,65309.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2056,65311.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2057,65318.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2058,65327.jpg,91,29,Aphis citricola Vander Goot,bird cherry-oataphid,5,5,aphids,aphids
+2059,65335.jpg,91,90,Aphis citricola Vander Goot,Toxoptera aurantii,5,5,aphids,aphids
+2060,65340.jpg,91,27,Aphis citricola Vander Goot,english grain aphid,5,5,aphids,aphids
+2061,65354.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2062,65379.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2063,65405.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2064,65420.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2065,65428.jpg,91,52,Aphis citricola Vander Goot,therioaphis maculata Buckton,5,5,aphids,aphids
+2066,65431.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2067,65432.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2068,65433.jpg,91,90,Aphis citricola Vander Goot,Toxoptera aurantii,5,5,aphids,aphids
+2069,65454.jpg,91,89,Aphis citricola Vander Goot,Toxoptera citricidus,5,5,aphids,aphids
+2070,65455.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2071,65464.jpg,91,90,Aphis citricola Vander Goot,Toxoptera aurantii,5,5,aphids,aphids
+2072,65468.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids
+2073,65474.jpg,91,24,Aphis citricola Vander Goot,aphids,5,5,aphids,aphids

@@ -1,9 +1,9 @@
 cluster_priority_rank,split,cluster_name,number_classes,class_members,missing_members,cluster_support,cluster_correct,all_cluster_errors,within_cluster_errors,outside_cluster_errors,within_share_of_cluster_errors,within_error_rate_of_cluster_support,within_share_of_all_split_errors
-1,train,aphids,8,aphids | english grain aphid | green bug | bird cherry-oataphid | therioaphis maculata Buckton | Toxoptera citricidus | Toxoptera aurantii | Aphis citricola Vander Goot,,4081,4001,80,75,5,0.937500,0.018378,0.136612
-2,train,plant_hoppers,3,brown plant hopper | white backed plant hopper | small brown plant hopper,,1366,1294,72,63,9,0.875000,0.046120,0.114754
-3,train,cutworms,3,black cutworm | large cutworm | yellow cutworm,,1093,1023,70,62,8,0.885714,0.056725,0.112933
-4,train,army_worms,5,army worm | cabbage army worm | beet army worm | Prodenia litura | flax budworm,,3538,3492,46,32,14,0.695652,0.009045,0.058288
-5,train,mites,6,red spider | longlegged spider mite | penthaleus major | Panonchus citri McGregor | Colomerus vitis | Polyphagotars onemus latus,,989,960,29,26,3,0.896552,0.026289,0.047359
-6,train,blister_beetles,3,lytta polita | legume blister beetle | blister beetle,,2375,2349,26,24,2,0.923077,0.010105,0.043716
-7,train,plant_bugs_and_miridae,4,Apolygus lucorum | alfalfa plant bug | tarnished plant bug | Miridae,,4161,4143,18,17,1,0.944444,0.004086,0.030965
-8,train,fruit_flies,3,Tetradacus c Bactrocera minax | Dacus dorsalis(Hendel) | Bactrocera tsuneonis,,595,583,12,12,0,1.000000,0.020168,0.021858
+1,train,aphids,8,aphids | english grain aphid | green bug | bird cherry-oataphid | therioaphis maculata Buckton | Toxoptera citricidus | Toxoptera aurantii | Aphis citricola Vander Goot,,4081,4000,81,76,5,0.938272,0.018623,0.134039
+2,train,cutworms,3,black cutworm | large cutworm | yellow cutworm,,1093,1019,74,67,7,0.905405,0.061299,0.118166
+3,train,plant_hoppers,3,brown plant hopper | white backed plant hopper | small brown plant hopper,,1366,1290,76,67,9,0.881579,0.049048,0.118166
+4,train,army_worms,5,army worm | cabbage army worm | beet army worm | Prodenia litura | flax budworm,,3538,3490,48,32,16,0.666667,0.009045,0.056437
+5,train,blister_beetles,3,lytta polita | legume blister beetle | blister beetle,,2375,2343,32,30,2,0.937500,0.012632,0.052910
+6,train,mites,6,red spider | longlegged spider mite | penthaleus major | Panonchus citri McGregor | Colomerus vitis | Polyphagotars onemus latus,,989,961,28,25,3,0.892857,0.025278,0.044092
+7,train,plant_bugs_and_miridae,4,Apolygus lucorum | alfalfa plant bug | tarnished plant bug | Miridae,,4161,4140,21,20,1,0.952381,0.004807,0.035273
+8,train,fruit_flies,3,Tetradacus c Bactrocera minax | Dacus dorsalis(Hendel) | Bactrocera tsuneonis,,595,582,13,13,0,1.000000,0.021849,0.022928
