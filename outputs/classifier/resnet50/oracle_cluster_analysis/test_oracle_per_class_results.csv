@@ -1,0 +1,36 @@
+cluster_order,method_order,split,cluster_name,method,label,class_name,support,oracle_precision,oracle_recall,oracle_f1,oracle_error_rate
+5,1,test,aphids,resnet50,28,green bug,98,0.357143,0.255102,0.297619,0.744898
+5,1,test,aphids,resnet50,27,english grain aphid,197,0.407821,0.370558,0.388298,0.629442
+2,1,test,cutworms,resnet50,19,large cutworm,148,0.371951,0.412162,0.391026,0.587838
+5,1,test,aphids,resnet50,52,therioaphis maculata Buckton,78,0.405405,0.384615,0.394737,0.615385
+5,1,test,aphids,resnet50,29,bird cherry-oataphid,213,0.419214,0.450704,0.434389,0.549296
+8,1,test,fruit_flies,resnet50,85,Bactrocera tsuneonis,51,0.655172,0.372549,0.475000,0.627451
+4,1,test,army_worms,resnet50,38,cabbage army worm,257,0.490421,0.498054,0.494208,0.501946
+6,1,test,plant_bugs_and_miridae,resnet50,46,alfalfa plant bug,197,0.552147,0.456853,0.500000,0.543147
+6,1,test,plant_bugs_and_miridae,resnet50,57,Apolygus lucorum,115,0.513761,0.486957,0.500000,0.513043
+5,1,test,aphids,resnet50,89,Toxoptera citricidus,57,0.500000,0.526316,0.512821,0.473684
+2,1,test,cutworms,resnet50,20,yellow cutworm,144,0.546154,0.493056,0.518248,0.506944
+1,1,test,plant_hoppers,resnet50,9,small brown plant hopper,166,0.524390,0.518072,0.521212,0.481928
+3,1,test,mites,resnet50,32,longlegged spider mite,74,0.563380,0.540541,0.551724,0.459459
+7,1,test,blister_beetles,resnet50,49,lytta polita,197,0.615854,0.512690,0.559557,0.487310
+6,1,test,plant_bugs_and_miridae,resnet50,47,tarnished plant bug,246,0.610092,0.540650,0.573276,0.459350
+1,1,test,plant_hoppers,resnet50,7,brown plant hopper,251,0.623431,0.593625,0.608163,0.406375
+1,1,test,plant_hoppers,resnet50,8,white backed plant hopper,268,0.606383,0.638060,0.621818,0.361940
+5,1,test,aphids,resnet50,91,Aphis citricola Vander Goot,106,0.585366,0.679245,0.628821,0.320755
+5,1,test,aphids,resnet50,90,Toxoptera aurantii,68,0.672131,0.602941,0.635659,0.397059
+4,1,test,army_worms,resnet50,45,flax budworm,320,0.646302,0.628125,0.637084,0.371875
+2,1,test,cutworms,resnet50,18,black cutworm,257,0.690196,0.684825,0.687500,0.315175
+4,1,test,army_worms,resnet50,39,beet army worm,482,0.693878,0.705394,0.699588,0.294606
+3,1,test,mites,resnet50,74,Panonchus citri McGregor,116,0.647482,0.775862,0.705882,0.224138
+4,1,test,army_worms,resnet50,23,army worm,322,0.728972,0.726708,0.727838,0.273292
+3,1,test,mites,resnet50,31,penthaleus major,70,0.810345,0.671429,0.734375,0.328571
+4,1,test,army_worms,resnet50,86,Prodenia litura,392,0.738462,0.734694,0.736573,0.265306
+3,1,test,mites,resnet50,21,red spider,159,0.768212,0.729560,0.748387,0.270440
+8,1,test,fruit_flies,resnet50,83,Tetradacus c Bactrocera minax,117,0.750000,0.769231,0.759494,0.230769
+3,1,test,mites,resnet50,63,Polyphagotars onemus latus,26,0.724138,0.807692,0.763636,0.192308
+7,1,test,blister_beetles,resnet50,50,legume blister beetle,423,0.753986,0.782506,0.767981,0.217494
+7,1,test,blister_beetles,resnet50,51,blister beetle,570,0.759796,0.782456,0.770959,0.217544
+8,1,test,fruit_flies,resnet50,84,Dacus dorsalis(Hendel),132,0.768212,0.878788,0.819788,0.121212
+5,1,test,aphids,resnet50,24,aphids,1229,0.867200,0.882018,0.874546,0.117982
+6,1,test,plant_bugs_and_miridae,resnet50,70,Miridae,1525,0.871940,0.910820,0.890956,0.089180
+3,1,test,mites,resnet50,60,Colomerus vitis,53,0.980000,0.924528,0.951456,0.075472
