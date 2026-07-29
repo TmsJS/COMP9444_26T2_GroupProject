@@ -70,10 +70,22 @@ python3 src/1_Classifier/4_PlotEvaluation/plot_class_metrics.py \
   --split test
 
 ##### (4) Analyze Baseline Resnet50 confusion result on (train set | val set | test set)
-python3 src/0_Data_Prep/3_analyze_confusion_matrix.py \
+python3 src/1_Classifier/5_ClassSeparability/1_analyze_confusion_matrix.py \
   outputs/classifier/resnet50 \
   --split all \
   --min-pair-count 2
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #### 2: Imbalance-Aware Resnet50
