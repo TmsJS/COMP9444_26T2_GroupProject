@@ -237,7 +237,7 @@ def plot_lowest_f1_classes(
     lowest_classes = (
         report
         .nsmallest(number_classes, "f1-score")
-        .sort_values(by="f1-score", ascending=True)
+        .sort_values(by="f1-score", ascending=False)
     )
 
     display_names = [
