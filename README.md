@@ -1,6 +1,6 @@
-### Since sourcefile folder is ready
-### PLEASE GO TO YOUR PROJECT ROOT FILEPATH FIRST
+### Since sourcefile folder src is ready
 #### ex: COMP9444_Group(root)/source
+### PLEASE GO TO YOUR PROJECT ROOT FILEPATH FIRST
 #### Each command below is executed under COMP9444_Group(root)
 
 ### Data preparation
@@ -83,12 +83,13 @@ python3 src/1_Classifier/5_ClassSeparability/2_evaluate_difficulty_groups.py \
 
 python3 src/1_Classifier/5_ClassSeparability/3_prepare_separability_data.py
 
-python3 src/1_Classifier/5_ClassSeparability/3_evaluate_coarse_and_groups.py \
+python3 src/1_Classifier/5_ClassSeparability/4_evaluate_coarse.py \
   outputs/classifier/resnet50 \
-  --split test \
-  --output-dir outputs/classifier/resnet50/separability_analysis
+  --split test
 
-
+python3 src/1_Classifier/5_ClassSeparability/5_evaluate_oracle_clusters.py \
+  --model resnet50=outputs/classifier/resnet50/test_probabilities.npz \
+  --split test
 
 
 #### 2: Imbalance-Aware Resnet50
