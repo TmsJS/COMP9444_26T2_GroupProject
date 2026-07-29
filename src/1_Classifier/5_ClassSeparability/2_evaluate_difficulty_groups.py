@@ -1,22 +1,23 @@
 """
-Evaluate validation performance by fixed class-difficulty group.
+Define and evaluate IP102 class-difficulty groups using validation data only.
 
-This script consumes predictions already produced by a 102-class model
-evaluator. It does not run a neural network and does not perform coarse-label
-mapping. Class-difficulty definitions must be created from validation analysis
-and frozen by 2_prepare_separability_data.py before this script is run.
+This script is the second step of the class-separability workflow:
 
-The output contains five rows:
+1. Read the validation visual-cluster analysis and select clusters whose
+   visual_confusion_score meets the configured threshold.
+2. Freeze those clusters in selected_clusters.csv.
+3. Divide all 102 original classes into cluster_hard, easy, diffuse_hard,
+   and uncertain using validation predictions only.
+4. Save the per-class definitions and a validation difficulty-group summary.
 
-1. cluster_hard: the 35 classes in selected visual-confusion clusters;
-2. non_cluster_total: all 67 classes outside cluster_hard;
-3. easy: the easy subset of non_cluster_total;
-4. diffuse_hard: the diffuse-hard subset of non_cluster_total;
-5. uncertain: the uncertain subset of non_cluster_total.
+The summary also contains non_cluster_total, which is the union of easy,
+diffuse_hard, and uncertain and serves as the direct comparison group for
+cluster_hard. It overlaps with those three subgroup rows and must not be added
+to them.
 
-non_cluster_total overlaps with easy, diffuse_hard, and uncertain. It is
-included as a direct comparison group for cluster_hard and must not be added
-to the three non-cluster subgroup rows.
+This script does not run a neural network and does not create coarse labels.
+The selected clusters and class-difficulty definitions must be frozen before
+any test-set evaluation.
 """
 
 from __future__ import annotations
@@ -26,18 +27,28 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import (
+    confusion_matrix,
+    precision_recall_fscore_support,
+)
 
 
 NUM_CLASSES = 102
-SPLITS = ("train", "val", "test")
-FINE_GROUPS = (
-    "easy",
-    "cluster_hard",
-    "diffuse_hard",
-    "uncertain",
-)
-REPORT_GROUP_ORDER = (
+DEFAULT_MINIMUM_VISUAL_SCORE = 50.0
+DEFAULT_EASY_MIN_SUPPORT = 20
+DEFAULT_EASY_MIN_F1 = 0.70
+DEFAULT_EASY_MIN_RECALL = 0.70
+DEFAULT_EASY_MAX_DOMINANT_CONFUSION = 0.15
+DEFAULT_HARD_MAX_F1 = 0.60
+DEFAULT_HARD_MAX_RECALL = 0.60
+
+DIFFICULTY_GROUP_ORDER = {
+    "easy": 1,
+    "cluster_hard": 2,
+    "diffuse_hard": 3,
+    "uncertain": 4,
+}
+SUMMARY_GROUP_ORDER = (
     "cluster_hard",
     "non_cluster_total",
     "easy",
@@ -47,26 +58,20 @@ REPORT_GROUP_ORDER = (
 
 
 def parse_arguments() -> argparse.Namespace:
-    """Read prediction, definition, split, and output options."""
+    """Read validation inputs, thresholds, and output locations."""
     parser = argparse.ArgumentParser(
         description=(
-            "Evaluate original 102-class predictions by fixed "
-            "class-difficulty group."
+            "Define and evaluate validation-derived IP102 "
+            "class-difficulty groups."
         ),
     )
     parser.add_argument(
         "model_output_dir",
         type=Path,
         help=(
-            "Model output directory containing "
-            "<split>_predictions.csv."
+            "Baseline model output directory containing "
+            "val_predictions.csv."
         ),
-    )
-    parser.add_argument(
-        "--split",
-        choices=SPLITS,
-        default="val",
-        help="Dataset split to evaluate (default: val).",
     )
     parser.add_argument(
         "--project-root",
@@ -78,12 +83,13 @@ def parse_arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--definitions-dir",
+        "--cluster-csv",
         type=Path,
         default=None,
         help=(
-            "Directory containing class_difficulty_groups.csv. "
-            "Default: outputs/classifier/class_separability."
+            "Validation visual-cluster analysis CSV. Default: "
+            "<model_output_dir>/analyze_confusion_matrix/"
+            "val_high_confidence_visual_clusters.csv."
         ),
     )
     parser.add_argument(
@@ -91,8 +97,18 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Prediction CSV override. Default: "
-            "<model_output_dir>/<split>_predictions.csv."
+            "Validation prediction CSV override. Default: "
+            "<model_output_dir>/val_predictions.csv."
+        ),
+    )
+    parser.add_argument(
+        "--definitions-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Directory for selected_clusters.csv and "
+            "class_difficulty_groups.csv. Default: "
+            "outputs/classifier/class_separability."
         ),
     )
     parser.add_argument(
@@ -100,11 +116,64 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Result directory. Default: "
+            "Directory for val_difficulty_group_summary.csv. Default: "
             "<model_output_dir>/difficulty_group_analysis."
         ),
     )
-    return parser.parse_args()
+    parser.add_argument(
+        "--minimum-visual-score",
+        type=float,
+        default=DEFAULT_MINIMUM_VISUAL_SCORE,
+    )
+    parser.add_argument(
+        "--easy-min-support",
+        type=int,
+        default=DEFAULT_EASY_MIN_SUPPORT,
+    )
+    parser.add_argument(
+        "--easy-min-f1",
+        type=float,
+        default=DEFAULT_EASY_MIN_F1,
+    )
+    parser.add_argument(
+        "--easy-min-recall",
+        type=float,
+        default=DEFAULT_EASY_MIN_RECALL,
+    )
+    parser.add_argument(
+        "--easy-max-dominant-confusion",
+        type=float,
+        default=DEFAULT_EASY_MAX_DOMINANT_CONFUSION,
+    )
+    parser.add_argument(
+        "--hard-max-f1",
+        type=float,
+        default=DEFAULT_HARD_MAX_F1,
+    )
+    parser.add_argument(
+        "--hard-max-recall",
+        type=float,
+        default=DEFAULT_HARD_MAX_RECALL,
+    )
+
+    args = parser.parse_args()
+    probability_arguments = (
+        args.easy_min_f1,
+        args.easy_min_recall,
+        args.easy_max_dominant_confusion,
+        args.hard_max_f1,
+        args.hard_max_recall,
+    )
+
+    if args.minimum_visual_score < 0:
+        parser.error("--minimum-visual-score cannot be negative.")
+    if args.easy_min_support < 0:
+        parser.error("--easy-min-support cannot be negative.")
+    if any(value < 0 or value > 1 for value in probability_arguments):
+        parser.error(
+            "F1, recall, and confusion thresholds must be in [0, 1]."
+        )
+    return args
 
 
 def resolve_path(path: Path, project_root: Path) -> Path:
@@ -122,10 +191,16 @@ def resolve_project_root(requested: Path | None) -> Path:
     else:
         project_root = requested.expanduser().resolve()
 
-    classifier_output = project_root / "outputs" / "classifier"
-    if not classifier_output.is_dir():
-        raise NotADirectoryError(
-            f"Invalid COMP9444_Group project root: {project_root}"
+    required = (
+        project_root
+        / "datasets"
+        / "raw"
+        / "Classification"
+        / "classes.txt"
+    )
+    if not required.is_file():
+        raise FileNotFoundError(
+            f"Invalid project root or missing classes.txt: {project_root}"
         )
     return project_root
 
@@ -134,7 +209,7 @@ def resolve_paths(
     args: argparse.Namespace,
     project_root: Path,
 ) -> dict[str, Path]:
-    """Resolve and validate all input and output paths."""
+    """Resolve and validate all validation inputs and outputs."""
     model_output_dir = resolve_path(
         args.model_output_dir,
         project_root,
@@ -144,6 +219,18 @@ def resolve_paths(
             f"Model output directory not found: {model_output_dir}"
         )
 
+    cluster_csv = (
+        model_output_dir
+        / "analyze_confusion_matrix"
+        / "val_high_confidence_visual_clusters.csv"
+        if args.cluster_csv is None
+        else resolve_path(args.cluster_csv, project_root)
+    )
+    predictions = (
+        model_output_dir / "val_predictions.csv"
+        if args.predictions is None
+        else resolve_path(args.predictions, project_root)
+    )
     definitions_dir = (
         project_root
         / "outputs"
@@ -152,12 +239,6 @@ def resolve_paths(
         if args.definitions_dir is None
         else resolve_path(args.definitions_dir, project_root)
     )
-    predictions = (
-        model_output_dir / f"{args.split}_predictions.csv"
-        if args.predictions is None
-        else resolve_path(args.predictions, project_root)
-    )
-    groups = definitions_dir / "class_difficulty_groups.csv"
     output_dir = (
         model_output_dir / "difficulty_group_analysis"
         if args.output_dir is None
@@ -166,31 +247,197 @@ def resolve_paths(
 
     missing = [
         path
-        for path in (predictions, groups)
+        for path in (cluster_csv, predictions)
         if not path.is_file()
     ]
     if missing:
         missing_text = "\n".join(f"- {path}" for path in missing)
         raise FileNotFoundError(
-            "Required input files are missing:\n"
+            "Required validation inputs are missing:\n"
             f"{missing_text}"
         )
 
+    definitions_dir.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
     return {
-        "model_output_dir": model_output_dir,
-        "predictions": predictions,
-        "groups": groups,
-        "output_dir": output_dir,
-        "summary": (
-            output_dir
-            / f"{args.split}_difficulty_group_summary.csv"
+        "classes": (
+            project_root
+            / "datasets"
+            / "raw"
+            / "Classification"
+            / "classes.txt"
         ),
+        "cluster_csv": cluster_csv,
+        "predictions": predictions,
+        "definitions_dir": definitions_dir,
+        "output_dir": output_dir,
+        "selected_clusters": definitions_dir / "selected_clusters.csv",
+        "difficulty_groups": (
+            definitions_dir / "class_difficulty_groups.csv"
+        ),
+        "summary": output_dir / "val_difficulty_group_summary.csv",
     }
 
 
-def load_predictions(path: Path) -> pd.DataFrame:
-    """Load and validate one original 102-class prediction table."""
+def load_class_names(classes_path: Path) -> list[str]:
+    """Load classes.txt and convert its one-based IDs to zero-based order."""
+    label_to_name: dict[int, str] = {}
+
+    with classes_path.open("r", encoding="utf-8") as file:
+        for line_number, line in enumerate(file, start=1):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            try:
+                class_number, class_name = stripped.split(maxsplit=1)
+            except ValueError as error:
+                raise ValueError(
+                    f"Invalid classes.txt row {line_number}: {line!r}"
+                ) from error
+
+            label = int(class_number) - 1
+            if label in label_to_name:
+                raise ValueError(
+                    f"Duplicate class number: {class_number}"
+                )
+            label_to_name[label] = class_name.strip()
+
+    expected = set(range(NUM_CLASSES))
+    observed = set(label_to_name)
+    if observed != expected:
+        raise ValueError(
+            "classes.txt must contain labels 1-102 exactly. "
+            f"Missing={sorted(expected - observed)}, "
+            f"unexpected={sorted(observed - expected)}"
+        )
+
+    class_names = [
+        label_to_name[label]
+        for label in range(NUM_CLASSES)
+    ]
+    if len(set(class_names)) != NUM_CLASSES:
+        raise ValueError("classes.txt contains duplicate class names.")
+    return class_names
+
+
+def parse_members(value: object) -> list[str]:
+    """Parse a pipe-separated cluster-member field."""
+    if pd.isna(value):
+        return []
+    return [
+        member.strip()
+        for member in str(value).split("|")
+        if member.strip()
+    ]
+
+
+def select_validation_clusters(
+    csv_path: Path,
+    class_names: list[str],
+    minimum_visual_score: float,
+) -> tuple[pd.DataFrame, dict[str, list[int]]]:
+    """Select and validate candidate clusters using validation scores only."""
+    dataframe = pd.read_csv(csv_path)
+    required = {
+        "cluster_name",
+        "class_members",
+        "visual_confusion_score",
+    }
+    missing = required - set(dataframe.columns)
+    if missing:
+        raise ValueError(
+            f"Cluster CSV is missing columns: {sorted(missing)}"
+        )
+
+    dataframe["visual_confusion_score"] = pd.to_numeric(
+        dataframe["visual_confusion_score"],
+        errors="raise",
+    )
+    if "split" in dataframe.columns:
+        dataframe = dataframe[
+            dataframe["split"].astype(str).str.lower() == "val"
+        ].copy()
+        if dataframe.empty:
+            raise ValueError("Cluster CSV contains no validation rows.")
+
+    selected = dataframe[
+        dataframe["visual_confusion_score"] >= minimum_visual_score
+    ].copy()
+    if selected.empty:
+        raise ValueError(
+            "No validation clusters meet the visual-score threshold."
+        )
+
+    sort_columns = (
+        ["visual_cluster_rank", "visual_confusion_score"]
+        if "visual_cluster_rank" in selected.columns
+        else ["visual_confusion_score"]
+    )
+    ascending = (
+        [True, False]
+        if "visual_cluster_rank" in selected.columns
+        else [False]
+    )
+    selected = (
+        selected
+        .sort_values(sort_columns, ascending=ascending)
+        .reset_index(drop=True)
+    )
+
+    name_to_label = {
+        name: label
+        for label, name in enumerate(class_names)
+    }
+    clusters: dict[str, list[int]] = {}
+    used_labels: dict[int, str] = {}
+
+    for row_number, row in selected.iterrows():
+        cluster_name = str(row["cluster_name"]).strip()
+        member_names = parse_members(row["class_members"])
+
+        if not cluster_name:
+            raise ValueError(
+                f"Empty cluster name at row {row_number + 1}."
+            )
+        if cluster_name in clusters:
+            raise ValueError(
+                f"Duplicate cluster name: {cluster_name}"
+            )
+        if len(member_names) < 2:
+            raise ValueError(
+                f"Cluster {cluster_name!r} needs at least two classes."
+            )
+
+        unknown = [
+            name
+            for name in member_names
+            if name not in name_to_label
+        ]
+        if unknown:
+            raise ValueError(
+                f"Unknown classes in {cluster_name!r}: {unknown}"
+            )
+
+        labels = [name_to_label[name] for name in member_names]
+        if len(set(labels)) != len(labels):
+            raise ValueError(
+                f"Duplicate member inside {cluster_name!r}."
+            )
+        for label in labels:
+            if label in used_labels:
+                raise ValueError(
+                    f"{class_names[label]!r} belongs to both "
+                    f"{used_labels[label]!r} and {cluster_name!r}."
+                )
+            used_labels[label] = cluster_name
+
+        clusters[cluster_name] = labels
+
+    return selected, clusters
+
+
+def load_validation_predictions(path: Path) -> pd.DataFrame:
+    """Load and validate original 102-class validation predictions."""
     dataframe = pd.read_csv(path)
     required = {"true_label", "predicted_label"}
     missing = required - set(dataframe.columns)
@@ -206,60 +453,18 @@ def load_predictions(path: Path) -> pd.DataFrame:
             dataframe[column],
             errors="raise",
         ).astype(int)
-        invalid = ~dataframe[column].between(0, NUM_CLASSES - 1)
-        if invalid.any():
+        if (~dataframe[column].between(0, NUM_CLASSES - 1)).any():
             raise ValueError(
                 f"{column} contains labels outside 0-101."
             )
     return dataframe
 
 
-def load_groups(path: Path) -> pd.DataFrame:
-    """Load and validate the frozen validation-derived group definitions."""
-    dataframe = pd.read_csv(path)
-    required = {"label", "class_name", "difficulty_group"}
-    missing = required - set(dataframe.columns)
-    if missing:
-        raise ValueError(
-            f"Difficulty-group CSV is missing columns: {sorted(missing)}"
-        )
-
-    dataframe["label"] = pd.to_numeric(
-        dataframe["label"],
-        errors="raise",
-    ).astype(int)
-    dataframe["difficulty_group"] = (
-        dataframe["difficulty_group"].astype(str).str.strip()
-    )
-
-    if set(dataframe["label"]) != set(range(NUM_CLASSES)):
-        raise ValueError(
-            "Difficulty-group CSV must contain labels 0-101 exactly."
-        )
-    if dataframe["label"].duplicated().any():
-        raise ValueError(
-            "Difficulty-group CSV contains duplicate labels."
-        )
-
-    unknown_groups = set(
-        dataframe["difficulty_group"]
-    ) - set(FINE_GROUPS)
-    if unknown_groups:
-        raise ValueError(
-            f"Unknown difficulty groups: {sorted(unknown_groups)}"
-        )
-    return dataframe.sort_values("label").reset_index(drop=True)
-
-
-def calculate_full_per_class_metrics(
+def calculate_per_class_metrics(
     predictions: pd.DataFrame,
+    class_names: list[str],
 ) -> pd.DataFrame:
-    """
-    Calculate metrics for all 102 original classes.
-
-    Precision is calculated from the complete split so false positives coming
-    from classes outside a reported group remain included.
-    """
+    """Calculate complete-split metrics for all 102 original classes."""
     labels = list(range(NUM_CLASSES))
     precision, recall, f1, support = (
         precision_recall_fscore_support(
@@ -271,28 +476,126 @@ def calculate_full_per_class_metrics(
     )
     return pd.DataFrame({
         "label": labels,
+        "class_name": class_names,
+        "support": support.astype(int),
         "precision": precision,
         "recall": recall,
         "f1": f1,
-        "support": support.astype(int),
     })
+
+
+def build_difficulty_groups(
+    predictions: pd.DataFrame,
+    per_class: pd.DataFrame,
+    class_names: list[str],
+    clusters: dict[str, list[int]],
+    args: argparse.Namespace,
+) -> pd.DataFrame:
+    """Assign every fine class to one frozen validation-derived group."""
+    labels = list(range(NUM_CLASSES))
+    confusion = confusion_matrix(
+        predictions["true_label"],
+        predictions["predicted_label"],
+        labels=labels,
+    )
+    label_to_cluster = {
+        label: cluster_name
+        for cluster_name, members in clusters.items()
+        for label in members
+    }
+    rows: list[dict[str, int | float | str | bool]] = []
+
+    for row in per_class.itertuples(index=False):
+        label = int(row.label)
+        support = int(confusion[label].sum())
+        if support != int(row.support):
+            raise RuntimeError(
+                f"Support mismatch for label {label}: "
+                f"metrics={row.support}, confusion={support}."
+            )
+
+        off_diagonal = confusion[label].copy()
+        off_diagonal[label] = 0
+        dominant_count = int(off_diagonal.max())
+        dominant_label = int(off_diagonal.argmax())
+        dominant_rate = (
+            dominant_count / support
+            if support
+            else 0.0
+        )
+
+        cluster_name = label_to_cluster.get(label, "")
+        if cluster_name:
+            difficulty_group = "cluster_hard"
+            reason = "member_of_selected_visual_cluster"
+        elif (
+            support >= args.easy_min_support
+            and float(row.f1) >= args.easy_min_f1
+            and float(row.recall) >= args.easy_min_recall
+            and dominant_rate < args.easy_max_dominant_confusion
+        ):
+            difficulty_group = "easy"
+            reason = "stable_high_validation_performance"
+        elif (
+            float(row.f1) < args.hard_max_f1
+            or float(row.recall) < args.hard_max_recall
+        ):
+            difficulty_group = "diffuse_hard"
+            reason = "low_validation_metric_without_selected_cluster"
+        else:
+            difficulty_group = "uncertain"
+            reason = "intermediate_or_low_support"
+
+        rows.append({
+            "difficulty_group_order": DIFFICULTY_GROUP_ORDER[
+                difficulty_group
+            ],
+            "label": label,
+            "class_number": label + 1,
+            "class_name": row.class_name,
+            "cluster_name": cluster_name,
+            "is_selected_cluster_member": bool(cluster_name),
+            "val_support": support,
+            "val_precision": float(row.precision),
+            "val_recall": float(row.recall),
+            "val_f1": float(row.f1),
+            "dominant_wrong_label": (
+                dominant_label if dominant_count else -1
+            ),
+            "dominant_wrong_class": (
+                class_names[dominant_label]
+                if dominant_count
+                else ""
+            ),
+            "dominant_wrong_count": dominant_count,
+            "dominant_confusion_rate": dominant_rate,
+            "difficulty_group": difficulty_group,
+            "group_reason": reason,
+        })
+
+    return (
+        pd.DataFrame(rows)
+        .sort_values(
+            ["difficulty_group_order", "val_f1", "label"],
+            ascending=[True, False, True],
+        )
+        .reset_index(drop=True)
+    )
 
 
 def build_group_summary(
     predictions: pd.DataFrame,
+    per_class: pd.DataFrame,
     groups: pd.DataFrame,
-    split: str,
 ) -> pd.DataFrame:
-    """Create cluster, non-cluster, and subgroup validation summaries."""
-    class_metrics = calculate_full_per_class_metrics(predictions)
+    """Summarise validation performance for cluster and comparison groups."""
     label_to_group = groups.set_index("label")[
         "difficulty_group"
     ].to_dict()
     sample_groups = predictions["true_label"].map(label_to_group)
-
     if sample_groups.isna().any():
         raise ValueError(
-            "Some prediction labels have no difficulty-group definition."
+            "Some validation labels have no difficulty-group definition."
         )
 
     total_samples = len(predictions)
@@ -302,14 +605,13 @@ def build_group_summary(
             != predictions["predicted_label"]
         ).sum()
     )
-
     cluster_labels = set(
         groups.loc[
             groups["difficulty_group"] == "cluster_hard",
             "label",
         ]
     )
-    report_labels: dict[str, list[int]] = {
+    report_labels = {
         "cluster_hard": sorted(cluster_labels),
         "non_cluster_total": sorted(
             set(range(NUM_CLASSES)) - cluster_labels
@@ -330,31 +632,31 @@ def build_group_summary(
 
     rows: list[dict[str, int | float | str | bool]] = []
     for group_order, group_name in enumerate(
-        REPORT_GROUP_ORDER,
+        SUMMARY_GROUP_ORDER,
         start=1,
     ):
         labels = report_labels[group_name]
-        if group_name == "non_cluster_total":
-            mask = sample_groups != "cluster_hard"
-        else:
-            mask = sample_groups == group_name
-
-        selected = predictions.loc[mask]
-        number_samples = len(selected)
+        mask = (
+            sample_groups != "cluster_hard"
+            if group_name == "non_cluster_total"
+            else sample_groups == group_name
+        )
+        selected_predictions = predictions.loc[mask]
+        number_samples = len(selected_predictions)
         number_correct = int(
             (
-                selected["true_label"]
-                == selected["predicted_label"]
+                selected_predictions["true_label"]
+                == selected_predictions["predicted_label"]
             ).sum()
         )
         number_errors = number_samples - number_correct
-        selected_class_metrics = class_metrics[
-            class_metrics["label"].isin(labels)
+        selected_metrics = per_class[
+            per_class["label"].isin(labels)
         ]
 
         rows.append({
             "group_order": group_order,
-            "split": split,
+            "split": "val",
             "difficulty_group": group_name,
             "is_aggregate": group_name == "non_cluster_total",
             "number_classes": len(labels),
@@ -382,13 +684,13 @@ def build_group_summary(
                 else 0.0
             ),
             "macro_precision": float(
-                selected_class_metrics["precision"].mean()
+                selected_metrics["precision"].mean()
             ),
             "macro_recall": float(
-                selected_class_metrics["recall"].mean()
+                selected_metrics["recall"].mean()
             ),
             "macro_f1": float(
-                selected_class_metrics["f1"].mean()
+                selected_metrics["f1"].mean()
             ),
         })
 
@@ -396,29 +698,66 @@ def build_group_summary(
 
 
 def main() -> None:
-    """Load definitions and predictions, evaluate groups, and save CSV."""
+    """Select clusters, define groups, evaluate validation, and save CSVs."""
     args = parse_arguments()
     project_root = resolve_project_root(args.project_root)
     paths = resolve_paths(args, project_root)
 
-    predictions = load_predictions(paths["predictions"])
-    groups = load_groups(paths["groups"])
-    summary = build_group_summary(
-        predictions,
-        groups,
-        args.split,
+    class_names = load_class_names(paths["classes"])
+    selected_clusters, clusters = select_validation_clusters(
+        paths["cluster_csv"],
+        class_names,
+        args.minimum_visual_score,
     )
-    summary.to_csv(
+    predictions = load_validation_predictions(paths["predictions"])
+    per_class = calculate_per_class_metrics(
+        predictions,
+        class_names,
+    )
+    difficulty_groups = build_difficulty_groups(
+        predictions,
+        per_class,
+        class_names,
+        clusters,
+        args,
+    )
+    group_summary = build_group_summary(
+        predictions,
+        per_class,
+        difficulty_groups,
+    )
+
+    selected_clusters.to_csv(
+        paths["selected_clusters"],
+        index=False,
+        float_format="%.6f",
+    )
+    difficulty_groups.to_csv(
+        paths["difficulty_groups"],
+        index=False,
+        float_format="%.6f",
+    )
+    group_summary.to_csv(
         paths["summary"],
         index=False,
         float_format="%.6f",
     )
 
-    print("Difficulty-group evaluation completed successfully.")
-    print("Split:", args.split)
-    print("Predictions:", paths["predictions"])
-    print("Group definitions:", paths["groups"])
-    print("Summary:", paths["summary"])
+    counts = (
+        difficulty_groups["difficulty_group"]
+        .value_counts()
+        .to_dict()
+    )
+    print("Validation difficulty-group analysis completed successfully.")
+    print("Selected clusters:", len(clusters))
+    print(
+        "Clustered classes:",
+        sum(len(members) for members in clusters.values()),
+    )
+    print("Difficulty groups:", counts)
+    print("Selected clusters:", paths["selected_clusters"])
+    print("Difficulty definitions:", paths["difficulty_groups"])
+    print("Validation summary:", paths["summary"])
 
 
 if __name__ == "__main__":

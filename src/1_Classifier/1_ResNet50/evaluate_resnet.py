@@ -5,6 +5,7 @@ import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import torch
 from imblearn.metrics import geometric_mean_score
@@ -137,8 +138,10 @@ def create_output_paths(
         "summary": output_dir / f"{split}_summary.txt",
         "report": output_dir / f"{split}_classification_report.csv",
         "predictions": output_dir / f"{split}_predictions.csv",
+        "probabilities": output_dir / f"{split}_probabilities.npz",
         "confusion_matrix": output_dir / f"{split}_confusion_matrix.csv",
     }
+
 
 def load_insect_names(classes_path: Path) -> dict[int, str]:
     """Load insect names and convert labels from 1-based to 0-based."""
@@ -262,11 +265,12 @@ def evaluate(
     evaluation_loader: DataLoader,
     device: torch.device,
     split: str,
-) -> tuple[float, list[int], list[int]]:
-    """Run inference once and return loss, labels, and predictions."""
+) -> tuple[float, list[int], list[int], np.ndarray]:
+    """Run inference once and return labels, predictions, and probabilities."""
     criterion = nn.CrossEntropyLoss()
-    all_predictions = []
-    all_labels = []
+    all_predictions: list[int] = []
+    all_labels: list[int] = []
+    probability_batches: list[np.ndarray] = []
     total_loss = 0.0
     number_samples = 0
 
@@ -282,13 +286,17 @@ def evaluate(
 
             outputs = model(images)
             loss = criterion(outputs, labels)
-            predictions = outputs.argmax(dim=1)
+            probabilities = torch.softmax(outputs, dim=1)
+            predictions = probabilities.argmax(dim=1)
 
             total_loss += loss.item() * images.size(0)
             number_samples += labels.size(0)
 
             all_predictions.extend(predictions.cpu().tolist())
             all_labels.extend(labels.cpu().tolist())
+            probability_batches.append(
+                probabilities.cpu().numpy()
+            )
 
     if number_samples == 0:
         raise ValueError(
@@ -296,7 +304,25 @@ def evaluate(
         )
 
     evaluation_loss = total_loss / number_samples
-    return evaluation_loss, all_labels, all_predictions
+    all_probabilities = np.concatenate(
+        probability_batches,
+        axis=0,
+    ).astype(np.float32, copy=False)
+
+    expected_shape = (number_samples, NUM_CLASSES)
+    if all_probabilities.shape != expected_shape:
+        raise RuntimeError(
+            "Unexpected probability-array shape: "
+            f"expected {expected_shape}, "
+            f"received {all_probabilities.shape}."
+        )
+
+    return (
+        evaluation_loss,
+        all_labels,
+        all_predictions,
+        all_probabilities,
+    )
 
 
 def format_checkpoint_value(checkpoint: dict, key: str) -> str:
@@ -449,6 +475,80 @@ def save_predictions(
     }).to_csv(output_path, index=False)
 
 
+def save_probabilities(
+    output_path: Path,
+    evaluation_dataset: IP102Dataset,
+    all_labels: list[int],
+    all_probabilities: np.ndarray,
+) -> None:
+    """Save image names, labels, and N-by-102 class probabilities."""
+    if not hasattr(evaluation_dataset, "samples"):
+        raise AttributeError(
+            "IP102Dataset must expose a 'samples' attribute to save "
+            "probabilities."
+        )
+
+    image_names = np.asarray(
+        [
+            str(image_name)
+            for image_name, _ in evaluation_dataset.samples
+        ],
+        dtype=str,
+    )
+    true_labels = np.asarray(
+        all_labels,
+        dtype=np.int64,
+    )
+    probabilities = np.asarray(
+        all_probabilities,
+        dtype=np.float32,
+    )
+
+    number_samples = len(true_labels)
+    expected_shape = (number_samples, NUM_CLASSES)
+
+    if len(image_names) != number_samples:
+        raise ValueError(
+            "The number of image names does not match the labels: "
+            f"{len(image_names)} != {number_samples}."
+        )
+
+    if probabilities.shape != expected_shape:
+        raise ValueError(
+            "The probability array has an unexpected shape: "
+            f"expected {expected_shape}, "
+            f"received {probabilities.shape}."
+        )
+
+    if not np.all(np.isfinite(probabilities)):
+        raise ValueError(
+            "The probability array contains NaN or infinite values."
+        )
+
+    if np.any(probabilities < 0):
+        raise ValueError(
+            "The probability array contains negative values."
+        )
+
+    row_sums = probabilities.sum(axis=1)
+    if not np.allclose(
+        row_sums,
+        np.ones(number_samples, dtype=np.float32),
+        rtol=1e-5,
+        atol=1e-6,
+    ):
+        raise ValueError(
+            "Each probability row must sum to one."
+        )
+
+    np.savez_compressed(
+        output_path,
+        image_names=image_names,
+        true_labels=true_labels,
+        probabilities=probabilities,
+    )
+
+
 def save_confusion_matrix(
     output_path: Path,
     insect_names: dict[int, str],
@@ -506,7 +606,12 @@ def main() -> None:
     model = create_resnet50_model(device)
     checkpoint = load_checkpoint(model_path, model, device)
 
-    evaluation_loss, all_labels, all_predictions = evaluate(
+    (
+        evaluation_loss,
+        all_labels,
+        all_predictions,
+        all_probabilities,
+    ) = evaluate(
         model=model,
         evaluation_loader=evaluation_loader,
         device=device,
@@ -544,6 +649,12 @@ def main() -> None:
         all_labels,
         all_predictions,
     )
+    save_probabilities(
+        paths["probabilities"],
+        evaluation_dataset,
+        all_labels,
+        all_probabilities,
+    )
     save_confusion_matrix(
         paths["confusion_matrix"],
         insect_names,
@@ -555,6 +666,7 @@ def main() -> None:
     print(f"{args.split.capitalize()} summary saved to:", paths["summary"])
     print("Classification report saved to:", paths["report"])
     print("Predictions saved to:", paths["predictions"])
+    print("Probabilities saved to:", paths["probabilities"])
     print("Confusion matrix saved to:", paths["confusion_matrix"])
 
 

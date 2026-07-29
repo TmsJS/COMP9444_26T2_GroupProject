@@ -1,9 +1,15 @@
 """
-Evaluate whether selected visual clusters remain difficult under oracle routing.
+Evaluate whether frozen visual-confusion clusters remain difficult under
+oracle routing.
 
 For each sample whose true label belongs to a selected cluster, oracle routing
 reveals the correct cluster and restricts prediction to that cluster's member
 classes. This isolates within-cluster separability from coarse-routing errors.
+
+The cluster definitions must first be selected from validation results by
+2_evaluate_difficulty_groups.py and converted into a frozen coarse mapping by
+3_prepare_separability_data.py. Test results must not be used to select or
+modify the clusters.
 
 Each model input must be an NPZ file containing:
 
@@ -13,7 +19,11 @@ Each model input must be an NPZ file containing:
 
 An N x 102 ``logits`` array may be supplied instead of ``probabilities``.
 Multiple --model NAME=PATH arguments enable equal-weight probability voting
-and consensus-error analysis. Model weights are never tuned on the test set.
+and consensus-error analysis. Equal soft voting is only added when at least two
+models are supplied. Model weights are never tuned on the test set.
+
+This script does not run or retrain a neural network. It is an optional
+diagnostic step after 4_evaluate_coarse.py.
 """
 
 from __future__ import annotations
@@ -79,11 +89,11 @@ def parse_arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--analysis-dir",
+        "--definitions-dir",
         type=Path,
         default=None,
         help=(
-            "Directory produced by 1_prepare_separability_data.py. "
+            "Directory produced by 3_prepare_separability_data.py. "
             "Default: outputs/classifier/class_separability."
         ),
     )
@@ -93,7 +103,7 @@ def parse_arguments() -> argparse.Namespace:
         default=None,
         help=(
             "Result directory. Default: "
-            "<analysis-dir>/oracle_<split>."
+            "<definitions-dir>/oracle_<split>."
         ),
     )
     return parser.parse_args()
@@ -155,7 +165,7 @@ def parse_model_specifications(
 def load_mapping(path: Path) -> pd.DataFrame:
     if not path.is_file():
         raise FileNotFoundError(
-            "Run 1_prepare_separability_data.py first. "
+            "Run 3_prepare_separability_data.py first. "
             f"Mapping not found: {path}"
         )
 
@@ -483,16 +493,16 @@ def save_cluster_confusion(
 def main() -> None:
     args = parse_arguments()
     project_root = resolve_project_root(args.project_root)
-    analysis_dir = (
+    definitions_dir = (
         project_root
         / "outputs"
         / "classifier"
         / "class_separability"
-        if args.analysis_dir is None
-        else resolve_path(args.analysis_dir, project_root)
+        if args.definitions_dir is None
+        else resolve_path(args.definitions_dir, project_root)
     )
     output_dir = (
-        analysis_dir / f"oracle_{args.split}"
+        definitions_dir / f"oracle_{args.split}"
         if args.output_dir is None
         else resolve_path(args.output_dir, project_root)
     )
@@ -501,7 +511,7 @@ def main() -> None:
     confusion_dir.mkdir(parents=True, exist_ok=True)
 
     mapping = load_mapping(
-        analysis_dir / "coarse_label_mapping.csv"
+        definitions_dir / "coarse_label_mapping.csv"
     )
     clusters = selected_clusters(mapping)
     label_to_name = mapping.set_index("fine_label")[
@@ -539,17 +549,19 @@ def main() -> None:
         model.name: model.probabilities
         for model in models
     }
-    full_probabilities[ENSEMBLE_NAME] = np.mean(
-        np.stack(
-            [model.probabilities for model in models],
-            axis=0,
-        ),
-        axis=0,
-    )
     method_names = [
         model.name
         for model in models
-    ] + [ENSEMBLE_NAME]
+    ]
+    if len(models) >= 2:
+        full_probabilities[ENSEMBLE_NAME] = np.mean(
+            np.stack(
+                [model.probabilities for model in models],
+                axis=0,
+            ),
+            axis=0,
+        )
+        method_names.append(ENSEMBLE_NAME)
 
     oracle_predictions = {
         method_name: np.full(
@@ -580,16 +592,17 @@ def main() -> None:
             )
             for model in models
         }
-        local_probabilities[ENSEMBLE_NAME] = np.mean(
-            np.stack(
-                [
-                    local_probabilities[model.name]
-                    for model in models
-                ],
+        if len(models) >= 2:
+            local_probabilities[ENSEMBLE_NAME] = np.mean(
+                np.stack(
+                    [
+                        local_probabilities[model.name]
+                        for model in models
+                    ],
+                    axis=0,
+                ),
                 axis=0,
-            ),
-            axis=0,
-        )
+            )
 
         for method_order, method_name in enumerate(
             method_names,
@@ -771,19 +784,20 @@ def main() -> None:
         individual_prediction_columns.append(prediction_column)
         individual_correct_columns.append(correct_column)
 
-    ensemble_predictions = oracle_predictions[
-        ENSEMBLE_NAME
-    ][hard_mask]
-    prediction_rows["ensemble_oracle_label"] = (
-        ensemble_predictions
-    )
-    prediction_rows["ensemble_oracle_class"] = [
-        label_to_name[label]
-        for label in ensemble_predictions
-    ]
-    prediction_rows["ensemble_oracle_correct"] = (
-        ensemble_predictions == hard_true
-    )
+    if ENSEMBLE_NAME in oracle_predictions:
+        ensemble_predictions = oracle_predictions[
+            ENSEMBLE_NAME
+        ][hard_mask]
+        prediction_rows["ensemble_oracle_label"] = (
+            ensemble_predictions
+        )
+        prediction_rows["ensemble_oracle_class"] = [
+            label_to_name[label]
+            for label in ensemble_predictions
+        ]
+        prediction_rows["ensemble_oracle_correct"] = (
+            ensemble_predictions == hard_true
+        )
 
     all_individual_wrong = ~prediction_rows[
         individual_correct_columns

@@ -1,10 +1,35 @@
 """
-Evaluate original, merged-coarse, and difficulty-group performance.
+Evaluate original fine-label and merged coarse-label performance.
 
 This script consumes prediction CSV files already produced by a model
-evaluator. It does not run a neural network. The validation-derived mapping
-created by 1_prepare_separability_data.py must be frozen before evaluating
-the test split.
+evaluator. It does not run or retrain a neural network.
+
+The coarse-label mapping must first be prepared and frozen by:
+
+    2_evaluate_difficulty_groups.py
+        -> selected_clusters.csv
+    3_prepare_separability_data.py
+        -> coarse_label_mapping.csv
+
+For test-set evaluation, both definitions must be derived from validation data
+only. This prevents test-set information from influencing which classes are
+merged.
+
+The script produces:
+
+1. <split>_original_vs_coarse_summary.csv
+   Compares the original 102-class metrics with the merged coarse metrics.
+
+2. <split>_coarse_classification_report.csv
+   Reports precision, recall, F1-score, support, and error rate for every
+   coarse class.
+
+3. <split>_coarse_confusion_matrix.csv
+   Stores the confusion matrix after fine labels are mapped to coarse labels.
+
+4. <split>_coarse_recovered_errors.csv
+   Lists fine-label mistakes that become correct after both labels are mapped
+   to the same valid coarse class.
 """
 
 from __future__ import annotations
@@ -23,19 +48,13 @@ from sklearn.metrics import (
 
 NUM_FINE_CLASSES = 102
 SPLITS = ("train", "val", "test")
-GROUP_ORDER = {
-    "easy": 1,
-    "cluster_hard": 2,
-    "diffuse_hard": 3,
-    "uncertain": 4,
-}
 
 
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Evaluate a model at the original 102-class level, at the "
-            "merged coarse level, and by fixed class-difficulty group."
+            "Compare a model at the original 102-class level and at "
+            "the frozen merged coarse-label level."
         ),
     )
     parser.add_argument(
@@ -57,16 +76,16 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "COMP9444_Group root. By default, parents[3] of this "
+            "Project root directory. By default, parents[3] of this "
             "script is used."
         ),
     )
     parser.add_argument(
-        "--analysis-dir",
+        "--definitions-dir",
         type=Path,
         default=None,
         help=(
-            "Directory produced by 1_prepare_separability_data.py. "
+            "Directory produced by 3_prepare_separability_data.py. "
             "Default: outputs/classifier/class_separability."
         ),
     )
@@ -84,13 +103,15 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Result directory. Default: <analysis-dir>/<model-folder>."
+            "Result directory. Default: "
+            "<model_output_dir>/separability_analysis."
         ),
     )
     return parser.parse_args()
 
 
 def resolve_path(path: Path, project_root: Path) -> Path:
+    """Resolve an absolute path or a path relative to the project root."""
     path = path.expanduser()
     if not path.is_absolute():
         path = project_root / path
@@ -98,6 +119,7 @@ def resolve_path(path: Path, project_root: Path) -> Path:
 
 
 def resolve_project_root(requested: Path | None) -> Path:
+    """Resolve and validate the project root."""
     if requested is None:
         project_root = Path(__file__).resolve().parents[3]
     else:
@@ -105,7 +127,8 @@ def resolve_project_root(requested: Path | None) -> Path:
 
     if not (project_root / "outputs" / "classifier").is_dir():
         raise NotADirectoryError(
-            f"Invalid COMP9444_Group project root: {project_root}"
+            f"Invalid project root: {project_root}\n"
+            "Expected an outputs/classifier directory."
         )
     return project_root
 
@@ -114,6 +137,7 @@ def resolve_paths(
     args: argparse.Namespace,
     project_root: Path,
 ) -> dict[str, Path]:
+    """Resolve input and output paths and check required inputs."""
     model_output_dir = resolve_path(
         args.model_output_dir,
         project_root,
@@ -123,13 +147,13 @@ def resolve_paths(
             f"Model output directory not found: {model_output_dir}"
         )
 
-    analysis_dir = (
+    definitions_dir = (
         project_root
         / "outputs"
         / "classifier"
         / "class_separability"
-        if args.analysis_dir is None
-        else resolve_path(args.analysis_dir, project_root)
+        if args.definitions_dir is None
+        else resolve_path(args.definitions_dir, project_root)
     )
     predictions = (
         model_output_dir / f"{args.split}_predictions.csv"
@@ -143,8 +167,7 @@ def resolve_paths(
     )
 
     paths = {
-        "mapping": analysis_dir / "coarse_label_mapping.csv",
-        "groups": analysis_dir / "class_difficulty_groups.csv",
+        "mapping": definitions_dir / "coarse_label_mapping.csv",
         "predictions": predictions,
         "output_dir": output_dir,
     }
@@ -165,6 +188,7 @@ def resolve_paths(
 
 
 def load_mapping(path: Path) -> pd.DataFrame:
+    """Load and validate the frozen fine-to-coarse label mapping."""
     dataframe = pd.read_csv(path)
     required = {
         "fine_label",
@@ -199,10 +223,24 @@ def load_mapping(path: Path) -> pd.DataFrame:
             "Coarse mapping must contain fine labels 0-101 exactly."
         )
 
+    if dataframe["class_name"].isna().any():
+        raise ValueError("Coarse mapping contains missing class names.")
+    if dataframe["coarse_name"].isna().any():
+        raise ValueError("Coarse mapping contains missing coarse names.")
+
+    fine_name_counts = dataframe.groupby(
+        "fine_label"
+    )["class_name"].nunique()
+    if (fine_name_counts != 1).any():
+        raise ValueError(
+            "One fine label maps to multiple class names."
+        )
+
     coarse_pairs = (
         dataframe[["coarse_label", "coarse_name"]]
         .drop_duplicates()
         .sort_values("coarse_label")
+        .reset_index(drop=True)
     )
     if coarse_pairs["coarse_label"].tolist() != list(
         range(len(coarse_pairs))
@@ -214,44 +252,12 @@ def load_mapping(path: Path) -> pd.DataFrame:
         raise ValueError(
             "One coarse label maps to multiple coarse names."
         )
+
     return dataframe
 
 
-def load_groups(path: Path) -> pd.DataFrame:
-    dataframe = pd.read_csv(path)
-    required = {
-        "label",
-        "class_name",
-        "difficulty_group",
-        "val_support",
-        "val_recall",
-        "val_f1",
-    }
-    missing = required - set(dataframe.columns)
-    if missing:
-        raise ValueError(
-            f"Difficulty-group CSV is missing columns: {sorted(missing)}"
-        )
-
-    dataframe["label"] = pd.to_numeric(
-        dataframe["label"],
-        errors="raise",
-    ).astype(int)
-    if set(dataframe["label"]) != set(range(NUM_FINE_CLASSES)):
-        raise ValueError(
-            "Difficulty-group CSV must contain labels 0-101 exactly."
-        )
-    unknown_groups = (
-        set(dataframe["difficulty_group"]) - set(GROUP_ORDER)
-    )
-    if unknown_groups:
-        raise ValueError(
-            f"Unknown difficulty groups: {sorted(unknown_groups)}"
-        )
-    return dataframe.sort_values("label").reset_index(drop=True)
-
-
 def load_predictions(path: Path) -> pd.DataFrame:
+    """Load and validate the saved fine-label predictions."""
     dataframe = pd.read_csv(path)
     required = {"true_label", "predicted_label"}
     missing = required - set(dataframe.columns)
@@ -272,8 +278,12 @@ def load_predictions(path: Path) -> pd.DataFrame:
             NUM_FINE_CLASSES - 1,
         )
         if invalid.any():
+            invalid_values = sorted(
+                dataframe.loc[invalid, column].unique().tolist()
+            )
             raise ValueError(
-                f"{column} contains labels outside 0-101."
+                f"{column} contains labels outside 0-101: "
+                f"{invalid_values[:10]}"
             )
 
     if "image_name" not in dataframe.columns:
@@ -285,6 +295,7 @@ def load_predictions(path: Path) -> pd.DataFrame:
                 for index in range(len(dataframe))
             ],
         )
+
     dataframe["image_name"] = dataframe["image_name"].astype(str)
     if dataframe["image_name"].duplicated().any():
         duplicates = dataframe.loc[
@@ -295,10 +306,12 @@ def load_predictions(path: Path) -> pd.DataFrame:
             "Prediction CSV contains duplicate image names: "
             f"{duplicates.tolist()}"
         )
+
     return dataframe
 
 
 def geometric_mean_from_recalls(recalls: np.ndarray) -> float:
+    """Calculate the geometric mean of per-class recalls."""
     recalls = np.asarray(recalls, dtype=np.float64)
     if len(recalls) == 0 or np.any(recalls <= 0):
         return 0.0
@@ -310,7 +323,8 @@ def calculate_metrics(
     predicted_labels: np.ndarray,
     labels: list[int],
 ) -> dict[str, float | int]:
-    precision, recall, f1, support = (
+    """Calculate overall and macro-averaged metrics."""
+    precision, recall, f1, _ = (
         precision_recall_fscore_support(
             true_labels,
             predicted_labels,
@@ -341,6 +355,7 @@ def calculate_per_class_metrics(
     predicted_labels: np.ndarray,
     labels: list[int],
 ) -> pd.DataFrame:
+    """Calculate precision, recall, F1-score, and support per class."""
     precision, recall, f1, support = (
         precision_recall_fscore_support(
             true_labels,
@@ -362,6 +377,7 @@ def add_names_and_coarse_labels(
     predictions: pd.DataFrame,
     mapping: pd.DataFrame,
 ) -> pd.DataFrame:
+    """Add fine-class names and mapped coarse labels to predictions."""
     fine_to_name = mapping.set_index("fine_label")[
         "class_name"
     ].to_dict()
@@ -394,6 +410,27 @@ def add_names_and_coarse_labels(
     result["predicted_coarse_class"] = (
         result["predicted_coarse_label"].map(coarse_to_name)
     )
+
+    mapped_columns = [
+        "true_class",
+        "predicted_class",
+        "true_coarse_label",
+        "predicted_coarse_label",
+        "true_coarse_class",
+        "predicted_coarse_class",
+    ]
+    if result[mapped_columns].isna().any().any():
+        raise ValueError(
+            "At least one prediction label is absent from the "
+            "coarse mapping."
+        )
+
+    result["true_coarse_label"] = result[
+        "true_coarse_label"
+    ].astype(int)
+    result["predicted_coarse_label"] = result[
+        "predicted_coarse_label"
+    ].astype(int)
     return result
 
 
@@ -402,8 +439,11 @@ def build_original_vs_coarse_summary(
     mapping: pd.DataFrame,
     split: str,
 ) -> pd.DataFrame:
+    """Compare the original fine evaluation with the coarse evaluation."""
     fine_labels = list(range(NUM_FINE_CLASSES))
-    coarse_labels = sorted(mapping["coarse_label"].unique())
+    coarse_labels = sorted(
+        mapping["coarse_label"].unique().tolist()
+    )
 
     original = calculate_metrics(
         predictions["true_label"].to_numpy(),
@@ -420,6 +460,12 @@ def build_original_vs_coarse_summary(
     recovered = (
         original_errors - int(coarse["number_errors"])
     )
+    recovery_rate = (
+        recovered / original_errors
+        if original_errors > 0
+        else 0.0
+    )
+
     rows = [
         {
             "evaluation_order": 1,
@@ -437,11 +483,7 @@ def build_original_vs_coarse_summary(
             "number_classes": len(coarse_labels),
             **coarse,
             "errors_recovered_by_merging": recovered,
-            "error_recovery_rate": (
-                recovered / original_errors
-                if original_errors > 0
-                else 0.0
-            ),
+            "error_recovery_rate": recovery_rate,
         },
     ]
     return pd.DataFrame(rows)
@@ -452,6 +494,7 @@ def build_coarse_report(
     mapping: pd.DataFrame,
     split: str,
 ) -> pd.DataFrame:
+    """Build a per-coarse-class classification report."""
     coarse_names = (
         mapping[["coarse_label", "coarse_name"]]
         .drop_duplicates()
@@ -472,9 +515,12 @@ def build_coarse_report(
         how="left",
         validate="one_to_one",
     )
+
+    report["number_correct"] = np.rint(
+        report["recall"] * report["support"]
+    ).astype(int)
     report["number_errors"] = (
-        report["support"]
-        - np.rint(report["recall"] * report["support"]).astype(int)
+        report["support"] - report["number_correct"]
     )
     report["error_rate"] = np.divide(
         report["number_errors"],
@@ -482,138 +528,64 @@ def build_coarse_report(
         out=np.zeros(len(report), dtype=np.float64),
         where=report["support"].to_numpy() > 0,
     )
-    return report.sort_values(
+
+    ordered_columns = [
+        "split",
+        "coarse_label",
+        "coarse_name",
+        "precision",
+        "recall",
+        "f1",
+        "support",
+        "number_correct",
+        "number_errors",
+        "error_rate",
+    ]
+    return report[ordered_columns].sort_values(
         ["f1", "recall", "support"],
         ascending=[True, True, False],
     ).reset_index(drop=True)
 
 
-def build_group_reports(
+def build_recovered_errors(
     predictions: pd.DataFrame,
-    groups: pd.DataFrame,
-    mapping: pd.DataFrame,
-    split: str,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    class_metrics = calculate_per_class_metrics(
-        predictions["true_label"].to_numpy(),
-        predictions["predicted_label"].to_numpy(),
-        list(range(NUM_FINE_CLASSES)),
+) -> pd.DataFrame:
+    """List fine mistakes absorbed by a valid coarse-label merge."""
+    original_wrong = (
+        predictions["true_label"]
+        != predictions["predicted_label"]
     )
-    details = groups.merge(
-        class_metrics,
-        on="label",
-        how="left",
-        validate="one_to_one",
-        suffixes=("_definition", f"_{split}"),
+    coarse_correct = (
+        predictions["true_coarse_label"]
+        == predictions["predicted_coarse_label"]
     )
-    details = details.merge(
-        mapping[
-            [
-                "fine_label",
-                "coarse_label",
-                "coarse_name",
-                "is_merged",
-                "cluster_name",
-            ]
-        ],
-        left_on="label",
-        right_on="fine_label",
-        how="left",
-        validate="one_to_one",
-        suffixes=("", "_mapping"),
+    recovered = predictions[
+        original_wrong & coarse_correct
+    ].copy()
+    recovered.insert(
+        0,
+        "recovered_error_rank",
+        range(1, len(recovered) + 1),
     )
-    details.insert(0, "split", split)
-    details["number_correct"] = np.rint(
-        details["recall"] * details["support"]
-    ).astype(int)
-    details["number_errors"] = (
-        details["support"] - details["number_correct"]
-    )
-    details["class_error_rate"] = np.divide(
-        details["number_errors"],
-        details["support"],
-        out=np.zeros(len(details), dtype=np.float64),
-        where=details["support"].to_numpy() > 0,
-    )
-    details["difficulty_group_order"] = details[
-        "difficulty_group"
-    ].map(GROUP_ORDER)
-    details = details.sort_values(
-        ["difficulty_group_order", "f1", "recall", "label"],
-        ascending=[True, True, True, True],
-    ).reset_index(drop=True)
 
-    total_samples = len(predictions)
-    total_errors = int(
-        np.sum(
-            predictions["true_label"].to_numpy()
-            != predictions["predicted_label"].to_numpy()
-        )
-    )
-    label_to_group = groups.set_index("label")[
-        "difficulty_group"
-    ].to_dict()
-    sample_groups = predictions["true_label"].map(label_to_group)
-    summary_rows: list[dict[str, int | float | str]] = []
-
-    for group_name, group_order in GROUP_ORDER.items():
-        group_labels = groups.loc[
-            groups["difficulty_group"] == group_name,
-            "label",
-        ].tolist()
-        mask = sample_groups == group_name
-        true_group = predictions.loc[mask, "true_label"].to_numpy()
-        pred_group = predictions.loc[
-            mask,
-            "predicted_label",
-        ].to_numpy()
-        number_samples = int(mask.sum())
-        number_correct = int(np.sum(true_group == pred_group))
-        number_errors = number_samples - number_correct
-        group_class_metrics = class_metrics[
-            class_metrics["label"].isin(group_labels)
-        ]
-
-        summary_rows.append({
-            "group_order": group_order,
-            "split": split,
-            "difficulty_group": group_name,
-            "number_classes": len(group_labels),
-            "number_samples": number_samples,
-            "sample_share": (
-                number_samples / total_samples
-                if total_samples > 0
-                else 0.0
-            ),
-            "number_correct": number_correct,
-            "number_errors": number_errors,
-            "conditional_accuracy": (
-                number_correct / number_samples
-                if number_samples > 0
-                else 0.0
-            ),
-            "conditional_error_rate": (
-                number_errors / number_samples
-                if number_samples > 0
-                else 0.0
-            ),
-            "error_share": (
-                number_errors / total_errors
-                if total_errors > 0
-                else 0.0
-            ),
-            "macro_precision": float(
-                group_class_metrics["precision"].mean()
-            ),
-            "macro_recall": float(
-                group_class_metrics["recall"].mean()
-            ),
-            "macro_f1": float(
-                group_class_metrics["f1"].mean()
-            ),
-        })
-
-    return pd.DataFrame(summary_rows), details
+    ordered_columns = [
+        "recovered_error_rank",
+        "image_name",
+        "true_label",
+        "true_class",
+        "predicted_label",
+        "predicted_class",
+        "true_coarse_label",
+        "true_coarse_class",
+        "predicted_coarse_label",
+        "predicted_coarse_class",
+    ]
+    extra_columns = [
+        column
+        for column in recovered.columns
+        if column not in ordered_columns
+    ]
+    return recovered[ordered_columns + extra_columns]
 
 
 def save_coarse_confusion_matrix(
@@ -621,6 +593,7 @@ def save_coarse_confusion_matrix(
     mapping: pd.DataFrame,
     path: Path,
 ) -> None:
+    """Save a named coarse-label confusion matrix."""
     coarse_names = (
         mapping[["coarse_label", "coarse_name"]]
         .drop_duplicates()
@@ -633,11 +606,13 @@ def save_coarse_confusion_matrix(
         predictions["predicted_coarse_label"],
         labels=labels,
     )
-    pd.DataFrame(
+    matrix_dataframe = pd.DataFrame(
         matrix,
         index=names,
         columns=names,
-    ).to_csv(path, index=True)
+    )
+    matrix_dataframe.index.name = "true_coarse_class"
+    matrix_dataframe.to_csv(path, index=True)
 
 
 def main() -> None:
@@ -646,7 +621,6 @@ def main() -> None:
     paths = resolve_paths(args, project_root)
 
     mapping = load_mapping(paths["mapping"])
-    groups = load_groups(paths["groups"])
     predictions = load_predictions(paths["predictions"])
     predictions = add_names_and_coarse_labels(
         predictions,
@@ -663,29 +637,7 @@ def main() -> None:
         mapping,
         args.split,
     )
-    group_summary, group_details = build_group_reports(
-        predictions,
-        groups,
-        mapping,
-        args.split,
-    )
-
-    original_wrong = (
-        predictions["true_label"]
-        != predictions["predicted_label"]
-    )
-    coarse_correct = (
-        predictions["true_coarse_label"]
-        == predictions["predicted_coarse_label"]
-    )
-    recovered_errors = predictions[
-        original_wrong & coarse_correct
-    ].copy()
-    recovered_errors.insert(
-        0,
-        "recovered_error_rank",
-        range(1, len(recovered_errors) + 1),
-    )
+    recovered_errors = build_recovered_errors(predictions)
 
     prefix = args.split
     output_paths = {
@@ -705,14 +657,6 @@ def main() -> None:
             paths["output_dir"]
             / f"{prefix}_coarse_recovered_errors.csv"
         ),
-        "group_summary": (
-            paths["output_dir"]
-            / f"{prefix}_difficulty_group_summary.csv"
-        ),
-        "group_details": (
-            paths["output_dir"]
-            / f"{prefix}_difficulty_class_details.csv"
-        ),
     }
 
     summary.to_csv(
@@ -729,16 +673,6 @@ def main() -> None:
         output_paths["recovered"],
         index=False,
     )
-    group_summary.to_csv(
-        output_paths["group_summary"],
-        index=False,
-        float_format="%.6f",
-    )
-    group_details.to_csv(
-        output_paths["group_details"],
-        index=False,
-        float_format="%.6f",
-    )
     save_coarse_confusion_matrix(
         predictions,
         mapping,
@@ -747,9 +681,11 @@ def main() -> None:
 
     original_row = summary.iloc[0]
     coarse_row = summary.iloc[1]
-    print("Coarse and difficulty-group evaluation complete.")
+
+    print("Coarse-label evaluation completed successfully.")
     print("Split:", args.split)
     print("Predictions:", paths["predictions"])
+    print("Coarse mapping:", paths["mapping"])
     print(
         "Original 102-class accuracy / Macro-F1:",
         f"{original_row['accuracy']:.4f} / "
