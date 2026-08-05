@@ -1,0 +1,8 @@
+cluster_name,number_classes,class_members,within_cluster_errors,cohesion,severity,reciprocity,visual_confusion_score
+auto_cluster_001,3,lytta polita | legume blister beetle | blister beetle,83,0.669355,0.210127,0.891566,60.909316
+auto_cluster_002,3,black cutworm | large cutworm | yellow cutworm,61,0.642105,0.335165,0.754098,60.821123
+auto_cluster_003,3,brown plant hopper | white backed plant hopper | small brown plant hopper,74,0.627119,0.323144,0.783784,60.454745
+auto_cluster_004,2,red spider | Panonchus citri McGregor,24,0.648649,0.263736,0.666667,57.191367
+auto_cluster_005,3,english grain aphid | green bug | bird cherry-oataphid,47,0.456311,0.279762,0.808511,52.815497
+auto_cluster_006,3,alfalfa plant bug | tarnished plant bug | Miridae,81,0.540000,0.123476,0.814815,51.600565
+auto_cluster_007,4,army worm | cabbage army worm | beet army worm | Prodenia litura,94,0.465347,0.195021,0.808511,50.634697

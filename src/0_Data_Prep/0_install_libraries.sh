@@ -21,6 +21,7 @@ echo "Installing core DeepLearning libraries:"
 pip install numpy==2.2.6
 pip install opencv-python==5.0.0.93
 pip install scikit-learn
+pip install networkx
 pip install pandas
 pip install seaborn
 

@@ -2,180 +2,180 @@ confusion_rank,split,true_label,true_class,predicted_label,predicted_class,wrong
 1,test,47,tarnished plant bug,70,Miridae,81,246,0.329268,0.680672,1640,0.049390
 2,test,46,alfalfa plant bug,70,Miridae,72,197,0.365482,0.615385,1640,0.043902
 3,test,51,blister beetle,50,legume blister beetle,64,570,0.112281,0.359551,434,0.147465
-4,test,50,legume blister beetle,51,blister beetle,62,423,0.146572,0.543860,593,0.104553
-5,test,101,Cicadellidae,69,Cicadella viridis,55,1723,0.031921,0.283505,382,0.143979
-6,test,49,lytta polita,51,blister beetle,54,197,0.274112,0.529412,593,0.091062
+4,test,50,legume blister beetle,51,blister beetle,62,423,0.146572,0.543860,594,0.104377
+5,test,101,Cicadellidae,69,Cicadella viridis,55,1723,0.031921,0.283505,383,0.143603
+6,test,49,lytta polita,51,blister beetle,54,197,0.274112,0.529412,594,0.090909
 7,test,7,brown plant hopper,8,white backed plant hopper,53,251,0.211155,0.420635,272,0.194853
-8,test,39,beet army worm,38,cabbage army worm,52,482,0.107884,0.273684,245,0.212245
+8,test,39,beet army worm,38,cabbage army worm,52,482,0.107884,0.273684,247,0.210526
 9,test,18,black cutworm,19,large cutworm,48,257,0.186770,0.457143,154,0.311688
 10,test,38,cabbage army worm,39,beet army worm,48,257,0.186770,0.331034,506,0.094862
-11,test,69,Cicadella viridis,101,Cicadellidae,47,384,0.122396,0.618421,1795,0.026184
-12,test,27,english grain aphid,29,bird cherry-oataphid,46,197,0.233503,0.356589,224,0.205357
+11,test,27,english grain aphid,29,bird cherry-oataphid,46,197,0.233503,0.356589,224,0.205357
+12,test,69,Cicadella viridis,101,Cicadellidae,46,384,0.119792,0.613333,1794,0.025641
 13,test,19,large cutworm,18,black cutworm,44,148,0.297297,0.423077,275,0.160000
-14,test,24,aphids,27,english grain aphid,44,1229,0.035801,0.171875,178,0.247191
+14,test,24,aphids,27,english grain aphid,44,1229,0.035801,0.172549,178,0.247191
 15,test,70,Miridae,47,tarnished plant bug,44,1525,0.028852,0.182573,208,0.211538
 16,test,13,rice shell pest,0,rice leaf roller,43,123,0.349593,0.597222,394,0.109137
 17,test,9,small brown plant hopper,8,white backed plant hopper,43,166,0.259036,0.457447,272,0.158088
-18,test,8,white backed plant hopper,7,brown plant hopper,41,268,0.152985,0.310606,226,0.181416
-19,test,29,bird cherry-oataphid,24,aphids,38,213,0.178404,0.301587,1314,0.028919
+18,test,8,white backed plant hopper,7,brown plant hopper,41,268,0.152985,0.310606,228,0.179825
+19,test,29,bird cherry-oataphid,24,aphids,38,213,0.178404,0.301587,1316,0.028875
 20,test,51,blister beetle,49,lytta polita,36,570,0.063158,0.202247,153,0.235294
-21,test,27,english grain aphid,24,aphids,34,197,0.172589,0.263566,1314,0.025875
+21,test,27,english grain aphid,24,aphids,34,197,0.172589,0.263566,1316,0.025836
 22,test,21,red spider,74,Panonchus citri McGregor,33,159,0.207547,0.589286,146,0.226027
 23,test,70,Miridae,46,alfalfa plant bug,33,1525,0.021639,0.136929,152,0.217105
-24,test,8,white backed plant hopper,9,small brown plant hopper,32,268,0.119403,0.242424,159,0.201258
+24,test,8,white backed plant hopper,9,small brown plant hopper,32,268,0.119403,0.242424,158,0.202532
 25,test,70,Miridae,57,Apolygus lucorum,32,1525,0.020984,0.132780,109,0.293578
 26,test,29,bird cherry-oataphid,27,english grain aphid,31,213,0.145540,0.246032,178,0.174157
-27,test,24,aphids,70,Miridae,31,1229,0.025224,0.121094,1640,0.018902
+27,test,24,aphids,70,Miridae,31,1229,0.025224,0.121569,1640,0.018902
 28,test,20,yellow cutworm,19,large cutworm,29,144,0.201389,0.315217,154,0.188312
 29,test,49,lytta polita,50,legume blister beetle,29,197,0.147208,0.284314,434,0.066820
 30,test,3,asiatic rice borer,4,yellow rice borer,29,316,0.091772,0.228346,151,0.192053
-31,test,24,aphids,29,bird cherry-oataphid,29,1229,0.023596,0.113281,224,0.129464
-32,test,7,brown plant hopper,9,small brown plant hopper,28,251,0.111554,0.222222,159,0.176101
+31,test,24,aphids,29,bird cherry-oataphid,29,1229,0.023596,0.113725,224,0.129464
+32,test,7,brown plant hopper,9,small brown plant hopper,28,251,0.111554,0.222222,158,0.177215
 33,test,54,Thrips,92,Scirtothrips dorsalis Hood,28,264,0.106061,0.168675,256,0.109375
-34,test,39,beet army worm,45,flax budworm,28,482,0.058091,0.147368,283,0.098940
-35,test,70,Miridae,24,aphids,28,1525,0.018361,0.116183,1314,0.021309
+34,test,39,beet army worm,45,flax budworm,28,482,0.058091,0.147368,282,0.099291
+35,test,70,Miridae,24,aphids,28,1525,0.018361,0.116183,1316,0.021277
 36,test,57,Apolygus lucorum,70,Miridae,27,115,0.234783,0.385714,1640,0.016463
-37,test,11,rice leafhopper,101,Cicadellidae,27,122,0.221311,0.409091,1795,0.015042
-38,test,45,flax budworm,39,beet army worm,27,320,0.084375,0.144385,506,0.053360
+37,test,11,rice leafhopper,101,Cicadellidae,27,122,0.221311,0.409091,1794,0.015050
+38,test,45,flax budworm,39,beet army worm,27,320,0.084375,0.143617,506,0.053360
 39,test,4,yellow rice borer,3,asiatic rice borer,26,152,0.171053,0.472727,321,0.080997
-40,test,9,small brown plant hopper,7,brown plant hopper,25,166,0.150602,0.265957,226,0.110619
-41,test,92,Scirtothrips dorsalis Hood,54,Thrips,24,243,0.098765,0.342857,218,0.110092
-42,test,45,flax budworm,86,Prodenia litura,24,320,0.075000,0.128342,391,0.061381
-43,test,28,green bug,29,bird cherry-oataphid,23,98,0.234694,0.310811,224,0.102679
-44,test,1,rice leaf caterpillar,0,rice leaf roller,23,147,0.156463,0.310811,394,0.058376
-45,test,23,army worm,22,corn borer,23,322,0.071429,0.158621,539,0.042672
+40,test,9,small brown plant hopper,7,brown plant hopper,25,166,0.150602,0.265957,228,0.109649
+41,test,92,Scirtothrips dorsalis Hood,54,Thrips,24,243,0.098765,0.342857,217,0.110599
+42,test,45,flax budworm,86,Prodenia litura,24,320,0.075000,0.127660,391,0.061381
+43,test,23,army worm,22,corn borer,24,322,0.074534,0.165517,540,0.044444
+44,test,28,green bug,29,bird cherry-oataphid,23,98,0.234694,0.310811,224,0.102679
+45,test,1,rice leaf caterpillar,0,rice leaf roller,23,147,0.156463,0.310811,394,0.058376
 46,test,101,Cicadellidae,70,Miridae,23,1723,0.013349,0.118557,1640,0.014024
 47,test,86,Prodenia litura,39,beet army worm,22,392,0.056122,0.171875,506,0.043478
-48,test,28,green bug,27,english grain aphid,21,98,0.214286,0.283784,178,0.117978
-49,test,20,yellow cutworm,18,black cutworm,21,144,0.145833,0.228261,275,0.076364
-50,test,52,therioaphis maculata Buckton,24,aphids,20,78,0.256410,0.327869,1314,0.015221
+48,test,52,therioaphis maculata Buckton,24,aphids,21,78,0.269231,0.344262,1316,0.015957
+49,test,28,green bug,27,english grain aphid,21,98,0.214286,0.283784,178,0.117978
+50,test,20,yellow cutworm,18,black cutworm,21,144,0.145833,0.228261,275,0.076364
 51,test,19,large cutworm,20,yellow cutworm,20,148,0.135135,0.192308,126,0.158730
 52,test,47,tarnished plant bug,46,alfalfa plant bug,20,246,0.081301,0.168067,152,0.131579
-53,test,38,cabbage army worm,45,flax budworm,20,257,0.077821,0.137931,283,0.070671
-54,test,3,asiatic rice borer,22,corn borer,20,316,0.063291,0.157480,539,0.037106
+53,test,38,cabbage army worm,45,flax budworm,20,257,0.077821,0.137931,282,0.070922
+54,test,3,asiatic rice borer,22,corn borer,20,316,0.063291,0.157480,540,0.037037
 55,test,22,corn borer,23,army worm,20,510,0.039216,0.149254,309,0.064725
-56,test,101,Cicadellidae,11,rice leafhopper,20,1723,0.011608,0.103093,102,0.196078
+56,test,101,Cicadellidae,11,rice leafhopper,20,1723,0.011608,0.103093,101,0.198020
 57,test,18,black cutworm,20,yellow cutworm,19,257,0.073930,0.180952,126,0.150794
-58,test,86,Prodenia litura,38,cabbage army worm,19,392,0.048469,0.148438,245,0.077551
-59,test,24,aphids,91,Aphis citricola Vander Goot,19,1229,0.015460,0.074219,123,0.154472
-60,test,67,Lycorma delicatula,101,Cicadellidae,19,1594,0.011920,0.109195,1795,0.010585
+58,test,86,Prodenia litura,38,cabbage army worm,19,392,0.048469,0.148438,247,0.076923
+59,test,24,aphids,91,Aphis citricola Vander Goot,19,1229,0.015460,0.074510,123,0.154472
+60,test,67,Lycorma delicatula,101,Cicadellidae,19,1594,0.011920,0.109195,1794,0.010591
 61,test,38,cabbage army worm,23,army worm,18,257,0.070039,0.124138,309,0.058252
 62,test,38,cabbage army worm,86,Prodenia litura,18,257,0.070039,0.124138,391,0.046036
 63,test,39,beet army worm,86,Prodenia litura,18,482,0.037344,0.094737,391,0.046036
 64,test,22,corn borer,3,asiatic rice borer,18,510,0.035294,0.134328,321,0.056075
-65,test,101,Cicadellidae,67,Lycorma delicatula,18,1723,0.010447,0.092784,1680,0.010714
-66,test,28,green bug,24,aphids,17,98,0.173469,0.229730,1314,0.012938
+65,test,101,Cicadellidae,67,Lycorma delicatula,18,1723,0.010447,0.092784,1681,0.010708
+66,test,28,green bug,24,aphids,17,98,0.173469,0.229730,1316,0.012918
 67,test,74,Panonchus citri McGregor,21,red spider,17,116,0.146552,0.629630,146,0.116438
 68,test,83,Tetradacus c Bactrocera minax,84,Dacus dorsalis(Hendel),17,117,0.145299,0.531250,138,0.123188
 69,test,99,Rhytidodera bowrinii white,68,Xylotrechus,17,167,0.101796,0.340000,346,0.049133
-70,test,45,flax budworm,67,Lycorma delicatula,17,320,0.053125,0.090909,1680,0.010119
+70,test,45,flax budworm,67,Lycorma delicatula,17,320,0.053125,0.090426,1681,0.010113
 71,test,23,army worm,39,beet army worm,17,322,0.052795,0.117241,506,0.033597
-72,test,100,Sternochetus frigidus,42,beet weevil,16,138,0.115942,0.285714,113,0.141593
-73,test,95,Salurnis marginella Guerr,94,Lawana imitata Melichar,16,147,0.108844,0.666667,186,0.086022
-74,test,94,Lawana imitata Melichar,95,Salurnis marginella Guerr,16,174,0.091954,0.484848,153,0.104575
-75,test,45,flax budworm,22,corn borer,16,320,0.050000,0.085561,539,0.029685
+72,test,95,Salurnis marginella Guerr,94,Lawana imitata Melichar,16,147,0.108844,0.666667,186,0.086022
+73,test,94,Lawana imitata Melichar,95,Salurnis marginella Guerr,16,174,0.091954,0.484848,153,0.104575
+74,test,45,flax budworm,22,corn borer,16,320,0.050000,0.085106,540,0.029630
+75,test,45,flax budworm,38,cabbage army worm,16,320,0.050000,0.085106,247,0.064777
 76,test,33,wheat phloeothrips,92,Scirtothrips dorsalis Hood,15,88,0.170455,0.416667,256,0.058594
-77,test,91,Aphis citricola Vander Goot,24,aphids,15,106,0.141509,0.416667,1314,0.011416
-78,test,20,yellow cutworm,23,army worm,15,144,0.104167,0.163043,309,0.048544
-79,test,7,brown plant hopper,101,Cicadellidae,15,251,0.059761,0.119048,1795,0.008357
-80,test,45,flax budworm,38,cabbage army worm,15,320,0.046875,0.080214,245,0.061224
+77,test,91,Aphis citricola Vander Goot,24,aphids,15,106,0.141509,0.416667,1316,0.011398
+78,test,100,Sternochetus frigidus,42,beet weevil,15,138,0.108696,0.267857,112,0.133929
+79,test,20,yellow cutworm,23,army worm,15,144,0.104167,0.163043,309,0.048544
+80,test,7,brown plant hopper,101,Cicadellidae,15,251,0.059761,0.119048,1794,0.008361
 81,test,23,army worm,86,Prodenia litura,15,322,0.046584,0.103448,391,0.038363
-82,test,39,beet army worm,22,corn borer,15,482,0.031120,0.078947,539,0.027829
+82,test,39,beet army worm,22,corn borer,15,482,0.031120,0.078947,540,0.027778
 83,test,39,beet army worm,23,army worm,15,482,0.031120,0.078947,309,0.048544
-84,test,70,Miridae,101,Cicadellidae,15,1525,0.009836,0.062241,1795,0.008357
+84,test,70,Miridae,101,Cicadellidae,15,1525,0.009836,0.062241,1794,0.008361
 85,test,85,Bactrocera tsuneonis,83,Tetradacus c Bactrocera minax,14,51,0.274510,0.400000,118,0.118644
 86,test,31,penthaleus major,32,longlegged spider mite,14,70,0.200000,0.518519,70,0.200000
 87,test,27,english grain aphid,28,green bug,14,197,0.071066,0.108527,72,0.194444
-88,test,23,army worm,38,cabbage army worm,14,322,0.043478,0.096552,245,0.057143
-89,test,86,Prodenia litura,45,flax budworm,14,392,0.035714,0.109375,283,0.049470
+88,test,23,army worm,38,cabbage army worm,14,322,0.043478,0.096552,247,0.056680
+89,test,86,Prodenia litura,45,flax budworm,14,392,0.035714,0.109375,282,0.049645
 90,test,2,paddy stem maggot,6,Rice Stemfly,13,79,0.164557,0.265306,113,0.115044
 91,test,46,alfalfa plant bug,47,tarnished plant bug,13,197,0.065990,0.111111,208,0.062500
-92,test,71,Trialeurodes vaporariorum,24,aphids,13,208,0.062500,0.351351,1314,0.009893
-93,test,54,Thrips,24,aphids,13,264,0.049242,0.078313,1314,0.009893
+92,test,71,Trialeurodes vaporariorum,24,aphids,13,208,0.062500,0.351351,1316,0.009878
+93,test,54,Thrips,24,aphids,13,264,0.049242,0.078313,1316,0.009878
 94,test,0,rice leaf roller,13,rice shell pest,13,335,0.038806,0.206349,92,0.141304
-95,test,24,aphids,67,Lycorma delicatula,13,1229,0.010578,0.050781,1680,0.007738
+95,test,24,aphids,67,Lycorma delicatula,13,1229,0.010578,0.050980,1681,0.007733
 96,test,17,white margined moth,18,black cutworm,12,45,0.266667,0.400000,275,0.043636
 97,test,29,bird cherry-oataphid,28,green bug,12,213,0.056338,0.095238,72,0.166667
-98,test,66,Ampelophaga,67,Lycorma delicatula,12,230,0.052174,0.230769,1680,0.007143
+98,test,66,Ampelophaga,67,Lycorma delicatula,12,230,0.052174,0.230769,1681,0.007139
 99,test,54,Thrips,33,wheat phloeothrips,12,264,0.045455,0.072289,96,0.125000
-100,test,54,Thrips,67,Lycorma delicatula,12,264,0.045455,0.072289,1680,0.007143
+100,test,54,Thrips,67,Lycorma delicatula,12,264,0.045455,0.072289,1681,0.007139
 101,test,8,white backed plant hopper,3,asiatic rice borer,12,268,0.044776,0.090909,321,0.037383
 102,test,3,asiatic rice borer,0,rice leaf roller,12,316,0.037975,0.094488,394,0.030457
-103,test,45,flax budworm,87,Adristyrannus,12,320,0.037500,0.064171,97,0.123711
-104,test,45,flax budworm,97,Chlumetia transversa,12,320,0.037500,0.064171,93,0.129032
+103,test,45,flax budworm,87,Adristyrannus,12,320,0.037500,0.063830,97,0.123711
+104,test,45,flax budworm,97,Chlumetia transversa,12,320,0.037500,0.063830,93,0.129032
 105,test,51,blister beetle,70,Miridae,12,570,0.021053,0.067416,1640,0.007317
-106,test,24,aphids,101,Cicadellidae,12,1229,0.009764,0.046875,1795,0.006685
-107,test,70,Miridae,51,blister beetle,12,1525,0.007869,0.049793,593,0.020236
+106,test,24,aphids,101,Cicadellidae,12,1229,0.009764,0.047059,1794,0.006689
+107,test,70,Miridae,51,blister beetle,12,1525,0.007869,0.049793,594,0.020202
 108,test,12,grain spreader thrips,33,wheat phloeothrips,11,52,0.211538,0.458333,96,0.114583
 109,test,90,Toxoptera aurantii,89,Toxoptera citricidus,11,68,0.161765,0.354839,56,0.196429
 110,test,32,longlegged spider mite,21,red spider,11,74,0.148649,0.289474,146,0.075342
-111,test,93,Dasineura sp,24,aphids,11,152,0.072368,0.183333,1314,0.008371
-112,test,26,peach borer,22,corn borer,11,208,0.052885,0.282051,539,0.020408
-113,test,54,Thrips,22,corn borer,11,264,0.041667,0.066265,539,0.020408
+111,test,93,Dasineura sp,24,aphids,11,152,0.072368,0.183333,1316,0.008359
+112,test,26,peach borer,22,corn borer,11,208,0.052885,0.282051,540,0.020370
+113,test,54,Thrips,22,corn borer,11,264,0.041667,0.066265,540,0.020370
 114,test,50,legume blister beetle,49,lytta polita,11,423,0.026005,0.096491,153,0.071895
 115,test,22,corn borer,4,yellow rice borer,11,510,0.021569,0.082090,151,0.072848
-116,test,24,aphids,52,therioaphis maculata Buckton,11,1229,0.008950,0.042969,62,0.177419
+116,test,24,aphids,52,therioaphis maculata Buckton,11,1229,0.008950,0.043137,61,0.180328
 117,test,67,Lycorma delicatula,70,Miridae,11,1594,0.006901,0.063218,1640,0.006707
-118,test,101,Cicadellidae,24,aphids,11,1723,0.006384,0.056701,1314,0.008371
-119,test,53,odontothrips loti,54,Thrips,10,54,0.185185,0.434783,218,0.045872
+118,test,101,Cicadellidae,24,aphids,11,1723,0.006384,0.056701,1316,0.008359
+119,test,53,odontothrips loti,54,Thrips,10,54,0.185185,0.434783,217,0.046083
 120,test,32,longlegged spider mite,31,penthaleus major,10,74,0.135135,0.263158,58,0.172414
-121,test,37,flea beetle,51,blister beetle,10,237,0.042194,0.222222,593,0.016863
+121,test,37,flea beetle,51,blister beetle,10,237,0.042194,0.222222,594,0.016835
 122,test,54,Thrips,53,odontothrips loti,10,264,0.037879,0.060241,54,0.185185
 123,test,0,rice leaf roller,1,rice leaf caterpillar,10,335,0.029851,0.158730,137,0.072993
 124,test,0,rice leaf roller,3,asiatic rice borer,10,335,0.029851,0.158730,321,0.031153
-125,test,48,Locustoidea,67,Lycorma delicatula,10,419,0.023866,0.200000,1680,0.005952
+125,test,48,Locustoidea,67,Lycorma delicatula,10,419,0.023866,0.200000,1681,0.005949
 126,test,22,corn borer,26,peach borer,10,510,0.019608,0.074627,223,0.044843
-127,test,51,blister beetle,67,Lycorma delicatula,10,570,0.017544,0.056180,1680,0.005952
-128,test,70,Miridae,48,Locustoidea,10,1525,0.006557,0.041494,414,0.024155
-129,test,67,Lycorma delicatula,45,flax budworm,10,1594,0.006274,0.057471,283,0.035336
+127,test,51,blister beetle,67,Lycorma delicatula,10,570,0.017544,0.056180,1681,0.005949
+128,test,70,Miridae,48,Locustoidea,10,1525,0.006557,0.041494,413,0.024213
+129,test,67,Lycorma delicatula,45,flax budworm,10,1594,0.006274,0.057471,282,0.035461
 130,test,17,white margined moth,20,yellow cutworm,9,45,0.200000,0.300000,126,0.071429
-131,test,90,Toxoptera aurantii,24,aphids,9,68,0.132353,0.290323,1314,0.006849
+131,test,90,Toxoptera aurantii,24,aphids,9,68,0.132353,0.290323,1316,0.006839
 132,test,64,Pseudococcus comstocki Kuwana,76,Icerya purchasi Maskell,9,93,0.096774,0.257143,207,0.043478
 133,test,5,rice gall midge,93,Dasineura sp,9,152,0.059211,0.219512,168,0.053571
-134,test,10,rice water weevil,42,beet weevil,9,257,0.035019,0.140625,113,0.079646
+134,test,10,rice water weevil,42,beet weevil,9,257,0.035019,0.140625,112,0.080357
 135,test,18,black cutworm,17,white margined moth,9,257,0.035019,0.085714,39,0.230769
-136,test,45,flax budworm,66,Ampelophaga,9,320,0.028125,0.048128,217,0.041475
-137,test,23,army worm,45,flax budworm,9,322,0.027950,0.062069,283,0.031802
+136,test,45,flax budworm,66,Ampelophaga,9,320,0.028125,0.047872,217,0.041475
+137,test,23,army worm,45,flax budworm,9,322,0.027950,0.062069,282,0.031915
 138,test,68,Xylotrechus,70,Miridae,9,345,0.026087,0.204545,1640,0.005488
-139,test,24,aphids,28,green bug,9,1229,0.007323,0.035156,72,0.125000
-140,test,70,Miridae,67,Lycorma delicatula,9,1525,0.005902,0.037344,1680,0.005357
-141,test,67,Lycorma delicatula,24,aphids,9,1594,0.005646,0.051724,1314,0.006849
+139,test,24,aphids,28,green bug,9,1229,0.007323,0.035294,72,0.125000
+140,test,70,Miridae,67,Lycorma delicatula,9,1525,0.005902,0.037344,1681,0.005354
+141,test,67,Lycorma delicatula,24,aphids,9,1594,0.005646,0.051724,1316,0.006839
 142,test,67,Lycorma delicatula,86,Prodenia litura,9,1594,0.005646,0.051724,391,0.023018
 143,test,1,rice leaf caterpillar,39,beet army worm,8,147,0.054422,0.108108,506,0.015810
 144,test,19,large cutworm,86,Prodenia litura,8,148,0.054054,0.076923,391,0.020460
-145,test,44,alfalfa weevil,42,beet weevil,8,158,0.050633,0.126984,113,0.070796
+145,test,44,alfalfa weevil,42,beet weevil,8,158,0.050633,0.126984,112,0.071429
 146,test,9,small brown plant hopper,3,asiatic rice borer,8,166,0.048193,0.085106,321,0.024922
-147,test,99,Rhytidodera bowrinii white,51,blister beetle,8,167,0.047904,0.160000,593,0.013491
+147,test,99,Rhytidodera bowrinii white,51,blister beetle,8,167,0.047904,0.160000,594,0.013468
 148,test,99,Rhytidodera bowrinii white,70,Miridae,8,167,0.047904,0.160000,1640,0.004878
 149,test,29,bird cherry-oataphid,91,Aphis citricola Vander Goot,8,213,0.037559,0.063492,123,0.065041
 150,test,92,Scirtothrips dorsalis Hood,33,wheat phloeothrips,8,243,0.032922,0.114286,96,0.083333
 151,test,7,brown plant hopper,0,rice leaf roller,8,251,0.031873,0.063492,394,0.020305
-152,test,45,flax budworm,23,army worm,8,320,0.025000,0.042781,309,0.025890
+152,test,45,flax budworm,23,army worm,8,320,0.025000,0.042553,309,0.025890
 153,test,23,army worm,19,large cutworm,8,322,0.024845,0.055172,154,0.051948
 154,test,68,Xylotrechus,99,Rhytidodera bowrinii white,8,345,0.023188,0.181818,151,0.052980
 155,test,86,Prodenia litura,23,army worm,8,392,0.020408,0.062500,309,0.025890
-156,test,86,Prodenia litura,67,Lycorma delicatula,8,392,0.020408,0.062500,1680,0.004762
+156,test,86,Prodenia litura,67,Lycorma delicatula,8,392,0.020408,0.062500,1681,0.004759
 157,test,48,Locustoidea,70,Miridae,8,419,0.019093,0.160000,1640,0.004878
-158,test,39,beet army worm,54,Thrips,8,482,0.016598,0.042105,218,0.036697
+158,test,39,beet army worm,54,Thrips,8,482,0.016598,0.042105,217,0.036866
 159,test,22,corn borer,39,beet army worm,8,510,0.015686,0.059701,506,0.015810
 160,test,51,blister beetle,99,Rhytidodera bowrinii white,8,570,0.014035,0.044944,151,0.052980
-161,test,24,aphids,89,Toxoptera citricidus,8,1229,0.006509,0.031250,56,0.142857
+161,test,24,aphids,89,Toxoptera citricidus,8,1229,0.006509,0.031373,56,0.142857
 162,test,67,Lycorma delicatula,39,beet army worm,8,1594,0.005019,0.045977,506,0.015810
 163,test,81,Nipaecoccus vastalor,64,Pseudococcus comstocki Kuwana,7,30,0.233333,0.538462,82,0.085366
-164,test,35,cerodonta denticornis,40,Beet spot flies,7,42,0.166667,0.304348,96,0.072917
+164,test,35,cerodonta denticornis,40,Beet spot flies,7,42,0.166667,0.304348,94,0.074468
 165,test,85,Bactrocera tsuneonis,84,Dacus dorsalis(Hendel),7,51,0.137255,0.200000,138,0.050725
-166,test,12,grain spreader thrips,54,Thrips,7,52,0.134615,0.291667,218,0.032110
-167,test,89,Toxoptera citricidus,24,aphids,7,57,0.122807,0.241379,1314,0.005327
+166,test,12,grain spreader thrips,54,Thrips,7,52,0.134615,0.291667,217,0.032258
+167,test,89,Toxoptera citricidus,24,aphids,7,57,0.122807,0.241379,1316,0.005319
 168,test,32,longlegged spider mite,74,Panonchus citri McGregor,7,74,0.094595,0.184211,146,0.047945
 169,test,52,therioaphis maculata Buckton,29,bird cherry-oataphid,7,78,0.089744,0.114754,224,0.031250
 170,test,2,paddy stem maggot,10,rice water weevil,7,79,0.088608,0.142857,254,0.027559
-171,test,33,wheat phloeothrips,54,Thrips,7,88,0.079545,0.194444,218,0.032110
+171,test,33,wheat phloeothrips,54,Thrips,7,88,0.079545,0.194444,217,0.032258
 172,test,6,Rice Stemfly,35,cerodonta denticornis,7,111,0.063063,0.162791,35,0.200000
-173,test,57,Apolygus lucorum,24,aphids,7,115,0.060870,0.100000,1314,0.005327
+173,test,57,Apolygus lucorum,24,aphids,7,115,0.060870,0.100000,1316,0.005319
 174,test,57,Apolygus lucorum,46,alfalfa plant bug,7,115,0.060870,0.100000,152,0.046053
 175,test,84,Dacus dorsalis(Hendel),83,Tetradacus c Bactrocera minax,7,132,0.053030,0.233333,118,0.059322
 176,test,21,red spider,32,longlegged spider mite,7,159,0.044025,0.125000,70,0.100000
-177,test,46,alfalfa plant bug,101,Cicadellidae,7,197,0.035533,0.059829,1795,0.003900
+177,test,46,alfalfa plant bug,101,Cicadellidae,7,197,0.035533,0.059829,1794,0.003902
 178,test,82,Aleurocanthus spiniferus,71,Trialeurodes vaporariorum,7,208,0.033654,0.304348,226,0.030973
 179,test,10,rice water weevil,100,Sternochetus frigidus,7,257,0.027237,0.109375,121,0.057851
 180,test,54,Thrips,12,grain spreader thrips,7,264,0.026515,0.042169,44,0.159091
@@ -183,612 +183,612 @@ confusion_rank,split,true_label,true_class,predicted_label,predicted_class,wrong
 182,test,54,Thrips,57,Apolygus lucorum,7,264,0.026515,0.042169,109,0.064220
 183,test,3,asiatic rice borer,1,rice leaf caterpillar,7,316,0.022152,0.055118,137,0.051095
 184,test,86,Prodenia litura,97,Chlumetia transversa,7,392,0.017857,0.054688,93,0.075269
-185,test,22,corn borer,45,flax budworm,7,510,0.013725,0.052239,283,0.024735
-186,test,72,Erythroneura apicalis,101,Cicadellidae,6,22,0.272727,0.600000,1795,0.003343
-187,test,98,Mango flat beak leafhopper,101,Cicadellidae,6,28,0.214286,0.315789,1795,0.003343
+185,test,22,corn borer,45,flax budworm,7,510,0.013725,0.052239,282,0.024823
+186,test,72,Erythroneura apicalis,101,Cicadellidae,6,22,0.272727,0.600000,1794,0.003344
+187,test,98,Mango flat beak leafhopper,101,Cicadellidae,6,28,0.214286,0.315789,1794,0.003344
 188,test,89,Toxoptera citricidus,29,bird cherry-oataphid,6,57,0.105263,0.206897,224,0.026786
-189,test,2,paddy stem maggot,40,Beet spot flies,6,79,0.075949,0.122449,96,0.062500
+189,test,2,paddy stem maggot,40,Beet spot flies,6,79,0.075949,0.122449,94,0.063830
 190,test,41,meadow moth,39,beet army worm,6,81,0.074074,0.240000,506,0.011858
 191,test,33,wheat phloeothrips,12,grain spreader thrips,6,88,0.068182,0.166667,44,0.136364
-192,test,97,Chlumetia transversa,38,cabbage army worm,6,92,0.065217,0.153846,245,0.024490
-193,test,97,Chlumetia transversa,45,flax budworm,6,92,0.065217,0.153846,283,0.021201
+192,test,97,Chlumetia transversa,38,cabbage army worm,6,92,0.065217,0.153846,247,0.024291
+193,test,97,Chlumetia transversa,45,flax budworm,6,92,0.065217,0.153846,282,0.021277
 194,test,64,Pseudococcus comstocki Kuwana,81,Nipaecoccus vastalor,6,93,0.064516,0.171429,32,0.187500
-195,test,11,rice leafhopper,7,brown plant hopper,6,122,0.049180,0.090909,226,0.026549
+195,test,11,rice leafhopper,7,brown plant hopper,6,122,0.049180,0.090909,228,0.026316
 196,test,11,rice leafhopper,8,white backed plant hopper,6,122,0.049180,0.090909,272,0.022059
 197,test,1,rice leaf caterpillar,3,asiatic rice borer,6,147,0.040816,0.081081,321,0.018692
 198,test,19,large cutworm,17,white margined moth,6,148,0.040541,0.057692,39,0.153846
 199,test,4,yellow rice borer,10,rice water weevil,6,152,0.039474,0.109091,254,0.023622
-200,test,9,small brown plant hopper,101,Cicadellidae,6,166,0.036145,0.063830,1795,0.003343
+200,test,9,small brown plant hopper,101,Cicadellidae,6,166,0.036145,0.063830,1794,0.003344
 201,test,25,Potosiabre vitarsis,14,grub,6,170,0.035294,0.315789,269,0.022305
 202,test,27,english grain aphid,91,Aphis citricola Vander Goot,6,197,0.030457,0.046512,123,0.048780
-203,test,29,bird cherry-oataphid,90,Toxoptera aurantii,6,213,0.028169,0.047619,61,0.098361
-204,test,37,flea beetle,24,aphids,6,237,0.025316,0.133333,1314,0.004566
+203,test,29,bird cherry-oataphid,90,Toxoptera aurantii,6,213,0.028169,0.047619,60,0.100000
+204,test,37,flea beetle,24,aphids,6,237,0.025316,0.133333,1316,0.004559
 205,test,92,Scirtothrips dorsalis Hood,53,odontothrips loti,6,243,0.024691,0.085714,54,0.111111
 206,test,10,rice water weevil,1,rice leaf caterpillar,6,257,0.023346,0.093750,137,0.043796
 207,test,38,cabbage army worm,88,Phyllocnistis citrella Stainton,6,257,0.023346,0.041379,121,0.049587
-208,test,8,white backed plant hopper,101,Cicadellidae,6,268,0.022388,0.045455,1795,0.003343
+208,test,8,white backed plant hopper,101,Cicadellidae,6,268,0.022388,0.045455,1794,0.003344
 209,test,3,asiatic rice borer,16,wireworm,6,316,0.018987,0.047244,270,0.022222
-210,test,45,flax budworm,18,black cutworm,6,320,0.018750,0.032086,275,0.021818
+210,test,45,flax budworm,18,black cutworm,6,320,0.018750,0.031915,275,0.021818
 211,test,23,army worm,18,black cutworm,6,322,0.018634,0.041379,275,0.021818
-212,test,86,Prodenia litura,24,aphids,6,392,0.015306,0.046875,1314,0.004566
-213,test,48,Locustoidea,101,Cicadellidae,6,419,0.014320,0.120000,1795,0.003343
-214,test,58,Limacodidae,67,Lycorma delicatula,6,421,0.014252,0.133333,1680,0.003571
-215,test,58,Limacodidae,101,Cicadellidae,6,421,0.014252,0.133333,1795,0.003343
-216,test,39,beet army worm,24,aphids,6,482,0.012448,0.031579,1314,0.004566
-217,test,24,aphids,92,Scirtothrips dorsalis Hood,6,1229,0.004882,0.023438,256,0.023438
+212,test,86,Prodenia litura,24,aphids,6,392,0.015306,0.046875,1316,0.004559
+213,test,48,Locustoidea,101,Cicadellidae,6,419,0.014320,0.120000,1794,0.003344
+214,test,58,Limacodidae,67,Lycorma delicatula,6,421,0.014252,0.133333,1681,0.003569
+215,test,58,Limacodidae,101,Cicadellidae,6,421,0.014252,0.133333,1794,0.003344
+216,test,39,beet army worm,24,aphids,6,482,0.012448,0.031579,1316,0.004559
+217,test,24,aphids,92,Scirtothrips dorsalis Hood,6,1229,0.004882,0.023529,256,0.023438
 218,test,67,Lycorma delicatula,93,Dasineura sp,6,1594,0.003764,0.034483,168,0.035714
-219,test,36,beet fly,40,Beet spot flies,5,32,0.156250,0.208333,96,0.052083
+219,test,36,beet fly,40,Beet spot flies,5,32,0.156250,0.208333,94,0.053191
 220,test,17,white margined moth,19,large cutworm,5,45,0.111111,0.166667,154,0.032468
 221,test,55,alfalfa seed chalcid,70,Miridae,5,56,0.089286,0.172414,1640,0.003049
 222,test,90,Toxoptera aurantii,92,Scirtothrips dorsalis Hood,5,68,0.073529,0.161290,256,0.019531
-223,test,97,Chlumetia transversa,22,corn borer,5,92,0.054348,0.128205,539,0.009276
+223,test,97,Chlumetia transversa,22,corn borer,5,92,0.054348,0.128205,540,0.009259
 224,test,42,beet weevil,44,alfalfa weevil,5,93,0.053763,0.185185,141,0.035461
 225,test,42,beet weevil,100,Sternochetus frigidus,5,93,0.053763,0.185185,121,0.041322
-226,test,87,Adristyrannus,67,Lycorma delicatula,5,94,0.053191,0.185185,1680,0.002976
+226,test,87,Adristyrannus,67,Lycorma delicatula,5,94,0.053191,0.185185,1681,0.002974
 227,test,28,green bug,91,Aphis citricola Vander Goot,5,98,0.051020,0.067568,123,0.040650
 228,test,34,wheat sawfly,55,alfalfa seed chalcid,5,102,0.049020,0.192308,56,0.089286
-229,test,59,Viteus vitifoliae,24,aphids,5,107,0.046729,0.113636,1314,0.003805
+229,test,59,Viteus vitifoliae,24,aphids,5,107,0.046729,0.113636,1316,0.003799
 230,test,59,Viteus vitifoliae,60,Colomerus vitis,5,107,0.046729,0.113636,49,0.102041
 231,test,6,Rice Stemfly,2,paddy stem maggot,5,111,0.045045,0.116279,68,0.073529
 232,test,6,Rice Stemfly,3,asiatic rice borer,5,111,0.045045,0.116279,321,0.015576
-233,test,57,Apolygus lucorum,54,Thrips,5,115,0.043478,0.071429,218,0.022936
+233,test,57,Apolygus lucorum,54,Thrips,5,115,0.043478,0.071429,217,0.023041
 234,test,83,Tetradacus c Bactrocera minax,85,Bactrocera tsuneonis,5,117,0.042735,0.156250,25,0.200000
-235,test,77,Unaspis yanonensis,24,aphids,5,126,0.039683,0.138889,1314,0.003805
+235,test,77,Unaspis yanonensis,24,aphids,5,126,0.039683,0.138889,1316,0.003799
 236,test,20,yellow cutworm,17,white margined moth,5,144,0.034722,0.054348,39,0.128205
-237,test,19,large cutworm,45,flax budworm,5,148,0.033784,0.048077,283,0.017668
+237,test,19,large cutworm,45,flax budworm,5,148,0.033784,0.048077,282,0.017730
 238,test,5,rice gall midge,3,asiatic rice borer,5,152,0.032895,0.121951,321,0.015576
 239,test,4,yellow rice borer,0,rice leaf roller,5,152,0.032895,0.090909,394,0.012690
-240,test,46,alfalfa plant bug,24,aphids,5,197,0.025381,0.042735,1314,0.003805
-241,test,27,english grain aphid,52,therioaphis maculata Buckton,5,197,0.025381,0.038760,62,0.080645
-242,test,47,tarnished plant bug,24,aphids,5,246,0.020325,0.042017,1314,0.003805
-243,test,38,cabbage army worm,67,Lycorma delicatula,5,257,0.019455,0.034483,1680,0.002976
+240,test,46,alfalfa plant bug,24,aphids,5,197,0.025381,0.042735,1316,0.003799
+241,test,27,english grain aphid,52,therioaphis maculata Buckton,5,197,0.025381,0.038760,61,0.081967
+242,test,47,tarnished plant bug,24,aphids,5,246,0.020325,0.042017,1316,0.003799
+243,test,38,cabbage army worm,67,Lycorma delicatula,5,257,0.019455,0.034483,1681,0.002974
 244,test,14,grub,18,black cutworm,5,258,0.019380,0.156250,275,0.018182
 245,test,14,grub,39,beet army worm,5,258,0.019380,0.156250,506,0.009881
-246,test,14,grub,67,Lycorma delicatula,5,258,0.019380,0.156250,1680,0.002976
-247,test,16,wireworm,101,Cicadellidae,5,267,0.018727,0.116279,1795,0.002786
+246,test,14,grub,67,Lycorma delicatula,5,258,0.019380,0.156250,1681,0.002974
+247,test,16,wireworm,101,Cicadellidae,5,267,0.018727,0.116279,1794,0.002787
 248,test,3,asiatic rice borer,8,white backed plant hopper,5,316,0.015823,0.039370,272,0.018382
 249,test,3,asiatic rice borer,13,rice shell pest,5,316,0.015823,0.039370,92,0.054348
 250,test,3,asiatic rice borer,26,peach borer,5,316,0.015823,0.039370,223,0.022422
 251,test,23,army worm,20,yellow cutworm,5,322,0.015528,0.034483,126,0.039683
-252,test,23,army worm,67,Lycorma delicatula,5,322,0.015528,0.034483,1680,0.002976
+252,test,23,army worm,67,Lycorma delicatula,5,322,0.015528,0.034483,1681,0.002974
 253,test,68,Xylotrechus,50,legume blister beetle,5,345,0.014493,0.113636,434,0.011521
-254,test,50,legume blister beetle,67,Lycorma delicatula,5,423,0.011820,0.043860,1680,0.002976
-255,test,39,beet army worm,67,Lycorma delicatula,5,482,0.010373,0.026316,1680,0.002976
-256,test,15,mole cricket,67,Lycorma delicatula,5,495,0.010101,0.217391,1680,0.002976
-257,test,51,blister beetle,37,flea beetle,5,570,0.008772,0.028090,227,0.022026
-258,test,24,aphids,71,Trialeurodes vaporariorum,5,1229,0.004068,0.019531,226,0.022124
-259,test,24,aphids,93,Dasineura sp,5,1229,0.004068,0.019531,168,0.029762
-260,test,70,Miridae,37,flea beetle,5,1525,0.003279,0.020747,227,0.022026
+254,test,50,legume blister beetle,67,Lycorma delicatula,5,423,0.011820,0.043860,1681,0.002974
+255,test,39,beet army worm,67,Lycorma delicatula,5,482,0.010373,0.026316,1681,0.002974
+256,test,15,mole cricket,67,Lycorma delicatula,5,495,0.010101,0.217391,1681,0.002974
+257,test,51,blister beetle,37,flea beetle,5,570,0.008772,0.028090,228,0.021930
+258,test,24,aphids,71,Trialeurodes vaporariorum,5,1229,0.004068,0.019608,226,0.022124
+259,test,24,aphids,93,Dasineura sp,5,1229,0.004068,0.019608,168,0.029762
+260,test,70,Miridae,37,flea beetle,5,1525,0.003279,0.020747,228,0.021930
 261,test,70,Miridae,68,Xylotrechus,5,1525,0.003279,0.020747,346,0.014451
-262,test,67,Lycorma delicatula,22,corn borer,5,1594,0.003137,0.028736,539,0.009276
-263,test,67,Lycorma delicatula,54,Thrips,5,1594,0.003137,0.028736,218,0.022936
+262,test,67,Lycorma delicatula,22,corn borer,5,1594,0.003137,0.028736,540,0.009259
+263,test,67,Lycorma delicatula,54,Thrips,5,1594,0.003137,0.028736,217,0.023041
 264,test,67,Lycorma delicatula,66,Ampelophaga,5,1594,0.003137,0.028736,217,0.023041
 265,test,67,Lycorma delicatula,94,Lawana imitata Melichar,5,1594,0.003137,0.028736,186,0.026882
-266,test,101,Cicadellidae,7,brown plant hopper,5,1723,0.002902,0.025773,226,0.022124
+266,test,101,Cicadellidae,7,brown plant hopper,5,1723,0.002902,0.025773,228,0.021930
 267,test,80,Parlatoria zizyphus Lucus,82,Aleurocanthus spiniferus,4,23,0.173913,0.444444,209,0.019139
-268,test,63,Polyphagotars onemus latus,54,Thrips,4,26,0.153846,0.210526,218,0.018349
+268,test,63,Polyphagotars onemus latus,54,Thrips,4,26,0.153846,0.210526,217,0.018433
 269,test,36,beet fly,2,paddy stem maggot,4,32,0.125000,0.166667,68,0.058824
 270,test,75,Phyllocoptes oleiverus ashmead,83,Tetradacus c Bactrocera minax,4,52,0.076923,0.222222,118,0.033898
 271,test,60,Colomerus vitis,59,Viteus vitifoliae,4,53,0.075472,0.222222,97,0.041237
-272,test,55,alfalfa seed chalcid,51,blister beetle,4,56,0.071429,0.137931,593,0.006745
-273,test,89,Toxoptera citricidus,90,Toxoptera aurantii,4,57,0.070175,0.137931,61,0.065574
-274,test,43,sericaorient alismots chulsky,51,blister beetle,4,58,0.068966,0.235294,593,0.006745
+272,test,55,alfalfa seed chalcid,51,blister beetle,4,56,0.071429,0.137931,594,0.006734
+273,test,89,Toxoptera citricidus,90,Toxoptera aurantii,4,57,0.070175,0.137931,60,0.066667
+274,test,43,sericaorient alismots chulsky,51,blister beetle,4,58,0.068966,0.235294,594,0.006734
 275,test,96,Deporaus marginatus Pascoe,100,Sternochetus frigidus,4,63,0.063492,0.166667,121,0.033058
-276,test,79,Chrysomphalus aonidum,58,Limacodidae,4,68,0.058824,0.181818,402,0.009950
+276,test,79,Chrysomphalus aonidum,58,Limacodidae,4,68,0.058824,0.181818,401,0.009975
 277,test,79,Chrysomphalus aonidum,77,Unaspis yanonensis,4,68,0.058824,0.181818,125,0.032000
 278,test,52,therioaphis maculata Buckton,71,Trialeurodes vaporariorum,4,78,0.051282,0.065574,226,0.017699
-279,test,41,meadow moth,22,corn borer,4,81,0.049383,0.160000,539,0.007421
+279,test,41,meadow moth,22,corn borer,4,81,0.049383,0.160000,540,0.007407
 280,test,40,Beet spot flies,2,paddy stem maggot,4,90,0.044444,0.133333,68,0.058824
-281,test,97,Chlumetia transversa,67,Lycorma delicatula,4,92,0.043478,0.102564,1680,0.002381
+281,test,97,Chlumetia transversa,67,Lycorma delicatula,4,92,0.043478,0.102564,1681,0.002380
 282,test,97,Chlumetia transversa,86,Prodenia litura,4,92,0.043478,0.102564,391,0.010230
 283,test,42,beet weevil,10,rice water weevil,4,93,0.043011,0.148148,254,0.015748
 284,test,42,beet weevil,70,Miridae,4,93,0.043011,0.148148,1640,0.002439
-285,test,87,Adristyrannus,45,flax budworm,4,94,0.042553,0.148148,283,0.014134
+285,test,87,Adristyrannus,45,flax budworm,4,94,0.042553,0.148148,282,0.014184
 286,test,87,Adristyrannus,66,Ampelophaga,4,94,0.042553,0.148148,217,0.018433
-287,test,91,Aphis citricola Vander Goot,90,Toxoptera aurantii,4,106,0.037736,0.111111,61,0.065574
-288,test,6,Rice Stemfly,40,Beet spot flies,4,111,0.036036,0.093023,96,0.041667
+287,test,91,Aphis citricola Vander Goot,90,Toxoptera aurantii,4,106,0.037736,0.111111,60,0.066667
+288,test,6,Rice Stemfly,40,Beet spot flies,4,111,0.036036,0.093023,94,0.042553
 289,test,57,Apolygus lucorum,47,tarnished plant bug,4,115,0.034783,0.057143,208,0.019231
 290,test,88,Phyllocnistis citrella Stainton,77,Unaspis yanonensis,4,122,0.032787,0.142857,125,0.032000
 291,test,88,Phyllocnistis citrella Stainton,93,Dasineura sp,4,122,0.032787,0.142857,168,0.023810
-292,test,11,rice leafhopper,9,small brown plant hopper,4,122,0.032787,0.060606,159,0.025157
+292,test,11,rice leafhopper,9,small brown plant hopper,4,122,0.032787,0.060606,158,0.025316
 293,test,13,rice shell pest,1,rice leaf caterpillar,4,123,0.032520,0.055556,137,0.029197
 294,test,100,Sternochetus frigidus,10,rice water weevil,4,138,0.028986,0.071429,254,0.015748
-295,test,100,Sternochetus frigidus,67,Lycorma delicatula,4,138,0.028986,0.071429,1680,0.002381
-296,test,100,Sternochetus frigidus,96,Deporaus marginatus Pascoe,4,138,0.028986,0.071429,50,0.080000
-297,test,20,yellow cutworm,22,corn borer,4,144,0.027778,0.043478,539,0.007421
-298,test,1,rice leaf caterpillar,45,flax budworm,4,147,0.027211,0.054054,283,0.014134
-299,test,19,large cutworm,23,army worm,4,148,0.027027,0.038462,309,0.012945
-300,test,4,yellow rice borer,22,corn borer,4,152,0.026316,0.072727,539,0.007421
-301,test,93,Dasineura sp,5,rice gall midge,4,152,0.026316,0.066667,147,0.027211
-302,test,93,Dasineura sp,30,wheat blossom midge,4,152,0.026316,0.066667,161,0.024845
-303,test,93,Dasineura sp,44,alfalfa weevil,4,152,0.026316,0.066667,141,0.028369
-304,test,93,Dasineura sp,67,Lycorma delicatula,4,152,0.026316,0.066667,1680,0.002381
-305,test,44,alfalfa weevil,10,rice water weevil,4,158,0.025316,0.063492,254,0.015748
-306,test,44,alfalfa weevil,24,aphids,4,158,0.025316,0.063492,1314,0.003044
-307,test,44,alfalfa weevil,100,Sternochetus frigidus,4,158,0.025316,0.063492,121,0.033058
-308,test,21,red spider,24,aphids,4,159,0.025157,0.071429,1314,0.003044
-309,test,25,Potosiabre vitarsis,43,sericaorient alismots chulsky,4,170,0.023529,0.210526,57,0.070175
-310,test,26,peach borer,14,grub,4,208,0.019231,0.102564,269,0.014870
-311,test,26,peach borer,67,Lycorma delicatula,4,208,0.019231,0.102564,1680,0.002381
-312,test,29,bird cherry-oataphid,52,therioaphis maculata Buckton,4,213,0.018779,0.031746,62,0.064516
-313,test,76,Icerya purchasi Maskell,64,Pseudococcus comstocki Kuwana,4,217,0.018433,0.100000,82,0.048780
-314,test,76,Icerya purchasi Maskell,94,Lawana imitata Melichar,4,217,0.018433,0.100000,186,0.021505
-315,test,66,Ampelophaga,101,Cicadellidae,4,230,0.017391,0.076923,1795,0.002228
-316,test,92,Scirtothrips dorsalis Hood,21,red spider,4,243,0.016461,0.057143,146,0.027397
-317,test,92,Scirtothrips dorsalis Hood,93,Dasineura sp,4,243,0.016461,0.057143,168,0.023810
-318,test,7,brown plant hopper,11,rice leafhopper,4,251,0.015936,0.031746,102,0.039216
-319,test,10,rice water weevil,3,asiatic rice borer,4,257,0.015564,0.062500,321,0.012461
-320,test,10,rice water weevil,14,grub,4,257,0.015564,0.062500,269,0.014870
-321,test,10,rice water weevil,16,wireworm,4,257,0.015564,0.062500,270,0.014815
-322,test,54,Thrips,15,mole cricket,4,264,0.015152,0.024096,504,0.007937
-323,test,54,Thrips,70,Miridae,4,264,0.015152,0.024096,1640,0.002439
-324,test,54,Thrips,71,Trialeurodes vaporariorum,4,264,0.015152,0.024096,226,0.017699
-325,test,54,Thrips,101,Cicadellidae,4,264,0.015152,0.024096,1795,0.002228
-326,test,16,wireworm,3,asiatic rice borer,4,267,0.014981,0.093023,321,0.012461
-327,test,16,wireworm,10,rice water weevil,4,267,0.014981,0.093023,254,0.015748
-328,test,16,wireworm,23,army worm,4,267,0.014981,0.093023,309,0.012945
-329,test,16,wireworm,26,peach borer,4,267,0.014981,0.093023,223,0.017937
-330,test,8,white backed plant hopper,10,rice water weevil,4,268,0.014925,0.030303,254,0.015748
-331,test,8,white backed plant hopper,23,army worm,4,268,0.014925,0.030303,309,0.012945
-332,test,3,asiatic rice borer,6,Rice Stemfly,4,316,0.012658,0.031496,113,0.035398
-333,test,3,asiatic rice borer,10,rice water weevil,4,316,0.012658,0.031496,254,0.015748
-334,test,3,asiatic rice borer,11,rice leafhopper,4,316,0.012658,0.031496,102,0.039216
-335,test,3,asiatic rice borer,39,beet army worm,4,316,0.012658,0.031496,506,0.007905
-336,test,45,flax budworm,1,rice leaf caterpillar,4,320,0.012500,0.021390,137,0.029197
-337,test,45,flax budworm,58,Limacodidae,4,320,0.012500,0.021390,402,0.009950
-338,test,23,army worm,1,rice leaf caterpillar,4,322,0.012422,0.027586,137,0.029197
-339,test,23,army worm,54,Thrips,4,322,0.012422,0.027586,218,0.018349
-340,test,0,rice leaf roller,22,corn borer,4,335,0.011940,0.063492,539,0.007421
-341,test,68,Xylotrechus,51,blister beetle,4,345,0.011594,0.090909,593,0.006745
-342,test,69,Cicadella viridis,11,rice leafhopper,4,384,0.010417,0.052632,102,0.039216
-343,test,69,Cicadella viridis,70,Miridae,4,384,0.010417,0.052632,1640,0.002439
-344,test,86,Prodenia litura,19,large cutworm,4,392,0.010204,0.031250,154,0.025974
-345,test,86,Prodenia litura,20,yellow cutworm,4,392,0.010204,0.031250,126,0.031746
-346,test,86,Prodenia litura,48,Locustoidea,4,392,0.010204,0.031250,414,0.009662
-347,test,86,Prodenia litura,101,Cicadellidae,4,392,0.010204,0.031250,1795,0.002228
-348,test,48,Locustoidea,15,mole cricket,4,419,0.009547,0.080000,504,0.007937
-349,test,48,Locustoidea,24,aphids,4,419,0.009547,0.080000,1314,0.003044
-350,test,58,Limacodidae,24,aphids,4,421,0.009501,0.088889,1314,0.003044
-351,test,58,Limacodidae,45,flax budworm,4,421,0.009501,0.088889,283,0.014134
-352,test,50,legume blister beetle,54,Thrips,4,423,0.009456,0.035088,218,0.018349
-353,test,39,beet army worm,18,black cutworm,4,482,0.008299,0.021053,275,0.014545
-354,test,39,beet army worm,20,yellow cutworm,4,482,0.008299,0.021053,126,0.031746
-355,test,22,corn borer,1,rice leaf caterpillar,4,510,0.007843,0.029851,137,0.029197
-356,test,22,corn borer,67,Lycorma delicatula,4,510,0.007843,0.029851,1680,0.002381
-357,test,51,blister beetle,43,sericaorient alismots chulsky,4,570,0.007018,0.022472,57,0.070175
-358,test,51,blister beetle,68,Xylotrechus,4,570,0.007018,0.022472,346,0.011561
-359,test,51,blister beetle,101,Cicadellidae,4,570,0.007018,0.022472,1795,0.002228
-360,test,24,aphids,44,alfalfa weevil,4,1229,0.003255,0.015625,141,0.028369
-361,test,24,aphids,51,blister beetle,4,1229,0.003255,0.015625,593,0.006745
-362,test,24,aphids,54,Thrips,4,1229,0.003255,0.015625,218,0.018349
-363,test,24,aphids,57,Apolygus lucorum,4,1229,0.003255,0.015625,109,0.036697
-364,test,67,Lycorma delicatula,38,cabbage army worm,4,1594,0.002509,0.022989,245,0.016327
-365,test,67,Lycorma delicatula,51,blister beetle,4,1594,0.002509,0.022989,593,0.006745
-366,test,67,Lycorma delicatula,57,Apolygus lucorum,4,1594,0.002509,0.022989,109,0.036697
-367,test,67,Lycorma delicatula,58,Limacodidae,4,1594,0.002509,0.022989,402,0.009950
-368,test,67,Lycorma delicatula,60,Colomerus vitis,4,1594,0.002509,0.022989,49,0.081633
-369,test,67,Lycorma delicatula,65,parathrene regalis,4,1594,0.002509,0.022989,50,0.080000
-370,test,101,Cicadellidae,72,Erythroneura apicalis,4,1723,0.002322,0.020619,20,0.200000
-371,test,63,Polyphagotars onemus latus,74,Panonchus citri McGregor,3,26,0.115385,0.157895,146,0.020548
-372,test,63,Polyphagotars onemus latus,92,Scirtothrips dorsalis Hood,3,26,0.115385,0.157895,256,0.011719
-373,test,36,beet fly,35,cerodonta denticornis,3,32,0.093750,0.125000,35,0.085714
-374,test,35,cerodonta denticornis,2,paddy stem maggot,3,42,0.071429,0.130435,68,0.044118
-375,test,35,cerodonta denticornis,101,Cicadellidae,3,42,0.071429,0.130435,1795,0.001671
-376,test,85,Bactrocera tsuneonis,55,alfalfa seed chalcid,3,51,0.058824,0.085714,56,0.053571
-377,test,60,Colomerus vitis,70,Miridae,3,53,0.056604,0.166667,1640,0.001829
-378,test,53,odontothrips loti,33,wheat phloeothrips,3,54,0.055556,0.130435,96,0.031250
-379,test,53,odontothrips loti,92,Scirtothrips dorsalis Hood,3,54,0.055556,0.130435,256,0.011719
-380,test,55,alfalfa seed chalcid,24,aphids,3,56,0.053571,0.103448,1314,0.002283
-381,test,43,sericaorient alismots chulsky,25,Potosiabre vitarsis,3,58,0.051724,0.176471,164,0.018293
-382,test,96,Deporaus marginatus Pascoe,42,beet weevil,3,63,0.047619,0.125000,113,0.026549
-383,test,96,Deporaus marginatus Pascoe,70,Miridae,3,63,0.047619,0.125000,1640,0.001829
-384,test,79,Chrysomphalus aonidum,67,Lycorma delicatula,3,68,0.044118,0.136364,1680,0.001786
-385,test,52,therioaphis maculata Buckton,28,green bug,3,78,0.038462,0.049180,72,0.041667
-386,test,52,therioaphis maculata Buckton,45,flax budworm,3,78,0.038462,0.049180,283,0.010601
-387,test,2,paddy stem maggot,35,cerodonta denticornis,3,79,0.037975,0.061224,35,0.085714
-388,test,41,meadow moth,45,flax budworm,3,81,0.037037,0.120000,283,0.010601
-389,test,41,meadow moth,67,Lycorma delicatula,3,81,0.037037,0.120000,1680,0.001786
-390,test,33,wheat phloeothrips,24,aphids,3,88,0.034091,0.083333,1314,0.002283
-391,test,40,Beet spot flies,35,cerodonta denticornis,3,90,0.033333,0.100000,35,0.085714
-392,test,40,Beet spot flies,101,Cicadellidae,3,90,0.033333,0.100000,1795,0.001671
-393,test,64,Pseudococcus comstocki Kuwana,67,Lycorma delicatula,3,93,0.032258,0.085714,1680,0.001786
-394,test,34,wheat sawfly,39,beet army worm,3,102,0.029412,0.115385,506,0.005929
-395,test,34,wheat sawfly,70,Miridae,3,102,0.029412,0.115385,1640,0.001829
-396,test,91,Aphis citricola Vander Goot,52,therioaphis maculata Buckton,3,106,0.028302,0.083333,62,0.048387
-397,test,91,Aphis citricola Vander Goot,89,Toxoptera citricidus,3,106,0.028302,0.083333,56,0.053571
-398,test,59,Viteus vitifoliae,67,Lycorma delicatula,3,107,0.028037,0.068182,1680,0.001786
-399,test,59,Viteus vitifoliae,93,Dasineura sp,3,107,0.028037,0.068182,168,0.017857
-400,test,6,Rice Stemfly,1,rice leaf caterpillar,3,111,0.027027,0.069767,137,0.021898
-401,test,6,Rice Stemfly,22,corn borer,3,111,0.027027,0.069767,539,0.005566
-402,test,57,Apolygus lucorum,60,Colomerus vitis,3,115,0.026087,0.042857,49,0.061224
-403,test,57,Apolygus lucorum,93,Dasineura sp,3,115,0.026087,0.042857,168,0.017857
-404,test,74,Panonchus citri McGregor,32,longlegged spider mite,3,116,0.025862,0.111111,70,0.042857
-405,test,11,rice leafhopper,69,Cicadella viridis,3,122,0.024590,0.045455,382,0.007853
-406,test,77,Unaspis yanonensis,76,Icerya purchasi Maskell,3,126,0.023810,0.083333,207,0.014493
-407,test,77,Unaspis yanonensis,79,Chrysomphalus aonidum,3,126,0.023810,0.083333,69,0.043478
-408,test,84,Dacus dorsalis(Hendel),67,Lycorma delicatula,3,132,0.022727,0.100000,1680,0.001786
-409,test,84,Dacus dorsalis(Hendel),70,Miridae,3,132,0.022727,0.100000,1640,0.001829
-410,test,100,Sternochetus frigidus,16,wireworm,3,138,0.021739,0.053571,270,0.011111
-411,test,100,Sternochetus frigidus,51,blister beetle,3,138,0.021739,0.053571,593,0.005059
-412,test,100,Sternochetus frigidus,68,Xylotrechus,3,138,0.021739,0.053571,346,0.008671
-413,test,56,Pieris canidia,101,Cicadellidae,3,141,0.021277,0.250000,1795,0.001671
-414,test,20,yellow cutworm,39,beet army worm,3,144,0.020833,0.032609,506,0.005929
-415,test,1,rice leaf caterpillar,4,yellow rice borer,3,147,0.020408,0.040541,151,0.019868
-416,test,1,rice leaf caterpillar,10,rice water weevil,3,147,0.020408,0.040541,254,0.011811
-417,test,1,rice leaf caterpillar,13,rice shell pest,3,147,0.020408,0.040541,92,0.032609
-418,test,1,rice leaf caterpillar,23,army worm,3,147,0.020408,0.040541,309,0.009709
-419,test,19,large cutworm,67,Lycorma delicatula,3,148,0.020270,0.028846,1680,0.001786
-420,test,5,rice gall midge,0,rice leaf roller,3,152,0.019737,0.073171,394,0.007614
-421,test,4,yellow rice borer,1,rice leaf caterpillar,3,152,0.019737,0.054545,137,0.021898
-422,test,4,yellow rice borer,6,Rice Stemfly,3,152,0.019737,0.054545,113,0.026549
-423,test,93,Dasineura sp,45,flax budworm,3,152,0.019737,0.050000,283,0.010601
-424,test,93,Dasineura sp,88,Phyllocnistis citrella Stainton,3,152,0.019737,0.050000,121,0.024793
-425,test,93,Dasineura sp,101,Cicadellidae,3,152,0.019737,0.050000,1795,0.001671
-426,test,44,alfalfa weevil,45,flax budworm,3,158,0.018987,0.047619,283,0.010601
-427,test,44,alfalfa weevil,67,Lycorma delicatula,3,158,0.018987,0.047619,1680,0.001786
-428,test,21,red spider,67,Lycorma delicatula,3,159,0.018868,0.053571,1680,0.001786
-429,test,94,Lawana imitata Melichar,67,Lycorma delicatula,3,174,0.017241,0.090909,1680,0.001786
-430,test,94,Lawana imitata Melichar,71,Trialeurodes vaporariorum,3,174,0.017241,0.090909,226,0.013274
-431,test,49,lytta polita,67,Lycorma delicatula,3,197,0.015228,0.029412,1680,0.001786
-432,test,49,lytta polita,70,Miridae,3,197,0.015228,0.029412,1640,0.001829
-433,test,46,alfalfa plant bug,44,alfalfa weevil,3,197,0.015228,0.025641,141,0.021277
-434,test,27,english grain aphid,9,small brown plant hopper,3,197,0.015228,0.023256,159,0.018868
-435,test,27,english grain aphid,74,Panonchus citri McGregor,3,197,0.015228,0.023256,146,0.020548
-436,test,82,Aleurocanthus spiniferus,79,Chrysomphalus aonidum,3,208,0.014423,0.130435,69,0.043478
-437,test,71,Trialeurodes vaporariorum,39,beet army worm,3,208,0.014423,0.081081,506,0.005929
-438,test,71,Trialeurodes vaporariorum,77,Unaspis yanonensis,3,208,0.014423,0.081081,125,0.024000
-439,test,71,Trialeurodes vaporariorum,82,Aleurocanthus spiniferus,3,208,0.014423,0.081081,209,0.014354
-440,test,29,bird cherry-oataphid,8,white backed plant hopper,3,213,0.014085,0.023810,272,0.011029
-441,test,29,bird cherry-oataphid,75,Phyllocoptes oleiverus ashmead,3,213,0.014085,0.023810,45,0.066667
-442,test,76,Icerya purchasi Maskell,77,Unaspis yanonensis,3,217,0.013825,0.075000,125,0.024000
-443,test,76,Icerya purchasi Maskell,95,Salurnis marginella Guerr,3,217,0.013825,0.075000,153,0.019608
-444,test,66,Ampelophaga,48,Locustoidea,3,230,0.013043,0.057692,414,0.007246
-445,test,66,Ampelophaga,97,Chlumetia transversa,3,230,0.013043,0.057692,93,0.032258
-446,test,37,flea beetle,43,sericaorient alismots chulsky,3,237,0.012658,0.066667,57,0.052632
-447,test,92,Scirtothrips dorsalis Hood,39,beet army worm,3,243,0.012346,0.042857,506,0.005929
-448,test,92,Scirtothrips dorsalis Hood,63,Polyphagotars onemus latus,3,243,0.012346,0.042857,15,0.200000
-449,test,92,Scirtothrips dorsalis Hood,101,Cicadellidae,3,243,0.012346,0.042857,1795,0.001671
-450,test,7,brown plant hopper,3,asiatic rice borer,3,251,0.011952,0.023810,321,0.009346
-451,test,7,brown plant hopper,67,Lycorma delicatula,3,251,0.011952,0.023810,1680,0.001786
-452,test,10,rice water weevil,0,rice leaf roller,3,257,0.011673,0.046875,394,0.007614
-453,test,10,rice water weevil,5,rice gall midge,3,257,0.011673,0.046875,147,0.020408
-454,test,10,rice water weevil,6,Rice Stemfly,3,257,0.011673,0.046875,113,0.026549
-455,test,10,rice water weevil,25,Potosiabre vitarsis,3,257,0.011673,0.046875,164,0.018293
-456,test,18,black cutworm,1,rice leaf caterpillar,3,257,0.011673,0.028571,137,0.021898
-457,test,18,black cutworm,14,grub,3,257,0.011673,0.028571,269,0.011152
-458,test,18,black cutworm,22,corn borer,3,257,0.011673,0.028571,539,0.005566
-459,test,18,black cutworm,23,army worm,3,257,0.011673,0.028571,309,0.009709
-460,test,18,black cutworm,86,Prodenia litura,3,257,0.011673,0.028571,391,0.007673
-461,test,38,cabbage army worm,3,asiatic rice borer,3,257,0.011673,0.020690,321,0.009346
-462,test,38,cabbage army worm,18,black cutworm,3,257,0.011673,0.020690,275,0.010909
-463,test,38,cabbage army worm,24,aphids,3,257,0.011673,0.020690,1314,0.002283
-464,test,38,cabbage army worm,97,Chlumetia transversa,3,257,0.011673,0.020690,93,0.032258
-465,test,54,Thrips,44,alfalfa weevil,3,264,0.011364,0.018072,141,0.021277
-466,test,54,Thrips,51,blister beetle,3,264,0.011364,0.018072,593,0.005059
-467,test,54,Thrips,64,Pseudococcus comstocki Kuwana,3,264,0.011364,0.018072,82,0.036585
-468,test,54,Thrips,88,Phyllocnistis citrella Stainton,3,264,0.011364,0.018072,121,0.024793
-469,test,16,wireworm,18,black cutworm,3,267,0.011236,0.069767,275,0.010909
-470,test,8,white backed plant hopper,13,rice shell pest,3,268,0.011194,0.022727,92,0.032609
-471,test,3,asiatic rice borer,2,paddy stem maggot,3,316,0.009494,0.023622,68,0.044118
-472,test,3,asiatic rice borer,5,rice gall midge,3,316,0.009494,0.023622,147,0.020408
-473,test,3,asiatic rice borer,45,flax budworm,3,316,0.009494,0.023622,283,0.010601
-474,test,45,flax budworm,0,rice leaf roller,3,320,0.009375,0.016043,394,0.007614
-475,test,45,flax budworm,70,Miridae,3,320,0.009375,0.016043,1640,0.001829
-476,test,45,flax budworm,101,Cicadellidae,3,320,0.009375,0.016043,1795,0.001671
-477,test,23,army worm,13,rice shell pest,3,322,0.009317,0.020690,92,0.032609
-478,test,23,army worm,15,mole cricket,3,322,0.009317,0.020690,504,0.005952
-479,test,23,army worm,16,wireworm,3,322,0.009317,0.020690,270,0.011111
-480,test,0,rice leaf roller,8,white backed plant hopper,3,335,0.008955,0.047619,272,0.011029
-481,test,0,rice leaf roller,38,cabbage army worm,3,335,0.008955,0.047619,245,0.012245
-482,test,0,rice leaf roller,67,Lycorma delicatula,3,335,0.008955,0.047619,1680,0.001786
-483,test,68,Xylotrechus,22,corn borer,3,345,0.008696,0.068182,539,0.005566
-484,test,68,Xylotrechus,65,parathrene regalis,3,345,0.008696,0.068182,50,0.060000
-485,test,69,Cicadella viridis,67,Lycorma delicatula,3,384,0.007812,0.039474,1680,0.001786
-486,test,86,Prodenia litura,18,black cutworm,3,392,0.007653,0.023438,275,0.010909
-487,test,86,Prodenia litura,44,alfalfa weevil,3,392,0.007653,0.023438,141,0.021277
-488,test,86,Prodenia litura,66,Ampelophaga,3,392,0.007653,0.023438,217,0.013825
-489,test,58,Limacodidae,70,Miridae,3,421,0.007126,0.066667,1640,0.001829
-490,test,58,Limacodidae,100,Sternochetus frigidus,3,421,0.007126,0.066667,121,0.024793
-491,test,39,beet army worm,93,Dasineura sp,3,482,0.006224,0.015789,168,0.017857
-492,test,22,corn borer,0,rice leaf roller,3,510,0.005882,0.022388,394,0.007614
-493,test,22,corn borer,18,black cutworm,3,510,0.005882,0.022388,275,0.010909
-494,test,22,corn borer,54,Thrips,3,510,0.005882,0.022388,218,0.013761
-495,test,22,corn borer,70,Miridae,3,510,0.005882,0.022388,1640,0.001829
-496,test,22,corn borer,101,Cicadellidae,3,510,0.005882,0.022388,1795,0.001671
-497,test,51,blister beetle,33,wheat phloeothrips,3,570,0.005263,0.016854,96,0.031250
-498,test,51,blister beetle,54,Thrips,3,570,0.005263,0.016854,218,0.013761
-499,test,24,aphids,21,red spider,3,1229,0.002441,0.011719,146,0.020548
-500,test,24,aphids,90,Toxoptera aurantii,3,1229,0.002441,0.011719,61,0.049180
-501,test,70,Miridae,40,Beet spot flies,3,1525,0.001967,0.012448,96,0.031250
-502,test,70,Miridae,44,alfalfa weevil,3,1525,0.001967,0.012448,141,0.021277
-503,test,70,Miridae,69,Cicadella viridis,3,1525,0.001967,0.012448,382,0.007853
-504,test,67,Lycorma delicatula,37,flea beetle,3,1594,0.001882,0.017241,227,0.013216
+295,test,100,Sternochetus frigidus,51,blister beetle,4,138,0.028986,0.071429,594,0.006734
+296,test,100,Sternochetus frigidus,67,Lycorma delicatula,4,138,0.028986,0.071429,1681,0.002380
+297,test,100,Sternochetus frigidus,96,Deporaus marginatus Pascoe,4,138,0.028986,0.071429,50,0.080000
+298,test,20,yellow cutworm,22,corn borer,4,144,0.027778,0.043478,540,0.007407
+299,test,1,rice leaf caterpillar,45,flax budworm,4,147,0.027211,0.054054,282,0.014184
+300,test,19,large cutworm,23,army worm,4,148,0.027027,0.038462,309,0.012945
+301,test,4,yellow rice borer,22,corn borer,4,152,0.026316,0.072727,540,0.007407
+302,test,93,Dasineura sp,5,rice gall midge,4,152,0.026316,0.066667,147,0.027211
+303,test,93,Dasineura sp,30,wheat blossom midge,4,152,0.026316,0.066667,161,0.024845
+304,test,93,Dasineura sp,44,alfalfa weevil,4,152,0.026316,0.066667,141,0.028369
+305,test,93,Dasineura sp,67,Lycorma delicatula,4,152,0.026316,0.066667,1681,0.002380
+306,test,44,alfalfa weevil,10,rice water weevil,4,158,0.025316,0.063492,254,0.015748
+307,test,44,alfalfa weevil,24,aphids,4,158,0.025316,0.063492,1316,0.003040
+308,test,44,alfalfa weevil,100,Sternochetus frigidus,4,158,0.025316,0.063492,121,0.033058
+309,test,21,red spider,24,aphids,4,159,0.025157,0.071429,1316,0.003040
+310,test,25,Potosiabre vitarsis,43,sericaorient alismots chulsky,4,170,0.023529,0.210526,57,0.070175
+311,test,26,peach borer,14,grub,4,208,0.019231,0.102564,269,0.014870
+312,test,26,peach borer,67,Lycorma delicatula,4,208,0.019231,0.102564,1681,0.002380
+313,test,29,bird cherry-oataphid,52,therioaphis maculata Buckton,4,213,0.018779,0.031746,61,0.065574
+314,test,76,Icerya purchasi Maskell,64,Pseudococcus comstocki Kuwana,4,217,0.018433,0.100000,82,0.048780
+315,test,76,Icerya purchasi Maskell,94,Lawana imitata Melichar,4,217,0.018433,0.100000,186,0.021505
+316,test,66,Ampelophaga,101,Cicadellidae,4,230,0.017391,0.076923,1794,0.002230
+317,test,92,Scirtothrips dorsalis Hood,21,red spider,4,243,0.016461,0.057143,146,0.027397
+318,test,92,Scirtothrips dorsalis Hood,93,Dasineura sp,4,243,0.016461,0.057143,168,0.023810
+319,test,7,brown plant hopper,11,rice leafhopper,4,251,0.015936,0.031746,101,0.039604
+320,test,10,rice water weevil,3,asiatic rice borer,4,257,0.015564,0.062500,321,0.012461
+321,test,10,rice water weevil,14,grub,4,257,0.015564,0.062500,269,0.014870
+322,test,10,rice water weevil,16,wireworm,4,257,0.015564,0.062500,270,0.014815
+323,test,54,Thrips,15,mole cricket,4,264,0.015152,0.024096,504,0.007937
+324,test,54,Thrips,70,Miridae,4,264,0.015152,0.024096,1640,0.002439
+325,test,54,Thrips,71,Trialeurodes vaporariorum,4,264,0.015152,0.024096,226,0.017699
+326,test,54,Thrips,101,Cicadellidae,4,264,0.015152,0.024096,1794,0.002230
+327,test,16,wireworm,3,asiatic rice borer,4,267,0.014981,0.093023,321,0.012461
+328,test,16,wireworm,10,rice water weevil,4,267,0.014981,0.093023,254,0.015748
+329,test,16,wireworm,23,army worm,4,267,0.014981,0.093023,309,0.012945
+330,test,16,wireworm,26,peach borer,4,267,0.014981,0.093023,223,0.017937
+331,test,8,white backed plant hopper,10,rice water weevil,4,268,0.014925,0.030303,254,0.015748
+332,test,8,white backed plant hopper,23,army worm,4,268,0.014925,0.030303,309,0.012945
+333,test,3,asiatic rice borer,6,Rice Stemfly,4,316,0.012658,0.031496,113,0.035398
+334,test,3,asiatic rice borer,10,rice water weevil,4,316,0.012658,0.031496,254,0.015748
+335,test,3,asiatic rice borer,11,rice leafhopper,4,316,0.012658,0.031496,101,0.039604
+336,test,3,asiatic rice borer,39,beet army worm,4,316,0.012658,0.031496,506,0.007905
+337,test,45,flax budworm,1,rice leaf caterpillar,4,320,0.012500,0.021277,137,0.029197
+338,test,45,flax budworm,58,Limacodidae,4,320,0.012500,0.021277,401,0.009975
+339,test,23,army worm,1,rice leaf caterpillar,4,322,0.012422,0.027586,137,0.029197
+340,test,0,rice leaf roller,22,corn borer,4,335,0.011940,0.063492,540,0.007407
+341,test,68,Xylotrechus,51,blister beetle,4,345,0.011594,0.090909,594,0.006734
+342,test,69,Cicadella viridis,11,rice leafhopper,4,384,0.010417,0.053333,101,0.039604
+343,test,69,Cicadella viridis,67,Lycorma delicatula,4,384,0.010417,0.053333,1681,0.002380
+344,test,69,Cicadella viridis,70,Miridae,4,384,0.010417,0.053333,1640,0.002439
+345,test,86,Prodenia litura,19,large cutworm,4,392,0.010204,0.031250,154,0.025974
+346,test,86,Prodenia litura,20,yellow cutworm,4,392,0.010204,0.031250,126,0.031746
+347,test,86,Prodenia litura,48,Locustoidea,4,392,0.010204,0.031250,413,0.009685
+348,test,86,Prodenia litura,101,Cicadellidae,4,392,0.010204,0.031250,1794,0.002230
+349,test,48,Locustoidea,15,mole cricket,4,419,0.009547,0.080000,504,0.007937
+350,test,48,Locustoidea,24,aphids,4,419,0.009547,0.080000,1316,0.003040
+351,test,58,Limacodidae,24,aphids,4,421,0.009501,0.088889,1316,0.003040
+352,test,58,Limacodidae,45,flax budworm,4,421,0.009501,0.088889,282,0.014184
+353,test,50,legume blister beetle,54,Thrips,4,423,0.009456,0.035088,217,0.018433
+354,test,39,beet army worm,18,black cutworm,4,482,0.008299,0.021053,275,0.014545
+355,test,39,beet army worm,20,yellow cutworm,4,482,0.008299,0.021053,126,0.031746
+356,test,22,corn borer,1,rice leaf caterpillar,4,510,0.007843,0.029851,137,0.029197
+357,test,22,corn borer,67,Lycorma delicatula,4,510,0.007843,0.029851,1681,0.002380
+358,test,51,blister beetle,43,sericaorient alismots chulsky,4,570,0.007018,0.022472,57,0.070175
+359,test,51,blister beetle,68,Xylotrechus,4,570,0.007018,0.022472,346,0.011561
+360,test,51,blister beetle,101,Cicadellidae,4,570,0.007018,0.022472,1794,0.002230
+361,test,24,aphids,44,alfalfa weevil,4,1229,0.003255,0.015686,141,0.028369
+362,test,24,aphids,51,blister beetle,4,1229,0.003255,0.015686,594,0.006734
+363,test,24,aphids,54,Thrips,4,1229,0.003255,0.015686,217,0.018433
+364,test,24,aphids,57,Apolygus lucorum,4,1229,0.003255,0.015686,109,0.036697
+365,test,67,Lycorma delicatula,37,flea beetle,4,1594,0.002509,0.022989,228,0.017544
+366,test,67,Lycorma delicatula,38,cabbage army worm,4,1594,0.002509,0.022989,247,0.016194
+367,test,67,Lycorma delicatula,51,blister beetle,4,1594,0.002509,0.022989,594,0.006734
+368,test,67,Lycorma delicatula,57,Apolygus lucorum,4,1594,0.002509,0.022989,109,0.036697
+369,test,67,Lycorma delicatula,58,Limacodidae,4,1594,0.002509,0.022989,401,0.009975
+370,test,67,Lycorma delicatula,60,Colomerus vitis,4,1594,0.002509,0.022989,49,0.081633
+371,test,67,Lycorma delicatula,65,parathrene regalis,4,1594,0.002509,0.022989,51,0.078431
+372,test,101,Cicadellidae,72,Erythroneura apicalis,4,1723,0.002322,0.020619,20,0.200000
+373,test,63,Polyphagotars onemus latus,74,Panonchus citri McGregor,3,26,0.115385,0.157895,146,0.020548
+374,test,63,Polyphagotars onemus latus,92,Scirtothrips dorsalis Hood,3,26,0.115385,0.157895,256,0.011719
+375,test,36,beet fly,35,cerodonta denticornis,3,32,0.093750,0.125000,35,0.085714
+376,test,35,cerodonta denticornis,2,paddy stem maggot,3,42,0.071429,0.130435,68,0.044118
+377,test,35,cerodonta denticornis,101,Cicadellidae,3,42,0.071429,0.130435,1794,0.001672
+378,test,85,Bactrocera tsuneonis,55,alfalfa seed chalcid,3,51,0.058824,0.085714,56,0.053571
+379,test,60,Colomerus vitis,70,Miridae,3,53,0.056604,0.166667,1640,0.001829
+380,test,53,odontothrips loti,33,wheat phloeothrips,3,54,0.055556,0.130435,96,0.031250
+381,test,53,odontothrips loti,92,Scirtothrips dorsalis Hood,3,54,0.055556,0.130435,256,0.011719
+382,test,55,alfalfa seed chalcid,24,aphids,3,56,0.053571,0.103448,1316,0.002280
+383,test,43,sericaorient alismots chulsky,25,Potosiabre vitarsis,3,58,0.051724,0.176471,164,0.018293
+384,test,96,Deporaus marginatus Pascoe,42,beet weevil,3,63,0.047619,0.125000,112,0.026786
+385,test,96,Deporaus marginatus Pascoe,70,Miridae,3,63,0.047619,0.125000,1640,0.001829
+386,test,79,Chrysomphalus aonidum,67,Lycorma delicatula,3,68,0.044118,0.136364,1681,0.001785
+387,test,52,therioaphis maculata Buckton,28,green bug,3,78,0.038462,0.049180,72,0.041667
+388,test,52,therioaphis maculata Buckton,45,flax budworm,3,78,0.038462,0.049180,282,0.010638
+389,test,2,paddy stem maggot,35,cerodonta denticornis,3,79,0.037975,0.061224,35,0.085714
+390,test,41,meadow moth,45,flax budworm,3,81,0.037037,0.120000,282,0.010638
+391,test,41,meadow moth,67,Lycorma delicatula,3,81,0.037037,0.120000,1681,0.001785
+392,test,33,wheat phloeothrips,24,aphids,3,88,0.034091,0.083333,1316,0.002280
+393,test,40,Beet spot flies,35,cerodonta denticornis,3,90,0.033333,0.100000,35,0.085714
+394,test,40,Beet spot flies,101,Cicadellidae,3,90,0.033333,0.100000,1794,0.001672
+395,test,64,Pseudococcus comstocki Kuwana,67,Lycorma delicatula,3,93,0.032258,0.085714,1681,0.001785
+396,test,34,wheat sawfly,39,beet army worm,3,102,0.029412,0.115385,506,0.005929
+397,test,34,wheat sawfly,70,Miridae,3,102,0.029412,0.115385,1640,0.001829
+398,test,91,Aphis citricola Vander Goot,52,therioaphis maculata Buckton,3,106,0.028302,0.083333,61,0.049180
+399,test,91,Aphis citricola Vander Goot,89,Toxoptera citricidus,3,106,0.028302,0.083333,56,0.053571
+400,test,59,Viteus vitifoliae,67,Lycorma delicatula,3,107,0.028037,0.068182,1681,0.001785
+401,test,59,Viteus vitifoliae,93,Dasineura sp,3,107,0.028037,0.068182,168,0.017857
+402,test,6,Rice Stemfly,1,rice leaf caterpillar,3,111,0.027027,0.069767,137,0.021898
+403,test,6,Rice Stemfly,22,corn borer,3,111,0.027027,0.069767,540,0.005556
+404,test,57,Apolygus lucorum,60,Colomerus vitis,3,115,0.026087,0.042857,49,0.061224
+405,test,57,Apolygus lucorum,93,Dasineura sp,3,115,0.026087,0.042857,168,0.017857
+406,test,74,Panonchus citri McGregor,32,longlegged spider mite,3,116,0.025862,0.111111,70,0.042857
+407,test,11,rice leafhopper,69,Cicadella viridis,3,122,0.024590,0.045455,383,0.007833
+408,test,77,Unaspis yanonensis,76,Icerya purchasi Maskell,3,126,0.023810,0.083333,207,0.014493
+409,test,77,Unaspis yanonensis,79,Chrysomphalus aonidum,3,126,0.023810,0.083333,69,0.043478
+410,test,84,Dacus dorsalis(Hendel),67,Lycorma delicatula,3,132,0.022727,0.100000,1681,0.001785
+411,test,84,Dacus dorsalis(Hendel),70,Miridae,3,132,0.022727,0.100000,1640,0.001829
+412,test,100,Sternochetus frigidus,16,wireworm,3,138,0.021739,0.053571,270,0.011111
+413,test,100,Sternochetus frigidus,68,Xylotrechus,3,138,0.021739,0.053571,346,0.008671
+414,test,56,Pieris canidia,101,Cicadellidae,3,141,0.021277,0.250000,1794,0.001672
+415,test,20,yellow cutworm,39,beet army worm,3,144,0.020833,0.032609,506,0.005929
+416,test,1,rice leaf caterpillar,4,yellow rice borer,3,147,0.020408,0.040541,151,0.019868
+417,test,1,rice leaf caterpillar,10,rice water weevil,3,147,0.020408,0.040541,254,0.011811
+418,test,1,rice leaf caterpillar,13,rice shell pest,3,147,0.020408,0.040541,92,0.032609
+419,test,1,rice leaf caterpillar,23,army worm,3,147,0.020408,0.040541,309,0.009709
+420,test,19,large cutworm,67,Lycorma delicatula,3,148,0.020270,0.028846,1681,0.001785
+421,test,5,rice gall midge,0,rice leaf roller,3,152,0.019737,0.073171,394,0.007614
+422,test,4,yellow rice borer,1,rice leaf caterpillar,3,152,0.019737,0.054545,137,0.021898
+423,test,4,yellow rice borer,6,Rice Stemfly,3,152,0.019737,0.054545,113,0.026549
+424,test,93,Dasineura sp,45,flax budworm,3,152,0.019737,0.050000,282,0.010638
+425,test,93,Dasineura sp,88,Phyllocnistis citrella Stainton,3,152,0.019737,0.050000,121,0.024793
+426,test,93,Dasineura sp,101,Cicadellidae,3,152,0.019737,0.050000,1794,0.001672
+427,test,44,alfalfa weevil,45,flax budworm,3,158,0.018987,0.047619,282,0.010638
+428,test,44,alfalfa weevil,67,Lycorma delicatula,3,158,0.018987,0.047619,1681,0.001785
+429,test,21,red spider,67,Lycorma delicatula,3,159,0.018868,0.053571,1681,0.001785
+430,test,94,Lawana imitata Melichar,67,Lycorma delicatula,3,174,0.017241,0.090909,1681,0.001785
+431,test,94,Lawana imitata Melichar,71,Trialeurodes vaporariorum,3,174,0.017241,0.090909,226,0.013274
+432,test,49,lytta polita,67,Lycorma delicatula,3,197,0.015228,0.029412,1681,0.001785
+433,test,49,lytta polita,70,Miridae,3,197,0.015228,0.029412,1640,0.001829
+434,test,46,alfalfa plant bug,44,alfalfa weevil,3,197,0.015228,0.025641,141,0.021277
+435,test,27,english grain aphid,9,small brown plant hopper,3,197,0.015228,0.023256,158,0.018987
+436,test,27,english grain aphid,74,Panonchus citri McGregor,3,197,0.015228,0.023256,146,0.020548
+437,test,82,Aleurocanthus spiniferus,79,Chrysomphalus aonidum,3,208,0.014423,0.130435,69,0.043478
+438,test,71,Trialeurodes vaporariorum,39,beet army worm,3,208,0.014423,0.081081,506,0.005929
+439,test,71,Trialeurodes vaporariorum,77,Unaspis yanonensis,3,208,0.014423,0.081081,125,0.024000
+440,test,71,Trialeurodes vaporariorum,82,Aleurocanthus spiniferus,3,208,0.014423,0.081081,209,0.014354
+441,test,29,bird cherry-oataphid,8,white backed plant hopper,3,213,0.014085,0.023810,272,0.011029
+442,test,29,bird cherry-oataphid,75,Phyllocoptes oleiverus ashmead,3,213,0.014085,0.023810,45,0.066667
+443,test,76,Icerya purchasi Maskell,77,Unaspis yanonensis,3,217,0.013825,0.075000,125,0.024000
+444,test,76,Icerya purchasi Maskell,95,Salurnis marginella Guerr,3,217,0.013825,0.075000,153,0.019608
+445,test,66,Ampelophaga,48,Locustoidea,3,230,0.013043,0.057692,413,0.007264
+446,test,66,Ampelophaga,97,Chlumetia transversa,3,230,0.013043,0.057692,93,0.032258
+447,test,37,flea beetle,43,sericaorient alismots chulsky,3,237,0.012658,0.066667,57,0.052632
+448,test,92,Scirtothrips dorsalis Hood,39,beet army worm,3,243,0.012346,0.042857,506,0.005929
+449,test,92,Scirtothrips dorsalis Hood,63,Polyphagotars onemus latus,3,243,0.012346,0.042857,15,0.200000
+450,test,92,Scirtothrips dorsalis Hood,101,Cicadellidae,3,243,0.012346,0.042857,1794,0.001672
+451,test,7,brown plant hopper,3,asiatic rice borer,3,251,0.011952,0.023810,321,0.009346
+452,test,7,brown plant hopper,67,Lycorma delicatula,3,251,0.011952,0.023810,1681,0.001785
+453,test,10,rice water weevil,0,rice leaf roller,3,257,0.011673,0.046875,394,0.007614
+454,test,10,rice water weevil,5,rice gall midge,3,257,0.011673,0.046875,147,0.020408
+455,test,10,rice water weevil,6,Rice Stemfly,3,257,0.011673,0.046875,113,0.026549
+456,test,10,rice water weevil,25,Potosiabre vitarsis,3,257,0.011673,0.046875,164,0.018293
+457,test,18,black cutworm,1,rice leaf caterpillar,3,257,0.011673,0.028571,137,0.021898
+458,test,18,black cutworm,14,grub,3,257,0.011673,0.028571,269,0.011152
+459,test,18,black cutworm,22,corn borer,3,257,0.011673,0.028571,540,0.005556
+460,test,18,black cutworm,23,army worm,3,257,0.011673,0.028571,309,0.009709
+461,test,18,black cutworm,86,Prodenia litura,3,257,0.011673,0.028571,391,0.007673
+462,test,38,cabbage army worm,3,asiatic rice borer,3,257,0.011673,0.020690,321,0.009346
+463,test,38,cabbage army worm,18,black cutworm,3,257,0.011673,0.020690,275,0.010909
+464,test,38,cabbage army worm,24,aphids,3,257,0.011673,0.020690,1316,0.002280
+465,test,38,cabbage army worm,97,Chlumetia transversa,3,257,0.011673,0.020690,93,0.032258
+466,test,54,Thrips,44,alfalfa weevil,3,264,0.011364,0.018072,141,0.021277
+467,test,54,Thrips,51,blister beetle,3,264,0.011364,0.018072,594,0.005051
+468,test,54,Thrips,64,Pseudococcus comstocki Kuwana,3,264,0.011364,0.018072,82,0.036585
+469,test,54,Thrips,88,Phyllocnistis citrella Stainton,3,264,0.011364,0.018072,121,0.024793
+470,test,16,wireworm,18,black cutworm,3,267,0.011236,0.069767,275,0.010909
+471,test,8,white backed plant hopper,13,rice shell pest,3,268,0.011194,0.022727,92,0.032609
+472,test,3,asiatic rice borer,2,paddy stem maggot,3,316,0.009494,0.023622,68,0.044118
+473,test,3,asiatic rice borer,5,rice gall midge,3,316,0.009494,0.023622,147,0.020408
+474,test,3,asiatic rice borer,45,flax budworm,3,316,0.009494,0.023622,282,0.010638
+475,test,45,flax budworm,0,rice leaf roller,3,320,0.009375,0.015957,394,0.007614
+476,test,45,flax budworm,70,Miridae,3,320,0.009375,0.015957,1640,0.001829
+477,test,45,flax budworm,101,Cicadellidae,3,320,0.009375,0.015957,1794,0.001672
+478,test,23,army worm,13,rice shell pest,3,322,0.009317,0.020690,92,0.032609
+479,test,23,army worm,15,mole cricket,3,322,0.009317,0.020690,504,0.005952
+480,test,23,army worm,16,wireworm,3,322,0.009317,0.020690,270,0.011111
+481,test,23,army worm,54,Thrips,3,322,0.009317,0.020690,217,0.013825
+482,test,0,rice leaf roller,8,white backed plant hopper,3,335,0.008955,0.047619,272,0.011029
+483,test,0,rice leaf roller,38,cabbage army worm,3,335,0.008955,0.047619,247,0.012146
+484,test,0,rice leaf roller,67,Lycorma delicatula,3,335,0.008955,0.047619,1681,0.001785
+485,test,68,Xylotrechus,22,corn borer,3,345,0.008696,0.068182,540,0.005556
+486,test,68,Xylotrechus,65,parathrene regalis,3,345,0.008696,0.068182,51,0.058824
+487,test,86,Prodenia litura,18,black cutworm,3,392,0.007653,0.023438,275,0.010909
+488,test,86,Prodenia litura,44,alfalfa weevil,3,392,0.007653,0.023438,141,0.021277
+489,test,86,Prodenia litura,66,Ampelophaga,3,392,0.007653,0.023438,217,0.013825
+490,test,58,Limacodidae,70,Miridae,3,421,0.007126,0.066667,1640,0.001829
+491,test,58,Limacodidae,100,Sternochetus frigidus,3,421,0.007126,0.066667,121,0.024793
+492,test,39,beet army worm,93,Dasineura sp,3,482,0.006224,0.015789,168,0.017857
+493,test,22,corn borer,0,rice leaf roller,3,510,0.005882,0.022388,394,0.007614
+494,test,22,corn borer,18,black cutworm,3,510,0.005882,0.022388,275,0.010909
+495,test,22,corn borer,54,Thrips,3,510,0.005882,0.022388,217,0.013825
+496,test,22,corn borer,70,Miridae,3,510,0.005882,0.022388,1640,0.001829
+497,test,22,corn borer,101,Cicadellidae,3,510,0.005882,0.022388,1794,0.001672
+498,test,51,blister beetle,33,wheat phloeothrips,3,570,0.005263,0.016854,96,0.031250
+499,test,51,blister beetle,54,Thrips,3,570,0.005263,0.016854,217,0.013825
+500,test,24,aphids,21,red spider,3,1229,0.002441,0.011765,146,0.020548
+501,test,24,aphids,90,Toxoptera aurantii,3,1229,0.002441,0.011765,60,0.050000
+502,test,70,Miridae,40,Beet spot flies,3,1525,0.001967,0.012448,94,0.031915
+503,test,70,Miridae,44,alfalfa weevil,3,1525,0.001967,0.012448,141,0.021277
+504,test,70,Miridae,69,Cicadella viridis,3,1525,0.001967,0.012448,383,0.007833
 505,test,67,Lycorma delicatula,87,Adristyrannus,3,1594,0.001882,0.017241,97,0.030928
 506,test,101,Cicadellidae,34,wheat sawfly,3,1723,0.001741,0.015464,95,0.031579
-507,test,101,Cicadellidae,42,beet weevil,3,1723,0.001741,0.015464,113,0.026549
-508,test,101,Cicadellidae,51,blister beetle,3,1723,0.001741,0.015464,593,0.005059
+507,test,101,Cicadellidae,42,beet weevil,3,1723,0.001741,0.015464,112,0.026786
+508,test,101,Cicadellidae,51,blister beetle,3,1723,0.001741,0.015464,594,0.005051
 509,test,101,Cicadellidae,94,Lawana imitata Melichar,3,1723,0.001741,0.015464,186,0.016129
 510,test,101,Cicadellidae,95,Salurnis marginella Guerr,3,1723,0.001741,0.015464,153,0.019608
 511,test,101,Cicadellidae,98,Mango flat beak leafhopper,3,1723,0.001741,0.015464,12,0.250000
 512,test,72,Erythroneura apicalis,86,Prodenia litura,2,22,0.090909,0.200000,391,0.005115
 513,test,80,Parlatoria zizyphus Lucus,77,Unaspis yanonensis,2,23,0.086957,0.222222,125,0.016000
-514,test,63,Polyphagotars onemus latus,24,aphids,2,26,0.076923,0.105263,1314,0.001522
-515,test,98,Mango flat beak leafhopper,9,small brown plant hopper,2,28,0.071429,0.105263,159,0.012579
-516,test,98,Mango flat beak leafhopper,69,Cicadella viridis,2,28,0.071429,0.105263,382,0.005236
+514,test,63,Polyphagotars onemus latus,24,aphids,2,26,0.076923,0.105263,1316,0.001520
+515,test,98,Mango flat beak leafhopper,9,small brown plant hopper,2,28,0.071429,0.105263,158,0.012658
+516,test,98,Mango flat beak leafhopper,69,Cicadella viridis,2,28,0.071429,0.105263,383,0.005222
 517,test,98,Mango flat beak leafhopper,93,Dasineura sp,2,28,0.071429,0.105263,168,0.011905
 518,test,81,Nipaecoccus vastalor,76,Icerya purchasi Maskell,2,30,0.066667,0.153846,207,0.009662
-519,test,36,beet fly,24,aphids,2,32,0.062500,0.083333,1314,0.001522
-520,test,36,beet fly,45,flax budworm,2,32,0.062500,0.083333,283,0.007067
+519,test,36,beet fly,24,aphids,2,32,0.062500,0.083333,1316,0.001520
+520,test,36,beet fly,45,flax budworm,2,32,0.062500,0.083333,282,0.007092
 521,test,36,beet fly,55,alfalfa seed chalcid,2,32,0.062500,0.083333,56,0.035714
 522,test,65,parathrene regalis,26,peach borer,2,42,0.047619,0.181818,223,0.008969
 523,test,35,cerodonta denticornis,6,Rice Stemfly,2,42,0.047619,0.086957,113,0.017699
 524,test,85,Bactrocera tsuneonis,26,peach borer,2,51,0.039216,0.057143,223,0.008969
-525,test,75,Phyllocoptes oleiverus ashmead,54,Thrips,2,52,0.038462,0.111111,218,0.009174
-526,test,75,Phyllocoptes oleiverus ashmead,67,Lycorma delicatula,2,52,0.038462,0.111111,1680,0.001190
+525,test,75,Phyllocoptes oleiverus ashmead,54,Thrips,2,52,0.038462,0.111111,217,0.009217
+526,test,75,Phyllocoptes oleiverus ashmead,67,Lycorma delicatula,2,52,0.038462,0.111111,1681,0.001190
 527,test,75,Phyllocoptes oleiverus ashmead,79,Chrysomphalus aonidum,2,52,0.038462,0.111111,69,0.028986
 528,test,75,Phyllocoptes oleiverus ashmead,92,Scirtothrips dorsalis Hood,2,52,0.038462,0.111111,256,0.007812
 529,test,12,grain spreader thrips,92,Scirtothrips dorsalis Hood,2,52,0.038462,0.083333,256,0.007812
 530,test,60,Colomerus vitis,71,Trialeurodes vaporariorum,2,53,0.037736,0.111111,226,0.008850
-531,test,60,Colomerus vitis,101,Cicadellidae,2,53,0.037736,0.111111,1795,0.001114
-532,test,53,odontothrips loti,51,blister beetle,2,54,0.037037,0.086957,593,0.003373
-533,test,55,alfalfa seed chalcid,93,Dasineura sp,2,56,0.035714,0.068966,168,0.011905
-534,test,89,Toxoptera citricidus,52,therioaphis maculata Buckton,2,57,0.035088,0.068966,62,0.032258
-535,test,89,Toxoptera citricidus,70,Miridae,2,57,0.035088,0.068966,1640,0.001220
-536,test,89,Toxoptera citricidus,91,Aphis citricola Vander Goot,2,57,0.035088,0.068966,123,0.016260
-537,test,43,sericaorient alismots chulsky,37,flea beetle,2,58,0.034483,0.117647,227,0.008811
-538,test,43,sericaorient alismots chulsky,82,Aleurocanthus spiniferus,2,58,0.034483,0.117647,209,0.009569
-539,test,96,Deporaus marginatus Pascoe,44,alfalfa weevil,2,63,0.031746,0.083333,141,0.014184
-540,test,96,Deporaus marginatus Pascoe,50,legume blister beetle,2,63,0.031746,0.083333,434,0.004608
-541,test,96,Deporaus marginatus Pascoe,101,Cicadellidae,2,63,0.031746,0.083333,1795,0.001114
-542,test,79,Chrysomphalus aonidum,82,Aleurocanthus spiniferus,2,68,0.029412,0.090909,209,0.009569
-543,test,90,Toxoptera aurantii,28,green bug,2,68,0.029412,0.064516,72,0.027778
-544,test,31,penthaleus major,24,aphids,2,70,0.028571,0.074074,1314,0.001522
-545,test,31,penthaleus major,74,Panonchus citri McGregor,2,70,0.028571,0.074074,146,0.013699
-546,test,32,longlegged spider mite,8,white backed plant hopper,2,74,0.027027,0.052632,272,0.007353
-547,test,32,longlegged spider mite,9,small brown plant hopper,2,74,0.027027,0.052632,159,0.012579
-548,test,78,Ceroplastes rubens,79,Chrysomphalus aonidum,2,78,0.025641,0.166667,69,0.028986
-549,test,78,Ceroplastes rubens,91,Aphis citricola Vander Goot,2,78,0.025641,0.166667,123,0.016260
-550,test,52,therioaphis maculata Buckton,54,Thrips,2,78,0.025641,0.032787,218,0.009174
-551,test,52,therioaphis maculata Buckton,67,Lycorma delicatula,2,78,0.025641,0.032787,1680,0.001190
-552,test,52,therioaphis maculata Buckton,89,Toxoptera citricidus,2,78,0.025641,0.032787,56,0.035714
-553,test,52,therioaphis maculata Buckton,93,Dasineura sp,2,78,0.025641,0.032787,168,0.011905
-554,test,2,paddy stem maggot,0,rice leaf roller,2,79,0.025316,0.040816,394,0.005076
-555,test,2,paddy stem maggot,3,asiatic rice borer,2,79,0.025316,0.040816,321,0.006231
-556,test,2,paddy stem maggot,4,yellow rice borer,2,79,0.025316,0.040816,151,0.013245
-557,test,2,paddy stem maggot,5,rice gall midge,2,79,0.025316,0.040816,147,0.013605
-558,test,2,paddy stem maggot,11,rice leafhopper,2,79,0.025316,0.040816,102,0.019608
-559,test,2,paddy stem maggot,70,Miridae,2,79,0.025316,0.040816,1640,0.001220
-560,test,41,meadow moth,3,asiatic rice borer,2,81,0.024691,0.080000,321,0.006231
-561,test,62,oides decempunctata,51,blister beetle,2,85,0.023529,0.400000,593,0.003373
-562,test,62,oides decempunctata,67,Lycorma delicatula,2,85,0.023529,0.400000,1680,0.001190
-563,test,40,Beet spot flies,6,Rice Stemfly,2,90,0.022222,0.066667,113,0.017699
-564,test,40,Beet spot flies,36,beet fly,2,90,0.022222,0.066667,13,0.153846
-565,test,40,Beet spot flies,54,Thrips,2,90,0.022222,0.066667,218,0.009174
-566,test,40,Beet spot flies,67,Lycorma delicatula,2,90,0.022222,0.066667,1680,0.001190
-567,test,40,Beet spot flies,88,Phyllocnistis citrella Stainton,2,90,0.022222,0.066667,121,0.016529
-568,test,97,Chlumetia transversa,23,army worm,2,92,0.021739,0.051282,309,0.006472
-569,test,97,Chlumetia transversa,66,Ampelophaga,2,92,0.021739,0.051282,217,0.009217
-570,test,42,beet weevil,51,blister beetle,2,93,0.021505,0.074074,593,0.003373
-571,test,42,beet weevil,68,Xylotrechus,2,93,0.021505,0.074074,346,0.005780
-572,test,42,beet weevil,96,Deporaus marginatus Pascoe,2,93,0.021505,0.074074,50,0.040000
-573,test,64,Pseudococcus comstocki Kuwana,77,Unaspis yanonensis,2,93,0.021505,0.057143,125,0.016000
-574,test,64,Pseudococcus comstocki Kuwana,93,Dasineura sp,2,93,0.021505,0.057143,168,0.011905
-575,test,64,Pseudococcus comstocki Kuwana,94,Lawana imitata Melichar,2,93,0.021505,0.057143,186,0.010753
-576,test,64,Pseudococcus comstocki Kuwana,97,Chlumetia transversa,2,93,0.021505,0.057143,93,0.021505
-577,test,87,Adristyrannus,22,corn borer,2,94,0.021277,0.074074,539,0.003711
-578,test,87,Adristyrannus,58,Limacodidae,2,94,0.021277,0.074074,402,0.004975
-579,test,87,Adristyrannus,97,Chlumetia transversa,2,94,0.021277,0.074074,93,0.021505
-580,test,34,wheat sawfly,23,army worm,2,102,0.019608,0.076923,309,0.006472
-581,test,34,wheat sawfly,50,legume blister beetle,2,102,0.019608,0.076923,434,0.004608
-582,test,34,wheat sawfly,65,parathrene regalis,2,102,0.019608,0.076923,50,0.040000
-583,test,91,Aphis citricola Vander Goot,27,english grain aphid,2,106,0.018868,0.055556,178,0.011236
-584,test,91,Aphis citricola Vander Goot,29,bird cherry-oataphid,2,106,0.018868,0.055556,224,0.008929
-585,test,59,Viteus vitifoliae,23,army worm,2,107,0.018692,0.045455,309,0.006472
-586,test,59,Viteus vitifoliae,52,therioaphis maculata Buckton,2,107,0.018692,0.045455,62,0.032258
-587,test,59,Viteus vitifoliae,54,Thrips,2,107,0.018692,0.045455,218,0.009174
-588,test,59,Viteus vitifoliae,91,Aphis citricola Vander Goot,2,107,0.018692,0.045455,123,0.016260
-589,test,6,Rice Stemfly,5,rice gall midge,2,111,0.018018,0.046512,147,0.013605
-590,test,6,Rice Stemfly,10,rice water weevil,2,111,0.018018,0.046512,254,0.007874
-591,test,6,Rice Stemfly,67,Lycorma delicatula,2,111,0.018018,0.046512,1680,0.001190
-592,test,57,Apolygus lucorum,44,alfalfa weevil,2,115,0.017391,0.028571,141,0.014184
-593,test,57,Apolygus lucorum,92,Scirtothrips dorsalis Hood,2,115,0.017391,0.028571,256,0.007812
-594,test,57,Apolygus lucorum,101,Cicadellidae,2,115,0.017391,0.028571,1795,0.001114
-595,test,74,Panonchus citri McGregor,24,aphids,2,116,0.017241,0.074074,1314,0.001522
-596,test,83,Tetradacus c Bactrocera minax,30,wheat blossom midge,2,117,0.017094,0.062500,161,0.012422
-597,test,83,Tetradacus c Bactrocera minax,70,Miridae,2,117,0.017094,0.062500,1640,0.001220
-598,test,88,Phyllocnistis citrella Stainton,1,rice leaf caterpillar,2,122,0.016393,0.071429,137,0.014599
-599,test,88,Phyllocnistis citrella Stainton,3,asiatic rice borer,2,122,0.016393,0.071429,321,0.006231
-600,test,88,Phyllocnistis citrella Stainton,8,white backed plant hopper,2,122,0.016393,0.071429,272,0.007353
-601,test,88,Phyllocnistis citrella Stainton,92,Scirtothrips dorsalis Hood,2,122,0.016393,0.071429,256,0.007812
-602,test,11,rice leafhopper,0,rice leaf roller,2,122,0.016393,0.030303,394,0.005076
-603,test,11,rice leafhopper,2,paddy stem maggot,2,122,0.016393,0.030303,68,0.029412
-604,test,11,rice leafhopper,3,asiatic rice borer,2,122,0.016393,0.030303,321,0.006231
-605,test,11,rice leafhopper,4,yellow rice borer,2,122,0.016393,0.030303,151,0.013245
-606,test,11,rice leafhopper,6,Rice Stemfly,2,122,0.016393,0.030303,113,0.017699
-607,test,11,rice leafhopper,22,corn borer,2,122,0.016393,0.030303,539,0.003711
-608,test,11,rice leafhopper,24,aphids,2,122,0.016393,0.030303,1314,0.001522
-609,test,13,rice shell pest,2,paddy stem maggot,2,123,0.016260,0.027778,68,0.029412
-610,test,13,rice shell pest,3,asiatic rice borer,2,123,0.016260,0.027778,321,0.006231
-611,test,13,rice shell pest,9,small brown plant hopper,2,123,0.016260,0.027778,159,0.012579
-612,test,13,rice shell pest,10,rice water weevil,2,123,0.016260,0.027778,254,0.007874
-613,test,13,rice shell pest,11,rice leafhopper,2,123,0.016260,0.027778,102,0.019608
-614,test,13,rice shell pest,26,peach borer,2,123,0.016260,0.027778,223,0.008969
-615,test,77,Unaspis yanonensis,29,bird cherry-oataphid,2,126,0.015873,0.055556,224,0.008929
-616,test,77,Unaspis yanonensis,75,Phyllocoptes oleiverus ashmead,2,126,0.015873,0.055556,45,0.044444
-617,test,77,Unaspis yanonensis,78,Ceroplastes rubens,2,126,0.015873,0.055556,80,0.025000
-618,test,77,Unaspis yanonensis,81,Nipaecoccus vastalor,2,126,0.015873,0.055556,32,0.062500
-619,test,77,Unaspis yanonensis,93,Dasineura sp,2,126,0.015873,0.055556,168,0.011905
-620,test,84,Dacus dorsalis(Hendel),24,aphids,2,132,0.015152,0.066667,1314,0.001522
-621,test,84,Dacus dorsalis(Hendel),36,beet fly,2,132,0.015152,0.066667,13,0.153846
-622,test,73,Papilio xuthus,51,blister beetle,2,135,0.014815,0.181818,593,0.003373
-623,test,73,Papilio xuthus,65,parathrene regalis,2,135,0.014815,0.181818,50,0.040000
-624,test,100,Sternochetus frigidus,14,grub,2,138,0.014493,0.035714,269,0.007435
-625,test,100,Sternochetus frigidus,86,Prodenia litura,2,138,0.014493,0.035714,391,0.005115
-626,test,100,Sternochetus frigidus,93,Dasineura sp,2,138,0.014493,0.035714,168,0.011905
-627,test,56,Pieris canidia,67,Lycorma delicatula,2,141,0.014184,0.166667,1680,0.001190
-628,test,20,yellow cutworm,67,Lycorma delicatula,2,144,0.013889,0.021739,1680,0.001190
-629,test,20,yellow cutworm,86,Prodenia litura,2,144,0.013889,0.021739,391,0.005115
-630,test,30,wheat blossom midge,23,army worm,2,146,0.013699,0.285714,309,0.006472
-631,test,95,Salurnis marginella Guerr,67,Lycorma delicatula,2,147,0.013605,0.083333,1680,0.001190
-632,test,95,Salurnis marginella Guerr,101,Cicadellidae,2,147,0.013605,0.083333,1795,0.001114
-633,test,1,rice leaf caterpillar,2,paddy stem maggot,2,147,0.013605,0.027027,68,0.029412
-634,test,1,rice leaf caterpillar,5,rice gall midge,2,147,0.013605,0.027027,147,0.013605
-635,test,1,rice leaf caterpillar,18,black cutworm,2,147,0.013605,0.027027,275,0.007273
-636,test,1,rice leaf caterpillar,22,corn borer,2,147,0.013605,0.027027,539,0.003711
-637,test,1,rice leaf caterpillar,58,Limacodidae,2,147,0.013605,0.027027,402,0.004975
-638,test,1,rice leaf caterpillar,86,Prodenia litura,2,147,0.013605,0.027027,391,0.005115
-639,test,1,rice leaf caterpillar,101,Cicadellidae,2,147,0.013605,0.027027,1795,0.001114
-640,test,19,large cutworm,15,mole cricket,2,148,0.013514,0.019231,504,0.003968
-641,test,19,large cutworm,22,corn borer,2,148,0.013514,0.019231,539,0.003711
-642,test,19,large cutworm,38,cabbage army worm,2,148,0.013514,0.019231,245,0.008163
-643,test,19,large cutworm,39,beet army worm,2,148,0.013514,0.019231,506,0.003953
-644,test,5,rice gall midge,6,Rice Stemfly,2,152,0.013158,0.048780,113,0.017699
-645,test,5,rice gall midge,11,rice leafhopper,2,152,0.013158,0.048780,102,0.019608
-646,test,5,rice gall midge,13,rice shell pest,2,152,0.013158,0.048780,92,0.021739
-647,test,5,rice gall midge,23,army worm,2,152,0.013158,0.048780,309,0.006472
-648,test,5,rice gall midge,24,aphids,2,152,0.013158,0.048780,1314,0.001522
-649,test,5,rice gall midge,50,legume blister beetle,2,152,0.013158,0.048780,434,0.004608
-650,test,5,rice gall midge,71,Trialeurodes vaporariorum,2,152,0.013158,0.048780,226,0.008850
-651,test,4,yellow rice borer,7,brown plant hopper,2,152,0.013158,0.036364,226,0.008850
-652,test,93,Dasineura sp,27,english grain aphid,2,152,0.013158,0.033333,178,0.011236
-653,test,93,Dasineura sp,37,flea beetle,2,152,0.013158,0.033333,227,0.008811
-654,test,93,Dasineura sp,39,beet army worm,2,152,0.013158,0.033333,506,0.003953
-655,test,93,Dasineura sp,57,Apolygus lucorum,2,152,0.013158,0.033333,109,0.018349
-656,test,93,Dasineura sp,59,Viteus vitifoliae,2,152,0.013158,0.033333,97,0.020619
-657,test,44,alfalfa weevil,1,rice leaf caterpillar,2,158,0.012658,0.031746,137,0.014599
-658,test,44,alfalfa weevil,16,wireworm,2,158,0.012658,0.031746,270,0.007407
-659,test,44,alfalfa weevil,29,bird cherry-oataphid,2,158,0.012658,0.031746,224,0.008929
-660,test,44,alfalfa weevil,39,beet army worm,2,158,0.012658,0.031746,506,0.003953
-661,test,44,alfalfa weevil,46,alfalfa plant bug,2,158,0.012658,0.031746,152,0.013158
-662,test,44,alfalfa weevil,57,Apolygus lucorum,2,158,0.012658,0.031746,109,0.018349
-663,test,44,alfalfa weevil,93,Dasineura sp,2,158,0.012658,0.031746,168,0.011905
-664,test,9,small brown plant hopper,2,paddy stem maggot,2,166,0.012048,0.021277,68,0.029412
-665,test,9,small brown plant hopper,67,Lycorma delicatula,2,166,0.012048,0.021277,1680,0.001190
-666,test,25,Potosiabre vitarsis,26,peach borer,2,170,0.011765,0.105263,223,0.008969
-667,test,25,Potosiabre vitarsis,67,Lycorma delicatula,2,170,0.011765,0.105263,1680,0.001190
-668,test,94,Lawana imitata Melichar,56,Pieris canidia,2,174,0.011494,0.060606,136,0.014706
-669,test,94,Lawana imitata Melichar,70,Miridae,2,174,0.011494,0.060606,1640,0.001220
-670,test,94,Lawana imitata Melichar,101,Cicadellidae,2,174,0.011494,0.060606,1795,0.001114
-671,test,49,lytta polita,16,wireworm,2,197,0.010152,0.019608,270,0.007407
-672,test,49,lytta polita,68,Xylotrechus,2,197,0.010152,0.019608,346,0.005780
-673,test,49,lytta polita,86,Prodenia litura,2,197,0.010152,0.019608,391,0.005115
-674,test,49,lytta polita,99,Rhytidodera bowrinii white,2,197,0.010152,0.019608,151,0.013245
-675,test,46,alfalfa plant bug,45,flax budworm,2,197,0.010152,0.017094,283,0.007067
-676,test,46,alfalfa plant bug,52,therioaphis maculata Buckton,2,197,0.010152,0.017094,62,0.032258
-677,test,46,alfalfa plant bug,57,Apolygus lucorum,2,197,0.010152,0.017094,109,0.018349
-678,test,46,alfalfa plant bug,67,Lycorma delicatula,2,197,0.010152,0.017094,1680,0.001190
-679,test,27,english grain aphid,67,Lycorma delicatula,2,197,0.010152,0.015504,1680,0.001190
-680,test,27,english grain aphid,90,Toxoptera aurantii,2,197,0.010152,0.015504,61,0.032787
-681,test,82,Aleurocanthus spiniferus,75,Phyllocoptes oleiverus ashmead,2,208,0.009615,0.086957,45,0.044444
-682,test,71,Trialeurodes vaporariorum,59,Viteus vitifoliae,2,208,0.009615,0.054054,97,0.020619
-683,test,71,Trialeurodes vaporariorum,76,Icerya purchasi Maskell,2,208,0.009615,0.054054,207,0.009662
-684,test,71,Trialeurodes vaporariorum,92,Scirtothrips dorsalis Hood,2,208,0.009615,0.054054,256,0.007812
-685,test,26,peach borer,3,asiatic rice borer,2,208,0.009615,0.051282,321,0.006231
-686,test,26,peach borer,24,aphids,2,208,0.009615,0.051282,1314,0.001522
-687,test,26,peach borer,39,beet army worm,2,208,0.009615,0.051282,506,0.003953
-688,test,29,bird cherry-oataphid,9,small brown plant hopper,2,213,0.009390,0.015873,159,0.012579
-689,test,29,bird cherry-oataphid,22,corn borer,2,213,0.009390,0.015873,539,0.003711
-690,test,29,bird cherry-oataphid,59,Viteus vitifoliae,2,213,0.009390,0.015873,97,0.020619
-691,test,29,bird cherry-oataphid,89,Toxoptera citricidus,2,213,0.009390,0.015873,56,0.035714
-692,test,76,Icerya purchasi Maskell,24,aphids,2,217,0.009217,0.050000,1314,0.001522
-693,test,76,Icerya purchasi Maskell,71,Trialeurodes vaporariorum,2,217,0.009217,0.050000,226,0.008850
-694,test,76,Icerya purchasi Maskell,78,Ceroplastes rubens,2,217,0.009217,0.050000,80,0.025000
-695,test,76,Icerya purchasi Maskell,79,Chrysomphalus aonidum,2,217,0.009217,0.050000,69,0.028986
-696,test,76,Icerya purchasi Maskell,81,Nipaecoccus vastalor,2,217,0.009217,0.050000,32,0.062500
-697,test,76,Icerya purchasi Maskell,101,Cicadellidae,2,217,0.009217,0.050000,1795,0.001114
-698,test,66,Ampelophaga,16,wireworm,2,230,0.008696,0.038462,270,0.007407
-699,test,66,Ampelophaga,18,black cutworm,2,230,0.008696,0.038462,275,0.007273
-700,test,66,Ampelophaga,19,large cutworm,2,230,0.008696,0.038462,154,0.012987
-701,test,66,Ampelophaga,23,army worm,2,230,0.008696,0.038462,309,0.006472
-702,test,66,Ampelophaga,45,flax budworm,2,230,0.008696,0.038462,283,0.007067
-703,test,66,Ampelophaga,70,Miridae,2,230,0.008696,0.038462,1640,0.001220
-704,test,66,Ampelophaga,86,Prodenia litura,2,230,0.008696,0.038462,391,0.005115
-705,test,66,Ampelophaga,87,Adristyrannus,2,230,0.008696,0.038462,97,0.020619
-706,test,37,flea beetle,10,rice water weevil,2,237,0.008439,0.044444,254,0.007874
-707,test,37,flea beetle,39,beet army worm,2,237,0.008439,0.044444,506,0.003953
-708,test,37,flea beetle,47,tarnished plant bug,2,237,0.008439,0.044444,208,0.009615
-709,test,37,flea beetle,52,therioaphis maculata Buckton,2,237,0.008439,0.044444,62,0.032258
-710,test,37,flea beetle,93,Dasineura sp,2,237,0.008439,0.044444,168,0.011905
-711,test,37,flea beetle,101,Cicadellidae,2,237,0.008439,0.044444,1795,0.001114
-712,test,92,Scirtothrips dorsalis Hood,12,grain spreader thrips,2,243,0.008230,0.028571,44,0.045455
-713,test,92,Scirtothrips dorsalis Hood,24,aphids,2,243,0.008230,0.028571,1314,0.001522
-714,test,92,Scirtothrips dorsalis Hood,67,Lycorma delicatula,2,243,0.008230,0.028571,1680,0.001190
-715,test,92,Scirtothrips dorsalis Hood,88,Phyllocnistis citrella Stainton,2,243,0.008230,0.028571,121,0.016529
-716,test,47,tarnished plant bug,57,Apolygus lucorum,2,246,0.008130,0.016807,109,0.018349
-717,test,47,tarnished plant bug,101,Cicadellidae,2,246,0.008130,0.016807,1795,0.001114
-718,test,7,brown plant hopper,6,Rice Stemfly,2,251,0.007968,0.015873,113,0.017699
-719,test,7,brown plant hopper,48,Locustoidea,2,251,0.007968,0.015873,414,0.004831
-720,test,10,rice water weevil,44,alfalfa weevil,2,257,0.007782,0.031250,141,0.014184
-721,test,10,rice water weevil,58,Limacodidae,2,257,0.007782,0.031250,402,0.004975
-722,test,18,black cutworm,15,mole cricket,2,257,0.007782,0.019048,504,0.003968
-723,test,18,black cutworm,66,Ampelophaga,2,257,0.007782,0.019048,217,0.009217
-724,test,18,black cutworm,67,Lycorma delicatula,2,257,0.007782,0.019048,1680,0.001190
-725,test,38,cabbage army worm,1,rice leaf caterpillar,2,257,0.007782,0.013793,137,0.014599
-726,test,38,cabbage army worm,9,small brown plant hopper,2,257,0.007782,0.013793,159,0.012579
-727,test,38,cabbage army worm,13,rice shell pest,2,257,0.007782,0.013793,92,0.021739
-728,test,38,cabbage army worm,20,yellow cutworm,2,257,0.007782,0.013793,126,0.015873
-729,test,38,cabbage army worm,87,Adristyrannus,2,257,0.007782,0.013793,97,0.020619
-730,test,38,cabbage army worm,94,Lawana imitata Melichar,2,257,0.007782,0.013793,186,0.010753
-731,test,38,cabbage army worm,101,Cicadellidae,2,257,0.007782,0.013793,1795,0.001114
-732,test,14,grub,19,large cutworm,2,258,0.007752,0.062500,154,0.012987
-733,test,14,grub,20,yellow cutworm,2,258,0.007752,0.062500,126,0.015873
-734,test,14,grub,54,Thrips,2,258,0.007752,0.062500,218,0.009174
-735,test,54,Thrips,3,asiatic rice borer,2,264,0.007576,0.012048,321,0.006231
-736,test,54,Thrips,37,flea beetle,2,264,0.007576,0.012048,227,0.008811
-737,test,54,Thrips,38,cabbage army worm,2,264,0.007576,0.012048,245,0.008163
-738,test,54,Thrips,55,alfalfa seed chalcid,2,264,0.007576,0.012048,56,0.035714
-739,test,54,Thrips,61,Brevipoalpus lewisi McGregor,2,264,0.007576,0.012048,21,0.095238
-740,test,54,Thrips,93,Dasineura sp,2,264,0.007576,0.012048,168,0.011905
-741,test,16,wireworm,19,large cutworm,2,267,0.007491,0.046512,154,0.012987
-742,test,16,wireworm,22,corn borer,2,267,0.007491,0.046512,539,0.003711
-743,test,8,white backed plant hopper,0,rice leaf roller,2,268,0.007463,0.015152,394,0.005076
-744,test,8,white backed plant hopper,1,rice leaf caterpillar,2,268,0.007463,0.015152,137,0.014599
-745,test,8,white backed plant hopper,2,paddy stem maggot,2,268,0.007463,0.015152,68,0.029412
-746,test,8,white backed plant hopper,5,rice gall midge,2,268,0.007463,0.015152,147,0.013605
-747,test,8,white backed plant hopper,6,Rice Stemfly,2,268,0.007463,0.015152,113,0.017699
-748,test,8,white backed plant hopper,11,rice leafhopper,2,268,0.007463,0.015152,102,0.019608
-749,test,8,white backed plant hopper,48,Locustoidea,2,268,0.007463,0.015152,414,0.004831
-750,test,8,white backed plant hopper,71,Trialeurodes vaporariorum,2,268,0.007463,0.015152,226,0.008850
-751,test,3,asiatic rice borer,99,Rhytidodera bowrinii white,2,316,0.006329,0.015748,151,0.013245
-752,test,45,flax budworm,3,asiatic rice borer,2,320,0.006250,0.010695,321,0.006231
-753,test,45,flax budworm,14,grub,2,320,0.006250,0.010695,269,0.007435
-754,test,45,flax budworm,26,peach borer,2,320,0.006250,0.010695,223,0.008969
-755,test,45,flax budworm,41,meadow moth,2,320,0.006250,0.010695,65,0.030769
-756,test,45,flax budworm,44,alfalfa weevil,2,320,0.006250,0.010695,141,0.014184
-757,test,45,flax budworm,52,therioaphis maculata Buckton,2,320,0.006250,0.010695,62,0.032258
-758,test,23,army worm,3,asiatic rice borer,2,322,0.006211,0.013793,321,0.006231
-759,test,23,army worm,24,aphids,2,322,0.006211,0.013793,1314,0.001522
-760,test,23,army worm,26,peach borer,2,322,0.006211,0.013793,223,0.008969
-761,test,23,army worm,51,blister beetle,2,322,0.006211,0.013793,593,0.003373
-762,test,23,army worm,59,Viteus vitifoliae,2,322,0.006211,0.013793,97,0.020619
-763,test,23,army worm,77,Unaspis yanonensis,2,322,0.006211,0.013793,125,0.016000
-764,test,23,army worm,97,Chlumetia transversa,2,322,0.006211,0.013793,93,0.021505
-765,test,0,rice leaf roller,4,yellow rice borer,2,335,0.005970,0.031746,151,0.013245
-766,test,0,rice leaf roller,10,rice water weevil,2,335,0.005970,0.031746,254,0.007874
-767,test,0,rice leaf roller,23,army worm,2,335,0.005970,0.031746,309,0.006472
-768,test,0,rice leaf roller,39,beet army worm,2,335,0.005970,0.031746,506,0.003953
-769,test,68,Xylotrechus,16,wireworm,2,345,0.005797,0.045455,270,0.007407
-770,test,68,Xylotrechus,101,Cicadellidae,2,345,0.005797,0.045455,1795,0.001114
-771,test,69,Cicadella viridis,24,aphids,2,384,0.005208,0.026316,1314,0.001522
-772,test,69,Cicadella viridis,39,beet army worm,2,384,0.005208,0.026316,506,0.003953
-773,test,69,Cicadella viridis,48,Locustoidea,2,384,0.005208,0.026316,414,0.004831
-774,test,69,Cicadella viridis,72,Erythroneura apicalis,2,384,0.005208,0.026316,20,0.100000
+531,test,60,Colomerus vitis,101,Cicadellidae,2,53,0.037736,0.111111,1794,0.001115
+532,test,53,odontothrips loti,51,blister beetle,2,54,0.037037,0.086957,594,0.003367
+533,test,55,alfalfa seed chalcid,65,parathrene regalis,2,56,0.035714,0.068966,51,0.039216
+534,test,55,alfalfa seed chalcid,93,Dasineura sp,2,56,0.035714,0.068966,168,0.011905
+535,test,89,Toxoptera citricidus,52,therioaphis maculata Buckton,2,57,0.035088,0.068966,61,0.032787
+536,test,89,Toxoptera citricidus,70,Miridae,2,57,0.035088,0.068966,1640,0.001220
+537,test,89,Toxoptera citricidus,91,Aphis citricola Vander Goot,2,57,0.035088,0.068966,123,0.016260
+538,test,43,sericaorient alismots chulsky,37,flea beetle,2,58,0.034483,0.117647,228,0.008772
+539,test,43,sericaorient alismots chulsky,82,Aleurocanthus spiniferus,2,58,0.034483,0.117647,209,0.009569
+540,test,96,Deporaus marginatus Pascoe,44,alfalfa weevil,2,63,0.031746,0.083333,141,0.014184
+541,test,96,Deporaus marginatus Pascoe,50,legume blister beetle,2,63,0.031746,0.083333,434,0.004608
+542,test,96,Deporaus marginatus Pascoe,101,Cicadellidae,2,63,0.031746,0.083333,1794,0.001115
+543,test,79,Chrysomphalus aonidum,82,Aleurocanthus spiniferus,2,68,0.029412,0.090909,209,0.009569
+544,test,90,Toxoptera aurantii,28,green bug,2,68,0.029412,0.064516,72,0.027778
+545,test,31,penthaleus major,24,aphids,2,70,0.028571,0.074074,1316,0.001520
+546,test,31,penthaleus major,74,Panonchus citri McGregor,2,70,0.028571,0.074074,146,0.013699
+547,test,32,longlegged spider mite,8,white backed plant hopper,2,74,0.027027,0.052632,272,0.007353
+548,test,32,longlegged spider mite,9,small brown plant hopper,2,74,0.027027,0.052632,158,0.012658
+549,test,78,Ceroplastes rubens,79,Chrysomphalus aonidum,2,78,0.025641,0.166667,69,0.028986
+550,test,78,Ceroplastes rubens,91,Aphis citricola Vander Goot,2,78,0.025641,0.166667,123,0.016260
+551,test,52,therioaphis maculata Buckton,54,Thrips,2,78,0.025641,0.032787,217,0.009217
+552,test,52,therioaphis maculata Buckton,67,Lycorma delicatula,2,78,0.025641,0.032787,1681,0.001190
+553,test,52,therioaphis maculata Buckton,89,Toxoptera citricidus,2,78,0.025641,0.032787,56,0.035714
+554,test,52,therioaphis maculata Buckton,93,Dasineura sp,2,78,0.025641,0.032787,168,0.011905
+555,test,2,paddy stem maggot,0,rice leaf roller,2,79,0.025316,0.040816,394,0.005076
+556,test,2,paddy stem maggot,3,asiatic rice borer,2,79,0.025316,0.040816,321,0.006231
+557,test,2,paddy stem maggot,4,yellow rice borer,2,79,0.025316,0.040816,151,0.013245
+558,test,2,paddy stem maggot,5,rice gall midge,2,79,0.025316,0.040816,147,0.013605
+559,test,2,paddy stem maggot,11,rice leafhopper,2,79,0.025316,0.040816,101,0.019802
+560,test,2,paddy stem maggot,70,Miridae,2,79,0.025316,0.040816,1640,0.001220
+561,test,41,meadow moth,3,asiatic rice borer,2,81,0.024691,0.080000,321,0.006231
+562,test,62,oides decempunctata,51,blister beetle,2,85,0.023529,0.400000,594,0.003367
+563,test,62,oides decempunctata,67,Lycorma delicatula,2,85,0.023529,0.400000,1681,0.001190
+564,test,40,Beet spot flies,6,Rice Stemfly,2,90,0.022222,0.066667,113,0.017699
+565,test,40,Beet spot flies,36,beet fly,2,90,0.022222,0.066667,13,0.153846
+566,test,40,Beet spot flies,54,Thrips,2,90,0.022222,0.066667,217,0.009217
+567,test,40,Beet spot flies,67,Lycorma delicatula,2,90,0.022222,0.066667,1681,0.001190
+568,test,40,Beet spot flies,88,Phyllocnistis citrella Stainton,2,90,0.022222,0.066667,121,0.016529
+569,test,97,Chlumetia transversa,23,army worm,2,92,0.021739,0.051282,309,0.006472
+570,test,97,Chlumetia transversa,66,Ampelophaga,2,92,0.021739,0.051282,217,0.009217
+571,test,42,beet weevil,51,blister beetle,2,93,0.021505,0.074074,594,0.003367
+572,test,42,beet weevil,68,Xylotrechus,2,93,0.021505,0.074074,346,0.005780
+573,test,42,beet weevil,96,Deporaus marginatus Pascoe,2,93,0.021505,0.074074,50,0.040000
+574,test,64,Pseudococcus comstocki Kuwana,77,Unaspis yanonensis,2,93,0.021505,0.057143,125,0.016000
+575,test,64,Pseudococcus comstocki Kuwana,93,Dasineura sp,2,93,0.021505,0.057143,168,0.011905
+576,test,64,Pseudococcus comstocki Kuwana,94,Lawana imitata Melichar,2,93,0.021505,0.057143,186,0.010753
+577,test,64,Pseudococcus comstocki Kuwana,97,Chlumetia transversa,2,93,0.021505,0.057143,93,0.021505
+578,test,87,Adristyrannus,22,corn borer,2,94,0.021277,0.074074,540,0.003704
+579,test,87,Adristyrannus,58,Limacodidae,2,94,0.021277,0.074074,401,0.004988
+580,test,87,Adristyrannus,97,Chlumetia transversa,2,94,0.021277,0.074074,93,0.021505
+581,test,34,wheat sawfly,23,army worm,2,102,0.019608,0.076923,309,0.006472
+582,test,34,wheat sawfly,50,legume blister beetle,2,102,0.019608,0.076923,434,0.004608
+583,test,34,wheat sawfly,65,parathrene regalis,2,102,0.019608,0.076923,51,0.039216
+584,test,91,Aphis citricola Vander Goot,27,english grain aphid,2,106,0.018868,0.055556,178,0.011236
+585,test,91,Aphis citricola Vander Goot,29,bird cherry-oataphid,2,106,0.018868,0.055556,224,0.008929
+586,test,59,Viteus vitifoliae,23,army worm,2,107,0.018692,0.045455,309,0.006472
+587,test,59,Viteus vitifoliae,52,therioaphis maculata Buckton,2,107,0.018692,0.045455,61,0.032787
+588,test,59,Viteus vitifoliae,54,Thrips,2,107,0.018692,0.045455,217,0.009217
+589,test,59,Viteus vitifoliae,91,Aphis citricola Vander Goot,2,107,0.018692,0.045455,123,0.016260
+590,test,6,Rice Stemfly,5,rice gall midge,2,111,0.018018,0.046512,147,0.013605
+591,test,6,Rice Stemfly,10,rice water weevil,2,111,0.018018,0.046512,254,0.007874
+592,test,6,Rice Stemfly,67,Lycorma delicatula,2,111,0.018018,0.046512,1681,0.001190
+593,test,57,Apolygus lucorum,44,alfalfa weevil,2,115,0.017391,0.028571,141,0.014184
+594,test,57,Apolygus lucorum,92,Scirtothrips dorsalis Hood,2,115,0.017391,0.028571,256,0.007812
+595,test,57,Apolygus lucorum,101,Cicadellidae,2,115,0.017391,0.028571,1794,0.001115
+596,test,74,Panonchus citri McGregor,24,aphids,2,116,0.017241,0.074074,1316,0.001520
+597,test,83,Tetradacus c Bactrocera minax,30,wheat blossom midge,2,117,0.017094,0.062500,161,0.012422
+598,test,83,Tetradacus c Bactrocera minax,70,Miridae,2,117,0.017094,0.062500,1640,0.001220
+599,test,88,Phyllocnistis citrella Stainton,1,rice leaf caterpillar,2,122,0.016393,0.071429,137,0.014599
+600,test,88,Phyllocnistis citrella Stainton,3,asiatic rice borer,2,122,0.016393,0.071429,321,0.006231
+601,test,88,Phyllocnistis citrella Stainton,8,white backed plant hopper,2,122,0.016393,0.071429,272,0.007353
+602,test,88,Phyllocnistis citrella Stainton,92,Scirtothrips dorsalis Hood,2,122,0.016393,0.071429,256,0.007812
+603,test,11,rice leafhopper,0,rice leaf roller,2,122,0.016393,0.030303,394,0.005076
+604,test,11,rice leafhopper,2,paddy stem maggot,2,122,0.016393,0.030303,68,0.029412
+605,test,11,rice leafhopper,3,asiatic rice borer,2,122,0.016393,0.030303,321,0.006231
+606,test,11,rice leafhopper,4,yellow rice borer,2,122,0.016393,0.030303,151,0.013245
+607,test,11,rice leafhopper,6,Rice Stemfly,2,122,0.016393,0.030303,113,0.017699
+608,test,11,rice leafhopper,22,corn borer,2,122,0.016393,0.030303,540,0.003704
+609,test,11,rice leafhopper,24,aphids,2,122,0.016393,0.030303,1316,0.001520
+610,test,13,rice shell pest,2,paddy stem maggot,2,123,0.016260,0.027778,68,0.029412
+611,test,13,rice shell pest,3,asiatic rice borer,2,123,0.016260,0.027778,321,0.006231
+612,test,13,rice shell pest,7,brown plant hopper,2,123,0.016260,0.027778,228,0.008772
+613,test,13,rice shell pest,9,small brown plant hopper,2,123,0.016260,0.027778,158,0.012658
+614,test,13,rice shell pest,10,rice water weevil,2,123,0.016260,0.027778,254,0.007874
+615,test,13,rice shell pest,26,peach borer,2,123,0.016260,0.027778,223,0.008969
+616,test,77,Unaspis yanonensis,29,bird cherry-oataphid,2,126,0.015873,0.055556,224,0.008929
+617,test,77,Unaspis yanonensis,75,Phyllocoptes oleiverus ashmead,2,126,0.015873,0.055556,45,0.044444
+618,test,77,Unaspis yanonensis,78,Ceroplastes rubens,2,126,0.015873,0.055556,80,0.025000
+619,test,77,Unaspis yanonensis,81,Nipaecoccus vastalor,2,126,0.015873,0.055556,32,0.062500
+620,test,77,Unaspis yanonensis,93,Dasineura sp,2,126,0.015873,0.055556,168,0.011905
+621,test,84,Dacus dorsalis(Hendel),24,aphids,2,132,0.015152,0.066667,1316,0.001520
+622,test,84,Dacus dorsalis(Hendel),36,beet fly,2,132,0.015152,0.066667,13,0.153846
+623,test,73,Papilio xuthus,51,blister beetle,2,135,0.014815,0.181818,594,0.003367
+624,test,73,Papilio xuthus,65,parathrene regalis,2,135,0.014815,0.181818,51,0.039216
+625,test,100,Sternochetus frigidus,14,grub,2,138,0.014493,0.035714,269,0.007435
+626,test,100,Sternochetus frigidus,86,Prodenia litura,2,138,0.014493,0.035714,391,0.005115
+627,test,100,Sternochetus frigidus,93,Dasineura sp,2,138,0.014493,0.035714,168,0.011905
+628,test,56,Pieris canidia,67,Lycorma delicatula,2,141,0.014184,0.166667,1681,0.001190
+629,test,20,yellow cutworm,67,Lycorma delicatula,2,144,0.013889,0.021739,1681,0.001190
+630,test,20,yellow cutworm,86,Prodenia litura,2,144,0.013889,0.021739,391,0.005115
+631,test,30,wheat blossom midge,23,army worm,2,146,0.013699,0.285714,309,0.006472
+632,test,95,Salurnis marginella Guerr,67,Lycorma delicatula,2,147,0.013605,0.083333,1681,0.001190
+633,test,95,Salurnis marginella Guerr,101,Cicadellidae,2,147,0.013605,0.083333,1794,0.001115
+634,test,1,rice leaf caterpillar,2,paddy stem maggot,2,147,0.013605,0.027027,68,0.029412
+635,test,1,rice leaf caterpillar,5,rice gall midge,2,147,0.013605,0.027027,147,0.013605
+636,test,1,rice leaf caterpillar,18,black cutworm,2,147,0.013605,0.027027,275,0.007273
+637,test,1,rice leaf caterpillar,22,corn borer,2,147,0.013605,0.027027,540,0.003704
+638,test,1,rice leaf caterpillar,58,Limacodidae,2,147,0.013605,0.027027,401,0.004988
+639,test,1,rice leaf caterpillar,86,Prodenia litura,2,147,0.013605,0.027027,391,0.005115
+640,test,1,rice leaf caterpillar,101,Cicadellidae,2,147,0.013605,0.027027,1794,0.001115
+641,test,19,large cutworm,15,mole cricket,2,148,0.013514,0.019231,504,0.003968
+642,test,19,large cutworm,22,corn borer,2,148,0.013514,0.019231,540,0.003704
+643,test,19,large cutworm,38,cabbage army worm,2,148,0.013514,0.019231,247,0.008097
+644,test,19,large cutworm,39,beet army worm,2,148,0.013514,0.019231,506,0.003953
+645,test,5,rice gall midge,6,Rice Stemfly,2,152,0.013158,0.048780,113,0.017699
+646,test,5,rice gall midge,7,brown plant hopper,2,152,0.013158,0.048780,228,0.008772
+647,test,5,rice gall midge,11,rice leafhopper,2,152,0.013158,0.048780,101,0.019802
+648,test,5,rice gall midge,13,rice shell pest,2,152,0.013158,0.048780,92,0.021739
+649,test,5,rice gall midge,23,army worm,2,152,0.013158,0.048780,309,0.006472
+650,test,5,rice gall midge,24,aphids,2,152,0.013158,0.048780,1316,0.001520
+651,test,5,rice gall midge,50,legume blister beetle,2,152,0.013158,0.048780,434,0.004608
+652,test,5,rice gall midge,71,Trialeurodes vaporariorum,2,152,0.013158,0.048780,226,0.008850
+653,test,4,yellow rice borer,7,brown plant hopper,2,152,0.013158,0.036364,228,0.008772
+654,test,93,Dasineura sp,27,english grain aphid,2,152,0.013158,0.033333,178,0.011236
+655,test,93,Dasineura sp,37,flea beetle,2,152,0.013158,0.033333,228,0.008772
+656,test,93,Dasineura sp,39,beet army worm,2,152,0.013158,0.033333,506,0.003953
+657,test,93,Dasineura sp,57,Apolygus lucorum,2,152,0.013158,0.033333,109,0.018349
+658,test,93,Dasineura sp,59,Viteus vitifoliae,2,152,0.013158,0.033333,97,0.020619
+659,test,44,alfalfa weevil,1,rice leaf caterpillar,2,158,0.012658,0.031746,137,0.014599
+660,test,44,alfalfa weevil,16,wireworm,2,158,0.012658,0.031746,270,0.007407
+661,test,44,alfalfa weevil,29,bird cherry-oataphid,2,158,0.012658,0.031746,224,0.008929
+662,test,44,alfalfa weevil,39,beet army worm,2,158,0.012658,0.031746,506,0.003953
+663,test,44,alfalfa weevil,46,alfalfa plant bug,2,158,0.012658,0.031746,152,0.013158
+664,test,44,alfalfa weevil,57,Apolygus lucorum,2,158,0.012658,0.031746,109,0.018349
+665,test,44,alfalfa weevil,93,Dasineura sp,2,158,0.012658,0.031746,168,0.011905
+666,test,9,small brown plant hopper,2,paddy stem maggot,2,166,0.012048,0.021277,68,0.029412
+667,test,9,small brown plant hopper,67,Lycorma delicatula,2,166,0.012048,0.021277,1681,0.001190
+668,test,25,Potosiabre vitarsis,26,peach borer,2,170,0.011765,0.105263,223,0.008969
+669,test,25,Potosiabre vitarsis,67,Lycorma delicatula,2,170,0.011765,0.105263,1681,0.001190
+670,test,94,Lawana imitata Melichar,56,Pieris canidia,2,174,0.011494,0.060606,136,0.014706
+671,test,94,Lawana imitata Melichar,70,Miridae,2,174,0.011494,0.060606,1640,0.001220
+672,test,94,Lawana imitata Melichar,101,Cicadellidae,2,174,0.011494,0.060606,1794,0.001115
+673,test,49,lytta polita,16,wireworm,2,197,0.010152,0.019608,270,0.007407
+674,test,49,lytta polita,68,Xylotrechus,2,197,0.010152,0.019608,346,0.005780
+675,test,49,lytta polita,86,Prodenia litura,2,197,0.010152,0.019608,391,0.005115
+676,test,49,lytta polita,99,Rhytidodera bowrinii white,2,197,0.010152,0.019608,151,0.013245
+677,test,46,alfalfa plant bug,45,flax budworm,2,197,0.010152,0.017094,282,0.007092
+678,test,46,alfalfa plant bug,57,Apolygus lucorum,2,197,0.010152,0.017094,109,0.018349
+679,test,46,alfalfa plant bug,67,Lycorma delicatula,2,197,0.010152,0.017094,1681,0.001190
+680,test,27,english grain aphid,67,Lycorma delicatula,2,197,0.010152,0.015504,1681,0.001190
+681,test,27,english grain aphid,90,Toxoptera aurantii,2,197,0.010152,0.015504,60,0.033333
+682,test,82,Aleurocanthus spiniferus,75,Phyllocoptes oleiverus ashmead,2,208,0.009615,0.086957,45,0.044444
+683,test,71,Trialeurodes vaporariorum,59,Viteus vitifoliae,2,208,0.009615,0.054054,97,0.020619
+684,test,71,Trialeurodes vaporariorum,76,Icerya purchasi Maskell,2,208,0.009615,0.054054,207,0.009662
+685,test,71,Trialeurodes vaporariorum,92,Scirtothrips dorsalis Hood,2,208,0.009615,0.054054,256,0.007812
+686,test,26,peach borer,3,asiatic rice borer,2,208,0.009615,0.051282,321,0.006231
+687,test,26,peach borer,24,aphids,2,208,0.009615,0.051282,1316,0.001520
+688,test,26,peach borer,39,beet army worm,2,208,0.009615,0.051282,506,0.003953
+689,test,29,bird cherry-oataphid,9,small brown plant hopper,2,213,0.009390,0.015873,158,0.012658
+690,test,29,bird cherry-oataphid,22,corn borer,2,213,0.009390,0.015873,540,0.003704
+691,test,29,bird cherry-oataphid,59,Viteus vitifoliae,2,213,0.009390,0.015873,97,0.020619
+692,test,29,bird cherry-oataphid,89,Toxoptera citricidus,2,213,0.009390,0.015873,56,0.035714
+693,test,76,Icerya purchasi Maskell,24,aphids,2,217,0.009217,0.050000,1316,0.001520
+694,test,76,Icerya purchasi Maskell,71,Trialeurodes vaporariorum,2,217,0.009217,0.050000,226,0.008850
+695,test,76,Icerya purchasi Maskell,78,Ceroplastes rubens,2,217,0.009217,0.050000,80,0.025000
+696,test,76,Icerya purchasi Maskell,79,Chrysomphalus aonidum,2,217,0.009217,0.050000,69,0.028986
+697,test,76,Icerya purchasi Maskell,81,Nipaecoccus vastalor,2,217,0.009217,0.050000,32,0.062500
+698,test,76,Icerya purchasi Maskell,101,Cicadellidae,2,217,0.009217,0.050000,1794,0.001115
+699,test,66,Ampelophaga,16,wireworm,2,230,0.008696,0.038462,270,0.007407
+700,test,66,Ampelophaga,18,black cutworm,2,230,0.008696,0.038462,275,0.007273
+701,test,66,Ampelophaga,19,large cutworm,2,230,0.008696,0.038462,154,0.012987
+702,test,66,Ampelophaga,23,army worm,2,230,0.008696,0.038462,309,0.006472
+703,test,66,Ampelophaga,45,flax budworm,2,230,0.008696,0.038462,282,0.007092
+704,test,66,Ampelophaga,70,Miridae,2,230,0.008696,0.038462,1640,0.001220
+705,test,66,Ampelophaga,86,Prodenia litura,2,230,0.008696,0.038462,391,0.005115
+706,test,66,Ampelophaga,87,Adristyrannus,2,230,0.008696,0.038462,97,0.020619
+707,test,37,flea beetle,10,rice water weevil,2,237,0.008439,0.044444,254,0.007874
+708,test,37,flea beetle,39,beet army worm,2,237,0.008439,0.044444,506,0.003953
+709,test,37,flea beetle,47,tarnished plant bug,2,237,0.008439,0.044444,208,0.009615
+710,test,37,flea beetle,52,therioaphis maculata Buckton,2,237,0.008439,0.044444,61,0.032787
+711,test,37,flea beetle,93,Dasineura sp,2,237,0.008439,0.044444,168,0.011905
+712,test,37,flea beetle,101,Cicadellidae,2,237,0.008439,0.044444,1794,0.001115
+713,test,92,Scirtothrips dorsalis Hood,12,grain spreader thrips,2,243,0.008230,0.028571,44,0.045455
+714,test,92,Scirtothrips dorsalis Hood,24,aphids,2,243,0.008230,0.028571,1316,0.001520
+715,test,92,Scirtothrips dorsalis Hood,67,Lycorma delicatula,2,243,0.008230,0.028571,1681,0.001190
+716,test,92,Scirtothrips dorsalis Hood,88,Phyllocnistis citrella Stainton,2,243,0.008230,0.028571,121,0.016529
+717,test,47,tarnished plant bug,57,Apolygus lucorum,2,246,0.008130,0.016807,109,0.018349
+718,test,47,tarnished plant bug,101,Cicadellidae,2,246,0.008130,0.016807,1794,0.001115
+719,test,7,brown plant hopper,6,Rice Stemfly,2,251,0.007968,0.015873,113,0.017699
+720,test,7,brown plant hopper,48,Locustoidea,2,251,0.007968,0.015873,413,0.004843
+721,test,10,rice water weevil,44,alfalfa weevil,2,257,0.007782,0.031250,141,0.014184
+722,test,10,rice water weevil,58,Limacodidae,2,257,0.007782,0.031250,401,0.004988
+723,test,18,black cutworm,15,mole cricket,2,257,0.007782,0.019048,504,0.003968
+724,test,18,black cutworm,66,Ampelophaga,2,257,0.007782,0.019048,217,0.009217
+725,test,18,black cutworm,67,Lycorma delicatula,2,257,0.007782,0.019048,1681,0.001190
+726,test,38,cabbage army worm,1,rice leaf caterpillar,2,257,0.007782,0.013793,137,0.014599
+727,test,38,cabbage army worm,9,small brown plant hopper,2,257,0.007782,0.013793,158,0.012658
+728,test,38,cabbage army worm,13,rice shell pest,2,257,0.007782,0.013793,92,0.021739
+729,test,38,cabbage army worm,20,yellow cutworm,2,257,0.007782,0.013793,126,0.015873
+730,test,38,cabbage army worm,87,Adristyrannus,2,257,0.007782,0.013793,97,0.020619
+731,test,38,cabbage army worm,94,Lawana imitata Melichar,2,257,0.007782,0.013793,186,0.010753
+732,test,38,cabbage army worm,101,Cicadellidae,2,257,0.007782,0.013793,1794,0.001115
+733,test,14,grub,19,large cutworm,2,258,0.007752,0.062500,154,0.012987
+734,test,14,grub,20,yellow cutworm,2,258,0.007752,0.062500,126,0.015873
+735,test,14,grub,54,Thrips,2,258,0.007752,0.062500,217,0.009217
+736,test,54,Thrips,3,asiatic rice borer,2,264,0.007576,0.012048,321,0.006231
+737,test,54,Thrips,37,flea beetle,2,264,0.007576,0.012048,228,0.008772
+738,test,54,Thrips,38,cabbage army worm,2,264,0.007576,0.012048,247,0.008097
+739,test,54,Thrips,55,alfalfa seed chalcid,2,264,0.007576,0.012048,56,0.035714
+740,test,54,Thrips,61,Brevipoalpus lewisi McGregor,2,264,0.007576,0.012048,21,0.095238
+741,test,54,Thrips,93,Dasineura sp,2,264,0.007576,0.012048,168,0.011905
+742,test,16,wireworm,19,large cutworm,2,267,0.007491,0.046512,154,0.012987
+743,test,16,wireworm,22,corn borer,2,267,0.007491,0.046512,540,0.003704
+744,test,8,white backed plant hopper,0,rice leaf roller,2,268,0.007463,0.015152,394,0.005076
+745,test,8,white backed plant hopper,1,rice leaf caterpillar,2,268,0.007463,0.015152,137,0.014599
+746,test,8,white backed plant hopper,2,paddy stem maggot,2,268,0.007463,0.015152,68,0.029412
+747,test,8,white backed plant hopper,5,rice gall midge,2,268,0.007463,0.015152,147,0.013605
+748,test,8,white backed plant hopper,6,Rice Stemfly,2,268,0.007463,0.015152,113,0.017699
+749,test,8,white backed plant hopper,11,rice leafhopper,2,268,0.007463,0.015152,101,0.019802
+750,test,8,white backed plant hopper,48,Locustoidea,2,268,0.007463,0.015152,413,0.004843
+751,test,8,white backed plant hopper,71,Trialeurodes vaporariorum,2,268,0.007463,0.015152,226,0.008850
+752,test,3,asiatic rice borer,99,Rhytidodera bowrinii white,2,316,0.006329,0.015748,151,0.013245
+753,test,45,flax budworm,3,asiatic rice borer,2,320,0.006250,0.010638,321,0.006231
+754,test,45,flax budworm,14,grub,2,320,0.006250,0.010638,269,0.007435
+755,test,45,flax budworm,26,peach borer,2,320,0.006250,0.010638,223,0.008969
+756,test,45,flax budworm,41,meadow moth,2,320,0.006250,0.010638,65,0.030769
+757,test,45,flax budworm,44,alfalfa weevil,2,320,0.006250,0.010638,141,0.014184
+758,test,45,flax budworm,52,therioaphis maculata Buckton,2,320,0.006250,0.010638,61,0.032787
+759,test,23,army worm,3,asiatic rice borer,2,322,0.006211,0.013793,321,0.006231
+760,test,23,army worm,24,aphids,2,322,0.006211,0.013793,1316,0.001520
+761,test,23,army worm,26,peach borer,2,322,0.006211,0.013793,223,0.008969
+762,test,23,army worm,51,blister beetle,2,322,0.006211,0.013793,594,0.003367
+763,test,23,army worm,59,Viteus vitifoliae,2,322,0.006211,0.013793,97,0.020619
+764,test,23,army worm,77,Unaspis yanonensis,2,322,0.006211,0.013793,125,0.016000
+765,test,23,army worm,97,Chlumetia transversa,2,322,0.006211,0.013793,93,0.021505
+766,test,0,rice leaf roller,4,yellow rice borer,2,335,0.005970,0.031746,151,0.013245
+767,test,0,rice leaf roller,10,rice water weevil,2,335,0.005970,0.031746,254,0.007874
+768,test,0,rice leaf roller,23,army worm,2,335,0.005970,0.031746,309,0.006472
+769,test,0,rice leaf roller,39,beet army worm,2,335,0.005970,0.031746,506,0.003953
+770,test,68,Xylotrechus,16,wireworm,2,345,0.005797,0.045455,270,0.007407
+771,test,68,Xylotrechus,101,Cicadellidae,2,345,0.005797,0.045455,1794,0.001115
+772,test,69,Cicadella viridis,24,aphids,2,384,0.005208,0.026667,1316,0.001520
+773,test,69,Cicadella viridis,39,beet army worm,2,384,0.005208,0.026667,506,0.003953
+774,test,69,Cicadella viridis,72,Erythroneura apicalis,2,384,0.005208,0.026667,20,0.100000
 775,test,86,Prodenia litura,14,grub,2,392,0.005102,0.015625,269,0.007435
-776,test,86,Prodenia litura,22,corn borer,2,392,0.005102,0.015625,539,0.003711
+776,test,86,Prodenia litura,22,corn borer,2,392,0.005102,0.015625,540,0.003704
 777,test,86,Prodenia litura,47,tarnished plant bug,2,392,0.005102,0.015625,208,0.009615
 778,test,86,Prodenia litura,77,Unaspis yanonensis,2,392,0.005102,0.015625,125,0.016000
-779,test,48,Locustoidea,7,brown plant hopper,2,419,0.004773,0.040000,226,0.008850
+779,test,48,Locustoidea,7,brown plant hopper,2,419,0.004773,0.040000,228,0.008772
 780,test,48,Locustoidea,86,Prodenia litura,2,419,0.004773,0.040000,391,0.005115
 781,test,58,Limacodidae,23,army worm,2,421,0.004751,0.044444,309,0.006472
 782,test,58,Limacodidae,66,Ampelophaga,2,421,0.004751,0.044444,217,0.009217
 783,test,58,Limacodidae,71,Trialeurodes vaporariorum,2,421,0.004751,0.044444,226,0.008850
 784,test,58,Limacodidae,95,Salurnis marginella Guerr,2,421,0.004751,0.044444,153,0.013072
-785,test,50,legume blister beetle,24,aphids,2,423,0.004728,0.017544,1314,0.001522
+785,test,50,legume blister beetle,24,aphids,2,423,0.004728,0.017544,1316,0.001520
 786,test,50,legume blister beetle,33,wheat phloeothrips,2,423,0.004728,0.017544,96,0.020833
-787,test,50,legume blister beetle,37,flea beetle,2,423,0.004728,0.017544,227,0.008811
+787,test,50,legume blister beetle,37,flea beetle,2,423,0.004728,0.017544,228,0.008772
 788,test,50,legume blister beetle,39,beet army worm,2,423,0.004728,0.017544,506,0.003953
-789,test,50,legume blister beetle,45,flax budworm,2,423,0.004728,0.017544,283,0.007067
-790,test,50,legume blister beetle,48,Locustoidea,2,423,0.004728,0.017544,414,0.004831
+789,test,50,legume blister beetle,45,flax budworm,2,423,0.004728,0.017544,282,0.007092
+790,test,50,legume blister beetle,48,Locustoidea,2,423,0.004728,0.017544,413,0.004843
 791,test,50,legume blister beetle,53,odontothrips loti,2,423,0.004728,0.017544,54,0.037037
 792,test,50,legume blister beetle,70,Miridae,2,423,0.004728,0.017544,1640,0.001220
 793,test,39,beet army worm,1,rice leaf caterpillar,2,482,0.004149,0.010526,137,0.014599
@@ -797,13 +797,13 @@ confusion_rank,split,true_label,true_class,predicted_label,predicted_class,wrong
 796,test,39,beet army worm,57,Apolygus lucorum,2,482,0.004149,0.010526,109,0.018349
 797,test,39,beet army worm,66,Ampelophaga,2,482,0.004149,0.010526,217,0.009217
 798,test,39,beet army worm,82,Aleurocanthus spiniferus,2,482,0.004149,0.010526,209,0.009569
-799,test,39,beet army worm,101,Cicadellidae,2,482,0.004149,0.010526,1795,0.001114
-800,test,15,mole cricket,24,aphids,2,495,0.004040,0.086957,1314,0.001522
+799,test,39,beet army worm,101,Cicadellidae,2,482,0.004149,0.010526,1794,0.001115
+800,test,15,mole cricket,24,aphids,2,495,0.004040,0.086957,1316,0.001520
 801,test,15,mole cricket,25,Potosiabre vitarsis,2,495,0.004040,0.086957,164,0.012195
 802,test,22,corn borer,14,grub,2,510,0.003922,0.014925,269,0.007435
 803,test,22,corn borer,16,wireworm,2,510,0.003922,0.014925,270,0.007407
 804,test,22,corn borer,20,yellow cutworm,2,510,0.003922,0.014925,126,0.015873
-805,test,22,corn borer,38,cabbage army worm,2,510,0.003922,0.014925,245,0.008163
+805,test,22,corn borer,38,cabbage army worm,2,510,0.003922,0.014925,247,0.008097
 806,test,22,corn borer,41,meadow moth,2,510,0.003922,0.014925,65,0.030769
 807,test,22,corn borer,44,alfalfa weevil,2,510,0.003922,0.014925,141,0.014184
 808,test,22,corn borer,66,Ampelophaga,2,510,0.003922,0.014925,217,0.009217
@@ -811,52 +811,51 @@ confusion_rank,split,true_label,true_class,predicted_label,predicted_class,wrong
 810,test,22,corn borer,86,Prodenia litura,2,510,0.003922,0.014925,391,0.005115
 811,test,22,corn borer,91,Aphis citricola Vander Goot,2,510,0.003922,0.014925,123,0.016260
 812,test,51,blister beetle,19,large cutworm,2,570,0.003509,0.011236,154,0.012987
-813,test,51,blister beetle,24,aphids,2,570,0.003509,0.011236,1314,0.001522
-814,test,51,blister beetle,48,Locustoidea,2,570,0.003509,0.011236,414,0.004831
+813,test,51,blister beetle,24,aphids,2,570,0.003509,0.011236,1316,0.001520
+814,test,51,blister beetle,48,Locustoidea,2,570,0.003509,0.011236,413,0.004843
 815,test,51,blister beetle,62,oides decempunctata,2,570,0.003509,0.011236,84,0.023810
 816,test,51,blister beetle,86,Prodenia litura,2,570,0.003509,0.011236,391,0.005115
 817,test,51,blister beetle,93,Dasineura sp,2,570,0.003509,0.011236,168,0.011905
-818,test,24,aphids,9,small brown plant hopper,2,1229,0.001627,0.007812,159,0.012579
-819,test,24,aphids,22,corn borer,2,1229,0.001627,0.007812,539,0.003711
-820,test,24,aphids,23,army worm,2,1229,0.001627,0.007812,309,0.006472
-821,test,24,aphids,30,wheat blossom midge,2,1229,0.001627,0.007812,161,0.012422
-822,test,24,aphids,37,flea beetle,2,1229,0.001627,0.007812,227,0.008811
-823,test,24,aphids,38,cabbage army worm,2,1229,0.001627,0.007812,245,0.008163
-824,test,24,aphids,48,Locustoidea,2,1229,0.001627,0.007812,414,0.004831
-825,test,24,aphids,76,Icerya purchasi Maskell,2,1229,0.001627,0.007812,207,0.009662
-826,test,24,aphids,77,Unaspis yanonensis,2,1229,0.001627,0.007812,125,0.016000
+818,test,24,aphids,9,small brown plant hopper,2,1229,0.001627,0.007843,158,0.012658
+819,test,24,aphids,22,corn borer,2,1229,0.001627,0.007843,540,0.003704
+820,test,24,aphids,23,army worm,2,1229,0.001627,0.007843,309,0.006472
+821,test,24,aphids,30,wheat blossom midge,2,1229,0.001627,0.007843,161,0.012422
+822,test,24,aphids,37,flea beetle,2,1229,0.001627,0.007843,228,0.008772
+823,test,24,aphids,38,cabbage army worm,2,1229,0.001627,0.007843,247,0.008097
+824,test,24,aphids,48,Locustoidea,2,1229,0.001627,0.007843,413,0.004843
+825,test,24,aphids,76,Icerya purchasi Maskell,2,1229,0.001627,0.007843,207,0.009662
+826,test,24,aphids,77,Unaspis yanonensis,2,1229,0.001627,0.007843,125,0.016000
 827,test,70,Miridae,5,rice gall midge,2,1525,0.001311,0.008299,147,0.013605
 828,test,70,Miridae,16,wireworm,2,1525,0.001311,0.008299,270,0.007407
 829,test,70,Miridae,18,black cutworm,2,1525,0.001311,0.008299,275,0.007273
-830,test,70,Miridae,45,flax budworm,2,1525,0.001311,0.008299,283,0.007067
+830,test,70,Miridae,45,flax budworm,2,1525,0.001311,0.008299,282,0.007092
 831,test,70,Miridae,49,lytta polita,2,1525,0.001311,0.008299,153,0.013072
 832,test,70,Miridae,55,alfalfa seed chalcid,2,1525,0.001311,0.008299,56,0.035714
 833,test,70,Miridae,59,Viteus vitifoliae,2,1525,0.001311,0.008299,97,0.020619
 834,test,70,Miridae,71,Trialeurodes vaporariorum,2,1525,0.001311,0.008299,226,0.008850
 835,test,70,Miridae,93,Dasineura sp,2,1525,0.001311,0.008299,168,0.011905
 836,test,70,Miridae,99,Rhytidodera bowrinii white,2,1525,0.001311,0.008299,151,0.013245
-837,test,67,Lycorma delicatula,7,brown plant hopper,2,1594,0.001255,0.011494,226,0.008850
+837,test,67,Lycorma delicatula,7,brown plant hopper,2,1594,0.001255,0.011494,228,0.008772
 838,test,67,Lycorma delicatula,13,rice shell pest,2,1594,0.001255,0.011494,92,0.021739
 839,test,67,Lycorma delicatula,15,mole cricket,2,1594,0.001255,0.011494,504,0.003968
 840,test,67,Lycorma delicatula,20,yellow cutworm,2,1594,0.001255,0.011494,126,0.015873
-841,test,67,Lycorma delicatula,40,Beet spot flies,2,1594,0.001255,0.011494,96,0.020833
-842,test,67,Lycorma delicatula,48,Locustoidea,2,1594,0.001255,0.011494,414,0.004831
-843,test,67,Lycorma delicatula,50,legume blister beetle,2,1594,0.001255,0.011494,434,0.004608
-844,test,67,Lycorma delicatula,68,Xylotrechus,2,1594,0.001255,0.011494,346,0.005780
-845,test,67,Lycorma delicatula,76,Icerya purchasi Maskell,2,1594,0.001255,0.011494,207,0.009662
-846,test,67,Lycorma delicatula,78,Ceroplastes rubens,2,1594,0.001255,0.011494,80,0.025000
-847,test,67,Lycorma delicatula,82,Aleurocanthus spiniferus,2,1594,0.001255,0.011494,209,0.009569
-848,test,67,Lycorma delicatula,92,Scirtothrips dorsalis Hood,2,1594,0.001255,0.011494,256,0.007812
-849,test,67,Lycorma delicatula,95,Salurnis marginella Guerr,2,1594,0.001255,0.011494,153,0.013072
-850,test,101,Cicadellidae,2,paddy stem maggot,2,1723,0.001161,0.010309,68,0.029412
-851,test,101,Cicadellidae,4,yellow rice borer,2,1723,0.001161,0.010309,151,0.013245
-852,test,101,Cicadellidae,5,rice gall midge,2,1723,0.001161,0.010309,147,0.013605
-853,test,101,Cicadellidae,8,white backed plant hopper,2,1723,0.001161,0.010309,272,0.007353
-854,test,101,Cicadellidae,9,small brown plant hopper,2,1723,0.001161,0.010309,159,0.012579
-855,test,101,Cicadellidae,16,wireworm,2,1723,0.001161,0.010309,270,0.007407
-856,test,101,Cicadellidae,21,red spider,2,1723,0.001161,0.010309,146,0.013699
-857,test,101,Cicadellidae,37,flea beetle,2,1723,0.001161,0.010309,227,0.008811
-858,test,101,Cicadellidae,38,cabbage army worm,2,1723,0.001161,0.010309,245,0.008163
-859,test,101,Cicadellidae,45,flax budworm,2,1723,0.001161,0.010309,283,0.007067
-860,test,101,Cicadellidae,47,tarnished plant bug,2,1723,0.001161,0.010309,208,0.009615
-861,test,101,Cicadellidae,100,Sternochetus frigidus,2,1723,0.001161,0.010309,121,0.016529
+841,test,67,Lycorma delicatula,48,Locustoidea,2,1594,0.001255,0.011494,413,0.004843
+842,test,67,Lycorma delicatula,50,legume blister beetle,2,1594,0.001255,0.011494,434,0.004608
+843,test,67,Lycorma delicatula,68,Xylotrechus,2,1594,0.001255,0.011494,346,0.005780
+844,test,67,Lycorma delicatula,76,Icerya purchasi Maskell,2,1594,0.001255,0.011494,207,0.009662
+845,test,67,Lycorma delicatula,78,Ceroplastes rubens,2,1594,0.001255,0.011494,80,0.025000
+846,test,67,Lycorma delicatula,82,Aleurocanthus spiniferus,2,1594,0.001255,0.011494,209,0.009569
+847,test,67,Lycorma delicatula,92,Scirtothrips dorsalis Hood,2,1594,0.001255,0.011494,256,0.007812
+848,test,67,Lycorma delicatula,95,Salurnis marginella Guerr,2,1594,0.001255,0.011494,153,0.013072
+849,test,101,Cicadellidae,2,paddy stem maggot,2,1723,0.001161,0.010309,68,0.029412
+850,test,101,Cicadellidae,4,yellow rice borer,2,1723,0.001161,0.010309,151,0.013245
+851,test,101,Cicadellidae,5,rice gall midge,2,1723,0.001161,0.010309,147,0.013605
+852,test,101,Cicadellidae,8,white backed plant hopper,2,1723,0.001161,0.010309,272,0.007353
+853,test,101,Cicadellidae,9,small brown plant hopper,2,1723,0.001161,0.010309,158,0.012658
+854,test,101,Cicadellidae,16,wireworm,2,1723,0.001161,0.010309,270,0.007407
+855,test,101,Cicadellidae,21,red spider,2,1723,0.001161,0.010309,146,0.013699
+856,test,101,Cicadellidae,37,flea beetle,2,1723,0.001161,0.010309,228,0.008772
+857,test,101,Cicadellidae,38,cabbage army worm,2,1723,0.001161,0.010309,247,0.008097
+858,test,101,Cicadellidae,45,flax budworm,2,1723,0.001161,0.010309,282,0.007092
+859,test,101,Cicadellidae,47,tarnished plant bug,2,1723,0.001161,0.010309,208,0.009615
+860,test,101,Cicadellidae,100,Sternochetus frigidus,2,1723,0.001161,0.010309,121,0.016529

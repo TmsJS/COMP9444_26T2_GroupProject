@@ -1,9 +1,5 @@
 summary_order,item,value
 1,original_classes,102
-2,selected_clusters,8
-3,clustered_classes,35
-4,coarse_classes,75
-5,easy_classes,34
-6,cluster_hard_classes,35
-7,diffuse_hard_classes,17
-8,uncertain_classes,16
+2,selected_clusters,7
+3,clustered_classes,21
+4,coarse_classes,88

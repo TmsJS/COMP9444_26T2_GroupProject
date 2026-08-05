@@ -1,0 +1,9 @@
+cluster_name,number_classes,class_members,within_cluster_errors,cohesion,severity,reciprocity,visual_confusion_score
+auto_cluster_001,4,white margined moth | black cutworm | large cutworm | yellow cutworm,227,0.685801,0.382155,0.898678,66.870239
+auto_cluster_002,3,brown plant hopper | white backed plant hopper | small brown plant hopper,222,0.630682,0.324088,0.882883,62.607558
+auto_cluster_003,4,red spider | penthaleus major | longlegged spider mite | Panonchus citri McGregor,105,0.709459,0.250597,0.704762,59.991516
+auto_cluster_004,3,lytta polita | legume blister beetle | blister beetle,256,0.649746,0.215126,0.851562,59.474879
+auto_cluster_005,6,corn borer | army worm | cabbage army worm | beet army worm | flax budworm | Prodenia litura,507,0.545161,0.222076,0.883629,56.141322
+auto_cluster_006,2,Lawana imitata Melichar | Salurnis marginella Guerr,32,0.561404,0.099688,1.000000,55.446795
+auto_cluster_007,5,grain spreader thrips | wheat phloeothrips | odontothrips loti | Thrips | Scirtothrips dorsalis Hood,163,0.510972,0.232525,0.834356,54.101737
+auto_cluster_008,4,aphids | english grain aphid | green bug | bird cherry-oataphid,318,0.544521,0.183074,0.811321,53.499465

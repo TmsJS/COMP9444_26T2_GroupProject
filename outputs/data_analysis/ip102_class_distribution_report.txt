@@ -53,6 +53,6 @@ Top 3 LEAST frequent labels in test set:
   Label 80 (Parlatoria zizyphus Lucus): 23 images
   Label 61 (Brevipoalpus lewisi McGregor): 24 images
 
-CSV: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution.csv
-Chart: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution.png
-Text report: /home/thomas/My_Programs/COMP9444_Group/outputs/data_analysis/ip102_class_distribution_report.txt
+CSV: /Users/thomasshaw/Documents/UNSW_Courses/2026T2/COMP9444_NN/Assign/COMP9444_26T2_GroupProject/outputs/data_analysis/ip102_class_distribution.csv
+Chart: /Users/thomasshaw/Documents/UNSW_Courses/2026T2/COMP9444_NN/Assign/COMP9444_26T2_GroupProject/outputs/data_analysis/ip102_class_distribution.png
+Text report: /Users/thomasshaw/Documents/UNSW_Courses/2026T2/COMP9444_NN/Assign/COMP9444_26T2_GroupProject/outputs/data_analysis/ip102_class_distribution_report.txt

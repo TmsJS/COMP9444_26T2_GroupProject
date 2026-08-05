@@ -1132,7 +1132,7 @@ image_name,true_label,predicted_label
 03761.jpg,5,5
 03764.jpg,5,5
 03765.jpg,5,5
-03766.jpg,5,9
+03766.jpg,5,7
 03767.jpg,5,5
 03772.jpg,5,5
 03774.jpg,5,5
@@ -2413,7 +2413,7 @@ image_name,true_label,predicted_label
 08025.jpg,13,13
 08027.jpg,13,0
 08040.jpg,13,0
-08046.jpg,13,11
+08046.jpg,13,7
 08048.jpg,13,34
 08056.jpg,13,0
 08057.jpg,13,13
@@ -5052,7 +5052,7 @@ image_name,true_label,predicted_label
 16792.jpg,23,23
 16793.jpg,23,23
 16794.jpg,23,101
-16798.jpg,23,54
+16798.jpg,23,22
 16804.jpg,23,18
 16809.jpg,23,23
 16811.jpg,23,23
@@ -5485,7 +5485,7 @@ image_name,true_label,predicted_label
 18261.jpg,24,24
 18263.jpg,24,24
 18270.jpg,24,24
-18271.jpg,24,58
+18271.jpg,24,24
 18284.jpg,24,24
 18287.jpg,24,24
 18293.jpg,24,51
@@ -9542,7 +9542,7 @@ image_name,true_label,predicted_label
 31749.jpg,45,97
 31751.jpg,45,23
 31756.jpg,45,23
-31760.jpg,45,45
+31760.jpg,45,38
 31762.jpg,45,45
 31770.jpg,45,86
 31771.jpg,45,67
@@ -9723,7 +9723,7 @@ image_name,true_label,predicted_label
 32348.jpg,46,70
 32349.jpg,46,46
 32354.jpg,46,46
-32356.jpg,46,52
+32356.jpg,46,38
 32357.jpg,46,46
 32361.jpg,46,70
 32362.jpg,46,70
@@ -11649,7 +11649,7 @@ image_name,true_label,predicted_label
 38733.jpg,52,29
 38735.jpg,52,52
 38738.jpg,52,24
-38742.jpg,52,90
+38742.jpg,52,24
 38745.jpg,52,71
 38746.jpg,52,52
 38750.jpg,52,101
@@ -12049,7 +12049,7 @@ image_name,true_label,predicted_label
 40065.jpg,55,55
 40068.jpg,55,51
 40071.jpg,55,8
-40073.jpg,55,40
+40073.jpg,55,65
 40078.jpg,55,55
 40079.jpg,55,55
 40080.jpg,55,65
@@ -13741,7 +13741,7 @@ image_name,true_label,predicted_label
 45686.jpg,67,67
 45693.jpg,67,67
 45696.jpg,67,67
-45699.jpg,67,40
+45699.jpg,67,37
 45701.jpg,67,67
 45703.jpg,67,67
 45706.jpg,67,67
@@ -15535,7 +15535,7 @@ image_name,true_label,predicted_label
 51680.jpg,69,69
 51683.jpg,69,69
 51685.jpg,69,69
-51686.jpg,69,48
+51686.jpg,69,67
 51691.jpg,69,69
 51694.jpg,69,69
 51697.jpg,69,39
@@ -15740,7 +15740,7 @@ image_name,true_label,predicted_label
 52351.jpg,69,69
 52355.jpg,69,101
 52357.jpg,69,69
-52359.jpg,69,101
+52359.jpg,69,69
 52362.jpg,69,69
 52363.jpg,69,69
 52365.jpg,69,69
@@ -20791,7 +20791,7 @@ image_name,true_label,predicted_label
 69128.jpg,100,100
 69131.jpg,100,42
 69133.jpg,100,100
-69134.jpg,100,42
+69134.jpg,100,51
 69135.jpg,100,3
 69138.jpg,100,100
 69140.jpg,100,100

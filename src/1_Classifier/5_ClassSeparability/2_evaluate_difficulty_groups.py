@@ -3,8 +3,8 @@ Define and evaluate IP102 class-difficulty groups using validation data only.
 
 This script is the second step of the class-separability workflow:
 
-1. Read the validation visual-cluster analysis and select clusters whose
-   visual_confusion_score meets the configured threshold.
+1. Read the automatically discovered validation clusters and retain clusters
+   whose visual_confusion_score meets the configured threshold.
 2. Freeze those clusters in selected_clusters.csv.
 3. Divide all 102 original classes into cluster_hard, easy, diffuse_hard,
    and uncertain using validation predictions only.
@@ -87,9 +87,9 @@ def parse_arguments() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Validation visual-cluster analysis CSV. Default: "
+            "Automatically discovered validation-cluster CSV. Default: "
             "<model_output_dir>/analyze_confusion_matrix/"
-            "val_high_confidence_visual_clusters.csv."
+            "val_discovered_confusion_clusters.csv."
         ),
     )
     parser.add_argument(
@@ -222,7 +222,7 @@ def resolve_paths(
     cluster_csv = (
         model_output_dir
         / "analyze_confusion_matrix"
-        / "val_high_confidence_visual_clusters.csv"
+        / "val_discovered_confusion_clusters.csv"
         if args.cluster_csv is None
         else resolve_path(args.cluster_csv, project_root)
     )
@@ -383,6 +383,8 @@ def select_validation_clusters(
         .sort_values(sort_columns, ascending=ascending)
         .reset_index(drop=True)
     )
+    if "split" not in selected.columns:
+        selected.insert(0, "split", "val")
 
     name_to_label = {
         name: label

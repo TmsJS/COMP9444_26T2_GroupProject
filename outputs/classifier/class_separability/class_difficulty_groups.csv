@@ -1,103 +1,103 @@
-difficulty_group_order,label,class_number,class_name,cluster_name,coarse_label,coarse_name,is_merged,val_support,val_precision,val_recall,val_f1,dominant_wrong_label,dominant_wrong_class,dominant_wrong_count,dominant_confusion_rate,difficulty_group,group_reason
-1,56,57,Pieris canidia,,41,Pieris canidia,False,47,0.940000,1.000000,0.969072,-1,,0,0.000000,easy,stable_high_validation_performance
-1,73,74,Papilio xuthus,,54,Papilio xuthus,False,45,0.976744,0.933333,0.954545,66,Ampelophaga,2,0.044444,easy,stable_high_validation_performance
-1,62,63,oides decempunctata,,45,oides decempunctata,False,29,1.000000,0.896552,0.945455,37,flea beetle,1,0.034483,easy,stable_high_validation_performance
-1,15,16,mole cricket,,20,mole cricket,False,165,0.903409,0.963636,0.932551,68,Xylotrechus,2,0.012121,easy,stable_high_validation_performance
-1,58,59,Limacodidae,,42,Limacodidae,False,139,0.925926,0.899281,0.912409,67,Lycorma delicatula,4,0.028777,easy,stable_high_validation_performance
-1,30,31,wheat blossom midge,,26,wheat blossom midge,False,48,0.933333,0.875000,0.903226,5,rice gall midge,1,0.020833,easy,stable_high_validation_performance
-1,82,83,Aleurocanthus spiniferus,,62,Aleurocanthus spiniferus,False,68,0.897059,0.897059,0.897059,93,Dasineura sp,2,0.029412,easy,stable_high_validation_performance
-1,48,49,Locustoidea,,37,Locustoidea,False,139,0.910448,0.877698,0.893773,15,mole cricket,2,0.014388,easy,stable_high_validation_performance
-1,101,102,Cicadellidae,,74,Cicadellidae,False,573,0.854271,0.890052,0.871795,69,Cicadella viridis,24,0.041885,easy,stable_high_validation_performance
-1,67,68,Lycorma delicatula,,49,Lycorma delicatula,False,530,0.847397,0.890566,0.868445,101,Cicadellidae,7,0.013208,easy,stable_high_validation_performance
-1,25,26,Potosiabre vitarsis,,24,Potosiabre vitarsis,False,56,0.833333,0.892857,0.862069,26,peach borer,3,0.053571,easy,stable_high_validation_performance
-1,37,38,flea beetle,,31,flea beetle,False,79,0.880000,0.835443,0.857143,51,blister beetle,4,0.050633,easy,stable_high_validation_performance
-1,78,79,Ceroplastes rubens,,58,Ceroplastes rubens,False,26,0.913043,0.807692,0.857143,5,rice gall midge,1,0.038462,easy,stable_high_validation_performance
-1,88,89,Phyllocnistis citrella Stainton,,64,Phyllocnistis citrella Stainton,False,40,0.888889,0.800000,0.842105,39,beet army worm,3,0.075000,easy,stable_high_validation_performance
-1,76,77,Icerya purchasi Maskell,,56,Icerya purchasi Maskell,False,72,0.845070,0.833333,0.839161,64,Pseudococcus comstocki Kuwana,3,0.041667,easy,stable_high_validation_performance
-1,14,15,grub,,19,grub,False,86,0.873418,0.802326,0.836364,15,mole cricket,3,0.034884,easy,stable_high_validation_performance
-1,16,17,wireworm,,21,wireworm,False,88,0.793814,0.875000,0.832432,18,black cutworm,2,0.022727,easy,stable_high_validation_performance
-1,95,96,Salurnis marginella Guerr,,68,Salurnis marginella Guerr,False,48,0.863636,0.791667,0.826087,94,Lawana imitata Melichar,5,0.104167,easy,stable_high_validation_performance
-1,68,69,Xylotrechus,,50,Xylotrechus,False,115,0.858491,0.791304,0.823529,67,Lycorma delicatula,6,0.052174,easy,stable_high_validation_performance
-1,96,97,Deporaus marginatus Pascoe,,69,Deporaus marginatus Pascoe,False,21,0.782609,0.857143,0.818182,42,beet weevil,1,0.047619,easy,stable_high_validation_performance
-1,77,78,Unaspis yanonensis,,57,Unaspis yanonensis,False,42,0.804878,0.785714,0.795181,80,Parlatoria zizyphus Lucus,2,0.047619,easy,stable_high_validation_performance
-1,71,72,Trialeurodes vaporariorum,,52,Trialeurodes vaporariorum,False,69,0.743590,0.840580,0.789116,59,Viteus vitifoliae,2,0.028986,easy,stable_high_validation_performance
-1,0,1,rice leaf roller,,8,rice leaf roller,False,111,0.730769,0.855856,0.788382,13,rice shell pest,6,0.054054,easy,stable_high_validation_performance
-1,94,95,Lawana imitata Melichar,,67,Lawana imitata Melichar,False,58,0.789474,0.775862,0.782609,95,Salurnis marginella Guerr,5,0.086207,easy,stable_high_validation_performance
-1,66,67,Ampelophaga,,48,Ampelophaga,False,76,0.762500,0.802632,0.782051,67,Lycorma delicatula,5,0.065789,easy,stable_high_validation_performance
-1,79,80,Chrysomphalus aonidum,,59,Chrysomphalus aonidum,False,22,0.842105,0.727273,0.780488,24,aphids,1,0.045455,easy,stable_high_validation_performance
-1,59,60,Viteus vitifoliae,,43,Viteus vitifoliae,False,35,0.771429,0.771429,0.771429,67,Lycorma delicatula,2,0.057143,easy,stable_high_validation_performance
-1,69,70,Cicadella viridis,,51,Cicadella viridis,False,128,0.753731,0.789062,0.770992,101,Cicadellidae,17,0.132812,easy,stable_high_validation_performance
-1,87,88,Adristyrannus,,63,Adristyrannus,False,31,0.750000,0.774194,0.761905,67,Lycorma delicatula,2,0.064516,easy,stable_high_validation_performance
-1,10,11,rice water weevil,,15,rice water weevil,False,86,0.752941,0.744186,0.748538,42,beet weevil,4,0.046512,easy,stable_high_validation_performance
-1,26,27,peach borer,,25,peach borer,False,69,0.742857,0.753623,0.748201,22,corn borer,6,0.086957,easy,stable_high_validation_performance
-1,92,93,Scirtothrips dorsalis Hood,,65,Scirtothrips dorsalis Hood,False,80,0.707317,0.725000,0.716049,33,wheat phloeothrips,3,0.037500,easy,stable_high_validation_performance
-1,4,5,yellow rice borer,,12,yellow rice borer,False,50,0.692308,0.720000,0.705882,3,asiatic rice borer,6,0.120000,easy,stable_high_validation_performance
-1,22,23,corn borer,,23,corn borer,False,170,0.687151,0.723529,0.704871,3,asiatic rice borer,8,0.047059,easy,stable_high_validation_performance
-2,70,71,Miridae,plant_bugs_and_miridae,7,plant_bugs_and_miridae,True,508,0.804745,0.868110,0.835227,47,tarnished plant bug,16,0.031496,cluster_hard,member_of_selected_visual_cluster
-2,83,84,Tetradacus c Bactrocera minax,fruit_flies,2,fruit_flies,True,39,0.815789,0.794872,0.805195,84,Dacus dorsalis(Hendel),4,0.102564,cluster_hard,member_of_selected_visual_cluster
-2,24,25,aphids,aphids,5,aphids,True,409,0.762673,0.809291,0.785291,70,Miridae,14,0.034230,cluster_hard,member_of_selected_visual_cluster
-2,84,85,Dacus dorsalis(Hendel),fruit_flies,2,fruit_flies,True,44,0.723404,0.772727,0.747253,83,Tetradacus c Bactrocera minax,4,0.090909,cluster_hard,member_of_selected_visual_cluster
-2,50,51,legume blister beetle,blister_beetles,4,blister_beetles,True,141,0.725926,0.695035,0.710145,51,blister beetle,22,0.156028,cluster_hard,member_of_selected_visual_cluster
-2,51,52,blister beetle,blister_beetles,4,blister_beetles,True,189,0.673267,0.719577,0.695652,50,legume blister beetle,20,0.105820,cluster_hard,member_of_selected_visual_cluster
-2,23,24,army worm,army_worms,3,army_worms,True,107,0.635593,0.700935,0.666667,86,Prodenia litura,6,0.056075,cluster_hard,member_of_selected_visual_cluster
-2,60,61,Colomerus vitis,mites,6,mites,True,18,0.733333,0.611111,0.666667,59,Viteus vitifoliae,2,0.111111,cluster_hard,member_of_selected_visual_cluster
-2,91,92,Aphis citricola Vander Goot,aphids,5,aphids,True,35,0.677419,0.600000,0.636364,24,aphids,7,0.200000,cluster_hard,member_of_selected_visual_cluster
-2,89,90,Toxoptera citricidus,aphids,5,aphids,True,19,0.590909,0.684211,0.634146,90,Toxoptera aurantii,2,0.105263,cluster_hard,member_of_selected_visual_cluster
-2,86,87,Prodenia litura,army_worms,3,army_worms,True,130,0.623077,0.623077,0.623077,39,beet army worm,10,0.076923,cluster_hard,member_of_selected_visual_cluster
-2,31,32,penthaleus major,mites,6,mites,True,24,0.666667,0.583333,0.622222,32,longlegged spider mite,4,0.166667,cluster_hard,member_of_selected_visual_cluster
-2,90,91,Toxoptera aurantii,aphids,5,aphids,True,23,0.636364,0.608696,0.622222,89,Toxoptera citricidus,4,0.173913,cluster_hard,member_of_selected_visual_cluster
-2,49,50,lytta polita,blister_beetles,4,blister_beetles,True,65,0.649123,0.569231,0.606557,51,blister beetle,17,0.261538,cluster_hard,member_of_selected_visual_cluster
-2,74,75,Panonchus citri McGregor,mites,6,mites,True,38,0.530612,0.684211,0.597701,21,red spider,8,0.210526,cluster_hard,member_of_selected_visual_cluster
-2,8,9,white backed plant hopper,plant_hoppers,1,plant_hoppers,True,90,0.602410,0.555556,0.578035,7,brown plant hopper,18,0.200000,cluster_hard,member_of_selected_visual_cluster
-2,18,19,black cutworm,cutworms,0,cutworms,True,85,0.536082,0.611765,0.571429,19,large cutworm,17,0.200000,cluster_hard,member_of_selected_visual_cluster
-2,32,33,longlegged spider mite,mites,6,mites,True,24,0.590909,0.541667,0.565217,31,penthaleus major,5,0.208333,cluster_hard,member_of_selected_visual_cluster
-2,39,40,beet army worm,army_worms,3,army_worms,True,160,0.541176,0.575000,0.557576,38,cabbage army worm,16,0.100000,cluster_hard,member_of_selected_visual_cluster
-2,47,48,tarnished plant bug,plant_bugs_and_miridae,7,plant_bugs_and_miridae,True,82,0.602941,0.500000,0.546667,70,Miridae,22,0.268293,cluster_hard,member_of_selected_visual_cluster
-2,21,22,red spider,mites,6,mites,True,53,0.538462,0.528302,0.533333,74,Panonchus citri McGregor,16,0.301887,cluster_hard,member_of_selected_visual_cluster
-2,7,8,brown plant hopper,plant_hoppers,1,plant_hoppers,True,83,0.487179,0.457831,0.472050,8,white backed plant hopper,14,0.168675,cluster_hard,member_of_selected_visual_cluster
-2,45,46,flax budworm,army_worms,3,army_worms,True,107,0.537500,0.401869,0.459893,86,Prodenia litura,10,0.093458,cluster_hard,member_of_selected_visual_cluster
-2,9,10,small brown plant hopper,plant_hoppers,1,plant_hoppers,True,56,0.479167,0.410714,0.442308,7,brown plant hopper,16,0.285714,cluster_hard,member_of_selected_visual_cluster
-2,29,30,bird cherry-oataphid,aphids,5,aphids,True,71,0.424658,0.436620,0.430556,24,aphids,12,0.169014,cluster_hard,member_of_selected_visual_cluster
-2,20,21,yellow cutworm,cutworms,0,cutworms,True,48,0.531250,0.354167,0.425000,18,black cutworm,11,0.229167,cluster_hard,member_of_selected_visual_cluster
-2,38,39,cabbage army worm,army_worms,3,army_worms,True,85,0.463768,0.376471,0.415584,39,beet army worm,15,0.176471,cluster_hard,member_of_selected_visual_cluster
-2,46,47,alfalfa plant bug,plant_bugs_and_miridae,7,plant_bugs_and_miridae,True,66,0.452830,0.363636,0.403361,70,Miridae,17,0.257576,cluster_hard,member_of_selected_visual_cluster
-2,27,28,english grain aphid,aphids,5,aphids,True,65,0.460000,0.353846,0.400000,29,bird cherry-oataphid,17,0.261538,cluster_hard,member_of_selected_visual_cluster
-2,57,58,Apolygus lucorum,plant_bugs_and_miridae,7,plant_bugs_and_miridae,True,38,0.424242,0.368421,0.394366,70,Miridae,12,0.315789,cluster_hard,member_of_selected_visual_cluster
-2,28,29,green bug,aphids,5,aphids,True,32,0.440000,0.343750,0.385965,24,aphids,7,0.218750,cluster_hard,member_of_selected_visual_cluster
-2,19,20,large cutworm,cutworms,0,cutworms,True,49,0.281250,0.367347,0.318584,18,black cutworm,17,0.346939,cluster_hard,member_of_selected_visual_cluster
-2,52,53,therioaphis maculata Buckton,aphids,5,aphids,True,26,0.388889,0.269231,0.318182,24,aphids,3,0.115385,cluster_hard,member_of_selected_visual_cluster
-2,85,86,Bactrocera tsuneonis,fruit_flies,2,fruit_flies,True,17,0.375000,0.176471,0.240000,84,Dacus dorsalis(Hendel),5,0.294118,cluster_hard,member_of_selected_visual_cluster
-2,63,64,Polyphagotars onemus latus,mites,6,mites,True,8,0.166667,0.125000,0.142857,57,Apolygus lucorum,2,0.250000,cluster_hard,member_of_selected_visual_cluster
-3,53,54,odontothrips loti,,38,odontothrips loti,False,17,0.769231,0.588235,0.666667,54,Thrips,3,0.176471,diffuse_hard,low_validation_metric_without_selected_cluster
-3,43,44,sericaorient alismots chulsky,,35,sericaorient alismots chulsky,False,19,0.769231,0.526316,0.625000,50,legume blister beetle,2,0.105263,diffuse_hard,low_validation_metric_without_selected_cluster
-3,33,34,wheat phloeothrips,,27,wheat phloeothrips,False,29,0.653846,0.586207,0.618182,54,Thrips,5,0.172414,diffuse_hard,low_validation_metric_without_selected_cluster
-3,42,43,beet weevil,,34,beet weevil,False,31,0.555556,0.645161,0.597015,44,alfalfa weevil,4,0.129032,diffuse_hard,low_validation_metric_without_selected_cluster
-3,44,45,alfalfa weevil,,36,alfalfa weevil,False,52,0.612245,0.576923,0.594059,10,rice water weevil,5,0.096154,diffuse_hard,low_validation_metric_without_selected_cluster
-3,13,14,rice shell pest,,18,rice shell pest,False,41,0.550000,0.536585,0.543210,0,rice leaf roller,11,0.268293,diffuse_hard,low_validation_metric_without_selected_cluster
-3,93,94,Dasineura sp,,66,Dasineura sp,False,50,0.508772,0.580000,0.542056,24,aphids,4,0.080000,diffuse_hard,low_validation_metric_without_selected_cluster
-3,1,2,rice leaf caterpillar,,9,rice leaf caterpillar,False,48,0.547619,0.479167,0.511111,0,rice leaf roller,7,0.145833,diffuse_hard,low_validation_metric_without_selected_cluster
-3,55,56,alfalfa seed chalcid,,40,alfalfa seed chalcid,False,18,0.500000,0.500000,0.500000,70,Miridae,3,0.166667,diffuse_hard,low_validation_metric_without_selected_cluster
-3,81,82,Nipaecoccus vastalor,,61,Nipaecoccus vastalor,False,10,0.666667,0.400000,0.500000,64,Pseudococcus comstocki Kuwana,3,0.300000,diffuse_hard,low_validation_metric_without_selected_cluster
-3,17,18,white margined moth,,22,white margined moth,False,14,0.545455,0.428571,0.480000,19,large cutworm,4,0.285714,diffuse_hard,low_validation_metric_without_selected_cluster
-3,6,7,Rice Stemfly,,14,Rice Stemfly,False,37,0.392157,0.540541,0.454545,2,paddy stem maggot,6,0.162162,diffuse_hard,low_validation_metric_without_selected_cluster
-3,2,3,paddy stem maggot,,10,paddy stem maggot,False,26,0.406250,0.500000,0.448276,6,Rice Stemfly,7,0.269231,diffuse_hard,low_validation_metric_without_selected_cluster
-3,54,55,Thrips,,39,Thrips,False,88,0.500000,0.375000,0.428571,92,Scirtothrips dorsalis Hood,11,0.125000,diffuse_hard,low_validation_metric_without_selected_cluster
-3,97,98,Chlumetia transversa,,70,Chlumetia transversa,False,30,0.393939,0.433333,0.412698,19,large cutworm,3,0.100000,diffuse_hard,low_validation_metric_without_selected_cluster
-3,35,36,cerodonta denticornis,,29,cerodonta denticornis,False,13,0.333333,0.230769,0.272727,6,Rice Stemfly,5,0.384615,diffuse_hard,low_validation_metric_without_selected_cluster
-3,36,37,beet fly,,30,beet fly,False,10,0.285714,0.200000,0.235294,40,Beet spot flies,3,0.300000,diffuse_hard,low_validation_metric_without_selected_cluster
-4,75,76,Phyllocoptes oleiverus ashmead,,55,Phyllocoptes oleiverus ashmead,False,17,0.800000,0.941176,0.864865,30,wheat blossom midge,1,0.058824,uncertain,intermediate_or_low_support
-4,98,99,Mango flat beak leafhopper,,71,Mango flat beak leafhopper,False,10,0.875000,0.700000,0.777778,101,Cicadellidae,2,0.200000,uncertain,intermediate_or_low_support
-4,100,101,Sternochetus frigidus,,73,Sternochetus frigidus,False,46,0.777778,0.760870,0.769231,42,beet weevil,7,0.152174,uncertain,intermediate_or_low_support
-4,34,35,wheat sawfly,,28,wheat sawfly,False,34,0.884615,0.676471,0.766667,65,parathrene regalis,3,0.088235,uncertain,intermediate_or_low_support
-4,5,6,rice gall midge,,13,rice gall midge,False,51,0.795455,0.686275,0.736842,93,Dasineura sp,4,0.078431,uncertain,intermediate_or_low_support
-4,65,66,parathrene regalis,,47,parathrene regalis,False,14,0.687500,0.785714,0.733333,1,rice leaf caterpillar,1,0.071429,uncertain,intermediate_or_low_support
-4,61,62,Brevipoalpus lewisi McGregor,,44,Brevipoalpus lewisi McGregor,False,8,0.833333,0.625000,0.714286,21,red spider,2,0.250000,uncertain,intermediate_or_low_support
-4,72,73,Erythroneura apicalis,,53,Erythroneura apicalis,False,7,0.714286,0.714286,0.714286,101,Cicadellidae,2,0.285714,uncertain,intermediate_or_low_support
-4,99,100,Rhytidodera bowrinii white,,72,Rhytidodera bowrinii white,False,55,0.755102,0.672727,0.711538,68,Xylotrechus,5,0.090909,uncertain,intermediate_or_low_support
-4,40,41,Beet spot flies,,32,Beet spot flies,False,30,0.677419,0.700000,0.688525,35,cerodonta denticornis,2,0.066667,uncertain,intermediate_or_low_support
-4,64,65,Pseudococcus comstocki Kuwana,,46,Pseudococcus comstocki Kuwana,False,30,0.617647,0.700000,0.656250,76,Icerya purchasi Maskell,2,0.066667,uncertain,intermediate_or_low_support
-4,41,42,meadow moth,,33,meadow moth,False,27,0.680000,0.629630,0.653846,22,corn borer,3,0.111111,uncertain,intermediate_or_low_support
-4,11,12,rice leafhopper,,16,rice leafhopper,False,40,0.619048,0.650000,0.634146,8,white backed plant hopper,2,0.050000,uncertain,intermediate_or_low_support
-4,80,81,Parlatoria zizyphus Lucus,,60,Parlatoria zizyphus Lucus,False,7,0.555556,0.714286,0.625000,77,Unaspis yanonensis,1,0.142857,uncertain,intermediate_or_low_support
-4,3,4,asiatic rice borer,,11,asiatic rice borer,False,106,0.646465,0.603774,0.624390,22,corn borer,12,0.113208,uncertain,intermediate_or_low_support
-4,12,13,grain spreader thrips,,17,grain spreader thrips,False,18,0.571429,0.666667,0.615385,54,Thrips,4,0.222222,uncertain,intermediate_or_low_support
+difficulty_group_order,label,class_number,class_name,cluster_name,is_selected_cluster_member,val_support,val_precision,val_recall,val_f1,dominant_wrong_label,dominant_wrong_class,dominant_wrong_count,dominant_confusion_rate,difficulty_group,group_reason
+1,56,57,Pieris canidia,,False,47,0.940000,1.000000,0.969072,-1,,0,0.000000,easy,stable_high_validation_performance
+1,73,74,Papilio xuthus,,False,45,0.976744,0.933333,0.954545,66,Ampelophaga,2,0.044444,easy,stable_high_validation_performance
+1,62,63,oides decempunctata,,False,29,1.000000,0.896552,0.945455,37,flea beetle,1,0.034483,easy,stable_high_validation_performance
+1,15,16,mole cricket,,False,165,0.903409,0.963636,0.932551,68,Xylotrechus,2,0.012121,easy,stable_high_validation_performance
+1,58,59,Limacodidae,,False,139,0.925926,0.899281,0.912409,67,Lycorma delicatula,4,0.028777,easy,stable_high_validation_performance
+1,30,31,wheat blossom midge,,False,48,0.933333,0.875000,0.903226,5,rice gall midge,1,0.020833,easy,stable_high_validation_performance
+1,82,83,Aleurocanthus spiniferus,,False,68,0.897059,0.897059,0.897059,93,Dasineura sp,2,0.029412,easy,stable_high_validation_performance
+1,48,49,Locustoidea,,False,139,0.910448,0.877698,0.893773,15,mole cricket,2,0.014388,easy,stable_high_validation_performance
+1,101,102,Cicadellidae,,False,573,0.854271,0.890052,0.871795,69,Cicadella viridis,24,0.041885,easy,stable_high_validation_performance
+1,67,68,Lycorma delicatula,,False,530,0.847397,0.890566,0.868445,101,Cicadellidae,7,0.013208,easy,stable_high_validation_performance
+1,25,26,Potosiabre vitarsis,,False,56,0.833333,0.892857,0.862069,26,peach borer,3,0.053571,easy,stable_high_validation_performance
+1,37,38,flea beetle,,False,79,0.880000,0.835443,0.857143,51,blister beetle,4,0.050633,easy,stable_high_validation_performance
+1,78,79,Ceroplastes rubens,,False,26,0.913043,0.807692,0.857143,5,rice gall midge,1,0.038462,easy,stable_high_validation_performance
+1,88,89,Phyllocnistis citrella Stainton,,False,40,0.888889,0.800000,0.842105,39,beet army worm,3,0.075000,easy,stable_high_validation_performance
+1,76,77,Icerya purchasi Maskell,,False,72,0.845070,0.833333,0.839161,64,Pseudococcus comstocki Kuwana,3,0.041667,easy,stable_high_validation_performance
+1,14,15,grub,,False,86,0.873418,0.802326,0.836364,15,mole cricket,3,0.034884,easy,stable_high_validation_performance
+1,16,17,wireworm,,False,88,0.793814,0.875000,0.832432,18,black cutworm,2,0.022727,easy,stable_high_validation_performance
+1,95,96,Salurnis marginella Guerr,,False,48,0.863636,0.791667,0.826087,94,Lawana imitata Melichar,5,0.104167,easy,stable_high_validation_performance
+1,68,69,Xylotrechus,,False,115,0.858491,0.791304,0.823529,67,Lycorma delicatula,6,0.052174,easy,stable_high_validation_performance
+1,96,97,Deporaus marginatus Pascoe,,False,21,0.782609,0.857143,0.818182,42,beet weevil,1,0.047619,easy,stable_high_validation_performance
+1,83,84,Tetradacus c Bactrocera minax,,False,39,0.815789,0.794872,0.805195,84,Dacus dorsalis(Hendel),4,0.102564,easy,stable_high_validation_performance
+1,77,78,Unaspis yanonensis,,False,42,0.804878,0.785714,0.795181,80,Parlatoria zizyphus Lucus,2,0.047619,easy,stable_high_validation_performance
+1,71,72,Trialeurodes vaporariorum,,False,69,0.743590,0.840580,0.789116,59,Viteus vitifoliae,2,0.028986,easy,stable_high_validation_performance
+1,0,1,rice leaf roller,,False,111,0.730769,0.855856,0.788382,13,rice shell pest,6,0.054054,easy,stable_high_validation_performance
+1,24,25,aphids,,False,409,0.762673,0.809291,0.785291,70,Miridae,14,0.034230,easy,stable_high_validation_performance
+1,94,95,Lawana imitata Melichar,,False,58,0.789474,0.775862,0.782609,95,Salurnis marginella Guerr,5,0.086207,easy,stable_high_validation_performance
+1,66,67,Ampelophaga,,False,76,0.762500,0.802632,0.782051,67,Lycorma delicatula,5,0.065789,easy,stable_high_validation_performance
+1,79,80,Chrysomphalus aonidum,,False,22,0.842105,0.727273,0.780488,24,aphids,1,0.045455,easy,stable_high_validation_performance
+1,59,60,Viteus vitifoliae,,False,35,0.771429,0.771429,0.771429,67,Lycorma delicatula,2,0.057143,easy,stable_high_validation_performance
+1,69,70,Cicadella viridis,,False,128,0.753731,0.789062,0.770992,101,Cicadellidae,17,0.132812,easy,stable_high_validation_performance
+1,87,88,Adristyrannus,,False,31,0.750000,0.774194,0.761905,67,Lycorma delicatula,2,0.064516,easy,stable_high_validation_performance
+1,10,11,rice water weevil,,False,86,0.752941,0.744186,0.748538,42,beet weevil,4,0.046512,easy,stable_high_validation_performance
+1,26,27,peach borer,,False,69,0.742857,0.753623,0.748201,22,corn borer,6,0.086957,easy,stable_high_validation_performance
+1,84,85,Dacus dorsalis(Hendel),,False,44,0.723404,0.772727,0.747253,83,Tetradacus c Bactrocera minax,4,0.090909,easy,stable_high_validation_performance
+1,92,93,Scirtothrips dorsalis Hood,,False,80,0.707317,0.725000,0.716049,33,wheat phloeothrips,3,0.037500,easy,stable_high_validation_performance
+1,4,5,yellow rice borer,,False,50,0.692308,0.720000,0.705882,3,asiatic rice borer,6,0.120000,easy,stable_high_validation_performance
+1,22,23,corn borer,,False,170,0.687151,0.723529,0.704871,3,asiatic rice borer,8,0.047059,easy,stable_high_validation_performance
+2,70,71,Miridae,auto_cluster_006,True,508,0.804745,0.868110,0.835227,47,tarnished plant bug,16,0.031496,cluster_hard,member_of_selected_visual_cluster
+2,50,51,legume blister beetle,auto_cluster_001,True,141,0.725926,0.695035,0.710145,51,blister beetle,22,0.156028,cluster_hard,member_of_selected_visual_cluster
+2,51,52,blister beetle,auto_cluster_001,True,189,0.673267,0.719577,0.695652,50,legume blister beetle,20,0.105820,cluster_hard,member_of_selected_visual_cluster
+2,23,24,army worm,auto_cluster_007,True,107,0.635593,0.700935,0.666667,86,Prodenia litura,6,0.056075,cluster_hard,member_of_selected_visual_cluster
+2,86,87,Prodenia litura,auto_cluster_007,True,130,0.623077,0.623077,0.623077,39,beet army worm,10,0.076923,cluster_hard,member_of_selected_visual_cluster
+2,49,50,lytta polita,auto_cluster_001,True,65,0.649123,0.569231,0.606557,51,blister beetle,17,0.261538,cluster_hard,member_of_selected_visual_cluster
+2,74,75,Panonchus citri McGregor,auto_cluster_004,True,38,0.530612,0.684211,0.597701,21,red spider,8,0.210526,cluster_hard,member_of_selected_visual_cluster
+2,8,9,white backed plant hopper,auto_cluster_003,True,90,0.602410,0.555556,0.578035,7,brown plant hopper,18,0.200000,cluster_hard,member_of_selected_visual_cluster
+2,18,19,black cutworm,auto_cluster_002,True,85,0.536082,0.611765,0.571429,19,large cutworm,17,0.200000,cluster_hard,member_of_selected_visual_cluster
+2,39,40,beet army worm,auto_cluster_007,True,160,0.541176,0.575000,0.557576,38,cabbage army worm,16,0.100000,cluster_hard,member_of_selected_visual_cluster
+2,47,48,tarnished plant bug,auto_cluster_006,True,82,0.602941,0.500000,0.546667,70,Miridae,22,0.268293,cluster_hard,member_of_selected_visual_cluster
+2,21,22,red spider,auto_cluster_004,True,53,0.538462,0.528302,0.533333,74,Panonchus citri McGregor,16,0.301887,cluster_hard,member_of_selected_visual_cluster
+2,7,8,brown plant hopper,auto_cluster_003,True,83,0.487179,0.457831,0.472050,8,white backed plant hopper,14,0.168675,cluster_hard,member_of_selected_visual_cluster
+2,9,10,small brown plant hopper,auto_cluster_003,True,56,0.479167,0.410714,0.442308,7,brown plant hopper,16,0.285714,cluster_hard,member_of_selected_visual_cluster
+2,29,30,bird cherry-oataphid,auto_cluster_005,True,71,0.424658,0.436620,0.430556,24,aphids,12,0.169014,cluster_hard,member_of_selected_visual_cluster
+2,20,21,yellow cutworm,auto_cluster_002,True,48,0.531250,0.354167,0.425000,18,black cutworm,11,0.229167,cluster_hard,member_of_selected_visual_cluster
+2,38,39,cabbage army worm,auto_cluster_007,True,85,0.463768,0.376471,0.415584,39,beet army worm,15,0.176471,cluster_hard,member_of_selected_visual_cluster
+2,46,47,alfalfa plant bug,auto_cluster_006,True,66,0.452830,0.363636,0.403361,70,Miridae,17,0.257576,cluster_hard,member_of_selected_visual_cluster
+2,27,28,english grain aphid,auto_cluster_005,True,65,0.460000,0.353846,0.400000,29,bird cherry-oataphid,17,0.261538,cluster_hard,member_of_selected_visual_cluster
+2,28,29,green bug,auto_cluster_005,True,32,0.440000,0.343750,0.385965,24,aphids,7,0.218750,cluster_hard,member_of_selected_visual_cluster
+2,19,20,large cutworm,auto_cluster_002,True,49,0.281250,0.367347,0.318584,18,black cutworm,17,0.346939,cluster_hard,member_of_selected_visual_cluster
+3,53,54,odontothrips loti,,False,17,0.769231,0.588235,0.666667,54,Thrips,3,0.176471,diffuse_hard,low_validation_metric_without_selected_cluster
+3,43,44,sericaorient alismots chulsky,,False,19,0.769231,0.526316,0.625000,50,legume blister beetle,2,0.105263,diffuse_hard,low_validation_metric_without_selected_cluster
+3,31,32,penthaleus major,,False,24,0.666667,0.583333,0.622222,32,longlegged spider mite,4,0.166667,diffuse_hard,low_validation_metric_without_selected_cluster
+3,33,34,wheat phloeothrips,,False,29,0.653846,0.586207,0.618182,54,Thrips,5,0.172414,diffuse_hard,low_validation_metric_without_selected_cluster
+3,42,43,beet weevil,,False,31,0.555556,0.645161,0.597015,44,alfalfa weevil,4,0.129032,diffuse_hard,low_validation_metric_without_selected_cluster
+3,44,45,alfalfa weevil,,False,52,0.612245,0.576923,0.594059,10,rice water weevil,5,0.096154,diffuse_hard,low_validation_metric_without_selected_cluster
+3,32,33,longlegged spider mite,,False,24,0.590909,0.541667,0.565217,31,penthaleus major,5,0.208333,diffuse_hard,low_validation_metric_without_selected_cluster
+3,13,14,rice shell pest,,False,41,0.550000,0.536585,0.543210,0,rice leaf roller,11,0.268293,diffuse_hard,low_validation_metric_without_selected_cluster
+3,93,94,Dasineura sp,,False,50,0.508772,0.580000,0.542056,24,aphids,4,0.080000,diffuse_hard,low_validation_metric_without_selected_cluster
+3,1,2,rice leaf caterpillar,,False,48,0.547619,0.479167,0.511111,0,rice leaf roller,7,0.145833,diffuse_hard,low_validation_metric_without_selected_cluster
+3,55,56,alfalfa seed chalcid,,False,18,0.500000,0.500000,0.500000,70,Miridae,3,0.166667,diffuse_hard,low_validation_metric_without_selected_cluster
+3,81,82,Nipaecoccus vastalor,,False,10,0.666667,0.400000,0.500000,64,Pseudococcus comstocki Kuwana,3,0.300000,diffuse_hard,low_validation_metric_without_selected_cluster
+3,17,18,white margined moth,,False,14,0.545455,0.428571,0.480000,19,large cutworm,4,0.285714,diffuse_hard,low_validation_metric_without_selected_cluster
+3,45,46,flax budworm,,False,107,0.537500,0.401869,0.459893,86,Prodenia litura,10,0.093458,diffuse_hard,low_validation_metric_without_selected_cluster
+3,6,7,Rice Stemfly,,False,37,0.392157,0.540541,0.454545,2,paddy stem maggot,6,0.162162,diffuse_hard,low_validation_metric_without_selected_cluster
+3,2,3,paddy stem maggot,,False,26,0.406250,0.500000,0.448276,6,Rice Stemfly,7,0.269231,diffuse_hard,low_validation_metric_without_selected_cluster
+3,54,55,Thrips,,False,88,0.500000,0.375000,0.428571,92,Scirtothrips dorsalis Hood,11,0.125000,diffuse_hard,low_validation_metric_without_selected_cluster
+3,97,98,Chlumetia transversa,,False,30,0.393939,0.433333,0.412698,19,large cutworm,3,0.100000,diffuse_hard,low_validation_metric_without_selected_cluster
+3,57,58,Apolygus lucorum,,False,38,0.424242,0.368421,0.394366,70,Miridae,12,0.315789,diffuse_hard,low_validation_metric_without_selected_cluster
+3,52,53,therioaphis maculata Buckton,,False,26,0.388889,0.269231,0.318182,24,aphids,3,0.115385,diffuse_hard,low_validation_metric_without_selected_cluster
+3,35,36,cerodonta denticornis,,False,13,0.333333,0.230769,0.272727,6,Rice Stemfly,5,0.384615,diffuse_hard,low_validation_metric_without_selected_cluster
+3,85,86,Bactrocera tsuneonis,,False,17,0.375000,0.176471,0.240000,84,Dacus dorsalis(Hendel),5,0.294118,diffuse_hard,low_validation_metric_without_selected_cluster
+3,36,37,beet fly,,False,10,0.285714,0.200000,0.235294,40,Beet spot flies,3,0.300000,diffuse_hard,low_validation_metric_without_selected_cluster
+3,63,64,Polyphagotars onemus latus,,False,8,0.166667,0.125000,0.142857,57,Apolygus lucorum,2,0.250000,diffuse_hard,low_validation_metric_without_selected_cluster
+4,75,76,Phyllocoptes oleiverus ashmead,,False,17,0.800000,0.941176,0.864865,30,wheat blossom midge,1,0.058824,uncertain,intermediate_or_low_support
+4,98,99,Mango flat beak leafhopper,,False,10,0.875000,0.700000,0.777778,101,Cicadellidae,2,0.200000,uncertain,intermediate_or_low_support
+4,100,101,Sternochetus frigidus,,False,46,0.777778,0.760870,0.769231,42,beet weevil,7,0.152174,uncertain,intermediate_or_low_support
+4,34,35,wheat sawfly,,False,34,0.884615,0.676471,0.766667,65,parathrene regalis,3,0.088235,uncertain,intermediate_or_low_support
+4,5,6,rice gall midge,,False,51,0.795455,0.686275,0.736842,93,Dasineura sp,4,0.078431,uncertain,intermediate_or_low_support
+4,65,66,parathrene regalis,,False,14,0.687500,0.785714,0.733333,1,rice leaf caterpillar,1,0.071429,uncertain,intermediate_or_low_support
+4,61,62,Brevipoalpus lewisi McGregor,,False,8,0.833333,0.625000,0.714286,21,red spider,2,0.250000,uncertain,intermediate_or_low_support
+4,72,73,Erythroneura apicalis,,False,7,0.714286,0.714286,0.714286,101,Cicadellidae,2,0.285714,uncertain,intermediate_or_low_support
+4,99,100,Rhytidodera bowrinii white,,False,55,0.755102,0.672727,0.711538,68,Xylotrechus,5,0.090909,uncertain,intermediate_or_low_support
+4,40,41,Beet spot flies,,False,30,0.677419,0.700000,0.688525,35,cerodonta denticornis,2,0.066667,uncertain,intermediate_or_low_support
+4,60,61,Colomerus vitis,,False,18,0.733333,0.611111,0.666667,59,Viteus vitifoliae,2,0.111111,uncertain,intermediate_or_low_support
+4,64,65,Pseudococcus comstocki Kuwana,,False,30,0.617647,0.700000,0.656250,76,Icerya purchasi Maskell,2,0.066667,uncertain,intermediate_or_low_support
+4,41,42,meadow moth,,False,27,0.680000,0.629630,0.653846,22,corn borer,3,0.111111,uncertain,intermediate_or_low_support
+4,91,92,Aphis citricola Vander Goot,,False,35,0.677419,0.600000,0.636364,24,aphids,7,0.200000,uncertain,intermediate_or_low_support
+4,11,12,rice leafhopper,,False,40,0.619048,0.650000,0.634146,8,white backed plant hopper,2,0.050000,uncertain,intermediate_or_low_support
+4,89,90,Toxoptera citricidus,,False,19,0.590909,0.684211,0.634146,90,Toxoptera aurantii,2,0.105263,uncertain,intermediate_or_low_support
+4,80,81,Parlatoria zizyphus Lucus,,False,7,0.555556,0.714286,0.625000,77,Unaspis yanonensis,1,0.142857,uncertain,intermediate_or_low_support
+4,3,4,asiatic rice borer,,False,106,0.646465,0.603774,0.624390,22,corn borer,12,0.113208,uncertain,intermediate_or_low_support
+4,90,91,Toxoptera aurantii,,False,23,0.636364,0.608696,0.622222,89,Toxoptera citricidus,4,0.173913,uncertain,intermediate_or_low_support
+4,12,13,grain spreader thrips,,False,18,0.571429,0.666667,0.615385,54,Thrips,4,0.222222,uncertain,intermediate_or_low_support

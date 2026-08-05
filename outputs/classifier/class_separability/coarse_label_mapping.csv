@@ -1,103 +1,103 @@
 fine_label,class_number,class_name,coarse_label,coarse_name,is_merged,cluster_name
-0,1,rice leaf roller,8,rice leaf roller,False,
-1,2,rice leaf caterpillar,9,rice leaf caterpillar,False,
-2,3,paddy stem maggot,10,paddy stem maggot,False,
-3,4,asiatic rice borer,11,asiatic rice borer,False,
-4,5,yellow rice borer,12,yellow rice borer,False,
-5,6,rice gall midge,13,rice gall midge,False,
-6,7,Rice Stemfly,14,Rice Stemfly,False,
-7,8,brown plant hopper,1,plant_hoppers,True,plant_hoppers
-8,9,white backed plant hopper,1,plant_hoppers,True,plant_hoppers
-9,10,small brown plant hopper,1,plant_hoppers,True,plant_hoppers
-10,11,rice water weevil,15,rice water weevil,False,
-11,12,rice leafhopper,16,rice leafhopper,False,
-12,13,grain spreader thrips,17,grain spreader thrips,False,
-13,14,rice shell pest,18,rice shell pest,False,
-14,15,grub,19,grub,False,
-15,16,mole cricket,20,mole cricket,False,
-16,17,wireworm,21,wireworm,False,
-17,18,white margined moth,22,white margined moth,False,
-18,19,black cutworm,0,cutworms,True,cutworms
-19,20,large cutworm,0,cutworms,True,cutworms
-20,21,yellow cutworm,0,cutworms,True,cutworms
-21,22,red spider,6,mites,True,mites
-22,23,corn borer,23,corn borer,False,
-23,24,army worm,3,army_worms,True,army_worms
-24,25,aphids,5,aphids,True,aphids
+0,1,rice leaf roller,7,rice leaf roller,False,
+1,2,rice leaf caterpillar,8,rice leaf caterpillar,False,
+2,3,paddy stem maggot,9,paddy stem maggot,False,
+3,4,asiatic rice borer,10,asiatic rice borer,False,
+4,5,yellow rice borer,11,yellow rice borer,False,
+5,6,rice gall midge,12,rice gall midge,False,
+6,7,Rice Stemfly,13,Rice Stemfly,False,
+7,8,brown plant hopper,2,auto_cluster_003,True,auto_cluster_003
+8,9,white backed plant hopper,2,auto_cluster_003,True,auto_cluster_003
+9,10,small brown plant hopper,2,auto_cluster_003,True,auto_cluster_003
+10,11,rice water weevil,14,rice water weevil,False,
+11,12,rice leafhopper,15,rice leafhopper,False,
+12,13,grain spreader thrips,16,grain spreader thrips,False,
+13,14,rice shell pest,17,rice shell pest,False,
+14,15,grub,18,grub,False,
+15,16,mole cricket,19,mole cricket,False,
+16,17,wireworm,20,wireworm,False,
+17,18,white margined moth,21,white margined moth,False,
+18,19,black cutworm,1,auto_cluster_002,True,auto_cluster_002
+19,20,large cutworm,1,auto_cluster_002,True,auto_cluster_002
+20,21,yellow cutworm,1,auto_cluster_002,True,auto_cluster_002
+21,22,red spider,3,auto_cluster_004,True,auto_cluster_004
+22,23,corn borer,22,corn borer,False,
+23,24,army worm,6,auto_cluster_007,True,auto_cluster_007
+24,25,aphids,23,aphids,False,
 25,26,Potosiabre vitarsis,24,Potosiabre vitarsis,False,
 26,27,peach borer,25,peach borer,False,
-27,28,english grain aphid,5,aphids,True,aphids
-28,29,green bug,5,aphids,True,aphids
-29,30,bird cherry-oataphid,5,aphids,True,aphids
+27,28,english grain aphid,4,auto_cluster_005,True,auto_cluster_005
+28,29,green bug,4,auto_cluster_005,True,auto_cluster_005
+29,30,bird cherry-oataphid,4,auto_cluster_005,True,auto_cluster_005
 30,31,wheat blossom midge,26,wheat blossom midge,False,
-31,32,penthaleus major,6,mites,True,mites
-32,33,longlegged spider mite,6,mites,True,mites
-33,34,wheat phloeothrips,27,wheat phloeothrips,False,
-34,35,wheat sawfly,28,wheat sawfly,False,
-35,36,cerodonta denticornis,29,cerodonta denticornis,False,
-36,37,beet fly,30,beet fly,False,
-37,38,flea beetle,31,flea beetle,False,
-38,39,cabbage army worm,3,army_worms,True,army_worms
-39,40,beet army worm,3,army_worms,True,army_worms
-40,41,Beet spot flies,32,Beet spot flies,False,
-41,42,meadow moth,33,meadow moth,False,
-42,43,beet weevil,34,beet weevil,False,
-43,44,sericaorient alismots chulsky,35,sericaorient alismots chulsky,False,
-44,45,alfalfa weevil,36,alfalfa weevil,False,
-45,46,flax budworm,3,army_worms,True,army_worms
-46,47,alfalfa plant bug,7,plant_bugs_and_miridae,True,plant_bugs_and_miridae
-47,48,tarnished plant bug,7,plant_bugs_and_miridae,True,plant_bugs_and_miridae
-48,49,Locustoidea,37,Locustoidea,False,
-49,50,lytta polita,4,blister_beetles,True,blister_beetles
-50,51,legume blister beetle,4,blister_beetles,True,blister_beetles
-51,52,blister beetle,4,blister_beetles,True,blister_beetles
-52,53,therioaphis maculata Buckton,5,aphids,True,aphids
-53,54,odontothrips loti,38,odontothrips loti,False,
-54,55,Thrips,39,Thrips,False,
-55,56,alfalfa seed chalcid,40,alfalfa seed chalcid,False,
-56,57,Pieris canidia,41,Pieris canidia,False,
-57,58,Apolygus lucorum,7,plant_bugs_and_miridae,True,plant_bugs_and_miridae
-58,59,Limacodidae,42,Limacodidae,False,
-59,60,Viteus vitifoliae,43,Viteus vitifoliae,False,
-60,61,Colomerus vitis,6,mites,True,mites
-61,62,Brevipoalpus lewisi McGregor,44,Brevipoalpus lewisi McGregor,False,
-62,63,oides decempunctata,45,oides decempunctata,False,
-63,64,Polyphagotars onemus latus,6,mites,True,mites
-64,65,Pseudococcus comstocki Kuwana,46,Pseudococcus comstocki Kuwana,False,
-65,66,parathrene regalis,47,parathrene regalis,False,
-66,67,Ampelophaga,48,Ampelophaga,False,
-67,68,Lycorma delicatula,49,Lycorma delicatula,False,
-68,69,Xylotrechus,50,Xylotrechus,False,
-69,70,Cicadella viridis,51,Cicadella viridis,False,
-70,71,Miridae,7,plant_bugs_and_miridae,True,plant_bugs_and_miridae
-71,72,Trialeurodes vaporariorum,52,Trialeurodes vaporariorum,False,
-72,73,Erythroneura apicalis,53,Erythroneura apicalis,False,
-73,74,Papilio xuthus,54,Papilio xuthus,False,
-74,75,Panonchus citri McGregor,6,mites,True,mites
-75,76,Phyllocoptes oleiverus ashmead,55,Phyllocoptes oleiverus ashmead,False,
-76,77,Icerya purchasi Maskell,56,Icerya purchasi Maskell,False,
-77,78,Unaspis yanonensis,57,Unaspis yanonensis,False,
-78,79,Ceroplastes rubens,58,Ceroplastes rubens,False,
-79,80,Chrysomphalus aonidum,59,Chrysomphalus aonidum,False,
-80,81,Parlatoria zizyphus Lucus,60,Parlatoria zizyphus Lucus,False,
-81,82,Nipaecoccus vastalor,61,Nipaecoccus vastalor,False,
-82,83,Aleurocanthus spiniferus,62,Aleurocanthus spiniferus,False,
-83,84,Tetradacus c Bactrocera minax,2,fruit_flies,True,fruit_flies
-84,85,Dacus dorsalis(Hendel),2,fruit_flies,True,fruit_flies
-85,86,Bactrocera tsuneonis,2,fruit_flies,True,fruit_flies
-86,87,Prodenia litura,3,army_worms,True,army_worms
-87,88,Adristyrannus,63,Adristyrannus,False,
-88,89,Phyllocnistis citrella Stainton,64,Phyllocnistis citrella Stainton,False,
-89,90,Toxoptera citricidus,5,aphids,True,aphids
-90,91,Toxoptera aurantii,5,aphids,True,aphids
-91,92,Aphis citricola Vander Goot,5,aphids,True,aphids
-92,93,Scirtothrips dorsalis Hood,65,Scirtothrips dorsalis Hood,False,
-93,94,Dasineura sp,66,Dasineura sp,False,
-94,95,Lawana imitata Melichar,67,Lawana imitata Melichar,False,
-95,96,Salurnis marginella Guerr,68,Salurnis marginella Guerr,False,
-96,97,Deporaus marginatus Pascoe,69,Deporaus marginatus Pascoe,False,
-97,98,Chlumetia transversa,70,Chlumetia transversa,False,
-98,99,Mango flat beak leafhopper,71,Mango flat beak leafhopper,False,
-99,100,Rhytidodera bowrinii white,72,Rhytidodera bowrinii white,False,
-100,101,Sternochetus frigidus,73,Sternochetus frigidus,False,
-101,102,Cicadellidae,74,Cicadellidae,False,
+31,32,penthaleus major,27,penthaleus major,False,
+32,33,longlegged spider mite,28,longlegged spider mite,False,
+33,34,wheat phloeothrips,29,wheat phloeothrips,False,
+34,35,wheat sawfly,30,wheat sawfly,False,
+35,36,cerodonta denticornis,31,cerodonta denticornis,False,
+36,37,beet fly,32,beet fly,False,
+37,38,flea beetle,33,flea beetle,False,
+38,39,cabbage army worm,6,auto_cluster_007,True,auto_cluster_007
+39,40,beet army worm,6,auto_cluster_007,True,auto_cluster_007
+40,41,Beet spot flies,34,Beet spot flies,False,
+41,42,meadow moth,35,meadow moth,False,
+42,43,beet weevil,36,beet weevil,False,
+43,44,sericaorient alismots chulsky,37,sericaorient alismots chulsky,False,
+44,45,alfalfa weevil,38,alfalfa weevil,False,
+45,46,flax budworm,39,flax budworm,False,
+46,47,alfalfa plant bug,5,auto_cluster_006,True,auto_cluster_006
+47,48,tarnished plant bug,5,auto_cluster_006,True,auto_cluster_006
+48,49,Locustoidea,40,Locustoidea,False,
+49,50,lytta polita,0,auto_cluster_001,True,auto_cluster_001
+50,51,legume blister beetle,0,auto_cluster_001,True,auto_cluster_001
+51,52,blister beetle,0,auto_cluster_001,True,auto_cluster_001
+52,53,therioaphis maculata Buckton,41,therioaphis maculata Buckton,False,
+53,54,odontothrips loti,42,odontothrips loti,False,
+54,55,Thrips,43,Thrips,False,
+55,56,alfalfa seed chalcid,44,alfalfa seed chalcid,False,
+56,57,Pieris canidia,45,Pieris canidia,False,
+57,58,Apolygus lucorum,46,Apolygus lucorum,False,
+58,59,Limacodidae,47,Limacodidae,False,
+59,60,Viteus vitifoliae,48,Viteus vitifoliae,False,
+60,61,Colomerus vitis,49,Colomerus vitis,False,
+61,62,Brevipoalpus lewisi McGregor,50,Brevipoalpus lewisi McGregor,False,
+62,63,oides decempunctata,51,oides decempunctata,False,
+63,64,Polyphagotars onemus latus,52,Polyphagotars onemus latus,False,
+64,65,Pseudococcus comstocki Kuwana,53,Pseudococcus comstocki Kuwana,False,
+65,66,parathrene regalis,54,parathrene regalis,False,
+66,67,Ampelophaga,55,Ampelophaga,False,
+67,68,Lycorma delicatula,56,Lycorma delicatula,False,
+68,69,Xylotrechus,57,Xylotrechus,False,
+69,70,Cicadella viridis,58,Cicadella viridis,False,
+70,71,Miridae,5,auto_cluster_006,True,auto_cluster_006
+71,72,Trialeurodes vaporariorum,59,Trialeurodes vaporariorum,False,
+72,73,Erythroneura apicalis,60,Erythroneura apicalis,False,
+73,74,Papilio xuthus,61,Papilio xuthus,False,
+74,75,Panonchus citri McGregor,3,auto_cluster_004,True,auto_cluster_004
+75,76,Phyllocoptes oleiverus ashmead,62,Phyllocoptes oleiverus ashmead,False,
+76,77,Icerya purchasi Maskell,63,Icerya purchasi Maskell,False,
+77,78,Unaspis yanonensis,64,Unaspis yanonensis,False,
+78,79,Ceroplastes rubens,65,Ceroplastes rubens,False,
+79,80,Chrysomphalus aonidum,66,Chrysomphalus aonidum,False,
+80,81,Parlatoria zizyphus Lucus,67,Parlatoria zizyphus Lucus,False,
+81,82,Nipaecoccus vastalor,68,Nipaecoccus vastalor,False,
+82,83,Aleurocanthus spiniferus,69,Aleurocanthus spiniferus,False,
+83,84,Tetradacus c Bactrocera minax,70,Tetradacus c Bactrocera minax,False,
+84,85,Dacus dorsalis(Hendel),71,Dacus dorsalis(Hendel),False,
+85,86,Bactrocera tsuneonis,72,Bactrocera tsuneonis,False,
+86,87,Prodenia litura,6,auto_cluster_007,True,auto_cluster_007
+87,88,Adristyrannus,73,Adristyrannus,False,
+88,89,Phyllocnistis citrella Stainton,74,Phyllocnistis citrella Stainton,False,
+89,90,Toxoptera citricidus,75,Toxoptera citricidus,False,
+90,91,Toxoptera aurantii,76,Toxoptera aurantii,False,
+91,92,Aphis citricola Vander Goot,77,Aphis citricola Vander Goot,False,
+92,93,Scirtothrips dorsalis Hood,78,Scirtothrips dorsalis Hood,False,
+93,94,Dasineura sp,79,Dasineura sp,False,
+94,95,Lawana imitata Melichar,80,Lawana imitata Melichar,False,
+95,96,Salurnis marginella Guerr,81,Salurnis marginella Guerr,False,
+96,97,Deporaus marginatus Pascoe,82,Deporaus marginatus Pascoe,False,
+97,98,Chlumetia transversa,83,Chlumetia transversa,False,
+98,99,Mango flat beak leafhopper,84,Mango flat beak leafhopper,False,
+99,100,Rhytidodera bowrinii white,85,Rhytidodera bowrinii white,False,
+100,101,Sternochetus frigidus,86,Sternochetus frigidus,False,
+101,102,Cicadellidae,87,Cicadellidae,False,

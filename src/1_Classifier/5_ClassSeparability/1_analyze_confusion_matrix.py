@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import argparse
+from dataclasses import dataclass
 from pathlib import Path
 
+import networkx as nx
 import numpy as np
 import pandas as pd
 
@@ -103,6 +105,18 @@ VISUAL_SCORE_WEIGHTS = {
 FULL_EVIDENCE_WITHIN_ERRORS = 20
 
 
+@dataclass(frozen=True)
+class DiscoveryConfig:
+    """Thresholds for data-driven mutual-confusion graph discovery."""
+
+    min_direction_count: int = 3
+    min_combined_count: int = 10
+    min_mutual_rate: float = 0.05
+    min_visual_score: float = 50.0
+    resolution: float = 1.0
+    seed: int = 0
+
+
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -148,12 +162,73 @@ def parse_arguments() -> argparse.Namespace:
             "mistakes (default: 1)."
         ),
     )
+    parser.add_argument(
+        "--discovery-min-direction-count",
+        type=int,
+        default=DiscoveryConfig.min_direction_count,
+        help=(
+            "Minimum errors required in each direction before two classes "
+            "are connected in the automatic confusion graph (default: 3)."
+        ),
+    )
+    parser.add_argument(
+        "--discovery-min-combined-count",
+        type=int,
+        default=DiscoveryConfig.min_combined_count,
+        help=(
+            "Minimum combined bidirectional errors for an automatic graph "
+            "edge (default: 10)."
+        ),
+    )
+    parser.add_argument(
+        "--discovery-min-mutual-rate",
+        type=float,
+        default=DiscoveryConfig.min_mutual_rate,
+        help=(
+            "Minimum harmonic mean of the two directional error rates for "
+            "an automatic graph edge (default: 0.05)."
+        ),
+    )
+    parser.add_argument(
+        "--discovery-min-visual-score",
+        type=float,
+        default=DiscoveryConfig.min_visual_score,
+        help=(
+            "Minimum 0-100 visual-confusion score retained in the automatic "
+            "cluster table (default: 50)."
+        ),
+    )
+    parser.add_argument(
+        "--discovery-resolution",
+        type=float,
+        default=DiscoveryConfig.resolution,
+        help=(
+            "Louvain community-resolution parameter; larger values usually "
+            "produce smaller clusters (default: 1.0)."
+        ),
+    )
+    parser.add_argument(
+        "--discovery-seed",
+        type=int,
+        default=DiscoveryConfig.seed,
+        help="Random seed used by deterministic cluster discovery (default: 0).",
+    )
     args = parser.parse_args()
 
     if args.top_k <= 0:
         parser.error("--top-k must be positive.")
     if args.min_pair_count <= 0:
         parser.error("--min-pair-count must be positive.")
+    if args.discovery_min_direction_count <= 0:
+        parser.error("--discovery-min-direction-count must be positive.")
+    if args.discovery_min_combined_count <= 0:
+        parser.error("--discovery-min-combined-count must be positive.")
+    if not 0.0 <= args.discovery_min_mutual_rate <= 1.0:
+        parser.error("--discovery-min-mutual-rate must be in [0, 1].")
+    if not 0.0 <= args.discovery_min_visual_score <= 100.0:
+        parser.error("--discovery-min-visual-score must be in [0, 100].")
+    if args.discovery_resolution <= 0.0:
+        parser.error("--discovery-resolution must be positive.")
 
     return args
 
@@ -725,9 +800,10 @@ def create_high_confidence_visual_cluster_table(
     class_names: list[str],
     per_class: pd.DataFrame,
     split: str,
+    cluster_definitions: dict[str, list[str]] | None = None,
 ) -> pd.DataFrame:
     """
-    Rank predefined clusters by evidence of fine-grained visual confusion.
+    Rank candidate clusters by evidence of fine-grained visual confusion.
 
     The 0-100 visual_confusion_score combines:
 
@@ -750,10 +826,13 @@ def create_high_confidence_visual_cluster_table(
         for index, class_name in enumerate(class_names)
     }
     rows: list[dict[str, int | float | str | bool]] = []
+    definitions = (
+        IP102_CONFUSION_CLUSTERS
+        if cluster_definitions is None
+        else cluster_definitions
+    )
 
-    for cluster_name, requested_members in (
-        IP102_CONFUSION_CLUSTERS.items()
-    ):
+    for cluster_name, requested_members in definitions.items():
         members = [
             member
             for member in requested_members
@@ -963,6 +1042,139 @@ def create_high_confidence_visual_cluster_table(
     return result
 
 
+DISCOVERED_CLUSTER_COLUMNS = [
+    "cluster_name",
+    "number_classes",
+    "class_members",
+    "within_cluster_errors",
+    "cohesion",
+    "severity",
+    "reciprocity",
+    "visual_confusion_score",
+]
+
+
+def discover_confusion_cluster_definitions(
+    matrix: np.ndarray,
+    class_names: list[str],
+    config: DiscoveryConfig,
+) -> dict[str, list[str]]:
+    """
+    Discover candidate groups from a mutual-confusion graph.
+
+    Nodes are classes. An edge is retained only when both directional error
+    counts, their combined count, and the harmonic mean of their row-normalised
+    error rates all meet the configured thresholds. Louvain community
+    detection then finds dense groups without requiring a predefined number of
+    clusters. Classes with no retained edge are intentionally omitted.
+    """
+    support = matrix.sum(axis=1)
+    directional_rates = safe_divide(matrix, support[:, np.newaxis])
+    graph = nx.Graph()
+
+    for class_a in range(len(class_names)):
+        for class_b in range(class_a + 1, len(class_names)):
+            a_to_b_count = float(matrix[class_a, class_b])
+            b_to_a_count = float(matrix[class_b, class_a])
+            combined_count = a_to_b_count + b_to_a_count
+
+            if (
+                a_to_b_count < config.min_direction_count
+                or b_to_a_count < config.min_direction_count
+                or combined_count < config.min_combined_count
+            ):
+                continue
+
+            a_to_b_rate = float(directional_rates[class_a, class_b])
+            b_to_a_rate = float(directional_rates[class_b, class_a])
+            rate_sum = a_to_b_rate + b_to_a_rate
+            mutual_rate = (
+                2.0 * a_to_b_rate * b_to_a_rate / rate_sum
+                if rate_sum
+                else 0.0
+            )
+            if mutual_rate < config.min_mutual_rate:
+                continue
+
+            graph.add_edge(
+                class_a,
+                class_b,
+                weight=mutual_rate,
+                combined_count=int(combined_count),
+            )
+
+    if graph.number_of_edges() == 0:
+        return {}
+
+    communities = nx.community.louvain_communities(
+        graph,
+        weight="weight",
+        resolution=config.resolution,
+        seed=config.seed,
+    )
+    ordered_communities = sorted(
+        (
+            sorted(community)
+            for community in communities
+            if len(community) >= 2
+        ),
+        key=lambda members: (members[0], len(members), members),
+    )
+
+    return {
+        f"graph_community_{rank:03d}": [
+            class_names[index]
+            for index in members
+        ]
+        for rank, members in enumerate(ordered_communities, start=1)
+    }
+
+
+def create_discovered_confusion_cluster_table(
+    matrix: np.ndarray,
+    class_names: list[str],
+    per_class: pd.DataFrame,
+    split: str,
+    config: DiscoveryConfig,
+) -> pd.DataFrame:
+    """Discover, score, filter, and compactly report confusion clusters."""
+    definitions = discover_confusion_cluster_definitions(
+        matrix,
+        class_names,
+        config,
+    )
+    if not definitions:
+        return pd.DataFrame(columns=DISCOVERED_CLUSTER_COLUMNS)
+
+    scored = create_high_confidence_visual_cluster_table(
+        matrix,
+        class_names,
+        per_class,
+        split,
+        cluster_definitions=definitions,
+    )
+    selected = (
+        scored[
+            scored["visual_confusion_score"]
+            >= config.min_visual_score
+        ]
+        .sort_values(
+            by=[
+                "visual_confusion_score",
+                "within_cluster_errors",
+                "number_classes",
+            ],
+            ascending=[False, False, False],
+        )
+        .reset_index(drop=True)
+    )
+    selected["cluster_name"] = [
+        f"auto_cluster_{rank:03d}"
+        for rank in range(1, len(selected) + 1)
+    ]
+    return selected[DISCOVERED_CLUSTER_COLUMNS]
+
+
 def create_error_concentration_table(
     per_class: pd.DataFrame,
     split: str,
@@ -1053,6 +1265,7 @@ def analyse_split(
     split: str,
     top_k: int,
     min_pair_count: int,
+    discovery_config: DiscoveryConfig,
 ) -> tuple[pd.DataFrame, dict[str, int | float | str]]:
     """Analyse one split and save all result tables."""
     matrix_path = (
@@ -1094,6 +1307,13 @@ def analyse_split(
         per_class,
         split,
     )
+    discovered_clusters = create_discovered_confusion_cluster_table(
+        matrix,
+        class_names,
+        per_class,
+        split,
+        discovery_config,
+    )
     error_concentration = create_error_concentration_table(
         per_class,
         split,
@@ -1118,6 +1338,10 @@ def analyse_split(
     visual_clusters_path = (
         analysis_dir
         / f"{split}_high_confidence_visual_clusters.csv"
+    )
+    discovered_clusters_path = (
+        analysis_dir
+        / f"{split}_discovered_confusion_clusters.csv"
     )
     error_concentration_path = (
         analysis_dir / f"{split}_error_concentration.csv"
@@ -1152,6 +1376,11 @@ def analyse_split(
         index=False,
         float_format="%.6f",
     )
+    discovered_clusters.to_csv(
+        discovered_clusters_path,
+        index=False,
+        float_format="%.6f",
+    )
     error_concentration.to_csv(
         error_concentration_path,
         index=False,
@@ -1170,6 +1399,7 @@ def analyse_split(
     print("Support-bucket analysis:", support_buckets_path)
     print("Confusion-cluster analysis:", confusion_clusters_path)
     print("High-confidence visual clusters:", visual_clusters_path)
+    print("Automatically discovered clusters:", discovered_clusters_path)
     print("Error concentration:", error_concentration_path)
     return per_class, summary
 
@@ -1282,6 +1512,14 @@ def create_split_comparison(
 def main() -> None:
     args = parse_arguments()
     model_output_dir = args.output_dir.expanduser().resolve()
+    discovery_config = DiscoveryConfig(
+        min_direction_count=args.discovery_min_direction_count,
+        min_combined_count=args.discovery_min_combined_count,
+        min_mutual_rate=args.discovery_min_mutual_rate,
+        min_visual_score=args.discovery_min_visual_score,
+        resolution=args.discovery_resolution,
+        seed=args.discovery_seed,
+    )
 
     if not model_output_dir.is_dir():
         raise NotADirectoryError(
@@ -1328,6 +1566,7 @@ def main() -> None:
             split=split,
             top_k=args.top_k,
             min_pair_count=args.min_pair_count,
+            discovery_config=discovery_config,
         )
         split_tables[split] = table
         summaries[split] = summary
