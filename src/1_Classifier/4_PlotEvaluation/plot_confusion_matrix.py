@@ -12,7 +12,7 @@ def parse_arguments() -> argparse.Namespace:
     """Read the model output directory and optional display name."""
     parser = argparse.ArgumentParser(
         description=(
-            "Plot raw and normalized confusion matrices for a ResNet50 model."
+            "Plot raw and normalized confusion matrices for an IP102 model."
         ),
     )
 
@@ -86,6 +86,8 @@ def create_default_model_name(output_dir: Path) -> str:
     known_names = {
         "resnet50": "ResNet50",
         "resnet50_imbalance": "Imbalance-Aware ResNet50",
+        "efficientnet_b3": "EfficientNet-B3",
+        "deit3_base_patch16_224": "DeiT-III Base/16",
     }
 
     return known_names.get(

@@ -1,9 +1,10 @@
-"""Evaluate a trained EfficientNet-B3 checkpoint on the IP102 test set."""
+"""Evaluate an EfficientNet-B3 checkpoint on an IP102 dataset split."""
 
 import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import torch
 from imblearn.metrics import geometric_mean_score
@@ -24,7 +25,7 @@ from tqdm import tqdm
 
 
 # Expected location:
-# COMP9444_Group/src/1_Classifier/2_efficientnet/evaluate_efficientnet.py
+# COMP9444_Group/src/1_Classifier/3_EfficientNet/evaluate_efficientnet.py
 # parents[3] therefore points to COMP9444_Group.
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
@@ -70,10 +71,20 @@ def parse_arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--split",
+        type=str,
+        choices=("train", "val", "test"),
+        default="test",
+        help=(
+            "Dataset split to evaluate: train, val, or test "
+            "(default: test)."
+        ),
+    )
+    parser.add_argument(
         "--batch-size",
         type=int,
         default=16,
-        help="Test batch size (default: 16).",
+        help="Evaluation batch size (default: 16).",
     )
     parser.add_argument(
         "--num-workers",
@@ -110,8 +121,9 @@ def select_device() -> torch.device:
 def create_output_paths(
     model_path: Path,
     requested_output_dir: Path | None,
+    split: str,
 ) -> dict[str, Path]:
-    """Save evaluation results in the checkpoint directory by default."""
+    """Create split-specific paths in the model output directory."""
     if requested_output_dir is None:
         output_dir = model_path.parent
     else:
@@ -121,10 +133,11 @@ def create_output_paths(
 
     return {
         "output_dir": output_dir,
-        "summary": output_dir / "test_summary.txt",
-        "report": output_dir / "test_classification_report.csv",
-        "predictions": output_dir / "test_predictions.csv",
-        "confusion_matrix": output_dir / "test_confusion_matrix.csv",
+        "summary": output_dir / f"{split}_summary.txt",
+        "report": output_dir / f"{split}_classification_report.csv",
+        "predictions": output_dir / f"{split}_predictions.csv",
+        "probabilities": output_dir / f"{split}_probabilities.npz",
+        "confusion_matrix": output_dir / f"{split}_confusion_matrix.csv",
     }
 
 
@@ -162,13 +175,19 @@ def load_insect_names(classes_path: Path) -> dict[int, str]:
     return insect_names
 
 
-def create_test_loader(
+def create_evaluation_loader(
+    split: str,
     batch_size: int,
     num_workers: int,
     device: torch.device,
 ) -> tuple[IP102Dataset, DataLoader]:
-    """Create the unchanged IP102 test dataset and sequential DataLoader."""
-    test_transform = transforms.Compose([
+    """Create a deterministic DataLoader for one IP102 split."""
+    if split not in {"train", "val", "test"}:
+        raise ValueError(
+            f"Unsupported evaluation split: {split}"
+        )
+
+    evaluation_transform = transforms.Compose([
         transforms.Resize(
             (IMAGE_SIZE, IMAGE_SIZE),
             interpolation=InterpolationMode.BICUBIC,
@@ -180,13 +199,13 @@ def create_test_loader(
         ),
     ])
 
-    test_dataset = IP102Dataset(
+    evaluation_dataset = IP102Dataset(
         images_dir=IMAGES_DIR,
-        annotation_file=DATA_DIR / "test.txt",
-        transform=test_transform,
+        annotation_file=DATA_DIR / f"{split}.txt",
+        transform=evaluation_transform,
     )
-    test_loader = DataLoader(
-        test_dataset,
+    evaluation_loader = DataLoader(
+        evaluation_dataset,
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
@@ -194,7 +213,7 @@ def create_test_loader(
         persistent_workers=num_workers > 0,
     )
 
-    return test_dataset, test_loader
+    return evaluation_dataset, evaluation_loader
 
 
 def create_efficientnet_b3_model(device: torch.device) -> nn.Module:
@@ -254,18 +273,23 @@ def load_checkpoint(
 
 def evaluate(
     model: nn.Module,
-    test_loader: DataLoader,
+    evaluation_loader: DataLoader,
     device: torch.device,
-) -> tuple[float, list[int], list[int]]:
-    """Run inference once and return loss, labels, and predictions."""
+    split: str,
+) -> tuple[float, list[int], list[int], np.ndarray]:
+    """Run inference once and return labels, predictions, and probabilities."""
     criterion = nn.CrossEntropyLoss()
-    all_predictions = []
-    all_labels = []
+    all_predictions: list[int] = []
+    all_labels: list[int] = []
+    probability_batches: list[np.ndarray] = []
     total_loss = 0.0
     number_samples = 0
 
     with torch.inference_mode():
-        progress_bar = tqdm(test_loader, desc="Testing")
+        progress_bar = tqdm(
+            evaluation_loader,
+            desc=f"Evaluating {split}",
+        )
 
         for images, labels in progress_bar:
             images = images.to(device, non_blocking=True)
@@ -273,17 +297,42 @@ def evaluate(
 
             outputs = model(images)
             loss = criterion(outputs, labels)
-            predictions = outputs.argmax(dim=1)
+            probabilities = torch.softmax(outputs, dim=1)
+            predictions = probabilities.argmax(dim=1)
 
             total_loss += loss.item() * images.size(0)
             number_samples += labels.size(0)
             all_predictions.extend(predictions.cpu().tolist())
             all_labels.extend(labels.cpu().tolist())
+            probability_batches.append(
+                probabilities.cpu().numpy()
+            )
 
     if number_samples == 0:
-        raise ValueError("The test dataset is empty.")
+        raise ValueError(
+            f"The {split} dataset is empty."
+        )
 
-    return total_loss / number_samples, all_labels, all_predictions
+    evaluation_loss = total_loss / number_samples
+    all_probabilities = np.concatenate(
+        probability_batches,
+        axis=0,
+    ).astype(np.float32, copy=False)
+
+    expected_shape = (number_samples, NUM_CLASSES)
+    if all_probabilities.shape != expected_shape:
+        raise RuntimeError(
+            "Unexpected probability-array shape: "
+            f"expected {expected_shape}, "
+            f"received {all_probabilities.shape}."
+        )
+
+    return (
+        evaluation_loss,
+        all_labels,
+        all_predictions,
+        all_probabilities,
+    )
 
 
 def format_checkpoint_value(checkpoint: dict, key: str) -> str:
@@ -304,31 +353,32 @@ def build_summary(
     model_path: Path,
     output_dir: Path,
     device: torch.device,
-    test_loss: float,
+    split: str,
+    evaluation_loss: float,
     all_labels: list[int],
     all_predictions: list[int],
 ) -> str:
     """Calculate aggregate metrics and format the text summary."""
-    test_accuracy = accuracy_score(all_labels, all_predictions)
-    test_precision = precision_score(
+    evaluation_accuracy = accuracy_score(all_labels, all_predictions)
+    evaluation_precision = precision_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_recall = recall_score(
+    evaluation_recall = recall_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_macro_f1 = f1_score(
+    evaluation_macro_f1 = f1_score(
         all_labels,
         all_predictions,
         average="macro",
         zero_division=0,
     )
-    test_g_mean = float(
+    evaluation_g_mean = float(
         geometric_mean_score(
             all_labels,
             all_predictions,
@@ -336,9 +386,16 @@ def build_summary(
         )
     )
 
+    split_name = {
+        "train": "Training",
+        "val": "Validation",
+        "test": "Test",
+    }[split]
+
     return "\n".join([
         f"Checkpoint: {model_path}",
         f"Evaluation output: {output_dir}",
+        f"Dataset split: {split}",
         f"Device: {device}",
         "Model: EfficientNet-B3",
         f"Architecture: {MODEL_ARCHITECTURE}",
@@ -356,12 +413,12 @@ def build_summary(
             f"{format_checkpoint_value(checkpoint, 'val_macro_f1')}"
         ),
         "",
-        f"Test loss: {test_loss:.4f}",
-        f"Test accuracy: {test_accuracy:.4f}",
-        f"Test macro precision: {test_precision:.4f}",
-        f"Test macro recall: {test_recall:.4f}",
-        f"Test macro-F1: {test_macro_f1:.4f}",
-        f"Test GM: {test_g_mean:.4f}",
+        f"{split_name} loss: {evaluation_loss:.4f}",
+        f"{split_name} accuracy: {evaluation_accuracy:.4f}",
+        f"{split_name} macro precision: {evaluation_precision:.4f}",
+        f"{split_name} macro recall: {evaluation_recall:.4f}",
+        f"{split_name} macro-F1: {evaluation_macro_f1:.4f}",
+        f"{split_name} GM: {evaluation_g_mean:.4f}",
     ])
 
 
@@ -401,19 +458,19 @@ def save_per_class_report(
 
 def save_predictions(
     output_path: Path,
-    test_dataset: IP102Dataset,
+    evaluation_dataset: IP102Dataset,
     all_labels: list[int],
     all_predictions: list[int],
 ) -> None:
-    """Save one row for every test image."""
-    if not hasattr(test_dataset, "samples"):
+    """Save one row for every evaluated image."""
+    if not hasattr(evaluation_dataset, "samples"):
         raise AttributeError(
             "IP102Dataset must expose a 'samples' attribute to save filenames."
         )
 
     image_names = [
         image_name
-        for image_name, _ in test_dataset.samples
+        for image_name, _ in evaluation_dataset.samples
     ]
 
     if len(image_names) != len(all_labels):
@@ -426,6 +483,80 @@ def save_predictions(
         "true_label": all_labels,
         "predicted_label": all_predictions,
     }).to_csv(output_path, index=False)
+
+
+def save_probabilities(
+    output_path: Path,
+    evaluation_dataset: IP102Dataset,
+    all_labels: list[int],
+    all_probabilities: np.ndarray,
+) -> None:
+    """Save image names, labels, and N-by-102 class probabilities."""
+    if not hasattr(evaluation_dataset, "samples"):
+        raise AttributeError(
+            "IP102Dataset must expose a 'samples' attribute to save "
+            "probabilities."
+        )
+
+    image_names = np.asarray(
+        [
+            str(image_name)
+            for image_name, _ in evaluation_dataset.samples
+        ],
+        dtype=str,
+    )
+    true_labels = np.asarray(
+        all_labels,
+        dtype=np.int64,
+    )
+    probabilities = np.asarray(
+        all_probabilities,
+        dtype=np.float32,
+    )
+
+    number_samples = len(true_labels)
+    expected_shape = (number_samples, NUM_CLASSES)
+
+    if len(image_names) != number_samples:
+        raise ValueError(
+            "The number of image names does not match the labels: "
+            f"{len(image_names)} != {number_samples}."
+        )
+
+    if probabilities.shape != expected_shape:
+        raise ValueError(
+            "The probability array has an unexpected shape: "
+            f"expected {expected_shape}, "
+            f"received {probabilities.shape}."
+        )
+
+    if not np.all(np.isfinite(probabilities)):
+        raise ValueError(
+            "The probability array contains NaN or infinite values."
+        )
+
+    if np.any(probabilities < 0):
+        raise ValueError(
+            "The probability array contains negative values."
+        )
+
+    row_sums = probabilities.sum(axis=1)
+    if not np.allclose(
+        row_sums,
+        np.ones(number_samples, dtype=np.float32),
+        rtol=1e-5,
+        atol=1e-6,
+    ):
+        raise ValueError(
+            "Each probability row must sum to one."
+        )
+
+    np.savez_compressed(
+        output_path,
+        image_names=image_names,
+        true_labels=true_labels,
+        probabilities=probabilities,
+    )
 
 
 def save_confusion_matrix(
@@ -466,20 +597,34 @@ def main() -> None:
             f"Model checkpoint not found: {model_path}"
         )
 
-    paths = create_output_paths(model_path, args.output_dir)
+    paths = create_output_paths(
+        model_path=model_path,
+        requested_output_dir=args.output_dir,
+        split=args.split,
+    )
     device = select_device()
     insect_names = load_insect_names(CLASSES_PATH)
-    test_dataset, test_loader = create_test_loader(
+
+    evaluation_dataset, evaluation_loader = create_evaluation_loader(
+        split=args.split,
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         device=device,
     )
+
     model = create_efficientnet_b3_model(device)
     checkpoint = load_checkpoint(model_path, model, device)
-    test_loss, all_labels, all_predictions = evaluate(
-        model,
-        test_loader,
-        device,
+
+    (
+        evaluation_loss,
+        all_labels,
+        all_predictions,
+        all_probabilities,
+    ) = evaluate(
+        model=model,
+        evaluation_loader=evaluation_loader,
+        device=device,
+        split=args.split,
     )
 
     summary = build_summary(
@@ -487,7 +632,8 @@ def main() -> None:
         model_path=model_path,
         output_dir=paths["output_dir"],
         device=device,
-        test_loss=test_loss,
+        split=args.split,
+        evaluation_loss=evaluation_loss,
         all_labels=all_labels,
         all_predictions=all_predictions,
     )
@@ -504,9 +650,15 @@ def main() -> None:
     )
     save_predictions(
         paths["predictions"],
-        test_dataset,
+        evaluation_dataset,
         all_labels,
         all_predictions,
+    )
+    save_probabilities(
+        paths["probabilities"],
+        evaluation_dataset,
+        all_labels,
+        all_probabilities,
     )
     save_confusion_matrix(
         paths["confusion_matrix"],
@@ -516,9 +668,10 @@ def main() -> None:
     )
 
     print()
-    print("Test summary saved to:", paths["summary"])
+    print(f"{args.split.capitalize()} summary saved to:", paths["summary"])
     print("Classification report saved to:", paths["report"])
     print("Predictions saved to:", paths["predictions"])
+    print("Probabilities saved to:", paths["probabilities"])
     print("Confusion matrix saved to:", paths["confusion_matrix"])
 
 
