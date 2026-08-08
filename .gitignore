@@ -20,5 +20,8 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# Local Anaconda project metadata
+/anaconda_projects/
+
 # Dataset
 datasets/
